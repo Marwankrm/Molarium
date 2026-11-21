@@ -1,0 +1,277 @@
+window.DISCIPLINES = window.DISCIPLINES || [];
+window.DISCIPLINES.push({
+  id: "prothese-amovible",
+  ordre: 1,
+  nom: "Prothèse amovible",
+  sigle: "PA",
+  couleur: "#7a3e9d",
+  description: "Prothèse adjointe complète (PAC), partielle sans châssis (base résine) et partielle à châssis métallique : protocole séance par séance.",
+  protocoles: [
+    {
+      id: "pac-bimaxillaire",
+      titre: "Prothèse adjointe complète (PAC) bimaxillaire",
+      resume: "Protocole en 6 séances : empreintes primaires, empreintes secondaires, rapports intermaxillaires, essayage, pose, contrôles.",
+      duree: "6 séances",
+      niveau: "Étudiant encadré",
+      statut: "brouillon",
+      sourceType: "Pratique du service (CHU) + pratique courante (ouvrages de prothèse complète)",
+      maj: "2026-11",
+      hopital: [
+        "**Empreintes primaires** : alginate dans des porte-empreintes de stock",
+        "**Porte-empreintes individuels (PEI)** : fabriqués par le laboratoire ou par l'étudiant",
+        "**Empreinte secondaire** : joint périphérique à la **pâte de Kerr** (réalisé avant), puis empreinte à la **pâte d'oxyde de zinc-eugénol** ; **joint postérieur maxillaire** réalisé",
+        "**Rapports intermaxillaires** : enregistrement de la relation centrée à l'**Aluwax** ou à la **pâte de Kerr** ; dimension verticale de repos moins espace libre d'inocclusion, contrôle phonétique",
+        "**Arc facial** utilisé pour le montage des modèles sur l'articulateur (modèle d'articulateur non précisé)",
+        "**Teinte** : choisie avec un **teintier**",
+        "**Occlusion équilibrée bilatéralement**",
+        "**Mise en bouche** : zones de compression repérées avec le **Coltène PSI**",
+        "**Résine de base** : choisie par le laboratoire",
+        "**Le patient porte la prothèse jusqu'au contrôle à 48 h**",
+        "**Contrôles à 48 h, 1 semaine et 1 mois**",
+        "**Validation par l'encadrant** : empreintes, rapports intermaxillaires (RIM), essayage et pose",
+        "**6 séances** : nombre validé par le service"
+      ],
+      indications: ["Édentement total maxillaire et mandibulaire", "Dents restantes à pronostic défavorable, avulsées ou à avulser avant réhabilitation", "Patient informé des alternatives (dont prothèse sur implants)"],
+      contreIndications: ["Lésions muqueuses non diagnostiquées ou non cicatrisées", "Foyers infectieux ou racines résiduelles non traités", "Absence de motivation ou de capacité d'adaptation du patient (à discuter)"],
+      prerequis: ["Avulsions cicatrisées et chirurgie pré-prothétique réalisée si nécessaire", "Consentement éclairé et devis remis"],
+      materiel: [
+        "**Empreintes primaires** : porte-empreintes de stock maxillaire et mandibulaire, alginate",
+        "**Porte-empreintes individuels (PEI)** en résine",
+        "**Joint périphérique** : pâte de Kerr",
+        "**Empreinte secondaire** : pâte d'oxyde de zinc-eugénol",
+        "**Rapports intermaxillaires** : bases d'occlusion + bourrelets de cire, **Aluwax** ou pâte de Kerr, règle de Fox, plan de Camper, compas ou pied à coulisse, **arc facial**, **teintier**",
+        "Articulateur [[modèle non précisé]]",
+        "Dents prothétiques [[marque et forme à préciser]] ; résine de base choisie par le laboratoire",
+        "**Coltène PSI**, papier à articuler"
+      ],
+      alertes: [
+        "Vérifier l'**absence de lésion muqueuse suspecte** avant toute empreinte.",
+        "Prévenir le patient que l'adaptation dure **plusieurs semaines**.",
+        "**Pas d'antibioprophylaxie** pour les soins prothétiques ni les prises d'empreintes en population générale (HAS 2026)."
+      ],
+      etapes: [
+        { titre: "Séance 1 – Examen et empreintes primaires", details: [
+          "Examen clinique et radiologique (panoramique) : muqueuses, crêtes, freins, brides, tubérosités, salive ; plan de traitement et consentement",
+          "**Empreintes primaires** maxillaire et mandibulaire à l'**alginate** dans des porte-empreintes de stock, désinfection puis coulée des modèles primaires"
+        ], materiel: ["porte-empreintes de stock", "alginate, bol et spatule", "désinfectant d'empreintes", "plâtre"], validation: "empreintes primaires", astuce: "Au laboratoire (ou par l'étudiant) : confection des porte-empreintes individuels sur les modèles primaires." },
+        { titre: "Séance 2 – Empreintes secondaires", details: [
+          "**Essayage et ajustage des PEI**, puis **joint périphérique à la pâte de Kerr**, modelé par les mouvements fonctionnels (déglutition, ouverture, mimique, protrusion de la langue) ; **joint postérieur maxillaire**",
+          "**Empreinte secondaire à la pâte d'oxyde de zinc-eugénol**, maxillaire puis mandibulaire ; vérification de l'absence de zones de compression"
+        ], materiel: ["PEI", "pâte de Kerr et source de chaleur", "pâte d'oxyde de zinc-eugénol", "fraise à résine pour retouches"], validation: "empreintes secondaires", astuce: "Au laboratoire : coulée des modèles de travail et confection des bases d'occlusion avec bourrelets de cire." },
+        { titre: "Séance 3 – Rapports intermaxillaires (RIM)", details: [
+          "**Orienter les bourrelets** : plan d'occlusion parallèle au plan de Camper en arrière et à la ligne bipupillaire en avant ; bord libre visible 1 à 2 mm sous la lèvre supérieure au repos ; **arc facial** pour le montage du modèle maxillaire sur l'articulateur",
+          "**Dimension verticale d'occlusion (DVO)** : dimension verticale de repos moins l'espace libre d'inocclusion, contrôle phonétique ; **relation centrée** enregistrée à l'**Aluwax** ou à la **pâte de Kerr** ; repères de la ligne médiane, de la ligne du sourire et des canines ; choix de la teinte au **teintier**, de la forme et de la taille des dents"
+        ], materiel: ["bases d'occlusion + bourrelets de cire", "règle de Fox, plan de Camper", "arc facial", "Aluwax ou pâte de Kerr", "teintier", "compas ou pied à coulisse"], validation: "RIM", astuce: "Au laboratoire : montage sur articulateur et montage des dents sur cire." },
+        { titre: "Séance 4 – Essayage des dents montées sur cire", details: [
+          "Contrôler **esthétique, phonétique, DVO et occlusion** (occlusion équilibrée bilatéralement) ; faire valider le montage par le patient (miroir)",
+          "Corrections éventuelles du montage ; validation avant polymérisation"
+        ], materiel: ["prothèses sur cire", "miroir", "spatule à cire et source de chaleur", "teintier"], validation: "essayage", astuce: "Au laboratoire : mise en moufle, polymérisation de la résine, finition et polissage." },
+        { titre: "Séance 5 – Mise en bouche", details: [
+          "Vérifier l'intrados avec le **Coltène PSI** et retoucher les zones de compression ; contrôler les bords, la rétention et la stabilité",
+          "**Équilibration occlusale** (papier à articuler, relation centrée et excursions) ; consignes d'hygiène et d'utilisation"
+        ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main pour retouches", "fiche de consignes patient"], validation: "pose" },
+        { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois)", details: [
+          "Contrôle à **48 h** : retouche des zones douloureuses, nouveau contrôle de l'occlusion",
+          "Contrôles à **1 semaine** et **1 mois** ; évaluer l'intérêt d'un rebasage ou d'un projet implantaire"
+        ], materiel: ["Coltène PSI", "papier à articuler", "fraises pour retouches"] }
+      ],
+      consignes: [
+        "**Adaptation** : la prothèse demande **plusieurs semaines** d'adaptation ; salivation et gêne sont normales les premiers jours.",
+        "**Port les premiers jours** : porter la prothèse jusqu'au contrôle de 48 h pour repérer les zones douloureuses.",
+        "**Alimentation** : commencer par des aliments mous coupés en petits morceaux, **mâcher des deux côtés en même temps**, éviter les aliments durs ou collants au début.",
+        "**Parole** : lire à voix haute pour s'habituer ; la prononciation se normalise en quelques jours à quelques semaines.",
+        "**Douleurs ou blessures** : ne pas retoucher soi-même la prothèse ; revenir au contrôle. Porter la prothèse quelques heures avant le rendez-vous pour que la zone gênante soit visible.",
+        "**Hygiène** : brosser la prothèse après les repas avec une brosse dédiée et du **savon doux** (pas de dentifrice abrasif), **au-dessus d'un lavabo rempli d'eau ou d'une serviette** pour éviter qu'elle ne casse en tombant ; brosser doucement gencives, palais et langue avec une brosse souple.",
+        "**La nuit** : retirer la prothèse pour reposer la muqueuse ; la conserver **humide** dans une boîte, avec de l'eau ou une solution de nettoyage [[produit à préciser]] ; ne jamais la laisser sécher, ne pas utiliser d'eau bouillante.",
+        "**Cassure, fêlure ou perte de dent de la prothèse** : ne pas réparer soi-même (pas de colle), consulter.",
+        "**Contrôles** : à 48 h, 1 semaine, 1 mois puis une fois par an."
+      ],
+      erreurs: [
+        "Porte-empreinte individuel **trop court ou trop long** : joint périphérique absent ou blessures",
+        "Empreinte avec **surcompression** de la muqueuse (matériau trop épais, PEI mal dégagé)",
+        "**DVO trop haute** (fatigue, claquement des dents) ou **trop basse** (aspect vieilli, commissures labiales)",
+        "Plan d'occlusion mal orienté, ligne médiane non repérée, arc facial non utilisé",
+        "Passer à l'étape suivante **sans validation de l'encadrant** (empreintes, RIM, essayage, pose)",
+        "Oublier l'**équilibration occlusale** ou le contrôle à 48 h"
+      ],
+      suivi: ["Contrôle annuel (muqueuses, adaptation, usure)", "Rebasage si perte de rétention liée à la résorption des crêtes"],
+      complications: ["Blessure muqueuse : retouche ciblée de l'intrados", "Manque de rétention : vérifier le joint périphérique, envisager un rebasage", "Stomatite sous prothèse : désinfection de la prothèse, traitement selon avis [[conduite du service]]"],
+      references: [
+        "Pompignoli M., Doukhan D., Raux D. Prothèse complète : clinique et laboratoire (ouvrage de référence)",
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
+        "Séquence et produits confirmés par le service ; consignes et erreurs fréquentes rédigées d'après la pratique courante, à valider."
+      ]
+    },
+    {
+      id: "pap-resine",
+      titre: "Prothèse adjointe partielle (PAP) sans châssis métallique",
+      resume: "Protocole en 6 séances : examen et empreinte primaire, empreinte secondaire à l'alginate, rapports intermaxillaires (Futar), essayage, pose, contrôles.",
+      duree: "6 séances",
+      niveau: "Étudiant encadré",
+      statut: "brouillon",
+      sourceType: "Pratique du service (CHU) + pratique courante",
+      maj: "2026-11",
+      hopital: [
+        "**Indication** : prothèse transitoire proposée lorsqu'il faut **extraire des dents** et que les **crêtes vont être modifiées**",
+        "**Empreinte secondaire à l'alginate**, dans un **porte-empreinte individuel (PEI)** fabriqué par le laboratoire ou par l'étudiant",
+        "**Rapports intermaxillaires pas toujours nécessaires**, mais l'occlusion doit toujours être enregistrée avec le **Futar**",
+        "**Articulateur** utilisé ; teinte au **teintier** ; résine choisie par le laboratoire",
+        "**Validation par l'encadrant** : empreintes, rapports intermaxillaires, essayage et pose",
+        "**Suite** : la prothèse transitoire est **remplacée par la prothèse définitive**",
+        "**Contrôles à 48 h, 1 semaine et 1 mois** ; **6 séances** : nombre validé"
+      ],
+      indications: ["Situations où des **extractions sont nécessaires** et où les crêtes vont évoluer (prothèse transitoire)", "Remplacement provisoire des dents manquantes avant la prothèse définitive (châssis métallique ou autre)"],
+      contreIndications: ["Hygiène bucco-dentaire insuffisante non améliorable", "Pathologie parodontale non stabilisée sur les dents d'appui"],
+      prerequis: ["Plan de traitement établi : dents à extraire, prothèse définitive envisagée", "Bilan radiologique et parodontal, consentement éclairé"],
+      materiel: [
+        "Porte-empreintes de stock (empreinte primaire), **alginate**",
+        "**Porte-empreinte individuel (PEI)** pour l'empreinte secondaire",
+        "**Futar** (enregistrement de l'occlusion) ; bases d'occlusion en résine et cire si l'occlusion n'est pas stable",
+        "Articulateur [[modèle non précisé]] ; **teintier**",
+        "Dents prothétiques [[marque et forme à préciser]] ; résine choisie par le laboratoire",
+        "Crochets [[type de crochets à préciser avec le laboratoire]]",
+        "**Coltène PSI**, papier à articuler"
+      ],
+      alertes: [
+        "Prothèse transitoire : prévenir le patient qu'elle sera **remplacée par la prothèse définitive** après la cicatrisation et l'évolution des crêtes.",
+        "Une **base résine** s'appuie surtout sur la muqueuse et sur les crochets : insister sur l'hygiène et le suivi des dents d'appui.",
+        "**Pas d'antibioprophylaxie** pour les soins prothétiques ni les prises d'empreintes en population générale (HAS 2026)."
+      ],
+      etapes: [
+        { titre: "Séance 1 – Examen et empreinte primaire", details: [
+          "Examen clinique, radiologique et parodontal ; **classification de l'édentement** ; dents à extraire, dents d'appui et type de crochets ; plan de traitement et consentement",
+          "**Empreinte primaire à l'alginate** des deux arcades, coulée des modèles"
+        ], materiel: ["porte-empreintes de stock", "alginate", "plâtre", "désinfectant d'empreintes"], validation: "empreinte primaire", astuce: "Au laboratoire (ou par l'étudiant) : confection du porte-empreinte individuel sur le modèle primaire." },
+        { titre: "Séance 2 – Empreinte secondaire à l'alginate", details: [
+          "Essayage du **porte-empreinte individuel** : contrôle de l'extension et du dégagement des freins",
+          "**Empreinte secondaire à l'alginate** dans le PEI ; choix de la teinte au **teintier** et de la forme des dents"
+        ], materiel: ["PEI", "alginate", "teintier"], validation: "empreinte secondaire", astuce: "Au laboratoire : modèle de travail, bases d'occlusion avec bourrelets de cire si nécessaire." },
+        { titre: "Séance 3 – Rapports intermaxillaires", details: [
+          "**Pas toujours nécessaire** (si les dents restantes assurent un calage stable) ; **l'occlusion est dans tous les cas enregistrée avec le Futar**",
+          "Si l'occlusion n'est pas stable : bases d'occlusion et bourrelets de cire, dimension verticale et relation de référence ; repères esthétiques ; montage sur articulateur"
+        ], materiel: ["Futar", "bases d'occlusion et bourrelets de cire (si besoin)", "règle de Fox"], validation: "enregistrement des rapports intermaxillaires", astuce: "Au laboratoire : montage des dents sur cire sur articulateur." },
+        { titre: "Séance 4 – Essayage des dents montées", details: [
+          "Contrôler **esthétique, phonétique, occlusion** et appuis sur les dents restantes ; validation par le patient",
+          "Corrections éventuelles avant polymérisation"
+        ], materiel: ["prothèse sur cire", "miroir", "papier à articuler"], validation: "essayage", astuce: "Au laboratoire : mise en résine, pose des crochets, finition et polissage." },
+        { titre: "Séance 5 – Mise en bouche", details: [
+          "**Pose** : contrôle de l'insertion, des crochets, de l'intrados (**Coltène PSI**), retouches ; **équilibration occlusale**",
+          "Instructions d'hygiène et de manipulation, consignes remises au patient"
+        ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main", "fiche de consignes patient"], validation: "pose" },
+        { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois)", details: [
+          "Contrôle à **48 h** : retouches, occlusion",
+          "Contrôles à **1 semaine** et **1 mois** : appuis, crochets ; planification de la **prothèse définitive** une fois les crêtes stabilisées"
+        ], materiel: ["Coltène PSI", "papier à articuler", "fraises pour retouches"] }
+      ],
+      consignes: [
+        "**Prothèse transitoire** : elle sera **remplacée par la prothèse définitive** une fois les gencives cicatrisées ; prévoir des rendez-vous de contrôle réguliers.",
+        "**Mise en place et retrait** : insérer et retirer la prothèse **avec les doigts**, en appuyant sur la base ; **ne pas mordre pour la mettre en place** ; ne pas tirer ni plier les crochets.",
+        "**Alimentation** : aliments mous coupés en petits morceaux au début, mastication des deux côtés.",
+        "**Parole** : lire à voix haute ; l'adaptation prend quelques jours.",
+        "**Douleurs ou blessures** : ne pas retoucher soi-même ; revenir au contrôle, en portant la prothèse quelques heures avant.",
+        "**Hygiène** : brosser la prothèse après les repas avec une brosse dédiée et du savon doux, **au-dessus d'un lavabo rempli d'eau** ; brossage soigneux des dents restantes, notamment celles qui portent les crochets.",
+        "**La nuit** : retirer la prothèse et la conserver humide [[produit à préciser]]. Ne jamais la laisser sécher ni la plonger dans l'eau bouillante.",
+        "**Contrôles** : à 48 h, 1 semaine, 1 mois."
+      ],
+      erreurs: [
+        "Dents d'appui non assainies (caries, parodonte) avant la pose",
+        "Crochets mal positionnés (appui gingival, gêne) ou non vérifiés avant l'essayage",
+        "**Occlusion non enregistrée au Futar**, même quand les rapports intermaxillaires ne sont pas pris",
+        "Passer à l'étape suivante sans validation de l'encadrant",
+        "Ne pas prévenir le patient du caractère **provisoire** de la prothèse"
+      ],
+      suivi: ["Contrôle régulier jusqu'à la prothèse définitive", "Hygiène stricte des dents d'appui"],
+      references: [
+        "Séquence et produits confirmés par le service ; consignes et erreurs fréquentes rédigées d'après la pratique courante, à valider.",
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
+      ]
+    },
+    {
+      id: "pap-chassis",
+      titre: "Prothèse adjointe partielle (PAP) à châssis métallique",
+      resume: "Protocole en 6 séances avec châssis métallique : empreintes d'étude, empreinte secondaire à l'alginate, essayage du châssis, rapports intermaxillaires, essayage des dents, pose. (Correspond à la « PAP avec incrustation métallique » du service.)",
+      duree: "6 séances",
+      niveau: "Étudiant encadré",
+      statut: "brouillon",
+      sourceType: "Pratique du service (CHU) + pratique courante",
+      maj: "2026-11",
+      hopital: [
+        "Correspond à la « PAP avec incrustation métallique » du service",
+        "**Empreintes d'étude** à l'alginate dans des porte-empreintes de stock",
+        "**Conception du châssis** réalisée par le **laboratoire**",
+        "**Préparations des dents d'appui** (plans guides, taquets) : **seulement quand c'est nécessaire**",
+        "**Empreinte secondaire à l'alginate, dans un porte-empreinte individuel (PEI)** fabriqué par le laboratoire ou l'étudiant ; **pas d'empreinte de correction des selles terminales**",
+        "**Alliage du châssis : nickel-chrome (Ni-Cr)** [[à confirmer auprès du laboratoire]] ; **pas de test d'allergie au nickel**",
+        "**Validation par l'encadrant** : empreintes, rapports intermaxillaires, essayage et pose",
+        "**Contrôles à 48 h, 1 semaine et 1 mois** ; **6 séances** : nombre validé"
+      ],
+      indications: ["Édentement partiel étendu ou terminal (classes de Kennedy-Applegate)", "Prothèse définitive après une éventuelle prothèse transitoire", "Alternative à un bridge ou à un traitement implantaire (refus, contre-indication, coût)"],
+      contreIndications: ["Hygiène bucco-dentaire insuffisante non améliorable", "Pathologie parodontale non stabilisée", "Dents d'appui à pronostic défavorable"],
+      prerequis: ["Assainissement préalable : caries, parodonte, avulsions, restaurations défectueuses", "Bilan radiologique et parodontal, consentement éclairé"],
+      materiel: [
+        "Empreintes d'étude : porte-empreintes de stock, **alginate**",
+        "Fraises de préparation (plans guides, logements de taquets) [[références]] : seulement si nécessaire",
+        "**Porte-empreinte individuel (PEI)** et **alginate** pour l'empreinte secondaire",
+        "Châssis métallique en alliage **nickel-chrome (Ni-Cr)** [[à confirmer]]",
+        "Bases cire et bourrelets ; matériau d'enregistrement de l'occlusion [[Futar, cire… à préciser]] ; **teintier**",
+        "Dents prothétiques [[marque et forme à préciser]] ; résine choisie par le laboratoire",
+        "Articulateur [[modèle non précisé]] ; **Coltène PSI**, papier à articuler"
+      ],
+      alertes: [
+        "La PAP n'est réalisée **qu'après assainissement** de la bouche.",
+        "Alliage au **nickel** : demander au patient s'il connaît une allergie au nickel (pas de test systématique au service).",
+        "**Pas d'antibioprophylaxie** pour les soins prothétiques ni les prises d'empreintes en population générale (HAS 2026).",
+        "Le laboratoire conçoit le châssis : transmettre une **fiche de prescription** complète [[contenu de la fiche à préciser]]."
+      ],
+      etapes: [
+        { titre: "Séance 1 – Examen, empreintes d'étude et projet", details: [
+          "Examen clinique, radiologique et parodontal ; **classification de l'édentement** ; **empreintes d'étude à l'alginate**, enregistrement de l'occlusion, montage sur articulateur",
+          "**Étude des modèles** (axe d'insertion, zones de dépouille) et **fiche de prescription transmise au laboratoire, qui conçoit le châssis**"
+        ], materiel: ["porte-empreintes de stock", "alginate", "plâtre", "matériau d'enregistrement de l'occlusion", "fiche de prescription"], validation: "empreintes d'étude", astuce: "Au laboratoire : modèles d'étude coulés, conception du châssis, porte-empreinte individuel (PEI) pour la séance 2." },
+        { titre: "Séance 2 – Préparations (si nécessaire) et empreinte secondaire", details: [
+          "**Préparations** des dents d'appui **seulement si nécessaire** : plans guides, logements de taquets (plancher arrondi, sans bord vif)",
+          "**Empreinte secondaire** à l'**alginate dans le PEI** (essayage du PEI au préalable), maxillaire et mandibulaire ; enregistrement de l'occlusion si besoin ; choix de la teinte au **teintier**"
+        ], materiel: ["PEI", "alginate", "fraises de préparation (si besoin)", "teintier"], validation: "empreinte secondaire", astuce: "Au laboratoire : modèle de travail et coulée du châssis métallique." },
+        { titre: "Séance 3 – Essayage du châssis", details: [
+          "Contrôler l'**insertion, la désinsertion, la stabilité**, la mise en place complète des taquets, l'absence de contact prématuré et de blessure",
+          "Contrôler l'**adaptation sur les dents d'appui et sur la muqueuse** (Coltène PSI) ; corrections ou renvoi au laboratoire si nécessaire"
+        ], materiel: ["châssis", "Coltène PSI", "papier à articuler"], validation: "essayage du châssis", astuce: "Au laboratoire : confection des bases cire et des bourrelets sur le châssis." },
+        { titre: "Séance 4 – Rapports intermaxillaires", details: [
+          "**Enregistrement des rapports intermaxillaires** avec le châssis et les bases d'occlusion (dimension verticale et relation de référence)",
+          "Choix des dents au **teintier** : teinte, forme, taille ; repères esthétiques"
+        ], materiel: ["châssis + bases d'occlusion", "matériau d'enregistrement [[à préciser]]", "teintier"], validation: "rapports intermaxillaires", astuce: "Au laboratoire : montage des dents sur cire." },
+        { titre: "Séance 5 – Essayage des dents montées", details: [
+          "Contrôler **esthétique, phonétique, occlusion** et appuis ; validation par le patient",
+          "Corrections éventuelles avant polymérisation"
+        ], materiel: ["prothèse sur cire", "miroir", "papier à articuler"], validation: "essayage", astuce: "Au laboratoire : mise en résine, finition, polissage." },
+        { titre: "Séance 6 – Mise en bouche", details: [
+          "**Pose** : contrôle de l'insertion, des crochets et des appuis (**Coltène PSI**), retouches ; **équilibration occlusale**",
+          "Instructions d'hygiène et de manipulation ; contrôles à **48 h, 1 semaine et 1 mois**"
+        ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main", "fiche de consignes patient"], validation: "pose" }
+      ],
+      consignes: [
+        "**Mise en place et retrait** : insérer et retirer la prothèse **avec les doigts**, en appuyant sur la base ; **ne jamais mordre pour la mettre en place** ; ne pas plier ni tirer les crochets.",
+        "**Port** : habituation progressive ; une légère gêne les premiers jours est normale.",
+        "**Alimentation** : aliments mous au début, mastication des deux côtés ; éviter les aliments très durs ou collants.",
+        "**Douleurs ou blessures** : ne pas retoucher soi-même ; revenir au contrôle.",
+        "**Hygiène** : brosser la prothèse après les repas avec une brosse dédiée et du savon doux, **au-dessus d'un lavabo rempli d'eau** ; brosser très soigneusement les dents d'appui (brossettes interdentaires) avec un dentifrice fluoré.",
+        "**La nuit** : retirer la prothèse et la conserver humide [[produit à préciser]] ; ne jamais la laisser sécher ni la plonger dans l'eau bouillante.",
+        "**Signes à signaler** : démangeaisons, rougeur ou irritation de la muqueuse au contact du métal.",
+        "**Contrôles** : à 48 h, 1 semaine, 1 mois puis une fois par an."
+      ],
+      erreurs: [
+        "Axe d'insertion non étudié sur les modèles : prothèse qui ne s'insère pas ou gêne",
+        "Taquets mal logés ou contacts prématurés non retouchés avant l'essayage",
+        "Préparations des dents d'appui inutiles ou oubliées quand elles sont nécessaires",
+        "Dents d'appui non assainies avant la prise d'empreinte",
+        "Fiche de prescription incomplète transmise au laboratoire",
+        "Passer à l'étape suivante sans validation de l'encadrant"
+      ],
+      suivi: ["Hygiène stricte des dents d'appui et de la prothèse", "Contrôle des appuis, des crochets et des selles (rebasage éventuel) à chaque visite de maintenance"],
+      references: [
+        "Séquence et produits confirmés par le service ; consignes et erreurs fréquentes rédigées d'après la pratique courante, à valider.",
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
+      ]
+    }
+  ]
+});
