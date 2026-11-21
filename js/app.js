@@ -37,6 +37,19 @@
   }
   function plain(text) { return String(text).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/\[([^\[\]]+)\]\(https?:\/\/[^)\s]+\)/g, '$1'); }
   function ul(items) { return el('ul', null, items.map(function (t) { return el('li', null, [rich(t)]); })); }
+  function kvList(items) {
+    var box = el('div', { class: 'kv' });
+    items.forEach(function (t) {
+      var m = t.match(/^\*\*([^*]+)\*\*\s*:\s*([\s\S]*)$/);
+      if (m) box.appendChild(el('div', { class: 'kv-row' }, [el('div', { class: 'kv-k', text: m[1] }), el('div', { class: 'kv-v' }, [rich(m[2])])]));
+      else box.appendChild(el('div', { class: 'kv-row kv-full' }, [el('div', { class: 'kv-v' }, [rich(t)])]));
+    });
+    return box;
+  }
+  function stepLabel(titre, i) {
+    var m = titre.match(/^(Séance|Temps|Étape|Phase)\s*(\d+[A-Z]?)\s*(\([^)]*\))?\s*[–-]\s*(.+)$/);
+    return m ? { kind: m[1], n: m[2], note: m[3] ? m[3].slice(1, -1) : '', title: m[4] } : { kind: null, n: String(i + 1), note: '', title: titre };
+  }
   function plural(n, s, p) { return n + ' ' + (n > 1 ? (p || s + 's') : s); }
 
   var ICONS = {
@@ -58,6 +71,16 @@
     textsize: 'M3 19L8 6l5 13M5 14h6M15 19l3-7 3 7M16 17h4',
     bulb: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V16h8v-2.5A6 6 0 0 0 12 3z',
     arrow: 'M5 12h14M13 6l6 6-6 6',
+    hospital: 'M3 21h18M5 21V8l7-5 7 5v13M10 12h4M12 10v4M10 21v-4h4v4',
+    box: 'M21 8l-9-5-9 5v8l9 5 9-5V8zM3 8l9 5 9-5M12 13v8',
+    list: 'M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2',
+    steps: 'M5 4v16M5 7h9M5 12h14M5 17h7',
+    clip: 'M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1zM8 6H6a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-2M9 12l2 2 4-4',
+    chat: 'M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z',
+    cal: 'M4 6h16v14H4zM4 10h16M8 3v4M16 3v4',
+    book: 'M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5zM19 19v2H6',
+    clock: 'M12 7v5l3 2M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z',
+    user: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0',
     tooth: 'M12 6.5C11 5.3 9.8 4.5 8.3 4.5 6 4.5 4.5 6.3 4.5 8.8c0 2 .8 3.2 1.3 5 .5 1.9.6 4.2 1.2 5.7.3.8 1.3.8 1.6 0 .5-1.3.9-3.5 3.4-3.5s2.9 2.2 3.4 3.5c.3.8 1.3.8 1.6 0 .6-1.5.7-3.8 1.2-5.7.5-1.8 1.3-3 1.3-5 0-2.5-1.5-4.3-3.8-4.3-1.5 0-2.7.8-3.7 2z'
   };
   function icon(name, size, sw) {
@@ -281,7 +304,7 @@
     opts = opts || {};
     var d = el('details', { class: 'acc ' + (opts.cls || ''), id: id });
     if (opts.open) d.setAttribute('open', '');
-    var sum = el('summary', null, [el('h2', { text: titre }), opts.count ? el('span', { class: 'cnt', text: String(opts.count) }) : null, el('span', { class: 'chev' }, [icon('chev', 20)])]);
+    var sum = el('summary', null, [opts.icon ? el('span', { class: 'acc-ico' }, [icon(opts.icon, 20, '2')]) : null, el('h2', { text: titre }), opts.count ? el('span', { class: 'cnt', text: String(opts.count) }) : null, el('span', { class: 'chev' }, [icon('chev', 20)])]);
     d.appendChild(sum); d.appendChild(el('div', { class: 'acc-body' }, [body])); return d;
   }
 
@@ -330,18 +353,38 @@
     var secs = [], toc = [];
     function add(id, label, node) { secs.push(node); toc.push({ id: id, label: label }); }
 
-    if (p.hopital && p.hopital.length) {
-      add('s-hopital', 'Pratique CHU', acc('s-hopital', 'Pratique au CHU de Dijon', el('div', null, [el('p', { class: 'hint', text: 'Conduite et matériaux du service (transmis par l\'équipe). Prévaut sur les éléments génériques ci-dessous.' }), ul(p.hopital)]), { cls: 'hosp', open: true }));
+    if (p.etapes && p.etapes.length) {
+      var nVal = p.etapes.filter(function (x) { return x.validation; }).length;
+      var facts = el('div', { class: 'facts' });
+      function fact(ic, big, small) { facts.appendChild(el('div', { class: 'fact' }, [icon(ic, 20, '2'), el('div', null, [el('b', { text: big }), el('small', { text: small })])])); }
+      if (p.duree) fact('clock', p.duree, 'durée');
+      fact('steps', String(p.etapes.length), p.etapes.length > 1 ? 'étapes' : 'étape');
+      if (nVal) fact('check', String(nVal), nVal > 1 ? 'validations encadrant' : 'validation encadrant');
+      if (p._todoN) fact('warn', String(p._todoN), 'à préciser');
+      var ovl = el('ol', { class: 'ov-steps' });
+      p.etapes.forEach(function (x, i) {
+        var lab = stepLabel(x.titre, i);
+        ovl.appendChild(el('li', null, [el('a', { href: '#step-' + i, 'data-step': String(i) }, [el('span', { class: 'ov-n', text: lab.n }), el('span', { class: 'ov-t' }, [document.createTextNode(lab.title)]), x.validation ? el('span', { class: 'ov-v', title: 'Validation encadrant' }, [icon('check', 14, '3')]) : null])]));
+      });
+      ovl.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[data-step]'); if (!a) return; e.preventDefault();
+        var box = document.getElementById('s-etapes'); if (box) box.setAttribute('open', '');
+        var st = document.getElementById('step-' + a.getAttribute('data-step')); if (st) st.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      add('s-apercu', 'Aperçu', el('section', { class: 'overview', id: 's-apercu' }, [el('h2', { text: 'Aperçu de la fiche' }), facts, el('h3', { class: 'ov-h', text: 'Les étapes d\'un coup d\'œil' }), ovl]));
     }
-    if (p.alertes && p.alertes.length) add('s-alertes', 'Vigilance', acc('s-alertes', 'Points de vigilance', ul(p.alertes), { cls: 'alert', open: true }));
+    if (p.hopital && p.hopital.length) {
+      add('s-hopital', 'Pratique CHU', acc('s-hopital', 'Pratique au CHU de Dijon', el('div', null, [el('p', { class: 'hint', text: 'Conduite et matériaux du service (transmis par l\'équipe). Prévaut sur les éléments génériques ci-dessous.' }), kvList(p.hopital)]), { cls: 'hosp', open: true, icon: 'hospital' }));
+    }
+    if (p.alertes && p.alertes.length) add('s-alertes', 'Vigilance', acc('s-alertes', 'Points de vigilance', ul(p.alertes), { cls: 'alert', open: true, icon: 'warn' }));
     if (p.indications || p.contreIndications) {
       var two = el('div', { class: 'two' });
       if (p.indications) two.appendChild(el('div', null, [el('h3', { text: 'Indications' }), ul(p.indications)]));
       if (p.contreIndications) two.appendChild(el('div', null, [el('h3', { text: 'Contre-indications / précautions' }), ul(p.contreIndications)]));
-      add('s-indic', 'Indications', acc('s-indic', 'Indications et précautions', two, { open: !narrow }));
+      add('s-indic', 'Indications', acc('s-indic', 'Indications et précautions', two, { open: !narrow, icon: 'clip', cls: 'sec-blue' }));
     }
-    if (p.prerequis && p.prerequis.length) add('s-prereq', 'Pré-requis', acc('s-prereq', 'Pré-requis', ul(p.prerequis), { open: !narrow }));
-    if (p.materiel && p.materiel.length) add('s-mat', 'Matériel', acc('s-mat', 'Matériel', ul(p.materiel), { open: !narrow, count: p.materiel.length }));
+    if (p.prerequis && p.prerequis.length) add('s-prereq', 'Pré-requis', acc('s-prereq', 'Pré-requis', ul(p.prerequis), { open: !narrow, icon: 'list', cls: 'sec-blue' }));
+    if (p.materiel && p.materiel.length) add('s-mat', 'Matériel', acc('s-mat', 'Matériel à préparer', ul(p.materiel), { open: !narrow, count: p.materiel.length, icon: 'box', cls: 'sec-blue' }));
 
     if (p.etapes && p.etapes.length) {
       var bar = el('i'), label = el('span');
@@ -357,28 +400,30 @@
         done = {}; save2(); Array.prototype.forEach.call(steps.children, function (li) { li.classList.remove('done'); li.querySelector('.step-n').setAttribute('aria-pressed', 'false'); }); update();
       } });
       p.etapes.forEach(function (s, i) {
-        var li = el('li', { class: 'step' + (done[i] ? ' done' : '') });
-        var n = el('button', { class: 'step-n', type: 'button', 'aria-pressed': done[i] ? 'true' : 'false', 'aria-label': 'Marquer l\'étape ' + (i + 1) + ' comme faite', onclick: function () {
+        var lab = stepLabel(s.titre, i);
+        var li = el('li', { class: 'step' + (done[i] ? ' done' : ''), id: 'step-' + i });
+        var n = el('button', { class: 'step-n', type: 'button', 'data-n': lab.n, 'aria-pressed': done[i] ? 'true' : 'false', 'aria-label': 'Marquer l\'étape ' + lab.n + ' comme faite', onclick: function () {
           done[i] = !done[i]; li.classList.toggle('done', !!done[i]); n.setAttribute('aria-pressed', done[i] ? 'true' : 'false'); save2(); update();
         } });
-        var body = el('div', { class: 'step-body' }, [el('h3', { text: s.titre })]);
+        var head = el('div', { class: 'step-head' }, [lab.kind ? el('span', { class: 'eyebrow', text: lab.kind + ' ' + lab.n }) : null, el('h3', { text: lab.title }), lab.note ? el('p', { class: 'step-note', text: lab.note.charAt(0).toUpperCase() + lab.note.slice(1) }) : null]);
+        var body = el('div', { class: 'step-body' }, [head]);
         if (s.details && s.details.length) body.appendChild(ul(s.details));
         if (s.materiel && s.materiel.length) {
-          var m = el('div', { class: 'mat' }, [el('span', { class: 'lbl', text: 'Matériel' })]);
+          var m = el('div', { class: 'mat' }, [el('span', { class: 'lbl' }, [icon('box', 15, '2'), document.createTextNode('Matériel')])]);
           s.materiel.forEach(function (x) { m.appendChild(el('span', { class: 'm' }, [rich(x)])); }); body.appendChild(m);
         }
-        if (s.validation) body.appendChild(el('div', { class: 'valid' }, [icon('check', 16, '2.4'), document.createTextNode('À faire valider par l\'encadrant' + (typeof s.validation === 'string' ? ' : ' + s.validation : ''))]));
-        if (s.astuce) body.appendChild(el('div', { class: 'tip' }, [el('strong', { text: 'À retenir : ' }), rich(s.astuce)]));
+        if (s.validation) body.appendChild(el('div', { class: 'valid' }, [icon('check', 18, '2.6'), el('span', null, [el('strong', { text: 'À faire valider par l\'encadrant' }), document.createTextNode(typeof s.validation === 'string' ? ' : ' + s.validation : '')])]));
+        if (s.astuce) body.appendChild(el('div', { class: 'tip' }, [icon('bulb', 18, '2'), el('span', null, [el('strong', { text: 'À retenir : ' }), rich(s.astuce)])]));
         li.appendChild(n); li.appendChild(body); steps.appendChild(li);
       });
       update();
-      add('s-etapes', 'Déroulement', acc('s-etapes', 'Déroulement', el('div', null, [el('div', { class: 'progress-wrap' }, [prog]), steps, reset]), { open: true, count: p.etapes.length }));
+      add('s-etapes', 'Déroulement', acc('s-etapes', 'Déroulement', el('div', null, [el('div', { class: 'progress-wrap' }, [prog]), steps, reset]), { open: true, count: p.etapes.length, icon: 'steps', cls: 'main-acc' }));
     }
-    if (p.consignes && p.consignes.length) add('s-consignes', 'Consignes patient', acc('s-consignes', 'Consignes à donner au patient', ul(p.consignes), { open: !narrow }));
-    if (p.suivi && p.suivi.length) add('s-suivi', 'Suivi', acc('s-suivi', 'Suivi', ul(p.suivi), { open: !narrow }));
-    if (p.complications && p.complications.length) add('s-compl', 'Complications', acc('s-compl', 'Complications et conduite à tenir', ul(p.complications), { open: false }));
-    if (p.erreurs && p.erreurs.length) add('s-erreurs', 'Erreurs fréquentes', acc('s-erreurs', 'Erreurs fréquentes à éviter', ul(p.erreurs), { open: false }));
-    if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false }));
+    if (p.consignes && p.consignes.length) add('s-consignes', 'Consignes patient', acc('s-consignes', 'Consignes à donner au patient', ul(p.consignes), { open: !narrow, icon: 'chat', cls: 'sec-ok' }));
+    if (p.suivi && p.suivi.length) add('s-suivi', 'Suivi', acc('s-suivi', 'Suivi', ul(p.suivi), { open: !narrow, icon: 'cal', cls: 'sec-blue' }));
+    if (p.complications && p.complications.length) add('s-compl', 'Complications', acc('s-compl', 'Complications et conduite à tenir', ul(p.complications), { open: false, icon: 'warn', cls: 'sec-warn' }));
+    if (p.erreurs && p.erreurs.length) add('s-erreurs', 'Erreurs fréquentes', acc('s-erreurs', 'Erreurs fréquentes à éviter', ul(p.erreurs), { open: false, icon: 'close', cls: 'sec-danger' }));
+    if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false, icon: 'book', cls: 'sec-grey' }));
     if (p._todoN) add('s-todo', 'À préciser', acc('s-todo', 'Points à préciser par le service', ul(p._todos), { cls: 'todo-acc', open: false, count: p._todoN }));
 
     // sommaire (barre mobile + colonne desktop)
@@ -396,7 +441,7 @@
     bar2.addEventListener('click', jump); side.addEventListener('click', jump);
 
     frag.appendChild(bar2);
-    frag.appendChild(el('div', { class: 'pwrap' }, [el('div', null, secs), side]));
+    frag.appendChild(el('div', { class: 'pwrap', style: colorStyle(d) }, [el('div', null, secs), side]));
     mount(frag);
 
     // section active dans le sommaire
