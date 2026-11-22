@@ -37,6 +37,27 @@
   }
   function plain(text) { return String(text).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/\[([^\[\]]+)\]\(https?:\/\/[^)\s]+\)/g, '$1'); }
   function ul(items) { return el('ul', null, items.map(function (t) { return el('li', null, [rich(t)]); })); }
+
+  function annexeBody(x) {
+    var box = el('div', { class: 'annexe' });
+    if (x.intro) box.appendChild(el('p', { class: 'hint' }, [rich(x.intro)]));
+    if (x.table) {
+      var cols = x.table.cols, tb = el('table', { class: 'rtable' });
+      tb.appendChild(el('thead', null, [el('tr', null, cols.map(function (c) { return el('th', { scope: 'col', text: c }); }))]));
+      tb.appendChild(el('tbody', null, x.table.rows.map(function (r) {
+        return el('tr', null, r.map(function (c, j) { return el(j === 0 ? 'th' : 'td', j === 0 ? { scope: 'row', 'data-label': cols[j] } : { 'data-label': cols[j] }, [rich(c)]); }));
+      })));
+      box.appendChild(el('div', { class: 'rtable-wrap' }, [tb]));
+    }
+    (x.sections || []).forEach(function (z) {
+      var sec = el('div', { class: 'asec' }, [el('h3', { text: z.titre })]);
+      if (z.texte) sec.appendChild(el('p', null, [rich(z.texte)]));
+      if (z.items && z.items.length) sec.appendChild(ul(z.items));
+      if (z.alerte) sec.appendChild(el('div', { class: 'tip' }, [icon('warn', 18, '2'), el('span', null, [rich(z.alerte)])]));
+      box.appendChild(sec);
+    });
+    return box;
+  }
   function kvList(items) {
     var box = el('div', { class: 'kv' });
     items.forEach(function (t) {
@@ -118,6 +139,7 @@
       p._todos = uniq(collectTodos(p, []));
       p._todoN = p._todos.reduce(function (n, t) { return n + (t.match(/\[\[[^\]]+\]\]/g) || []).length; }, 0);
       var parts = [d.nom, p.titre, p.resume, (p.indications || []).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.hopital || []).join(' '), (p.consignes || []).join(' ')];
+      (p.annexes || []).forEach(function (x) { parts.push(x.titre, x.intro || ''); (x.table ? x.table.rows : []).forEach(function (r) { parts.push(r.join(' ')); }); (x.sections || []).forEach(function (z) { parts.push(z.titre, z.texte || '', (z.items || []).join(' ')); }); });
       (p.etapes || []).forEach(function (s) { parts.push(s.titre, (s.details || []).join(' '), (s.materiel || []).join(' '), s.astuce || ''); });
       p._hay = norm(plain(parts.join(' ')));
       ALL.push(p);
@@ -336,6 +358,9 @@
       } }, [icon('bulb', 18), el('span', { text: 'Écran allumé' })]);
       actions.push(wakeBtn);
     }
+    if ((p.materiel && p.materiel.length) || (p.etapes || []).some(function (x) { return x.materiel && x.materiel.length; })) {
+      actions.unshift(el('button', { class: 'btn primary', type: 'button', onclick: function () { openPrep(d, p); } }, [icon('box', 18), el('span', { text: 'Préparer la séance' })]));
+    }
     actions.push(el('button', { class: 'btn', type: 'button', onclick: function () { window.print(); } }, [icon('print', 18), el('span', { text: 'Imprimer / PDF' })]));
     actions.push(el('button', { class: 'btn', type: 'button', onclick: function () {
       var data = { title: p.titre, text: p.resume, url: location.href };
@@ -419,6 +444,9 @@
       update();
       add('s-etapes', 'Déroulement', acc('s-etapes', 'Déroulement', el('div', null, [el('div', { class: 'progress-wrap' }, [prog]), steps, reset]), { open: true, count: p.etapes.length, icon: 'steps', cls: 'main-acc' }));
     }
+    (p.annexes || []).forEach(function (x, i) {
+      add('s-annexe-' + i, x.court || x.titre, acc('s-annexe-' + i, x.titre, annexeBody(x), { open: false, icon: x.icone || 'book', cls: 'sec-blue' }));
+    });
     if (p.consignes && p.consignes.length) add('s-consignes', 'Consignes patient', acc('s-consignes', 'Consignes à donner au patient', ul(p.consignes), { open: !narrow, icon: 'chat', cls: 'sec-ok' }));
     if (p.suivi && p.suivi.length) add('s-suivi', 'Suivi', acc('s-suivi', 'Suivi', ul(p.suivi), { open: !narrow, icon: 'cal', cls: 'sec-blue' }));
     if (p.complications && p.complications.length) add('s-compl', 'Complications', acc('s-compl', 'Complications et conduite à tenir', ul(p.complications), { open: false, icon: 'warn', cls: 'sec-warn' }));
@@ -459,6 +487,113 @@
       toc.forEach(function (t) { var n = document.getElementById(t.id); if (n) io.observe(n); });
       window._io = io;
     }
+  }
+
+
+  // --- liste de matériel (« Préparer la séance ») ---
+  function openPrep(d, p) {
+    var key = 'prep:' + d.id + ':' + p.id;
+    var checked = load(key, {});
+    var stepsWith = (p.etapes || []).map(function (st, i) { return { i: i, lab: stepLabel(st.titre, i), items: st.materiel || [] }; }).filter(function (x) { return x.items.length; });
+    var general = p.materiel || [];
+    var mode = stepsWith.length ? 'steps' : 'gen', sel = null;
+    var opener = document.activeElement;
+    var wrap = el('div', { class: 'sheet-wrap' });
+    var sheet = el('div', { class: 'sheet', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'Préparer la séance' });
+    wrap.appendChild(sheet);
+    function k(t) { return norm(plain(t)); }
+    function visibleGroups() {
+      if (mode === 'gen') return [{ title: null, items: general }];
+      return stepsWith.filter(function (x) { return sel == null || sel === x.i; }).map(function (x) { return { title: (x.lab.kind ? x.lab.kind + ' ' + x.lab.n + ' · ' : '') + x.lab.title, items: x.items }; });
+    }
+    function uniqueKeys(groups) {
+      var seen = {}, out = [];
+      groups.forEach(function (g) { g.items.forEach(function (t) { var kk = k(t); if (!seen[kk]) { seen[kk] = 1; out.push(kk); } }); });
+      return out;
+    }
+    function close() {
+      document.removeEventListener('keydown', onKey); wrap.remove(); document.body.classList.remove('no-scroll');
+      if (opener && opener.focus) try { opener.focus(); } catch (e) {}
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key === 'Tab') {
+        var f = sheet.querySelectorAll('button,input,[tabindex]:not([tabindex="-1"])'); if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+    function render(focusSel) {
+      var groups = visibleGroups(), keys = uniqueKeys(groups);
+      var n = keys.filter(function (kk) { return checked[kk]; }).length;
+      sheet.textContent = '';
+      var closeB = el('button', { class: 'icon-btn sheet-x', type: 'button', 'aria-label': 'Fermer', onclick: close }, [icon('close', 20)]);
+      sheet.appendChild(el('div', { class: 'sheet-head' }, [el('div', null, [el('h2', { text: 'Préparer la séance' }), el('p', { class: 'muted', text: p.titre })]), closeB]));
+      var body = el('div', { class: 'sheet-body' });
+      if (stepsWith.length && general.length) {
+        var tabs = el('div', { class: 'seg', role: 'tablist' });
+        [['steps', 'Par séance'], ['gen', 'Liste générale']].forEach(function (t) {
+          tabs.appendChild(el('button', { type: 'button', role: 'tab', class: mode === t[0] ? 'on' : '', 'aria-selected': mode === t[0] ? 'true' : 'false', text: t[1], onclick: function () { mode = t[0]; render('seg'); } }));
+        });
+        body.appendChild(tabs);
+      }
+      if (mode === 'steps' && stepsWith.length > 1) {
+        var chips = el('div', { class: 'pchips' });
+        chips.appendChild(el('button', { type: 'button', class: 'pchip' + (sel == null ? ' on' : ''), text: 'Tout', onclick: function () { sel = null; render('chip'); } }));
+        stepsWith.forEach(function (x) {
+          chips.appendChild(el('button', { type: 'button', class: 'pchip' + (sel === x.i ? ' on' : ''), text: x.lab.kind ? x.lab.kind + ' ' + x.lab.n : String(x.lab.n), title: x.lab.title, onclick: function () { sel = x.i; render('chip'); } }));
+        });
+        body.appendChild(chips);
+      }
+      var prog = el('div', { class: 'prep-prog' }, [el('strong', { text: n + ' / ' + keys.length + ' prêts' }), el('div', { class: 'bar' }, [el('i', { style: 'width:' + (keys.length ? 100 * n / keys.length : 0) + '%' })])]);
+      body.appendChild(prog);
+      if (n === keys.length && keys.length) body.appendChild(el('p', { class: 'prep-done', text: 'Tout est prêt. Bonne séance !' }));
+      groups.forEach(function (g) {
+        var box = el('div', { class: 'prep-group' });
+        if (g.title) box.appendChild(el('h3', { text: g.title }));
+        var list = el('ul', { class: 'prep-list' });
+        g.items.forEach(function (t) {
+          var kk = k(t), id = 'pp' + Math.random().toString(36).slice(2, 8);
+          var cb = el('input', { type: 'checkbox', id: id });
+          cb.checked = !!checked[kk];
+          cb.addEventListener('change', function () { if (cb.checked) checked[kk] = true; else delete checked[kk]; save(key, checked); render('cb:' + kk); });
+          list.appendChild(el('li', { class: checked[kk] ? 'on' : '' }, [el('label', { 'for': id }, [cb, el('span', null, [rich(t)])])]));
+        });
+        box.appendChild(list); body.appendChild(box);
+      });
+      if (!keys.length) body.appendChild(el('p', { class: 'muted', text: 'Aucun matériel renseigné pour cette fiche.' }));
+      sheet.appendChild(body);
+      var copyB = el('button', { class: 'btn', type: 'button', onclick: function () {
+        var lines = [p.titre];
+        groups.forEach(function (g) { if (g.title) lines.push('', g.title); g.items.forEach(function (t) { lines.push((checked[k(t)] ? '[x] ' : '[ ] ') + plain(t)); }); });
+        var txt = lines.join('\n');
+        var ok = function () { copyB.lastChild.textContent = 'Copié'; setTimeout(function () { copyB.lastChild.textContent = 'Copier la liste'; }, 1600); };
+        if (navigator.clipboard) navigator.clipboard.writeText(txt).then(ok, function () { prompt('Copiez la liste :', txt); }); else prompt('Copiez la liste :', txt);
+      } }, [icon('link', 16), el('span', { text: 'Copier la liste' })]);
+      sheet.appendChild(el('div', { class: 'sheet-foot' }, [
+        el('button', { class: 'btn', type: 'button', text: 'Tout cocher', onclick: function () { keys.forEach(function (kk) { checked[kk] = true; }); save(key, checked); render('foot'); } }),
+        el('button', { class: 'btn', type: 'button', text: 'Réinitialiser', onclick: function () { keys.forEach(function (kk) { delete checked[kk]; }); save(key, checked); render('foot'); } }),
+        copyB,
+        el('button', { class: 'btn primary', type: 'button', text: 'Fermer', onclick: close })
+      ]));
+      var target = null, keepScroll = false;
+      if (focusSel && focusSel.slice(0, 3) === 'cb:') {
+        var want = focusSel.slice(3), boxes = sheet.querySelectorAll('.prep-list input'), gi = 0;
+        groups.forEach(function (g) { g.items.forEach(function (t) { if (!target && k(t) === want) target = boxes[gi]; gi++; }); });
+        keepScroll = true;
+      }
+      else if (focusSel === 'seg') target = sheet.querySelector('.seg .on');
+      else if (focusSel === 'chip') target = sheet.querySelector('.pchip.on');
+      else if (focusSel === 'foot') target = sheet.querySelector('.sheet-foot .btn');
+      else target = sheet.querySelector('.sheet-x');
+      if (target) try { target.focus({ preventScroll: keepScroll }); } catch (e) {}
+    }
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+    document.addEventListener('keydown', onKey);
+    document.body.classList.add('no-scroll');
+    document.body.appendChild(wrap);
+    render();
   }
 
   // --- recherche ---

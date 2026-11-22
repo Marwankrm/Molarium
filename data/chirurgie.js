@@ -5,7 +5,7 @@ window.DISCIPLINES.push({
   nom: "Chirurgie orale",
   sigle: "CH",
   couleur: "#1d6b3a",
-  description: "Avulsions simples et multiples, avulsion chirurgicale, dents de sagesse, biopsie, fermeture de CBS et patients sous antithrombotiques.",
+  description: "Avulsions simples et multiples, avulsion chirurgicale, dents de sagesse, fermeture de CBS et patients sous antithrombotiques.",
   protocoles: [
     {
       id: "avulsion-simple",
@@ -17,11 +17,11 @@ window.DISCIPLINES.push({
       sourceType: "Pratique du service (CHU) + recommandations HAS 2019 / HAS 2026 / SFCO 2015",
       maj: "2026-11",
       hopital: [
-        "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **Septodont avec adrénaline 1/200 000**",
+        "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
-        "**Hémostase locale après l'avulsion** : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique), puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** [[concentration de l'ampoule à préciser]]",
+        "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
         "**Validation par l'encadrant** : **une fois la dent extraite**",
         "**Consignes** remises au patient ; **contrôle à 7 jours**",
@@ -32,10 +32,10 @@ window.DISCIPLINES.push({
       prerequis: ["Questionnaire médical à jour, risque évalué (voir fiche « Consultation initiale »)", "Radiographie pré-opératoire : rapports radiculaires, sinus, canal alvéolaire inférieur", "Consentement éclairé"],
       materiel: [
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste (HAS 2026 : 0,1 à 0,2 %) et irrigation",
-        "Anesthésique **Septodont avec adrénaline 1/200 000** [[molécule à préciser]] et seringue",
+        "Anesthésique **articaïne Septodont avec adrénaline 1/200 000** et seringue",
         "Syndesmotome, élévateurs, daviers adaptés à la dent (tous types disponibles)",
         "Curette alvéolaire, compresses stériles, seringue d'irrigation",
-        "Hémostase locale (SFCO 2015) : éponges résorbables de collagène ou de gélatine, gaze de cellulose, colle de cyanoacrylate, sutures ; au service : **Cellistypt** (cellulose oxydée résorbable)",
+        "Hémostase locale (SFCO 2015) : éponges résorbables de collagène ou de gélatine, gaze de cellulose, colle de cyanoacrylate, sutures ; **au service, pour les patients à risque hémorragique** : **Cellistypt** ou **Pangen**, puis acide tranexamique en ampoule",
         "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm)"
       ],
       alertes: [
@@ -43,6 +43,7 @@ window.DISCIPLINES.push({
         "Elle est **recommandée chez les patients à risque infectieux augmenté** (accord d'experts) et chez les patients à **haut risque d'ostéonécrose des mâchoires** (grade C). Schéma adulte de 1re intention : **amoxicilline 2 g par voie orale, 30 à 60 min avant l'acte** (enfant : 50 mg/kg, sans dépasser 2 g).",
         "**Anesthésie intraligamentaire** : la HAS 2026 la réserve à la 2e intention, surtout chez le patient à haut risque d'ostéonécrose.",
         "Avulsion d'une dent unitaire = **chirurgie à faible risque hémorragique** : le traitement antithrombotique est poursuivi, l'hémostase locale est systématique (SFCO 2015, grade A).",
+        "**Protocole hémostase du service** (Cellistypt ou Pangen, puis acide tranexamique) : **réservé aux patients à risque hémorragique**, c'est-à-dire, selon la SFCO 2015, **traités par antithrombotiques** (antiplaquettaires, anticoagulants). La recommandation ne couvre pas les autres troubles de l'hémostase (maladie constitutionnelle, thrombopénie, atteinte hépatique…) : avis du médecin référent.",
         "Vérifier la dent à avulser avec le patient et la radiographie (côté, numéro)."
       ],
       etapes: [
@@ -51,17 +52,17 @@ window.DISCIPLINES.push({
         { titre: "Temps 3 – Syndesmotomie et luxation", details: ["Désinsertion de l'attache gingivale (syndesmotome)", "Luxation à l'élévateur, appui sur l'os et non sur la dent voisine"], materiel: ["syndesmotome", "élévateur"] },
         { titre: "Temps 4 – Extraction", details: ["Préhension au davier au plus près du collet, mouvements adaptés à l'anatomie radiculaire", "Si résistance : chercher la cause (ankylose, courbure, hypercémentose) plutôt que forcer ; séparer les racines si besoin"], materiel: ["daviers adaptés"], validation: "dent extraite" },
         { titre: "Temps 5 – Contrôle de l'alvéole et irrigation", details: ["Curetage du tissu de granulation ; vérification de l'intégrité de la dent extraite", "**Irrigation à la chlorhexidine** ; rapprochement des berges osseuses par pression"], materiel: ["curette", "seringue d'irrigation", "chlorhexidine"] },
-        { titre: "Temps 6 – Hémostase locale et suture", details: ["Compression par compresses ; si nécessaire, éponge résorbable dans l'alvéole", "**Suture au fil 4-0** : point simple ou point en croix selon l'alvéole ; patient sous antithrombotique : hémostase locale systématique + acide tranexamique selon prescription [[produit et concentration à préciser]]"], materiel: ["fil 4-0", "porte-aiguille et pince", "compresses", "Cellistypt (cellulose oxydée résorbable)"] },
-        { titre: "Temps 7 – Consignes et prescription", details: ["**Consignes remises au patient** ; numéro à appeler en cas de saignement persistant", "Antalgiques : paracétamol en 1re intention [[prescription du service]] ; antibiotiques uniquement dans les situations listées plus haut"], materiel: ["fiche de consignes", "ordonnance"] }
+        { titre: "Temps 6 – Hémostase locale et suture", details: ["Compression par compresses ; si nécessaire, éponge résorbable dans l'alvéole", "**Patient à risque hémorragique** (SFCO 2015 : patient traité par antithrombotique) : **protocole hémostase** : **Cellistypt** ou **Pangen** dans l'alvéole, puis **acide tranexamique en ampoule** (compresse imbibée sur l'alvéole ou application directe)", "**Suture au fil 4-0** : point simple ou point en croix selon l'alvéole"], materiel: ["fil 4-0", "porte-aiguille et pince", "compresses", "Cellistypt ou Pangen (patient à risque)", "acide tranexamique en ampoule (patient à risque)"] },
+        { titre: "Temps 7 – Consignes et prescription", details: ["**Consignes remises au patient** ; saignement persistant : appeler le **15** ou venir aux **urgences dentaires**", "Antalgiques : **paracétamol en 1re intention** ; antibiotiques uniquement dans les situations listées plus haut"], materiel: ["fiche de consignes", "ordonnance"] }
       ],
       consignes: [
         "**24 premières heures** : ne pas rincer ni cracher avec force, pas de tabac ni d'alcool, alimentation **froide ou tiède et molle**, mâcher du côté opposé.",
         "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
         "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
-        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine** à partir de J1 [[concentration et durée à préciser]].",
+        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
         "**Antalgiques** : paracétamol en première intention ; ibuprofène 400 mg possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
         "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
-        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **numéro d'urgence à remettre** [[numéro du service à préciser]].",
+        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
       ],
       erreurs: [
@@ -70,7 +71,7 @@ window.DISCIPLINES.push({
         "Appui de l'élévateur sur la dent voisine ou sur une paroi fragile",
         "Alvéole non curetée ni irriguée",
         "Hémostase locale oubliée chez un patient sous antithrombotique",
-        "Consignes non remises ou numéro d'urgence absent"
+        "Consignes non remises ou urgences (le 15, urgences dentaires) non rappelées"
       ],
       suivi: ["**Contrôle à 7 jours** (cicatrisation) ; fils résorbables, pas de dépose", "Contrôle téléphonique à 24-48 h pour les patients sous antithrombotiques"],
       complications: ["Hémorragie non contrôlée par compression : reprise chirurgicale de l'hémostase (anesthésie locale, curetage du caillot, révision, hémostase locale) ; hospitalisation si persistance (SFCO 2015)", "Alvéolite : soins locaux et antalgiques ; antibiotiques non systématiques (HAS 2026)", "Communication bucco-sinusienne : antibiothérapie recommandée (amoxicilline 1 g × 2/j pendant 5 jours, HAS 2026) et avis du senior"],
@@ -90,11 +91,11 @@ window.DISCIPLINES.push({
       sourceType: "Pratique du service (CHU) + recommandations HAS 2026 / SFCO 2015 – à compléter",
       maj: "2026-11",
       hopital: [
-        "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **Septodont avec adrénaline 1/200 000**",
+        "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
-        "**Hémostase locale après l'avulsion** : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique), puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** [[concentration de l'ampoule à préciser]]",
+        "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
         "**Validation par l'encadrant** : **une fois la dent extraite**",
         "**Consignes** remises au patient ; **contrôle à 7 jours**",
@@ -105,9 +106,9 @@ window.DISCIPLINES.push({
       prerequis: ["Panoramique ; **CBCT selon le cas**", "Plan par quadrant : nombre de dents, ordre de passage, séances prévues", "Consentement éclairé, risque médical évalué"],
       materiel: [
         "**Chlorhexidine 0,2 %** (bain de bouche avant le geste, irrigation)",
-        "Anesthésie adaptée à chaque dent [[produit à préciser]]",
+        "Anesthésie adaptée à chaque dent (**articaïne Septodont avec adrénaline 1/200 000**)",
         "Syndesmotomes, élévateurs et daviers selon les dents ; pince gouge ou fraise pour la régularisation osseuse",
-        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; hémostatique local **Cellistypt** (cellulose oxydée résorbable)"
+        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; patient à risque hémorragique : **Cellistypt** ou **Pangen**"
       ],
       alertes: [
         "**Risque hémorragique (SFCO 2015)** : avulsions multiples **dans un même quadrant** = faible risque ; **dans plusieurs quadrants** = **risque élevé**. Chez un patient sous antithrombotique, fractionner les séances (approche segmentaire).",
@@ -119,17 +120,17 @@ window.DISCIPLINES.push({
         { titre: "Temps 2 – Anesthésie", details: ["Anesthésie adaptée à chaque dent : para-apicale, tronculaire ou intraligamentaire (2e intention selon la HAS 2026)", "Contrôle de l'efficacité avant chaque avulsion"], materiel: ["anesthésique", "seringue"] },
         { titre: "Temps 3 – Avulsions successives", details: ["Syndesmotomie, luxation, extraction de chaque dent, dent par dent", "Si résistance : séparation des racines ou abord chirurgical (voir la fiche dédiée)"], materiel: ["syndesmotomes", "élévateurs", "daviers"], validation: "dents extraites" },
         { titre: "Temps 4 – Révision, régularisation osseuse et irrigation", details: ["Curetage de chaque alvéole ; **régularisation osseuse** des crêtes si une prothèse est prévue", "**Irrigation à la chlorhexidine**"], materiel: ["curette", "pince gouge ou fraise", "chlorhexidine"] },
-        { titre: "Temps 5 – Hémostase et sutures", details: ["Compression ; éponge résorbable si besoin ; **sutures au fil 4-0** (points simples ou en croix) après rapprochement des berges", "Patient sous antithrombotique : hémostase locale systématique, séances fractionnées"], materiel: ["fil 4-0", "porte-aiguille", "Cellistypt (cellulose oxydée résorbable)"] },
-        { titre: "Temps 6 – Consignes et prescription", details: ["**Consignes remises au patient**, numéro d'urgence", "Prescriptions selon la HAS 2026 et le profil du patient [[à valider avec le service]]"], materiel: ["fiche de consignes", "ordonnance"] }
+        { titre: "Temps 5 – Hémostase et sutures", details: ["Compression ; éponge résorbable si besoin ; **sutures au fil 4-0** (points simples ou en croix) après rapprochement des berges", "**Patient à risque hémorragique** (SFCO 2015 : patient traité par antithrombotique) : **protocole hémostase** (Cellistypt ou Pangen, puis acide tranexamique), séances fractionnées"], materiel: ["fil 4-0", "porte-aiguille", "Cellistypt ou Pangen (patient à risque)", "acide tranexamique en ampoule (patient à risque)"] },
+        { titre: "Temps 6 – Consignes et prescription", details: ["**Consignes remises au patient**, urgence : le **15** ou les **urgences dentaires**", "Prescriptions selon la HAS 2026 et le profil du patient ; antalgique de 1re intention : **paracétamol**"], materiel: ["fiche de consignes", "ordonnance"] }
       ],
       consignes: [
         "**24 premières heures** : ne pas rincer ni cracher avec force, pas de tabac ni d'alcool, alimentation **froide ou tiède et molle**, mâcher du côté opposé.",
         "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
         "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
-        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine** à partir de J1 [[concentration et durée à préciser]].",
+        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
         "**Antalgiques** : paracétamol en première intention ; ibuprofène 400 mg possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
         "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
-        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **numéro d'urgence à remettre** [[numéro du service à préciser]].",
+        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
       ],
       erreurs: [
@@ -156,11 +157,11 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "**Lambeau en enveloppe** (incision intrasulculaire, sans décharge) ; le lambeau triangulaire est réservé aux dents de sagesse",
-        "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **Septodont avec adrénaline 1/200 000**",
+        "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
-        "**Hémostase locale après l'avulsion** : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique), puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** [[concentration de l'ampoule à préciser]]",
+        "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
         "**Validation par l'encadrant** : **une fois la dent extraite**",
         "**Consignes** remises au patient ; **contrôle à 7 jours**",
@@ -171,11 +172,11 @@ window.DISCIPLINES.push({
       prerequis: ["Panoramique ; **CBCT selon le cas** (rapports sinus, canal alvéolaire inférieur, nerf mentonnier)", "Consentement éclairé, risque médical évalué"],
       materiel: [
         "**Chlorhexidine 0,2 %** : bain de bouche avant et **irrigation**",
-        "Anesthésique **Septodont avec adrénaline 1/200 000** [[molécule à préciser]]",
+        "Anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "Bistouri (lame), décolleur, écarteur",
-        "**Pièce à main chirurgicale** (moteur chirurgical) et fraises chirurgicales [[Zekrya ? à confirmer pour l'alvéolectomie]] ; irrigation continue",
+        "**Pièce à main chirurgicale** (moteur chirurgical) et fraises chirurgicales **Zekrya** ; irrigation continue",
         "Élévateurs, daviers, curette, pince gouge",
-        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; hémostatique local **Cellistypt** (cellulose oxydée résorbable)"
+        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; patient à risque hémorragique : **Cellistypt** ou **Pangen**"
       ],
       alertes: [
         "**Antibioprophylaxie non recommandée en population générale** pour une avulsion de dent sur arcade, **avec ou sans alvéolectomie ou séparation de racines** (HAS 2026, grade A) ; recommandée chez les patients à risque infectieux augmenté ou à haut risque d'ostéonécrose.",
@@ -189,17 +190,17 @@ window.DISCIPLINES.push({
         { titre: "Temps 3 – Alvéolectomie", details: ["**Alvéolectomie** (ostéotomie vestibulaire) à la pièce à main chirurgicale **sous irrigation** pour exposer la furcation et les racines", "Épargner l'os au maximum, notamment chez le patient à risque d'ostéonécrose"], materiel: ["pièce à main chirurgicale", "fraises chirurgicales", "irrigation"] },
         { titre: "Temps 4 – Séparation des racines et avulsion", details: ["**Section de la couronne et séparation des racines** à la fraise, puis extraction de chaque racine à l'élévateur ou au davier", "Si fragment inaccessible ou près du sinus/du nerf : s'arrêter et demander l'avis du senior"], materiel: ["fraise", "élévateurs", "daviers"], validation: "dent extraite" },
         { titre: "Temps 5 – Révision et irrigation", details: ["Curetage de l'alvéole, régularisation des arêtes osseuses (pince gouge ou fraise), contrôle de l'absence de fragment", "**Irrigation abondante à la chlorhexidine**"], materiel: ["curette", "pince gouge", "chlorhexidine"] },
-        { titre: "Temps 6 – Hémostase et sutures", details: ["Repositionnement du lambeau et **sutures au fil 4-0**, points simples ou en croix ; hémostase locale si besoin", "Compression par compresses"], materiel: ["fil 4-0", "porte-aiguille", "compresses", "Cellistypt (cellulose oxydée résorbable)"] },
-        { titre: "Temps 7 – Consignes et prescription", details: ["**Consignes remises au patient**, numéro d'urgence", "Prescriptions selon la HAS 2026 [[à valider avec le service]]"], materiel: ["fiche de consignes", "ordonnance"] }
+        { titre: "Temps 6 – Hémostase et sutures", details: ["Repositionnement du lambeau et **sutures au fil 4-0**, points simples ou en croix", "Compression par compresses ; **patient à risque hémorragique** : **protocole hémostase** (Cellistypt ou Pangen, puis acide tranexamique)"], materiel: ["fil 4-0", "porte-aiguille", "compresses", "Cellistypt ou Pangen (patient à risque)", "acide tranexamique en ampoule (patient à risque)"] },
+        { titre: "Temps 7 – Consignes et prescription", details: ["**Consignes remises au patient**, urgence : le **15** ou les **urgences dentaires**", "Prescriptions selon la HAS 2026 ; antalgique de 1re intention : **paracétamol**"], materiel: ["fiche de consignes", "ordonnance"] }
       ],
       consignes: [
         "**24 premières heures** : ne pas rincer ni cracher avec force, pas de tabac ni d'alcool, alimentation **froide ou tiède et molle**, mâcher du côté opposé.",
         "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
         "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
-        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine** à partir de J1 [[concentration et durée à préciser]].",
+        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
         "**Antalgiques** : paracétamol en première intention ; ibuprofène 400 mg possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
         "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
-        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **numéro d'urgence à remettre** [[numéro du service à préciser]].",
+        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
       ],
       erreurs: [
@@ -229,14 +230,14 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "**Dent incluse ou non** : même fiche ; l'antibioprophylaxie dépend de l'inclusion (dent incluse, enclavée ou en désinclusion : recommandée ; dent sur arcade : non recommandée en population générale, HAS 2026)",
-        "**Anesthésie** : tronculaire et locale, selon la dent ; anesthésique **Septodont avec adrénaline 1/200 000**",
+        "**Anesthésie** : tronculaire et locale, selon la dent ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Lambeau triangulaire**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales**",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
-        "**Hémostase locale après l'avulsion** : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique), puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** [[concentration de l'ampoule à préciser]]",
+        "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique ou rétro-alvéolaire ; **CBCT** demandé si **rapport avec le nerf** ou **difficulté visible** sur la rétro-alvéolaire ou le panoramique",
-        "**Ostéotomie à la fraise avec un moteur chirurgical** (pas de piézochirurgie), fraises **Zekrya** [[à confirmer]]",
+        "**Ostéotomie à la fraise avec un moteur chirurgical** (pas de piézochirurgie), fraises **Zekrya**",
         "**Pas de chlorhexidine en gel** (bain de bouche à la chlorhexidine 0,2 %)",
         "**Une seule fiche** pour la dent de sagesse incluse ou non",
         "**Validation par l'encadrant** : **une fois la dent extraite**",
@@ -263,7 +264,7 @@ window.DISCIPLINES.push({
       materiel: [
         "Antiseptique : bain de bouche chlorhexidine 0,1–0,2 % ou povidone iodée 10 % avant le geste (HAS 2026)",
         "Instrumentation de chirurgie : décolleur, écarteur, pince gouge, élévateurs, daviers, curette",
-        "**Moteur chirurgical** et **fraises Zekrya** [[à confirmer]]",
+        "**Moteur chirurgical** et **fraises Zekrya**",
         "**Irrigation à la chlorhexidine** (service) ; la HAS 2019 ne retient aucune supériorité d'un produit de lavage",
         "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm)",
         "Chlorhexidine 0,2 % en **bain de bouche** pour les suites (HAS 2019 : gel ou rinçage, grade B) ; **pas de gel au service**"
@@ -280,7 +281,7 @@ window.DISCIPLINES.push({
         { titre: "Abord", details: ["Anesthésie tronculaire et locale", "**Lambeau triangulaire** muco-périosté (service) ; aucune technique de lambeau n'est privilégiée par la HAS (grade B)", "Protection du nerf lingual (éviter le rétracteur sous-périosté lingual)"] },
         { titre: "Dégagement osseux et avulsion", details: ["**Ostéotomie à la fraise (moteur chirurgical, fraises Zekrya)** sous irrigation ; la HAS 2019 ne privilégie pas la piézochirurgie faute de données suffisantes (grade B)", "Section de la dent en plusieurs fragments si nécessaire", "Coronectomie : cas très exceptionnels uniquement"], validation: "dent extraite", astuce: "La découpe en fragments protège le plus souvent le nerf alvéolaire inférieur." },
         { titre: "Révision alvéolaire et sutures", details: ["Curetage : débris dentaires, poudre d'os, granulome, reliquat de sac péricoronaire", "**Lavage de la cavité à la chlorhexidine** (service ; aucun produit n'est démontré supérieur, HAS 2019)", "**Suture du lambeau recommandée** (HAS 2019) : **fil 4-0, points simples ou en croix** (service)"] },
-        { titre: "Mesures locales complémentaires", details: ["**Bain de bouche à la chlorhexidine** en post-opératoire pour prévenir l'alvéolite (HAS 2019 : gel ou rinçage, grade B) ; pas de gel au service", "PRF et régénération tissulaire guidée : **ne pas utiliser de façon systématique**"] },
+        { titre: "Mesures locales complémentaires", details: ["**Bain de bouche à la chlorhexidine** en post-opératoire (au service : à partir de **48 h**, **pendant 1 semaine**) pour prévenir l'alvéolite (HAS 2019 : gel ou rinçage, grade B) ; pas de gel au service", "PRF et régénération tissulaire guidée : **ne pas utiliser de façon systématique**"] },
         { titre: "Prescription et consignes", details: ["Antalgie : **paracétamol en première intention** ; ibuprofène 400 mg (sans contre-indication, hors contexte infectieux) ou association ibuprofène + paracétamol, à préférer au tramadol", "Feuille de consignes post-opératoires, avec le numéro à appeler ou l'hôpital le plus proche en cas de complication grave"] }
       ],
       suivi: [
@@ -300,122 +301,56 @@ window.DISCIPLINES.push({
       ]
     },
     {
-      id: "biopsie",
-      titre: "Biopsie d'une lésion de la muqueuse buccale",
-      resume: "Prélèvement d'une lésion pour analyse anatomopathologique : choix du site et de la technique (punch, bistouri), fixation, suture et envoi du prélèvement.",
-      duree: "1 séance, 20 à 30 min",
-      niveau: "Interne / étudiant encadré",
-      statut: "brouillon",
-      sourceType: "Revue AHNS 2026 + recommandations HAS 2026 / SFCO 2015 + pratique courante – à compléter",
-      maj: "2026-11",
-      hopital: [
-        "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et irrigation",
-        "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), points simples ou en croix",
-        "**Hémostase locale** : **Cellistypt** (cellulose oxydée résorbable)",
-        "**Consignes** remises au patient ; **contrôle à 7 jours**",
-        "Technique de biopsie, milieu de fixation et circuit d'envoi [[à renseigner par le service]]"
-      ],
-      indications: ["Lésion muqueuse **persistante** sans cause évidente (ulcération, leucoplasie, érythroplasie, tuméfaction)", "Lésion à diagnostic incertain, ou exérèse d'une lésion bénigne de petite taille", "Biopsie osseuse d'une lésion bénigne des mâchoires"],
-      contreIndications: ["Lésion très suspecte de malignité ou étendue : orientation rapide vers le chirurgien maxillo-facial ou le stomatologue [[conduite du service]]", "Troubles de l'hémostase non évalués : voir la fiche antithrombotiques"],
-      prerequis: ["Examen clinique de la lésion (siège, taille, aspect, durée), photographie, examen des aires ganglionnaires", "Consentement éclairé"],
-      materiel: [
-        "**Punch à biopsie** 3, 4 ou 5 mm ou **bistouri** avec lame",
-        "Anesthésique **Septodont avec adrénaline 1/200 000** [[molécule à préciser]] ; **chlorhexidine 0,2 %**",
-        "Pince fine (sans écraser le prélèvement), ciseaux",
-        "**Pot de fixation** étiqueté avec **formol 10 %** [[milieu et circuit à confirmer avec l'anatomopathologie]]",
-        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; hémostatique local **Cellistypt** (cellulose oxydée résorbable)",
-        "Fiche de renseignements cliniques pour l'anatomopathologiste"
-      ],
-      alertes: [
-        "**Choix du site** : zone la plus représentative, en évitant les zones nécrotiques ; lésions étendues ou multiples : plusieurs prélèvements.",
-        "**Biopsie incisionnelle au punch** : technique la plus utilisée en première intention (reproductible, moins d'artéfacts d'écrasement) ; **bistouri** si la profondeur d'invasion est recherchée, si la 1re biopsie est équivoque ou pour limiter le biais d'échantillonnage.",
-        "**Exérèse** (biopsie excisionnelle) : surtout pour des lésions petites et bénignes ; pour une lésion suspecte, la biopsie incisionnelle préserve les marges d'une éventuelle exérèse carcinologique.",
-        "**Ne pas écraser le prélèvement** ; fixer **immédiatement** ; orienter la pièce si nécessaire.",
-        "**Antibioprophylaxie non recommandée** en population générale pour la biopsie ou l'exérèse d'une lésion bénigne des tissus mous ou osseuse (HAS 2026) ; recommandée chez les patients à risque infectieux augmenté.",
-        "**Risque hémorragique (SFCO 2015)** : biopsie-exérèse muqueuse ≤ 1 cm = faible ; > 1 cm = élevé."
-      ],
-      etapes: [
-        { titre: "Temps 1 – Examen et choix du prélèvement", details: ["Description de la lésion, photographie, choix du **site** et de la technique (**punch 3-5 mm**, **bistouri incisionnel** ou **exérèse**)", "**Bain de bouche à la chlorhexidine** ; installation"], materiel: ["photographie", "chlorhexidine", "punch ou bistouri"] },
-        { titre: "Temps 2 – Anesthésie", details: ["**Anesthésie locale** à distance de la lésion pour ne pas déformer le tissu à prélever, avec vasoconstricteur", "Vérifier l'efficacité"], materiel: ["anesthésique", "seringue"] },
-        { titre: "Temps 3 – Prélèvement", details: ["**Punch** : appui perpendiculaire, rotation jusqu'à la profondeur voulue, section de la base aux ciseaux ; ou **bistouri** : incision en fuseau incluant la lésion et une marge de tissu sain adjacent", "Saisir le prélèvement avec une pince fine **sans l'écraser**"], materiel: ["punch ou bistouri", "pince fine", "ciseaux"] },
-        { titre: "Temps 4 – Fixation et envoi", details: ["**Fixation immédiate** dans le pot étiqueté (formol 10 %) [[à confirmer]] ; identité du patient, siège et orientation indiqués", "Fiche de renseignements cliniques : âge, antécédents, siège, taille, aspect, durée d'évolution, tabac/alcool, traitements"], materiel: ["pot et formol [[à confirmer]]", "fiche anatomopathologie"] },
-        { titre: "Temps 5 – Hémostase et suture", details: ["Compression ; **suture au fil 4-0** (point simple ou en croix) ; hémostase locale si besoin", "Irrigation à la chlorhexidine si le site l'exige"], materiel: ["fil 4-0", "porte-aiguille", "compresses"] },
-        { titre: "Temps 6 – Consignes et suite", details: ["**Consignes remises au patient** ; rendez-vous pour le résultat [[délai à préciser]]", "Si le résultat est inquiétant : orientation immédiate [[conduite du service]]"], materiel: ["fiche de consignes", "rendez-vous résultat"] }
-      ],
-      consignes: [
-        "**24 premières heures** : ne pas rincer ni cracher avec force, pas de tabac ni d'alcool, alimentation **froide ou tiède et molle**, mâcher du côté opposé.",
-        "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
-        "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
-        "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine** à partir de J1 [[concentration et durée à préciser]].",
-        "**Antalgiques** : paracétamol en première intention ; ibuprofène 400 mg possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
-        "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
-        "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **numéro d'urgence à remettre** [[numéro du service à préciser]].",
-        "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
-      ],
-      erreurs: [
-        "Prélèvement écrasé, trop petit ou non représentatif (zone nécrotique, centre ulcéré)",
-        "Fixation retardée ou mauvais milieu",
-        "Fiche de renseignements incomplète ou prélèvement non identifié",
-        "Absence de suivi du résultat",
-        "Biopsie d'une lésion suspecte sans orientation si nécessaire"
-      ],
-      suivi: ["Résultat anatomopathologique à récupérer et à communiquer au patient", "**Contrôle à 7 jours** (cicatrisation) ; fils résorbables, pas de dépose"],
-      references: [
-        "[Gates J.C. et al. Biopsy for suspicious oral lesions: a review from the American Head and Neck Society Cancer Prevention Service. Head Neck 2026;48](https://pmc.ncbi.nlm.nih.gov/articles/PMC12891757/)",
-        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 4](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
-        "[SFCO – Antithrombotiques en chirurgie orale (2015) – annexe 1](https://www.jomos.org/articles/mbcb/pdf/2015/04/mbcb150044-s.pdf)",
-        "Milieu de fixation, technique et circuit d'envoi : à renseigner par le service."
-      ]
-    },
-    {
       id: "fermeture-cbs",
       titre: "Fermeture d'une communication bucco-sinusienne (CBS)",
       resume: "Évaluation, préparation du sinus, fermeture par lambeau d'avancement vestibulaire de Rehrmann, antibiotiques et consignes.",
       duree: "1 séance, 45 à 60 min",
       niveau: "Interne / senior",
       statut: "brouillon",
-      sourceType: "Revue 2019 (Int J Implant Dent) + HAS 2026 + SFCO 2015 – à compléter par le service",
+      sourceType: "Revue 2019 (Int J Implant Dent) + revues 2018-2026 + HAS 2026 + SFCO 2015",
       maj: "2026-11",
       hopital: [
         "**Technique de fermeture : lambeau d'avancement vestibulaire de Rehrmann**",
         "**Chlorhexidine 0,2 %** : bain de bouche et irrigation",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), points simples ou en croix",
-        "**Hémostase locale** : **Cellistypt** (cellulose oxydée résorbable)",
+        "**Hémostase** : compression et sutures ; **patient à risque hémorragique** : protocole hémostase (**Cellistypt** ou **Pangen**, puis **acide tranexamique** en ampoule)",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
+        "**Validation par l'encadrant** : la **fermeture** de la CBS",
         "**Consignes** remises au patient ; **contrôle à 7 jours**"
       ],
       indications: ["Communication entre la cavité buccale et le sinus maxillaire après avulsion d'une molaire ou prémolaire maxillaire", "Fistule bucco-sinusienne persistante"],
       contreIndications: ["**Sinusite non traitée** : traiter l'infection avant ou en même temps (la fermeture doit se faire dans un sinus sain)", "Corps étranger dans le sinus : l'éliminer avant la fermeture"],
       prerequis: ["Diagnostic : taille, ancienneté, écoulement, sinusite ; **panoramique ou CBCT selon le cas**", "Avis du senior pour le choix de la technique"],
       materiel: [
-        "Sérum physiologique et seringue pour le **lavage du sinus** par la CBS ; décongestionnant nasal",
-        "Anesthésique **Septodont avec adrénaline 1/200 000** [[molécule à préciser]] ; **chlorhexidine 0,2 %**",
+        "Sérum physiologique et seringue pour le **lavage du sinus** par la CBS",
+        "Anesthésique **articaïne Septodont avec adrénaline 1/200 000** ; **chlorhexidine 0,2 %**",
         "Bistouri, décolleur, ciseaux, pince gouge",
-        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; **Cellistypt** (cellulose oxydée résorbable)",
+        "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; patient à risque hémorragique : **Cellistypt** ou **Pangen**",
         "Si besoin : boule de Bichat (lambeau de graisse), membrane résorbable"
       ],
       alertes: [
         "**Seuils** : une CBS de moins de 2 mm, non épithélialisée et sans infection peut cicatriser spontanément après formation d'un caillot ; **au-delà de 5 mm ou après plus de 3 semaines**, la fermeture chirurgicale est le plus souvent nécessaire.",
-        "**Fermer dans un sinus sain** : lavage au sérum physiologique par la CBS jusqu'à liquide clair, décongestionnant nasal et antibiotiques avant la chirurgie si le sinus est infecté.",
+        "**Fermer dans un sinus sain** : lavage au sérum physiologique par la CBS jusqu'à liquide clair et antibiotiques avant la chirurgie si le sinus est infecté.",
         "**Antibiotiques (HAS 2026)** : communication bucco-sinusienne = événement per-opératoire avec **antibiothérapie recommandée : amoxicilline 1 g × 2/j pendant 5 jours** ; sinusite maxillaire aiguë d'origine dentaire : antibiothérapie recommandée, bithérapie amoxicilline + acide clavulanique en 1re intention (tableau 14).",
         "**Risque hémorragique élevé (SFCO 2015)** : fermeture d'une CBS = chirurgie à risque élevé ; patient sous antithrombotique : voir la fiche dédiée.",
         "**Lambeau de Rehrmann** : l'avancement réduit la hauteur du vestibule, ce qui peut gêner une prothèse ou un futur traitement implantaire (revue 2019) ; en informer le patient.",
-        "**Pas de bouche fermée dans le sinus** : ne pas moucher ni éternuer bouche fermée."
+        "**Pas de bouche fermée dans le sinus** : ne pas moucher ni éternuer bouche fermée.",
+        "**Données récentes (aucune recommandation officielle)** : revue systématique 2025 : CBS **< 5 mm** prises en charge de façon conservatrice (matériaux hémostatiques), **> 5 mm** fermeture chirurgicale ; méta-analyse en réseau 2024 : **boule de Bichat** supérieure au lambeau d'avancement vestibulaire pour la fermeture et le risque de récidive (technique non utilisée au service pour l'instant) ; revue Cochrane 2018 : preuve de très faible qualité (un seul essai de 20 patients). Étude rétrospective 2026 : moins de complications avec une **antibiothérapie post-opératoire**, ce qui rejoint la HAS 2026."
       ],
       etapes: [
         { titre: "Temps 1 – Évaluation", details: ["Taille de la CBS, ancienneté, écoulement ; imagerie (panoramique, **CBCT selon le cas**) pour le défaut osseux et l'état du sinus", "Décision de technique avec le senior"], materiel: ["panoramique ± CBCT"] },
-        { titre: "Temps 2 – Préparation du sinus", details: ["Si sinus infecté : **drainage et lavage au sérum physiologique** par la CBS jusqu'à liquide clair ; décongestionnant nasal", "**Antibiothérapie** avant la chirurgie si indiquée (HAS 2026)"], materiel: ["sérum physiologique + seringue", "décongestionnant nasal"] },
+        { titre: "Temps 2 – Préparation du sinus", details: ["Si sinus infecté : **drainage et lavage au sérum physiologique** par la CBS jusqu'à liquide clair", "**Antibiothérapie** avant la chirurgie si indiquée (HAS 2026)"], materiel: ["sérum physiologique + seringue"] },
         { titre: "Temps 3 – Anesthésie et lambeau", details: ["Anesthésie locale ; **bain de bouche à la chlorhexidine**", "**Lambeau d'avancement vestibulaire de Rehrmann** : lambeau muco-périosté trapézoïdal à base large, décharges divergentes vers la base ; avivement des berges de la CBS et excision du trajet fistuleux ; **incision du périoste à la base du lambeau** pour l'allonger et l'avancer sans tension"], materiel: ["anesthésique", "bistouri", "décolleur", "ciseaux"] },
-        { titre: "Temps 4 – Fermeture et sutures", details: ["Avancement du lambeau **sans tension**, bord appuyé sur de l'os sain et suturé à la muqueuse palatine ; **suture au fil 4-0**, points simples ou en croix ; irrigation à la chlorhexidine", "Matériau de comblement ou cellulose oxydée si besoin pour les petites CBS [[à préciser]]"], materiel: ["fil 4-0", "porte-aiguille", "chlorhexidine"] },
-        { titre: "Temps 5 – Consignes et prescription", details: ["**Consignes remises au patient** : alimentation molle, **ne pas se moucher**, éternuer **bouche ouverte**, pas d'effort ni de sport intense", "**Antibiotiques**, antalgiques, décongestionnants nasaux selon la prescription [[à valider avec le service]]"], materiel: ["fiche de consignes", "ordonnance"] }
+        { titre: "Temps 4 – Fermeture et sutures", details: ["Avancement du lambeau **sans tension**, bord appuyé sur de l'os sain et suturé à la muqueuse palatine ; **suture au fil 4-0**, points simples ou en croix ; irrigation à la chlorhexidine", "**Pas de comblement systématique de l'alvéole** sous un lambeau de fermeture : l'utilisation d'un **agent hémostatique intra-alvéolaire** est associée à plus de complications et de fistules persistantes (étude rétrospective 2026, 505 patients ; niveau de preuve faible). Le **PRF** et les **membranes de collagène** sont des options décrites dans la littérature, à discuter avec l'encadrant", "**Patient à risque hémorragique** : l'hémostase locale reste nécessaire ; choisir l'agent et son emplacement avec l'encadrant"], materiel: ["fil 4-0", "porte-aiguille", "chlorhexidine"], validation: "fermeture de la CBS" },
+        { titre: "Temps 5 – Consignes et prescription", details: ["**Consignes remises au patient** : alimentation molle, **ne pas se moucher**, éternuer **bouche ouverte**, pas d'effort ni de sport intense", "**Antibiotiques selon la HAS 2026** (amoxicilline 1 g × 2/jour pendant 5 jours ; allergie aux pénicillines : alternatives de la fiche « Antibiotiques HAS 2026 »), antalgiques (**paracétamol en 1re intention**), **lavages du nez au sérum physiologique**"], materiel: ["fiche de consignes", "ordonnance"] }
       ],
       consignes: [
         "**Pas de mouchage** pendant les premières semaines ; éternuer **la bouche ouverte** ; éviter les efforts, le sport intense, les pailles et le tabac.",
         "**Alimentation** : molle, froide ou tiède, du côté opposé.",
-        "**Nez** : décongestionnants nasaux et lavages selon la prescription [[à préciser]].",
+        "**Nez** : **lavages du nez au sérum physiologique**, comme expliqué par l'équipe.",
         "**Antibiotiques** : les prendre comme prescrits (amoxicilline 1 g × 2/j pendant 5 jours selon la HAS 2026).",
-        "**Hygiène** : brosser doucement ; **bain de bouche à la chlorhexidine** à partir de J1 [[concentration et durée à préciser]].",
-        "**Consulter** en cas d'écoulement nasal purulent, de fièvre, de douleur sinusienne ou d'un liquide qui passe par le nez ; **numéro d'urgence à remettre** [[numéro du service à préciser]].",
+        "**Hygiène** : brosser doucement ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
+        "**Consulter** en cas d'écoulement nasal purulent, de fièvre, de douleur sinusienne ou d'un liquide qui passe par le nez ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours**, puis selon l'évolution."
       ],
       erreurs: [
@@ -431,6 +366,10 @@ window.DISCIPLINES.push({
         "[Parvini P. et al. Decision-making in closure of oroantral communication and fistula. Int J Implant Dent 2019;5](https://pmc.ncbi.nlm.nih.gov/articles/PMC6441669/)",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableaux 5 et 14](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
         "[SFCO – Antithrombotiques en chirurgie orale (2015) – annexe 1](https://www.jomos.org/articles/mbcb/pdf/2015/04/mbcb150044-s.pdf)",
+        "[Dipalma G. et al. Management of oro-antral communication: a systematic review of diagnostic and therapeutic strategies. Diagnostics 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC11765130/)",
+        "[Oliva S. et al. The treatment and management of oroantral communications and fistulas: systematic review and network meta-analysis. Dent J 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11120370/)",
+        "[Bakacak M.M. et al. Postoperative antibiotics after primary surgical closure of oroantral communications: retrospective multicenter study. Clin Oral Investig 2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC13627183/)",
+        "[Krishanappa S.K.K. et al. Interventions for treating oro-antral communications and fistulae due to dental procedures. Cochrane Database Syst Rev 2018](https://pubmed.ncbi.nlm.nih.gov/30113083/)",
         "Autres techniques décrites dans la revue (suture directe pour les très petites CBS, lambeau palatin, boule de Bichat pour les grandes CBS) : non utilisées au service pour l'instant."
       ]
     },
@@ -452,9 +391,9 @@ window.DISCIPLINES.push({
       ],
       materiel: [
         "Hémostase chirurgicale conventionnelle : compression + sutures",
-        "Hémostatiques locaux résorbables : éponges de collagène ou de gélatine, gaze de cellulose ; **au service après avulsion : Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique)",
+        "Hémostatiques locaux résorbables : éponges de collagène ou de gélatine, gaze de cellulose ; **au service, pour les patients à risque hémorragique : Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique)",
         "Colle de cyanoacrylate",
-        "**Acide tranexamique en ampoule** (mesure préventive pour les actes à faible risque hémorragique, **utilisé au service après l'avulsion**) : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** [[concentration de l'ampoule à préciser]]",
+        "**Acide tranexamique en ampoule** (mesure préventive pour les actes à faible risque hémorragique, **utilisé au service pour les patients à risque hémorragique**) : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole**",
         "Pour les actes à haut risque : électrocoagulation mono ou bipolaire, colle fibrine (fibrinogène + thrombine humains)"
       ],
       alertes: [

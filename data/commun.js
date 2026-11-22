@@ -21,6 +21,7 @@ window.DISCIPLINES.push({
       alertes: [
         "Rechercher systématiquement : **allergies** (latex, anesthésiques, antibiotiques), **antithrombotiques**, **bisphosphonates / dénosumab**, antécédent de **radiothérapie cervico-faciale**, **cardiopathie à risque d'endocardite**, grossesse.",
         "Un patient à risque médical élevé relève d'un avis du médecin référent **avant** les actes invasifs.",
+        "**Lésion muqueuse très suspecte** à l'examen : contacter un **chirurgien oral du service**.",
         "Classer le patient pour la prescription d'antibiotiques (population générale / risque infectieux augmenté / haut risque d'ostéonécrose des mâchoires) : voir la fiche « Antibioprophylaxie et antibiothérapie »."
       ],
       etapes: [

@@ -436,3 +436,56 @@ mark{background:#ffe27a;color:#000;border-radius:3px;padding:0 2px}
 
 .step{scroll-margin-top:12px}
 .acc,.overview{scroll-margin-top:8px}
+
+/* ---- Préparer la séance ---- */
+.no-scroll{overflow:hidden}
+.sheet-wrap{position:fixed;inset:0;z-index:400;background:rgba(10,20,28,.5);display:flex;align-items:flex-end;justify-content:center;animation:fadein .15s ease}
+.sheet{background:var(--surface);color:var(--ink);width:min(680px,100%);max-height:90vh;max-height:90dvh;display:flex;flex-direction:column;border-radius:22px 22px 0 0;box-shadow:var(--shadow-2);overflow:hidden;animation:slideup .2s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes slideup{from{transform:translateY(24px);opacity:.6}to{transform:none;opacity:1}}
+.sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 18px 10px;border-bottom:1px solid var(--line)}
+.sheet-head h2{margin:0;font-size:1.35rem;font-weight:800}
+.sheet-head p{margin:2px 0 0;font-size:.88rem}
+.sheet-body{overflow:auto;padding:14px 18px;flex:1;overscroll-behavior:contain}
+.sheet-foot{display:flex;flex-wrap:wrap;gap:8px;padding:12px 18px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--surface-2)}
+.sheet-foot .btn.primary{margin-left:auto}
+.seg{display:flex;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:3px;margin-bottom:12px}
+.seg button{flex:1;border:0;background:none;border-radius:9px;padding:8px;font-weight:650;cursor:pointer;color:var(--muted)}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow-1)}
+.pchips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px}
+.pchip{flex:none;border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:5px 12px;font-size:.84rem;font-weight:650;cursor:pointer;color:var(--ink)}
+.pchip.on{background:var(--d,var(--brand));border-color:var(--d,var(--brand));color:#fff}
+.prep-prog{margin:4px 0 10px}
+.prep-prog strong{font-size:.95rem}
+.prep-prog .bar{height:8px;background:var(--surface-2);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-top:6px}
+.prep-prog .bar i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .2s}
+.prep-done{background:var(--ok-bg);color:var(--ok);border-radius:10px;padding:8px 12px;font-weight:700;margin:0 0 10px}
+.prep-group h3{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
+.prep-list{list-style:none;margin:0;padding:0}
+.prep-list li{border-bottom:1px solid var(--line)}
+.prep-list li:last-child{border-bottom:0}
+.prep-list label{display:flex;align-items:center;gap:14px;min-height:50px;padding:6px 2px;cursor:pointer;line-height:1.35}
+.prep-list input{flex:none;width:24px;height:24px;accent-color:var(--ok);cursor:pointer}
+.prep-list li.on span{color:var(--muted);text-decoration:line-through;text-decoration-thickness:1px}
+.prep-list strong{background:none}
+@media (min-width:700px){.sheet-wrap{align-items:center}.sheet{border-radius:22px;max-height:84vh}}
+@media print{.sheet-wrap{display:none!important}}
+
+/* ---- annexes (tableaux et repères) ---- */
+.annexe .asec{margin:0 0 14px}
+.annexe .asec h3{font-size:1.02rem;font-weight:800;margin:14px 0 6px;color:var(--ink)}
+.rtable-wrap{overflow-x:auto;margin:4px 0 6px}
+.rtable{width:100%;border-collapse:separate;border-spacing:0;font-size:.93rem;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rtable th,.rtable td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);line-height:1.45}
+.rtable thead th{background:color-mix(in srgb,var(--d,var(--brand)) 12%,var(--surface));font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
+.rtable tbody th{font-weight:800;width:22%;background:var(--surface-2)}
+.rtable tbody tr:last-child th,.rtable tbody tr:last-child td{border-bottom:0}
+@media (max-width:620px){
+  .rtable,.rtable tbody,.rtable tr,.rtable th,.rtable td{display:block;width:100%}
+  .rtable thead{display:none}
+  .rtable tbody tr{border-bottom:1px solid var(--line);padding:2px 0 6px}
+  .rtable tbody tr:last-child{border-bottom:0}
+  .rtable tbody th{background:color-mix(in srgb,var(--d,var(--brand)) 10%,var(--surface));width:100%;border-bottom:0}
+  .rtable td{border-bottom:0;padding:4px 12px}
+  .rtable td::before{content:attr(data-label);display:block;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+}
