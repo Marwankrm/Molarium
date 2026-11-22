@@ -1,5 +1,6 @@
 /* ============ Jetons de design ============ */
 :root{
+  color-scheme:light;
   --bg:#f3f6f9; --surface:#ffffff; --surface-2:#f7f9fb; --ink:#12222d; --muted:#586a77; --line:#e0e6ed;
   --brand:#0b6e7f; --brand-ink:#ffffff; --brand-soft:#e1f1f3; --brand-strong:#07505c;
   --warn:#8f5200; --warn-bg:#fff3de; --warn-line:#f0c677;
@@ -11,14 +12,6 @@
   --topbar-h:64px; --tocbar-h:50px; --sidebar-w:296px; --tabbar-h:62px;
   --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --d:var(--brand); --scale:1;
-}
-[data-theme="dark"]{
-  --bg:#0c161c; --surface:#142129; --surface-2:#192832; --ink:#e7eff4; --muted:#9db1be; --line:#263943; --brand:#4cc3d6; --brand-ink:#06242a; --brand-soft:#15353d; --brand-strong:#8fe0ee;
-  --warn:#f0be68; --warn-bg:#30250f; --warn-line:#5b4520;
-  --danger:#ff9a9d; --danger-bg:#381a1c; --danger-line:#692c2f;
-  --ok:#7fd9a0; --ok-bg:#14301e;
-  --shadow-1:0 1px 2px rgba(0,0,0,.35),0 4px 14px rgba(0,0,0,.25);
-  --shadow-2:0 2px 6px rgba(0,0,0,.4),0 14px 32px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 html{font-size:calc(100% * var(--scale));scroll-behavior:smooth;scroll-padding-top:calc(var(--topbar-h) + var(--tocbar-h) + 56px);-webkit-text-size-adjust:100%}
@@ -346,7 +339,6 @@ mark{background:#ffe27a;color:#000;border-radius:3px;padding:0 2px}
 .acc.sec-warn .acc-ico{background:var(--warn-bg);color:var(--warn)}
 .acc.sec-danger .acc-ico{background:var(--danger-bg);color:var(--danger)}
 .acc.sec-grey .acc-ico{background:var(--surface-2);color:var(--muted)}
-[data-theme="dark"] .acc.sec-blue .acc-ico{color:#8ab8ee}
 .acc.sec-ok{border-left:5px solid var(--ok)}
 .acc.sec-warn{border-left:5px solid var(--warn)}
 .acc.sec-danger{border-left:5px solid var(--danger)}
@@ -489,3 +481,13 @@ mark{background:#ffe27a;color:#000;border-radius:3px;padding:0 2px}
   .rtable td{border-bottom:0;padding:4px 12px}
   .rtable td::before{content:attr(data-label);display:block;font-size:.7rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 }
+
+/* ---- liste des fiches d'une discipline ---- */
+.scroll-hint{display:flex;align-items:center;gap:8px;margin:14px 0 0;font-weight:700;color:var(--d,var(--brand))}
+.scroll-hint svg{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.list-title{font-size:1.1rem;font-weight:800;margin:22px 0 12px;color:var(--ink)}
+.pcard .go{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:.88rem;font-weight:800;color:var(--d,var(--brand))}
+.pcard:hover .go svg{transform:translateX(3px)}
+.pcard .go svg{transition:transform .15s}
+@media (prefers-reduced-motion:reduce){.scroll-hint svg{animation:none}}

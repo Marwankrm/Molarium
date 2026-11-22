@@ -1,4 +1,21 @@
 window.DISCIPLINES = window.DISCIPLINES || [];
+
+// Repères sur les limes ProTaper Gold : fiche technique Dentsply Sirona (tip card) et mode d'emploi.
+var PTG_ANNEXE = {
+  titre: "Limes ProTaper Gold : repères", court: "Limes ProTaper Gold", icone: "tooth",
+  intro: "Taille de pointe en 1/100 mm et conicité de la pointe (fiche technique Dentsply Sirona). La conicité varie le long de la lame : tailles à vérifier sur les limes du service.",
+  table: {
+    cols: ["Lime", "Pointe / conicité", "Rôle"],
+    rows: [
+      ["**S1**", "18/100 mm, 2 %", "Lime de mise en forme : prépare le canal du collet vers l'apex, en brossant"],
+      ["**S2**", "20/100 mm, 4 %", "Lime de mise en forme : même rôle que la S1, un peu plus large, en brossant"],
+      ["**SX**", "19/100 mm, 4 %", "Lime courte : entrée du canal, racine courte, éloigner le canal d'une furcation (selon le cas)"],
+      ["**F1**", "20/100 mm, 7 %", "Lime de finition, sans brossage, à la longueur de travail"],
+      ["**F2**", "25/100 mm, 8 %", "Lime de finition : **préparation apicale habituelle au service (25/100)**"],
+      ["**F3**", "30/100 mm, 9 %", "Lime de finition : si le canal est plus large"]
+    ]
+  }
+};
 window.DISCIPLINES.push({
   id: "endodontie",
   ordre: 3,
@@ -14,15 +31,16 @@ window.DISCIPLINES.push({
       duree: "Le plus souvent 1 séance ; 2 séances si nécessaire",
       niveau: "Étudiant encadré",
       statut: "brouillon",
+      annexes: [PTG_ANNEXE],
       sourceType: "Pratique du service (CHU) + consensus d'experts 2024 + recommandation HAS 2026 + revue 2022 (douleur post-opératoire)",
       maj: "2026-11",
       hopital: [
         "Traitement **très souvent réalisé en une seule séance** ; **2e séance** en cas de **manque de temps, de suintement ou de douleur** (avec **hydroxyde de calcium** entre les séances)",
-        "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** [[moteur, vitesse et couple à préciser]]",
-        "**Localisateur d'apex** utilisé [[modèle non précisé]]",
-        "**Irrigation** : hypochlorite de sodium à la concentration indiquée dans la fiche (2,5 à 5,25 %) [[concentration exacte à préciser]] ; **pas de chlorhexidine** ; **pas d'activation de l'irrigant** (pas d'équipement)",
-        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** [[références à préciser]] ; **cônes de gutta-percha assortis aux ProTaper Gold** ; ciment endodontique [[non précisé]]",
-        "**Étanchéité provisoire** : verre ionomère (CVI, **EQUIA Forte HT Fil** de GC) ou résine composite",
+        "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)**",
+        "**Localisateur d'apex** utilisé",
+        "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
+        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes de gutta-percha assortis aux ProTaper Gold** ; ciment endodontique",
+        "**Étanchéité provisoire** : matériau d'obturation temporaire",
         "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Hycal**, pâte prête à l'emploi en seringue",
         "**Validation par l'encadrant** : longueur de travail, essayage de la gutta (maître-cône) et obturation",
         "**3 radiographies** : **pré-opératoire**, **essayage de la gutta**, **contrôle d'obturation**"
@@ -32,13 +50,13 @@ window.DISCIPLINES.push({
       prerequis: ["Diagnostic pulpaire et péri-apical établi", "Radiographie pré-opératoire exploitable", "Évaluation de la restaurabilité de la dent", "Consentement éclairé, patient prévenu que **des douleurs post-opératoires sont fréquentes**"],
       materiel: [
         "Digue, clamps, cadre",
-        "Hypochlorite de sodium **2,5 à 5,25 %** (concentrations cliniques décrites : 0,5 à 8,25 % ; au-delà de 2,5 % : dissolution tissulaire) [[concentration exacte du CHU à préciser]]",
+        "Hypochlorite de sodium",
         "**CanalPro EDTA 17 %** (Coltène, flacon de 500 mL) ; eau pour rincer entre les irrigants",
         "Seringue 5 mL à embout **Luer-Lock** et aiguille **30 G** (Ø externe 0,298–0,320 mm), à ouverture latérale (réduit l'extrusion apicale)",
-        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; limes manuelles de cathétérisme [[à préciser]] ; localisateur d'apex [[modèle à préciser]]",
-        "**Cônes de gutta-percha assortis aux ProTaper Gold** et matériel de **thermocompaction (Dentsply Sirona)** [[références à préciser]] ; ciment endodontique [[à préciser]]",
+        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** : S1, S2, F1, F2 (SX et F3 si besoin) ; limes manuelles de cathétérisme (jusqu'au 15/100) et gel d'EDTA ; localisateur d'apex",
+        "**Cônes de gutta-percha assortis aux ProTaper Gold** et matériel de **thermocompaction (Dentsply Sirona)** ; ciment endodontique",
         "Hydroxyde de calcium en pâte prête à l'emploi en seringue (**Hycal**), si 2e séance",
-        "Verre ionomère (**EQUIA Forte HT Fil**, GC, capsule teinte A2 [[à confirmer : utilisé pour l'étanchéité]]) ou résine composite pour l'étanchéité coronaire",
+        "Matériau d'obturation temporaire pour l'étanchéité coronaire",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
       ],
       alertes: [
@@ -51,20 +69,64 @@ window.DISCIPLINES.push({
         "**Une séance ou deux ?** Au service, le traitement est **très souvent fait en une seule séance**. Une 2e séance avec hydroxyde de calcium est surtout envisagée pour une dent avec lésion péri-apicale, fistule ou exsudat, ou si le temps manque. **Au service : 2e séance en cas de manque de temps, de suintement ou de douleur.** Une méta-analyse de 2017 trouve plus de flare-ups après une séance unique (preuve faible), sans différence de complications ni de douleur."
       ],
       etapes: [
-        { titre: "Séance 1 (le plus souvent séance unique) – Accès, mise en forme, irrigation, obturation et restauration", details: [
-          "**Anesthésie locale**, dépose des anciennes restaurations et caries, reconstruction d'une paroi si besoin, **pose de la digue**, désinfection du champ ; **cavité d'accès** directe aux orifices ; **dès l'ouverture de la chambre, injecter l'hypochlorite** pour remplir chambre et canaux, puis repérer les orifices et négocier les canaux",
-          "**Longueur de travail** au localisateur d'apex, confirmée par radiographie ; **mise en forme aux ProTaper Gold** avec **2 mL d'hypochlorite par canal entre chaque lime**, **10 à 20 mL au total par canal**, aiguille **à 2 mm de la longueur de travail** ; **séquence ProTaper Gold SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** [[le consensus conseille au moins n° 30 dans un canal infecté pour que l'aiguille 30 G atteigne le tiers apical : à discuter avec l'encadrant]]",
-          "**Irrigation finale** : **hypochlorite 1 min, EDTA 17 % 1 min, hypochlorite 30 s** (plus de 5 mL par canal), **rinçage à l'eau entre chaque irrigant**, séchage (rinçage à l'éthanol 95 %, 3 mL/canal, possible)",
-          "**Essayage de la gutta (cône assorti à la dernière lime)** et radiographie ; **obturation par thermocompaction** (Dentsply Sirona) avec le ciment endodontique [[à préciser]], radiographie de contrôle ; **restauration coronaire étanche immédiate** (verre ionomère ou résine composite), puis restauration définitive (onlay, couronne) dans les meilleurs délais"
-        ], materiel: ["digue et clamps", "fraises d'accès", "hypochlorite, EDTA 17 %, eau", "seringue Luer-Lock + aiguille 30 G", "localisateur d'apex", "ProTaper Gold", "cônes de gutta-percha", "matériel de thermocompaction", "ciment endodontique [[à préciser]]", "verre ionomère ou résine composite", "radiographies"], validation: "longueur de travail, essayage de la gutta et obturation", astuce: "Sans équipement d'activation, une agitation manuelle (lime ou cône de gutta-percha ajusté) est décrite par le consensus [[à discuter avec l'encadrant]]. Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer ; poser l'hydroxyde de calcium radio-opaque sur toute la longueur de travail, étanchéifier au verre ionomère ou à la résine composite et poursuivre en séance 2." },
-        { titre: "Séance 2 (si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
-          "**Quand ?** au service : **manque de temps, suintement (exsudat) ou douleur** ; plus généralement canal infecté avec lésion ou fistule ; intervalle entre les séances : **1 à 2 semaines**",
-          "Dépose de l'étanchéité provisoire et de l'hydroxyde de calcium par **irrigation abondante** (limes de calibrage si besoin), **irrigation finale** (hypochlorite, EDTA, hypochlorite, rinçage à l'eau), séchage, **essayage de la gutta**, **obturation par thermocompaction**, radiographie de contrôle et **restauration coronaire étanche immédiate**"
-        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "matériel de thermocompaction", "ciment endodontique [[à préciser]]", "verre ionomère ou résine composite", "radiographies"], validation: "essayage de la gutta et obturation", astuce: "L'étanchéité coronaire conditionne le succès à long terme." }
+        { titre: "Temps 1 (séance 1, le plus souvent séance unique) – Anesthésie, isolation et accès", details: [
+          "**Anesthésie locale**",
+          "Dépose des anciennes restaurations et des caries ; reconstruction d'une paroi si besoin",
+          "**Pose de la digue**, désinfection du champ",
+          "**Cavité d'accès** directe aux orifices"
+        ], materiel: ["digue et clamps", "fraises d'accès"] },
+        { titre: "Temps 2 – Repérage et négociation des canaux", details: [
+          "**Dès l'ouverture de la chambre : injecter l'hypochlorite** pour remplir la chambre et les canaux",
+          "Repérer les orifices",
+          "**Cathétérisme manuel** avec des limes **jusqu'au 15/100** (10 puis 15), **avant les limes rotatives**, avec du **gel d'EDTA**",
+          "Obtenir un **chemin de glisse** lisse et reproductible : la notice ne l'autorise que dans ces conditions"
+        ], materiel: ["hypochlorite", "seringue Luer-Lock + aiguille 30 G", "limes manuelles de cathétérisme (jusqu'au 15/100)", "gel d'EDTA"] },
+        { titre: "Temps 3 – Longueur de travail", details: [
+          "**Mesure au localisateur d'apex**",
+          "**Confirmation par radiographie**"
+        ], materiel: ["localisateur d'apex", "radiographies"], validation: "longueur de travail" },
+        { titre: "Temps 4 – Mise en forme et irrigation", details: [
+          "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
+          "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
+          "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus**",
+          "**Vitesse 300 tr/min**, couple selon la notice Dentsply Sirona : **S1 et SX 5,1 N·cm**, **S2 et F1 1,5 N·cm**, **F2 et F3 3,1 N·cm** (réglages du moteur)",
+          "Préparation apicale **en général jusqu'au 25/100 (F2)**",
+          "**Pression apicale minimale** : ne jamais forcer",
+          "**Entre chaque lime** : **2 mL d'hypochlorite par canal**",
+          "Au total : **10 à 20 mL d'hypochlorite par canal**",
+          "Aiguille placée **à 2 mm de la longueur de travail**"
+        ], materiel: ["ProTaper Gold", "moteur endodontique", "hypochlorite", "seringue Luer-Lock + aiguille 30 G"] },
+        { titre: "Temps 5 – Irrigation finale et séchage", details: [
+          "**Hypochlorite 1 min**, puis **EDTA 17 % 1 min**, puis **hypochlorite 30 s** (plus de 5 mL par canal)",
+          "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant (consensus 2024)",
+          "**Rinçage à l'eau entre chaque irrigant**",
+          "Séchage (rinçage à l'éthanol 95 %, 3 mL par canal, possible)"
+        ], materiel: ["hypochlorite, EDTA 17 %, eau", "pointes de papier"] },
+        { titre: "Temps 6 – Essayage de la gutta", details: [
+          "**Cône de gutta-percha assorti à la dernière lime**",
+          "**Radiographie d'essayage**",
+          "**Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer.** Poser l'hydroxyde de calcium (**Hycal**) sur toute la longueur de travail, étanchéifier avec un matériau d'obturation temporaire, puis poursuivre en séance 2"
+        ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
+        { titre: "Temps 7 – Obturation", details: [
+          "**Obturation par thermocompaction** (Dentsply Sirona) avec le ciment endodontique",
+          "**Radiographie de contrôle**"
+        ], materiel: ["matériel de thermocompaction", "ciment endodontique", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
+        { titre: "Temps 8 – Restauration coronaire", details: [
+          "**Restauration coronaire étanche immédiate** avec un matériau d'obturation temporaire",
+          "Restauration définitive (onlay, couronne) dans les meilleurs délais"
+        ], materiel: ["matériau d'obturation temporaire"], astuce: "L'étanchéité coronaire conditionne le succès à long terme." },
+        { titre: "Temps 9 (séance 2, si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
+          "**Quand ?** Au service : manque de temps, suintement (exsudat) ou douleur ; plus généralement canal infecté avec lésion ou fistule. Intervalle entre les séances : **1 à 2 semaines**",
+          "**Dépose de l'étanchéité provisoire** puis de l'hydroxyde de calcium, par **irrigation abondante** (limes de calibrage si besoin)",
+          "**Irrigation finale** : hypochlorite, EDTA, hypochlorite (**activation manuelle**), rinçage à l'eau ; séchage",
+          "**Essayage de la gutta**",
+          "**Obturation par thermocompaction**, radiographie de contrôle",
+          "**Restauration coronaire étanche immédiate**"
+        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "matériel de thermocompaction", "ciment endodontique", "matériau d'obturation temporaire", "radiographies"], validation: "essayage de la gutta et obturation" }
       ],
       consignes: [
         "**Douleurs après le traitement : elles sont fréquentes** (environ 1 patient sur 5 est gêné dans sa vie quotidienne, et jusqu'à 10 % gardent une douleur jusqu'à 6 mois selon une revue) ; elles sont le plus souvent maximales dans les premières 24 à 48 heures.",
-        "**Antalgiques** : paracétamol en première intention, en l'absence de contre-indication ; la prescription et les doses sont à adapter par le prescripteur [[prescription du service à préciser]].",
+        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication. Adulte de 50 kg ou plus : **1 g par prise, au moins 4 h entre deux prises, 3 g par jour au maximum** sans avis du prescripteur ; poids < 50 kg, maladie du foie ou des reins, consommation fréquente d'alcool : **60 mg/kg/jour au maximum, sans dépasser 3 g**. **Pas plus de 5 jours** sans avis médical (ANSM).",
         "**Consulter en urgence** en cas de gonflement, fièvre, douleur qui augmente ou difficulté à ouvrir la bouche ou à avaler.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
         "**Pansement provisoire** : s'il se détache ou se fracture, reprendre rendez-vous rapidement (risque de recontamination).",
@@ -87,12 +149,12 @@ window.DISCIPLINES.push({
         "Fracture d'instrument, perforation : arrêter, documenter, avis du senior"
       ],
       references: [
-        "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/)",
+        "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[ANSM – Le paracétamol : posologie, dose maximale et durée (adulte)](https://ansm.sante.fr/dossiers-thematiques/le-paracetamol/impression/520)", "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/)",
         "[Di Spirito F. et al. Post-operative endodontic pain management: an overview of systematic reviews. Healthcare 2022;10:760](https://pmc.ncbi.nlm.nih.gov/articles/PMC9141195/) — douleur post-endodontique fréquente (environ 1 patient sur 5 gêné au quotidien)",
         "[Schwendicke F., Göstemeyer G. Single-visit or multiple-visit root canal treatment. BMJ Open 2017;7](https://pmc.ncbi.nlm.nih.gov/articles/PMC5293988/)",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
         "Duncan H.F. et al. ESE S3-level clinical practice guideline: treatment of pulpal and apical disease. Int Endod J 2023;56 Suppl 3:238-295 (doi 10.1111/iej.13974) : **texte non consulté pour cette fiche**, à intégrer.",
-        "Prescription d'antalgiques : aucune recommandation française spécifique à l'endodontie trouvée ; à définir par le service."
+        "Antalgiques : aucune recommandation française spécifique à l'endodontie trouvée ; posologie du paracétamol d'après l'ANSM (voir les consignes)."
       ]
     },
     {
@@ -102,16 +164,17 @@ window.DISCIPLINES.push({
       duree: "Le plus souvent 1 séance ; 2 séances si nécessaire",
       niveau: "Interne / étudiant encadré",
       statut: "brouillon",
+      annexes: [PTG_ANNEXE],
       sourceType: "Pratique du service (CHU) + revues systématiques + consensus 2024 + HAS 2026",
       maj: "2026-11",
       hopital: [
         "Retraitement **très souvent réalisé en une seule séance** ; **2e séance** en cas de **manque de temps, de suintement ou de douleur** (avec **hydroxyde de calcium** entre les séances)",
         "**Solvant à l'orange** (huile d'orange), de la **même marque : Dentsply Sirona**",
-        "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** [[moteur, vitesse et couple à préciser]] ; instruments de désobturation [[à préciser]]",
-        "**Localisateur d'apex** utilisé [[modèle non précisé]]",
-        "**Irrigation** : hypochlorite de sodium (2,5 à 5,25 %) [[concentration exacte à préciser]] ; **pas de chlorhexidine** ; **pas d'activation de l'irrigant** (pas d'équipement)",
-        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes de gutta-percha assortis aux ProTaper Gold** ; ciment endodontique [[non précisé]]",
-        "**Étanchéité provisoire** : verre ionomère (CVI, **EQUIA Forte HT Fil** de GC) ou résine composite",
+        "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** ; instruments de désobturation [[à préciser]]",
+        "**Localisateur d'apex** utilisé",
+        "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
+        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes de gutta-percha assortis aux ProTaper Gold** ; ciment endodontique",
+        "**Étanchéité provisoire** : matériau d'obturation temporaire",
         "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Hycal**, pâte prête à l'emploi en seringue",
         "**Validation par l'encadrant** : longueur de travail, essayage de la gutta (maître-cône) et obturation",
         "**3 radiographies** : **pré-opératoire**, **essayage de la gutta**, **contrôle d'obturation**"
@@ -134,11 +197,11 @@ window.DISCIPLINES.push({
       materiel: [
         "Digue, clamps ; ultrasons et fraises pour la dépose de la restauration, de la couronne ou du tenon",
         "**Solvant à l'orange (Dentsply Sirona)** ; instruments de désobturation [[à préciser]]",
-        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; localisateur d'apex [[modèle à préciser]]",
-        "**Hypochlorite de sodium 2,5–5,25 %** [[concentration exacte à préciser]], **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
-        "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes de gutta-percha assortis aux ProTaper Gold**, ciment endodontique [[à préciser]]",
+        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; localisateur d'apex",
+        "**Hypochlorite de sodium**, **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
+        "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes de gutta-percha assortis aux ProTaper Gold**, ciment endodontique",
         "**Hydroxyde de calcium** en pâte prête à l'emploi en seringue (**Hycal**), si 2e séance",
-        "Verre ionomère (**EQUIA Forte HT Fil**, GC) ou résine composite ; matériau de réparation de perforation [[à préciser]]",
+        "Matériau d'obturation temporaire ; matériau de réparation de perforation [[à préciser]]",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
       ],
       alertes: [
@@ -150,20 +213,61 @@ window.DISCIPLINES.push({
         "**Rincer à l'eau entre les irrigants** ; **EDTA jamais en dernier** ; irrigation **sans pression**."
       ],
       etapes: [
-        { titre: "Séance 1 (le plus souvent séance unique) – Évaluation, désobturation, mise en forme, obturation et restauration", details: [
-          "**Évaluation** (radiographie, CBCT si besoin, qualité de l'obturation, fuite coronaire, lésion) ; **dépose de la restauration, de la couronne ou du tenon** si nécessaire (ultrasons) ; anesthésie, **digue**, accès",
-          "**Désobturation** de la gutta-percha au **solvant à l'orange** et aux instruments [[à préciser]], **repérage des canaux manqués**, négociation et **perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie) ; retrait des fragments ou réparation d'une perforation selon la situation [[matériau du service]]",
-          "**Mise en forme aux ProTaper Gold** (SX, S1, S2, F1, F2, F3 ; apex en général jusqu'au 25/100) avec irrigation abondante (hypochlorite 2 mL/canal entre chaque lime) ; **irrigation finale** hypochlorite 1 min, EDTA 17 % 1 min, hypochlorite 30 s, **rinçage à l'eau entre chaque irrigant** ; séchage",
-          "**Essayage de la gutta (cône assorti à la dernière lime)** et radiographie ; **obturation par thermocompaction**, radiographie de contrôle ; **restauration coronaire étanche immédiate**, puis restauration définitive (onlay, couronne) dans les meilleurs délais"
-        ], materiel: ["digue", "ultrasons et fraises", "solvant à l'orange (Dentsply Sirona)", "ProTaper Gold", "localisateur d'apex", "hypochlorite, EDTA, eau", "cônes de gutta-percha et thermocompaction", "ciment endodontique [[à préciser]]", "verre ionomère ou résine composite", "radiographies"], validation: "longueur de travail, essayage de la gutta et obturation", astuce: "Si la désobturation est longue, lésion étendue, fistule ou exsudat : ne pas obturer ; poser l'hydroxyde de calcium radio-opaque aqueux sur toute la longueur de travail, étanchéifier au verre ionomère ou à la résine composite et poursuivre en séance 2." },
-        { titre: "Séance 2 (si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
-          "**Quand ?** retraitement avec lésion étendue, fistule ou exsudat (la médication à l'hydroxyde de calcium est alors indiquée), travail inachevé en séance 1 ; **au service : manque de temps, suintement ou douleur** ; intervalle entre les séances : **1 à 2 semaines**",
-          "Dépose de l'étanchéité provisoire et de l'hydroxyde de calcium par **irrigation abondante**, **irrigation finale** (hypochlorite, EDTA, hypochlorite, rinçage à l'eau), séchage, **essayage de la gutta**, **obturation par thermocompaction**, radiographie de contrôle et **restauration coronaire étanche immédiate**"
-        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha et thermocompaction", "ciment endodontique [[à préciser]]", "verre ionomère ou résine composite", "radiographies"], validation: "essayage de la gutta et obturation", astuce: "La restauration coronaire étanche est aussi importante que l'obturation pour le succès du retraitement." }
+        { titre: "Temps 1 (séance 1, le plus souvent séance unique) – Évaluation et dépose", details: [
+          "**Évaluation** : radiographie, CBCT si besoin, qualité de l'obturation, fuite coronaire, lésion",
+          "**Dépose de la restauration, de la couronne ou du tenon** si nécessaire (ultrasons)"
+        ], materiel: ["radiographies", "ultrasons et fraises"] },
+        { titre: "Temps 2 – Anesthésie, isolation et accès", details: [
+          "**Anesthésie locale**",
+          "**Pose de la digue**",
+          "**Accès** aux canaux"
+        ], materiel: ["digue", "fraises d'accès"] },
+        { titre: "Temps 3 – Désobturation et longueur de travail", details: [
+          "**Désobturation de la gutta-percha** au **solvant à l'orange** (Dentsply Sirona) et aux instruments [[à préciser]]",
+          "**Repérage des canaux manqués**, négociation",
+          "**Perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie)",
+          "Retrait des fragments ou réparation d'une perforation selon la situation [[matériau du service]]"
+        ], materiel: ["solvant à l'orange (Dentsply Sirona)", "localisateur d'apex", "radiographies"], validation: "longueur de travail" },
+        { titre: "Temps 4 – Mise en forme et irrigation", details: [
+          "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec du **gel d'EDTA**",
+          "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
+          "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
+          "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus** ; apex en général jusqu'au 25/100",
+          "**Pression apicale minimale** : ne jamais forcer",
+          "**Vitesse 300 tr/min**, couple selon la notice Dentsply Sirona : **S1 et SX 5,1 N·cm**, **S2 et F1 1,5 N·cm**, **F2 et F3 3,1 N·cm** (réglages du moteur)",
+          "**Irrigation abondante** : hypochlorite, **2 mL par canal entre chaque lime**"
+        ], materiel: ["ProTaper Gold", "moteur endodontique", "gel d'EDTA", "limes manuelles de cathétérisme (jusqu'au 15/100)", "hypochlorite"] },
+        { titre: "Temps 5 – Irrigation finale et séchage", details: [
+          "**Hypochlorite 1 min**, puis **EDTA 17 % 1 min**, puis **hypochlorite 30 s**",
+          "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant (consensus 2024)",
+          "**Rinçage à l'eau entre chaque irrigant**",
+          "Séchage"
+        ], materiel: ["hypochlorite, EDTA, eau", "pointes de papier"] },
+        { titre: "Temps 6 – Essayage de la gutta", details: [
+          "**Cône de gutta-percha assorti à la dernière lime**",
+          "**Radiographie d'essayage**",
+          "**Désobturation longue, lésion étendue, fistule ou exsudat : ne pas obturer.** Poser l'hydroxyde de calcium radio-opaque aqueux sur toute la longueur de travail, étanchéifier avec un matériau d'obturation temporaire, puis poursuivre en séance 2"
+        ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
+        { titre: "Temps 7 – Obturation", details: [
+          "**Obturation par thermocompaction**",
+          "**Radiographie de contrôle**"
+        ], materiel: ["thermocompaction", "ciment endodontique", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
+        { titre: "Temps 8 – Restauration coronaire", details: [
+          "**Restauration coronaire étanche immédiate**",
+          "Restauration définitive (onlay, couronne) dans les meilleurs délais"
+        ], materiel: ["matériau d'obturation temporaire"], astuce: "La restauration coronaire étanche est aussi importante que l'obturation pour le succès du retraitement." },
+        { titre: "Temps 9 (séance 2, si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
+          "**Quand ?** Retraitement avec lésion étendue, fistule ou exsudat (médication à l'hydroxyde de calcium indiquée), travail inachevé en séance 1. Au service : manque de temps, suintement ou douleur. Intervalle entre les séances : **1 à 2 semaines**",
+          "**Dépose de l'étanchéité provisoire** puis de l'hydroxyde de calcium, par **irrigation abondante**",
+          "**Irrigation finale** : hypochlorite, EDTA, hypochlorite (**activation manuelle**), rinçage à l'eau ; séchage",
+          "**Essayage de la gutta**",
+          "**Obturation par thermocompaction**, radiographie de contrôle",
+          "**Restauration coronaire étanche immédiate**"
+        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "thermocompaction", "ciment endodontique", "matériau d'obturation temporaire", "radiographies"], validation: "essayage de la gutta et obturation" }
       ],
       consignes: [
         "**Douleurs après un retraitement : fréquentes**, surtout dans les premières 24 à 48 heures ; elles sont plus marquées qu'après un traitement initial dans certaines séries.",
-        "**Antalgiques** : paracétamol en première intention, en l'absence de contre-indication ; la prescription et les doses sont à adapter par le prescripteur [[prescription du service à préciser]].",
+        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication. Adulte de 50 kg ou plus : **1 g par prise, au moins 4 h entre deux prises, 3 g par jour au maximum** sans avis du prescripteur ; poids < 50 kg, maladie du foie ou des reins, consommation fréquente d'alcool : **60 mg/kg/jour au maximum, sans dépasser 3 g**. **Pas plus de 5 jours** sans avis médical (ANSM).",
         "**Gonflement, fièvre, difficulté à ouvrir la bouche ou à avaler** : consulter en urgence.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
         "**Pansement provisoire** : s'il se détache, reprendre rendez-vous rapidement.",
@@ -185,12 +289,12 @@ window.DISCIPLINES.push({
         "Accident d'hypochlorite : voir la fiche « Traitement endodontique »"
       ],
       references: [
-        "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",
+        "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[ANSM – Le paracétamol : posologie, dose maximale et durée (adulte)](https://ansm.sante.fr/dossiers-thematiques/le-paracetamol/impression/520)", "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",
         "[Dioguardi M. et al. Analysis of endodontic successes and failures in the removal of fractured endodontic instruments during retreatment. Healthcare 2024;12:1390](https://pmc.ncbi.nlm.nih.gov/articles/PMC11276083/)",
         "[Shah T. et al. Endodontic retreatment efficacy with and without solvents: a systematic review. J Conserv Dent Endod 2023;26](https://pmc.ncbi.nlm.nih.gov/articles/PMC10823971/)",
         "[Scardini I.L. et al. Postoperative pain following nonsurgical endodontic retreatment. Iran Endod J 2023;18](https://pmc.ncbi.nlm.nih.gov/articles/PMC10155107/)",
         "[Di Spirito F. et al. Post-operative endodontic pain management: an overview of systematic reviews. Healthcare 2022;10:760](https://pmc.ncbi.nlm.nih.gov/articles/PMC9141195/)",
-        "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/) — le consensus décrit la chlorhexidine 2 % et l'activation de l'irrigant, non utilisées au service",
+        "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/) — le consensus décrit aussi la chlorhexidine 2 % (non utilisée au service) et l'activation de l'irrigant : manuelle au service (cône de gutta-percha ou lime), sans équipement d'activation",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 1](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
         "Le guideline ESE (Duncan et al. 2023) n'a pas pu être consulté. Produits non précisés et validations à confirmer par le service."
       ]
@@ -206,7 +310,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       indications: ["Douleur spontanée, pulsatile ou nocturne", "Tuméfaction ou signes d'infection d'origine dentaire"],
       contreIndications: ["Signes de gravité : prise en charge hospitalière"],
-      materiel: ["Anesthésique local", "Matériel d'endodontie et digue", "Hydroxyde de calcium si séance différée", "Antalgiques [[palier et molécules du service à préciser]]"],
+      materiel: ["Anesthésique local", "Matériel d'endodontie et digue", "Hydroxyde de calcium si séance différée", "Antalgiques : paracétamol en 1re intention (posologie ANSM)"],
       alertes: [
         "**Drapeaux rouges → hospitalisation** : cellulite avec dysphagie ou difficultés respiratoires (majorées en décubitus), extension loco-régionale, crépitation sous-cutanée, ostéomyélite, ostéonécrose infectée.",
         "**Le traitement de la cause (drainage, pulpectomie, avulsion) est prioritaire.** L'antibiothérapie s'ajoute au geste local, elle ne le remplace pas (grade A).",
@@ -222,7 +326,7 @@ window.DISCIPLINES.push({
         { titre: "Antibiothérapie si indiquée (adulte, 1re intention)", details: ["**Amoxicilline 1 g × 3/jour pendant 3 jours** (prolonger de 2 jours si symptômes persistants)", "Allergie : clarithromycine 500 mg × 2/j, azithromycine 500 mg × 1/j ou pristinamycine 1 g × 2/j, 3 jours", "**Réévaluation à 3 jours** ; 2e intention : amoxicilline + métronidazole 1 g/500 mg × 3/j ou amoxicilline + acide clavulanique 1 g/125 mg × 3/j"] },
         { titre: "Consignes", details: ["Rendez-vous de traitement définitif", "Signes à surveiller : gonflement, fièvre, trismus, gêne à la déglutition → consulter en urgence"] }
       ],
-      references: ["[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"]
+      references: ["[ANSM – Le paracétamol : posologie, dose maximale et durée (adulte)](https://ansm.sante.fr/dossiers-thematiques/le-paracetamol/impression/520)", "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"]
     }
   ]
 });

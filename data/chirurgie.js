@@ -19,7 +19,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
-        "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
+        "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
@@ -29,12 +29,13 @@ window.DISCIPLINES.push({
       ],
       indications: ["Dent non conservable (carie profonde non restaurable, fracture, mobilité terminale, parodontite avancée)", "Dent temporaire persistante, dent surnuméraire accessible", "Indication orthodontique ou prothétique"],
       contreIndications: ["Infection avec signes de gravité (cellulite, trismus serré, dysphagie) : orientation hospitalière", "Patient à haut risque d'ostéonécrose des mâchoires ou d'endocardite : protocole adapté avant le geste", "Patient sous antithrombotiques : voir la fiche dédiée"],
-      prerequis: ["Questionnaire médical à jour, risque évalué (voir fiche « Consultation initiale »)", "Radiographie pré-opératoire : rapports radiculaires, sinus, canal alvéolaire inférieur", "Consentement éclairé"],
+      prerequis: ["Questionnaire médical à jour, risque évalué (voir fiche « Consultation initiale »)", "Radiographie pré-opératoire : rapports radiculaires, sinus, canal alvéolaire inférieur ; **panoramique et CBCT selon le cas**", "Consentement éclairé"],
       materiel: [
+        "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste (HAS 2026 : 0,1 à 0,2 %) et irrigation",
         "Anesthésique **articaïne Septodont avec adrénaline 1/200 000** et seringue",
         "Syndesmotome, élévateurs, daviers adaptés à la dent (tous types disponibles)",
-        "Curette alvéolaire, compresses stériles, seringue d'irrigation",
+        "Curette de Lucas, compresses stériles, seringue d'irrigation",
         "Hémostase locale (SFCO 2015) : éponges résorbables de collagène ou de gélatine, gaze de cellulose, colle de cyanoacrylate, sutures ; **au service, pour les patients à risque hémorragique** : **Cellistypt** ou **Pangen**, puis acide tranexamique en ampoule",
         "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm)"
       ],
@@ -93,7 +94,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
-        "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
+        "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
@@ -105,6 +106,7 @@ window.DISCIPLINES.push({
       contreIndications: ["Patient à haut risque d'ostéonécrose, d'endocardite ou sous antithrombotiques : protocole adapté, fractionner les séances", "Infection avec signes de gravité : orientation hospitalière"],
       prerequis: ["Panoramique ; **CBCT selon le cas**", "Plan par quadrant : nombre de dents, ordre de passage, séances prévues", "Consentement éclairé, risque médical évalué"],
       materiel: [
+        "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** (bain de bouche avant le geste, irrigation)",
         "Anesthésie adaptée à chaque dent (**articaïne Septodont avec adrénaline 1/200 000**)",
         "Syndesmotomes, élévateurs et daviers selon les dents ; pince gouge ou fraise pour la régularisation osseuse",
@@ -159,7 +161,7 @@ window.DISCIPLINES.push({
         "**Lambeau en enveloppe** (incision intrasulculaire, sans décharge) ; le lambeau triangulaire est réservé aux dents de sagesse",
         "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
-        "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
+        "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique et CBCT **selon le cas**",
@@ -171,11 +173,12 @@ window.DISCIPLINES.push({
       contreIndications: ["Infection avec signes de gravité : orientation hospitalière", "Rapports étroits avec le canal alvéolaire inférieur ou le sinus non évalués : imagerie complémentaire (CBCT selon le cas)", "Patient à risque particulier (antithrombotiques, ostéonécrose, endocardite) : protocole adapté"],
       prerequis: ["Panoramique ; **CBCT selon le cas** (rapports sinus, canal alvéolaire inférieur, nerf mentonnier)", "Consentement éclairé, risque médical évalué"],
       materiel: [
+        "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** : bain de bouche avant et **irrigation**",
         "Anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "Bistouri (lame), décolleur, écarteur",
         "**Pièce à main chirurgicale** (moteur chirurgical) et fraises chirurgicales **Zekrya** ; irrigation continue",
-        "Élévateurs, daviers, curette, pince gouge",
+        "Élévateurs, daviers, curette de Lucas, pince gouge",
         "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm) ; patient à risque hémorragique : **Cellistypt** ou **Pangen**"
       ],
       alertes: [
@@ -233,7 +236,7 @@ window.DISCIPLINES.push({
         "**Anesthésie** : tronculaire et locale, selon la dent ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Lambeau triangulaire**",
         "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
-        "**Instruments** : tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales**",
+        "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales**",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
         "**Imagerie** : panoramique ou rétro-alvéolaire ; **CBCT** demandé si **rapport avec le nerf** ou **difficulté visible** sur la rétro-alvéolaire ou le panoramique",
@@ -262,8 +265,9 @@ window.DISCIPLINES.push({
         "Patient informé des risques : douleur, œdème, trismus, saignement, infection, alvéolite, lésions nerveuses, rarement fracture mandibulaire ou projection de la dent"
       ],
       materiel: [
+        "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "Antiseptique : bain de bouche chlorhexidine 0,1–0,2 % ou povidone iodée 10 % avant le geste (HAS 2026)",
-        "Instrumentation de chirurgie : décolleur, écarteur, pince gouge, élévateurs, daviers, curette",
+        "Instrumentation de chirurgie : décolleur, écarteur, pince gouge, élévateurs, daviers, curette de Lucas",
         "**Moteur chirurgical** et **fraises Zekrya**",
         "**Irrigation à la chlorhexidine** (service) ; la HAS 2019 ne retient aucune supériorité d'un produit de lavage",
         "**Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm)",
@@ -280,7 +284,7 @@ window.DISCIPLINES.push({
         { titre: "Préparation", details: ["Prescription pré-opératoire remise au patient (antibioprophylaxie si indiquée, antalgiques)", "Bain de bouche antiseptique avant le geste"] },
         { titre: "Abord", details: ["Anesthésie tronculaire et locale", "**Lambeau triangulaire** muco-périosté (service) ; aucune technique de lambeau n'est privilégiée par la HAS (grade B)", "Protection du nerf lingual (éviter le rétracteur sous-périosté lingual)"] },
         { titre: "Dégagement osseux et avulsion", details: ["**Ostéotomie à la fraise (moteur chirurgical, fraises Zekrya)** sous irrigation ; la HAS 2019 ne privilégie pas la piézochirurgie faute de données suffisantes (grade B)", "Section de la dent en plusieurs fragments si nécessaire", "Coronectomie : cas très exceptionnels uniquement"], validation: "dent extraite", astuce: "La découpe en fragments protège le plus souvent le nerf alvéolaire inférieur." },
-        { titre: "Révision alvéolaire et sutures", details: ["Curetage : débris dentaires, poudre d'os, granulome, reliquat de sac péricoronaire", "**Lavage de la cavité à la chlorhexidine** (service ; aucun produit n'est démontré supérieur, HAS 2019)", "**Suture du lambeau recommandée** (HAS 2019) : **fil 4-0, points simples ou en croix** (service)"] },
+        { titre: "Révision alvéolaire et sutures", details: ["Curetage : débris dentaires, poudre d'os, granulome, reliquat de sac péricoronaire", "**Lavage de la cavité à la chlorhexidine** (service ; aucun produit n'est démontré supérieur, HAS 2019)", "**Suture du lambeau recommandée** (HAS 2019) : **fil 4-0, points simples ou en croix** (service)", "**Patient à risque hémorragique** (SFCO 2015 : patient traité par antithrombotique) : **protocole hémostase** : **Cellistypt** ou **Pangen** dans l'alvéole, puis **acide tranexamique en ampoule** (compresse imbibée sur l'alvéole ou application directe)"] },
         { titre: "Mesures locales complémentaires", details: ["**Bain de bouche à la chlorhexidine** en post-opératoire (au service : à partir de **48 h**, **pendant 1 semaine**) pour prévenir l'alvéolite (HAS 2019 : gel ou rinçage, grade B) ; pas de gel au service", "PRF et régénération tissulaire guidée : **ne pas utiliser de façon systématique**"] },
         { titre: "Prescription et consignes", details: ["Antalgie : **paracétamol en première intention** ; ibuprofène 400 mg (sans contre-indication, hors contexte infectieux) ou association ibuprofène + paracétamol, à préférer au tramadol", "Feuille de consignes post-opératoires, avec le numéro à appeler ou l'hôpital le plus proche en cas de complication grave"] }
       ],
@@ -311,6 +315,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "**Technique de fermeture : lambeau d'avancement vestibulaire de Rehrmann**",
+        "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** : bain de bouche et irrigation",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), points simples ou en croix",
         "**Hémostase** : compression et sutures ; **patient à risque hémorragique** : protocole hémostase (**Cellistypt** ou **Pangen**, puis **acide tranexamique** en ampoule)",
@@ -322,6 +327,7 @@ window.DISCIPLINES.push({
       contreIndications: ["**Sinusite non traitée** : traiter l'infection avant ou en même temps (la fermeture doit se faire dans un sinus sain)", "Corps étranger dans le sinus : l'éliminer avant la fermeture"],
       prerequis: ["Diagnostic : taille, ancienneté, écoulement, sinusite ; **panoramique ou CBCT selon le cas**", "Avis du senior pour le choix de la technique"],
       materiel: [
+        "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "Sérum physiologique et seringue pour le **lavage du sinus** par la CBS",
         "Anesthésique **articaïne Septodont avec adrénaline 1/200 000** ; **chlorhexidine 0,2 %**",
         "Bistouri, décolleur, ciseaux, pince gouge",

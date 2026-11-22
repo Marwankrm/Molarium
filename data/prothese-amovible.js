@@ -87,7 +87,7 @@ window.DISCIPLINES.push({
       sourceType: "Pratique du service (CHU) + pratique courante (ouvrages de prothèse complète)",
       maj: "2026-11",
       hopital: [
-        "**Empreintes primaires** : alginate dans des porte-empreintes de stock",
+        "**Empreintes primaires** : alginate dans des porte-empreintes du commerce",
         "**Porte-empreintes individuels (PEI)** : fabriqués par le laboratoire ou par l'étudiant",
         "**Empreinte secondaire** : joint périphérique à la **pâte de Kerr** (réalisé avant), puis empreinte à la **pâte d'oxyde de zinc-eugénol** ; **joint postérieur maxillaire** réalisé",
         "**Rapports intermaxillaires** : enregistrement de la relation centrée à l'**Aluwax** ou à la **pâte de Kerr** ; dimension verticale de repos moins espace libre d'inocclusion, contrôle phonétique",
@@ -105,9 +105,9 @@ window.DISCIPLINES.push({
       ],
       indications: ["Édentement total maxillaire et mandibulaire", "Dents restantes à pronostic défavorable, avulsées ou à avulser avant réhabilitation", "Patient informé des alternatives (dont prothèse sur implants)"],
       contreIndications: ["Lésions muqueuses non diagnostiquées ou non cicatrisées", "Foyers infectieux ou racines résiduelles non traités", "Absence de motivation ou de capacité d'adaptation du patient (à discuter)"],
-      prerequis: ["Avulsions cicatrisées et chirurgie pré-prothétique réalisée si nécessaire", "Consentement éclairé et devis remis"],
+      prerequis: ["Avulsions cicatrisées et chirurgie pré-prothétique réalisée si nécessaire", "Consentement éclairé", "**Délai laboratoire : 7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire"],
       materiel: [
-        "**Empreintes primaires** : porte-empreintes de stock maxillaire et mandibulaire, alginate",
+        "**Empreintes primaires** : porte-empreintes du commerce maxillaire et mandibulaire, alginate",
         "**Porte-empreintes individuels (PEI)** en résine",
         "**Joint périphérique** : pâte de Kerr",
         "**Empreinte secondaire** : pâte d'oxyde de zinc-eugénol",
@@ -124,8 +124,8 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Séance 1 – Examen et empreintes primaires", details: [
           "Examen clinique et radiologique (panoramique) : muqueuses, crêtes, freins, brides, tubérosités, salive ; plan de traitement et consentement",
-          "**Empreintes primaires** maxillaire et mandibulaire à l'**alginate** dans des porte-empreintes de stock, désinfection puis coulée des modèles primaires"
-        ], materiel: ["porte-empreintes de stock", "alginate, bol et spatule", "désinfectant d'empreintes", "plâtre"], validation: "empreintes primaires", astuce: "Au laboratoire (ou par l'étudiant) : confection des porte-empreintes individuels sur les modèles primaires." },
+          "**Empreintes primaires** maxillaire et mandibulaire à l'**alginate** dans des porte-empreintes du commerce, désinfection puis coulée des modèles primaires"
+        ], materiel: ["porte-empreintes du commerce", "alginate, bol et spatule", "désinfectant d'empreintes"], validation: "empreintes primaires", astuce: "Au laboratoire (ou par l'étudiant) : confection des porte-empreintes individuels sur les modèles primaires." },
         { titre: "Séance 2 – Empreintes secondaires", details: [
           "**Essayage et ajustage des PEI**, puis **joint périphérique à la pâte de Kerr**, modelé par les mouvements fonctionnels (déglutition, ouverture, mimique, protrusion de la langue) ; **joint postérieur maxillaire**",
           "**Empreinte secondaire à la pâte d'oxyde de zinc-eugénol**, maxillaire puis mandibulaire ; vérification de l'absence de zones de compression"
@@ -200,9 +200,9 @@ window.DISCIPLINES.push({
       ],
       indications: ["Situations où des **extractions sont nécessaires** et où les crêtes vont évoluer (prothèse transitoire)", "Remplacement provisoire des dents manquantes avant la prothèse définitive (châssis métallique ou autre)"],
       contreIndications: ["Hygiène bucco-dentaire insuffisante non améliorable", "Pathologie parodontale non stabilisée sur les dents d'appui"],
-      prerequis: ["Plan de traitement établi : dents à extraire, prothèse définitive envisagée", "Bilan radiologique et parodontal, consentement éclairé"],
+      prerequis: ["Plan de traitement établi : dents à extraire, prothèse définitive envisagée", "Bilan radiologique et parodontal, consentement éclairé", "**Délai laboratoire : 7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire"],
       materiel: [
-        "Porte-empreintes de stock (empreinte primaire), **alginate**",
+        "Porte-empreintes du commerce (empreinte primaire), **alginate**",
         "**Porte-empreinte individuel (PEI)** pour l'empreinte secondaire",
         "**Futar** (enregistrement de l'occlusion) ; bases d'occlusion en résine et cire si l'occlusion n'est pas stable",
         "Articulateur semi-adaptable **FAG Quick Master** ; **teintier**",
@@ -219,7 +219,7 @@ window.DISCIPLINES.push({
         { titre: "Séance 1 – Examen et empreinte primaire", details: [
           "Examen clinique, radiologique et parodontal ; **classification de l'édentement** ; dents à extraire, dents d'appui et type de crochets ; plan de traitement et consentement",
           "**Empreinte primaire à l'alginate** des deux arcades, coulée des modèles"
-        ], materiel: ["porte-empreintes de stock", "alginate", "plâtre", "désinfectant d'empreintes"], validation: "empreinte primaire", astuce: "Au laboratoire (ou par l'étudiant) : confection du porte-empreinte individuel sur le modèle primaire." },
+        ], materiel: ["porte-empreintes du commerce", "alginate", "désinfectant d'empreintes"], validation: "empreinte primaire", astuce: "Au laboratoire (ou par l'étudiant) : confection du porte-empreinte individuel sur le modèle primaire." },
         { titre: "Séance 2 – Empreinte secondaire à l'alginate", details: [
           "Essayage du **porte-empreinte individuel** : contrôle de l'extension et du dégagement des freins",
           "**Empreinte secondaire à l'alginate** dans le PEI ; choix de la teinte au **teintier** et de la forme des dents"
@@ -278,7 +278,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "Correspond à la « PAP avec incrustation métallique » du service",
-        "**Empreintes d'étude** à l'alginate dans des porte-empreintes de stock",
+        "**Empreintes d'étude** à l'alginate dans des porte-empreintes du commerce",
         "**Conception du châssis** réalisée par le **laboratoire**",
         "**Préparations des dents d'appui** (plans guides, taquets) : **seulement quand c'est nécessaire**",
         "**Empreinte secondaire à l'alginate, dans un porte-empreinte individuel (PEI)** fabriqué par le laboratoire ou l'étudiant ; **pas d'empreinte de correction des selles terminales**",
@@ -290,9 +290,9 @@ window.DISCIPLINES.push({
       ],
       indications: ["Édentement partiel étendu ou terminal (classes de Kennedy-Applegate)", "Prothèse définitive après une éventuelle prothèse transitoire", "Alternative à un bridge ou à un traitement implantaire (refus, contre-indication, coût)"],
       contreIndications: ["Hygiène bucco-dentaire insuffisante non améliorable", "Pathologie parodontale non stabilisée", "Dents d'appui à pronostic défavorable"],
-      prerequis: ["Assainissement préalable : caries, parodonte, avulsions, restaurations défectueuses", "Bilan radiologique et parodontal, consentement éclairé"],
+      prerequis: ["Assainissement préalable : caries, parodonte, avulsions, restaurations défectueuses", "Bilan radiologique et parodontal, consentement éclairé", "**Délai laboratoire : 7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire"],
       materiel: [
-        "Empreintes d'étude : porte-empreintes de stock, **alginate**",
+        "Empreintes d'étude : porte-empreintes du commerce, **alginate**",
         "Fraises de préparation (plans guides, logements de taquets) : seulement si nécessaire",
         "**Porte-empreinte individuel (PEI)** et **alginate** pour l'empreinte secondaire",
         "Châssis métallique coulé par le laboratoire",
@@ -310,7 +310,7 @@ window.DISCIPLINES.push({
         { titre: "Séance 1 – Examen, empreintes d'étude et projet", details: [
           "Examen clinique, radiologique et parodontal ; **classification de l'édentement** ; **empreintes d'étude à l'alginate**, enregistrement de l'occlusion, montage sur articulateur",
           "**Étude des modèles** (axe d'insertion, zones de dépouille) et **fiche de prescription transmise au laboratoire, qui conçoit le châssis**"
-        ], materiel: ["porte-empreintes de stock", "alginate", "plâtre", "matériau d'enregistrement de l'occlusion", "fiche de prescription"], validation: "empreintes d'étude", astuce: "Au laboratoire : modèles d'étude coulés, conception du châssis, porte-empreinte individuel (PEI) pour la séance 2." },
+        ], materiel: ["porte-empreintes du commerce", "alginate", "matériau d'enregistrement de l'occlusion", "fiche de prescription"], validation: "empreintes d'étude", astuce: "Au laboratoire : modèles d'étude coulés, conception du châssis, porte-empreinte individuel (PEI) pour la séance 2." },
         { titre: "Séance 2 – Préparations (si nécessaire) et empreinte secondaire", details: [
           "**Préparations** des dents d'appui **seulement si nécessaire** : plans guides, logements de taquets (plancher arrondi, sans bord vif)",
           "**Empreinte secondaire** à l'**alginate dans le PEI** (essayage du PEI au préalable), maxillaire et mandibulaire ; enregistrement de l'occlusion si besoin ; choix de la teinte au **teintier**"

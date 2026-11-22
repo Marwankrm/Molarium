@@ -10,14 +10,14 @@ window.DISCIPLINES.push({
     {
       id: "consultation-initiale",
       titre: "Consultation initiale et évaluation du risque médical",
-      resume: "Anamnèse, examen clinique, examens complémentaires et classification du risque avant tout acte.",
+      resume: "Anamnèse, examen clinique, examens complémentaires, diagnostic et plan de traitement avant tout acte.",
       duree: "30 à 45 min",
       niveau: "Tous niveaux",
       statut: "brouillon",
       maj: "2026-11",
       indications: ["Tout nouveau patient du service", "Patient revu après un intervalle long ou une modification de son état de santé"],
       contreIndications: ["Urgence vitale : prise en charge médicale immédiate (appel du 15) avant toute anamnèse détaillée"],
-      materiel: ["Dossier patient informatisé et questionnaire médical", "Plateau d'examen (miroir, sonde, précelle), sonde parodontale", "Tensiomètre / oxymètre selon le profil", "Radiographies rétro-alvéolaires ou panoramique selon l'indication"],
+      materiel: ["Dossier patient informatisé et questionnaire médical", "Plateau d'examen (miroir, sonde, précelle), sonde parodontale", "Radiographies rétro-alvéolaires ou panoramique selon l'indication"],
       alertes: [
         "Rechercher systématiquement : **allergies** (latex, anesthésiques, antibiotiques), **antithrombotiques**, **bisphosphonates / dénosumab**, antécédent de **radiothérapie cervico-faciale**, **cardiopathie à risque d'endocardite**, grossesse.",
         "Un patient à risque médical élevé relève d'un avis du médecin référent **avant** les actes invasifs.",
@@ -27,13 +27,11 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Accueil et motif de consultation", details: ["Recueillir le motif dans les mots du patient", "Évaluer la douleur (EVA) et l'urgence", "Vérifier l'identité et le consentement aux soins pédagogiques"] },
         { titre: "Anamnèse médicale", details: ["Antécédents médicaux, chirurgicaux, familiaux", "Traitements en cours (liste exhaustive, dont automédication)", "Allergies et intolérances", "Habitudes : tabac, alcool, hygiène bucco-dentaire, bruxisme"], astuce: "Faire signer / dater le questionnaire médical et le mettre à jour à chaque consultation de contrôle." },
-        { titre: "Classification du risque", details: ["Attribuer un score ASA (I à IV)", "Identifier les actes contre-indiqués ou à adapter", "Demander un avis médical si nécessaire (cardiologue, oncologue, hématologue…)"] },
         { titre: "Examen clinique", details: ["Examen extra-oral : asymétrie, adénopathies, ATM", "Examen des muqueuses (dépistage cancer buccal)", "Bilan dentaire : caries, restaurations, mobilités, occlusion", "Bilan parodontal : indices de plaque et de saignement, sondage"] },
         { titre: "Examens complémentaires", details: ["Imagerie adaptée (principe ALARA)", "Tests de vitalité pulpaire si besoin", "Photographies, modèles d'étude selon le plan de traitement"] },
         { titre: "Diagnostic et plan de traitement", details: ["Poser le diagnostic et hiérarchiser : urgences → étiologique → réhabilitation → maintenance", "Présenter les alternatives et obtenir le consentement éclairé", "Planifier les séances et orienter vers les disciplines concernées"] }
       ],
-      suivi: ["Remettre au patient le plan de traitement et les consignes d'hygiène adaptées", "Planifier les rendez-vous de contrôle"],
-      references: ["Recommandations HAS / ANSM en vigueur [[à compléter]]", "Protocole interne du service [[numéro / date à compléter]]"]
+      suivi: ["Remettre au patient le plan de traitement et les consignes d'hygiène adaptées", "Planifier les rendez-vous de contrôle"]
     },
     {
       id: "antibiotiques-has-2026",
@@ -116,7 +114,7 @@ window.DISCIPLINES.push({
         { titre: "Fin de soin : gestion des instruments", details: ["Trier immédiatement : OPCT dans le conteneur dédié", "Pré-désinfection puis transfert vers la stérilisation, en respectant le circuit marche-en-avant", "Ne jamais recapuchonner une aiguille à deux mains"] },
         { titre: "Désinfection du fauteuil", details: ["Retirer les protections jetables", "Nettoyer puis désinfecter l'ensemble des surfaces touchées (respecter le temps de contact du produit)", "Évacuer les déchets : DASRI / DAOM selon la filière"] }
       ],
-      references: ["Guide de prévention des infections liées aux soins en chirurgie dentaire et en stomatologie (DGS)", "Procédures du service et de l'équipe opérationnelle d'hygiène [[à compléter]]"]
+      references: ["Guide de prévention des infections liées aux soins en chirurgie dentaire et en stomatologie (DGS)"]
     }
   ]
 });

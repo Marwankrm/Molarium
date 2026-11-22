@@ -58,15 +58,6 @@
     });
     return box;
   }
-  function kvList(items) {
-    var box = el('div', { class: 'kv' });
-    items.forEach(function (t) {
-      var m = t.match(/^\*\*([^*]+)\*\*\s*:\s*([\s\S]*)$/);
-      if (m) box.appendChild(el('div', { class: 'kv-row' }, [el('div', { class: 'kv-k', text: m[1] }), el('div', { class: 'kv-v' }, [rich(m[2])])]));
-      else box.appendChild(el('div', { class: 'kv-row kv-full' }, [el('div', { class: 'kv-v' }, [rich(t)])]));
-    });
-    return box;
-  }
   function stepLabel(titre, i) {
     var m = titre.match(/^(Séance|Temps|Étape|Phase)\s*(\d+[A-Z]?)\s*(\([^)]*\))?\s*[–-]\s*(.+)$/);
     return m ? { kind: m[1], n: m[2], note: m[3] ? m[3].slice(1, -1) : '', title: m[4] } : { kind: null, n: String(i + 1), note: '', title: titre };
@@ -128,7 +119,7 @@
   function collectTodos(obj, out) {
     if (typeof obj === 'string') { if (/\[\[[^\]]+\]\]/.test(obj)) out.push(obj); }
     else if (Array.isArray(obj)) obj.forEach(function (x) { collectTodos(x, out); });
-    else if (obj && typeof obj === 'object') Object.keys(obj).forEach(function (k) { if (k.charAt(0) !== '_') collectTodos(obj[k], out); });
+    else if (obj && typeof obj === 'object') Object.keys(obj).forEach(function (k) { if (k.charAt(0) !== '_' && k !== 'hopital') collectTodos(obj[k], out); });
     return out;
   }
   function uniq(a) { var seen = {}; return a.filter(function (x) { if (seen[x]) return false; seen[x] = 1; return true; }); }
@@ -138,7 +129,7 @@
       p._d = d; p._key = d.id + '/' + p.id;
       p._todos = uniq(collectTodos(p, []));
       p._todoN = p._todos.reduce(function (n, t) { return n + (t.match(/\[\[[^\]]+\]\]/g) || []).length; }, 0);
-      var parts = [d.nom, p.titre, p.resume, (p.indications || []).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.hopital || []).join(' '), (p.consignes || []).join(' ')];
+      var parts = [d.nom, p.titre, p.resume, (p.indications || []).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.consignes || []).join(' ')];
       (p.annexes || []).forEach(function (x) { parts.push(x.titre, x.intro || ''); (x.table ? x.table.rows : []).forEach(function (r) { parts.push(r.join(' ')); }); (x.sections || []).forEach(function (z) { parts.push(z.titre, z.texte || '', (z.items || []).join(' ')); }); });
       (p.etapes || []).forEach(function (s) { parts.push(s.titre, (s.details || []).join(' '), (s.materiel || []).join(' '), s.astuce || ''); });
       p._hay = norm(plain(parts.join(' ')));
@@ -161,7 +152,6 @@
   }
   function cardChips(p) {
     var c = [statusChip(p)];
-    if (p.hopital && p.hopital.length) c.push(el('span', { class: 'chip hosp', text: 'Pratique CHU' }));
     if (p.duree) c.push(el('span', { class: 'chip plain', text: p.duree }));
     if (p._todoN) c.push(el('span', { class: 'chip todo-c', text: p._todoN + ' à préciser' }));
     return el('div', { class: 'chips' }, c);
@@ -188,7 +178,8 @@
       showDisc ? el('span', { class: 'disc', text: p._d.nom }) : null,
       el('h3', { text: p.titre }),
       el('p', { text: p.resume }),
-      cardChips(p)
+      cardChips(p),
+      el('span', { class: 'go' }, [document.createTextNode('Ouvrir la fiche'), icon('arrow', 16, '2.4')])
     ]);
     var f = favButton(p); f.classList.add('fav'); a.appendChild(f);
     return a;
@@ -314,8 +305,9 @@
     frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: d.nom }]));
     frag.appendChild(el('header', { class: 'page-head', style: colorStyle(d) }, [
       el('h1', { text: d.nom }), el('p', { class: 'psum', text: d.description }),
-      el('div', { class: 'chips' }, [el('span', { class: 'chip', text: plural(d.protocoles.length, 'fiche') }), todo ? el('span', { class: 'chip todo-c', text: todo + ' à préciser' }) : null])
+      el('p', { class: 'scroll-hint' }, [document.createTextNode(plural(d.protocoles.length, 'fiche') + ' à ouvrir, juste en dessous'), icon('chev', 18, '2.6')])
     ]));
+    frag.appendChild(el('h2', { class: 'list-title', text: 'Choisissez une fiche' }));
     var list = el('div', { class: 'plist' });
     d.protocoles.forEach(function (p) { list.appendChild(protoCard(p, false)); });
     frag.appendChild(list); mount(frag);
@@ -397,9 +389,6 @@
         var st = document.getElementById('step-' + a.getAttribute('data-step')); if (st) st.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
       add('s-apercu', 'Aperçu', el('section', { class: 'overview', id: 's-apercu' }, [el('h2', { text: 'Aperçu de la fiche' }), facts, el('h3', { class: 'ov-h', text: 'Les étapes d\'un coup d\'œil' }), ovl]));
-    }
-    if (p.hopital && p.hopital.length) {
-      add('s-hopital', 'Pratique CHU', acc('s-hopital', 'Pratique au CHU de Dijon', el('div', null, [el('p', { class: 'hint', text: 'Conduite et matériaux du service (transmis par l\'équipe). Prévaut sur les éléments génériques ci-dessous.' }), kvList(p.hopital)]), { cls: 'hosp', open: true, icon: 'hospital' }));
     }
     if (p.alertes && p.alertes.length) add('s-alertes', 'Vigilance', acc('s-alertes', 'Points de vigilance', ul(p.alertes), { cls: 'alert', open: true, icon: 'warn' }));
     if (p.indications || p.contreIndications) {
@@ -757,10 +746,7 @@
 
   // thème et taille du texte
   var root = document.documentElement;
-  function applyTheme(t) { root.setAttribute('data-theme', t); put($('themeBtn'), t === 'dark' ? 'sun' : 'moon'); var m = document.querySelector('meta[name=theme-color]'); if (m) m.setAttribute('content', t === 'dark' ? '#0c161c' : '#0b6e7f'); }
-  var savedTheme = null; try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
-  applyTheme(savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-  $('themeBtn').addEventListener('click', function () { var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'; applyTheme(t); try { localStorage.setItem('theme', t); } catch (e) {} });
+  root.setAttribute('data-theme', 'light'); try { localStorage.removeItem('theme'); } catch (e) {}
   var scales = [1, 1.12, 1.26], scaleIdx = Math.max(0, Math.min(2, load('scale', 0)));
   function applyScale() { root.style.setProperty('--scale', scales[scaleIdx]); }
   applyScale();
