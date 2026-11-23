@@ -4,7 +4,7 @@ window.DISCIPLINES.push({
   ordre: 2,
   nom: "Prothèse fixée",
   sigle: "PF",
-  couleur: "#c2571a",
+  couleur: "#b8501a",
   description: "Inlay-core, RMIPP, scellements de couronnes (zircone, céramo-métallique), inlay, onlay et endo-couronne : un protocole par acte.",
   protocoles: [
 

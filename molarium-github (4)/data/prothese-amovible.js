@@ -11,7 +11,7 @@ var RIM_PA = {
       "**5. Base mandibulaire** : vérifier la pleine adaptation, puis ajuster la hauteur du bourrelet à la **DVO calculée**.",
       "**6. Contrôle des deux bases ensemble** : absence d'interférences en ORC ; si interférences, **meuler en commençant par le maxillaire**.",
       "**7. Triangles de Patterson (dièdres)** : dièdres divergents dans le bourrelet maxillaire, en regard des **5 et 6**, qui servent de cales mécaniques anti-glissement.",
-      "**8. Enregistrement de l'ORC** : **pâte de Kerr** (thermoplastique) sur le bourrelet mandibulaire en regard des 5 et 6 ; chauffer, placer, **guider le patient en ORC**" + (pap ? " (matériau d'enregistrement : Futar, cire, Aluwax ou pâte de Kerr selon la préférence de l'opérateur)." : " (l'Aluwax reste possible selon la préférence de l'opérateur)."),
+      "**8. Enregistrement de l'ORC** : **pâte de Kerr** (thermoplastique) sur le bourrelet mandibulaire en regard des 5 et 6 ; chauffer, placer, **guider le patient en ORC en lui demandant de mettre la langue au palais, en arrière**" + (pap ? " (matériau d'enregistrement : Futar, cire, Aluwax ou pâte de Kerr selon la préférence de l'opérateur)." : " (l'Aluwax reste possible selon la préférence de l'opérateur)."),
       "**9. Vérification finale de la DVO (étape souvent oubliée)** : reprendre le compas **après la fermeture sur la pâte de Kerr** et vérifier que la DVO obtenue = DVR − espace libre."
     ];
   },
@@ -34,7 +34,7 @@ var RIM_PA = {
           ["DVR (dimension verticale de repos)", "Position mandibulaire au repos neuromusculaire ; muscles élévateurs et abaisseurs en équilibre tonico-postural", "Mesure au compas sur repères cutanés"],
           ["DVO (dimension verticale d'occlusion)", "Distance entre les 2 repères cutanés en occlusion, prothèses en bouche", "**DVO = DVR − espace libre (2 à 3 mm)**"],
           ["Espace libre (freeway space)", "Écart entre DVO et DVR ; espace phonétique et fonctionnel indispensable", "2 à 3 mm (± 1 mm)"],
-          ["ORC (occlusion en relation centrée)", "Position mandibulaire la plus reproductible : condyles en position antéro-supérieure (charnière)", "Pointe de la langue en arrière ; manipulation bimanuelle"],
+          ["ORC (occlusion en relation centrée)", "Position mandibulaire la plus reproductible : condyles en position antéro-supérieure (charnière)", "Langue au palais, en arrière ; manipulation bimanuelle"],
           ["Bourrelet d'occlusion", "Cire ou résine sur la base d'occlusion, simulant les futures dents prothétiques", "Guide le plan prothétique et la DVO"],
           ["Plan de Fox", "Plan prothétique maxillaire, parallèle à la ligne bipupillaire", "Vérifié avec la règle de Fox"],
           ["Plan de Camper", "Plan prothétique de référence crânienne : épine nasale antérieure → tragus", "Le plan de Fox doit lui être parallèle"]
@@ -48,7 +48,7 @@ var RIM_PA = {
         { titre: "Son F/V : vérification du plan incisif", texte: "Demander au patient de prononcer « feu » ou « veux ». La lèvre inférieure doit **effleurer légèrement le bord libre du bourrelet maxillaire**. Si elle passe sous le bourrelet : bourrelet trop court. Si elle ne l'atteint pas : trop long." },
         { titre: "Méthodes de relaxation pour la DVR", items: ["Relâchement des épaules", "Bâillement provoqué", "Eau en bouche puis déglutition", "Ouverture et fermeture plusieurs fois"], alerte: "**Mesurer 3 fois et prendre la moyenne** : une valeur isolée n'est pas fiable." },
         { titre: "Triangles de Patterson : mécanisme", texte: "Les dièdres divergents créés dans le bourrelet maxillaire, en regard des 5 et 6, **s'engagent dans la pâte de Kerr mandibulaire** à la fermeture. Ils bloquent mécaniquement tout glissement et rendent la position parfaitement reproductible." },
-        { titre: "Guidage en ORC", items: ["**Méthode réflexe** : pointe de la langue en arrière (palais mou)", "**Méthode bimanuelle de Dawson** : pouce sous le menton, doigts guidant l'arc de fermeture en charnière", "**Vérification** : mouvement de charnière pure de la mandibule, sans propulsion"] }
+        { titre: "Guidage en ORC", items: ["**Méthode réflexe** : demander au patient de mettre la **langue au palais, en arrière** (pointe vers le palais mou)", "**Méthode bimanuelle de Dawson** : pouce sous le menton, doigts guidant l'arc de fermeture en charnière", "**Vérification** : mouvement de charnière pure de la mandibule, sans propulsion"] }
       ]
     },
     {
@@ -62,7 +62,7 @@ var RIM_PA = {
           "**Triangles de Patterson** : cales anti-glissement pour l'enregistrement de l'ORC",
           "**Éliminer les interférences avant** l'enregistrement à la pâte de Kerr",
           "**Toujours vérifier la DVO au compas après** la fermeture sur la pâte de Kerr",
-          "**ORC** : arc de charnière pur, pointe de la langue en arrière"
+          "**ORC** : arc de charnière pur, langue au palais, en arrière"
         ] }
       ]
     }
@@ -132,7 +132,7 @@ window.DISCIPLINES.push({
         ], materiel: ["PEI", "pâte de Kerr et source de chaleur", "pâte d'oxyde de zinc-eugénol", "fraise à résine pour retouches"], validation: "empreintes secondaires", astuce: "Au laboratoire : coulée des modèles de travail et confection des bases d'occlusion avec bourrelets de cire." },
         { titre: "Séance 3 – Rapports intermaxillaires (RIM)", details: [
           "**Orienter les bourrelets** : plan d'occlusion parallèle au plan de Camper en arrière et à la ligne bipupillaire en avant ; bord libre visible 1 à 2 mm sous la lèvre supérieure au repos ; **arc facial** pour le montage du modèle maxillaire sur l'articulateur",
-          "**Dimension verticale d'occlusion (DVO)** : dimension verticale de repos moins l'espace libre d'inocclusion, contrôle phonétique ; **relation centrée** enregistrée à l'**Aluwax** ou à la **pâte de Kerr** ; repères de la ligne médiane, de la ligne du sourire et des canines ; choix de la teinte au **teintier**, de la forme et de la taille des dents"
+          "**Dimension verticale d'occlusion (DVO)** : dimension verticale de repos moins l'espace libre d'inocclusion, contrôle phonétique ; **relation centrée** enregistrée à l'**Aluwax** ou à la **pâte de Kerr**, en guidant le patient en ORC : **langue au palais, en arrière** ; repères de la ligne médiane, de la ligne du sourire et des canines ; choix de la teinte au **teintier**, de la forme et de la taille des dents"
         ], materiel: ["bases d'occlusion + bourrelets de cire", "règle de Fox, plan de Camper", "arc facial", "Aluwax ou pâte de Kerr", "teintier", "compas ou pied à coulisse"], validation: "RIM", astuce: "Au laboratoire : montage sur articulateur et montage des dents sur cire." },
         { titre: "Séance 4 – Essayage des dents montées sur cire", details: [
           "Contrôler **esthétique, phonétique, DVO et occlusion** (occlusion équilibrée bilatéralement) ; faire valider le montage par le patient (miroir)",

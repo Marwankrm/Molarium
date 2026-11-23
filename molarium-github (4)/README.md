@@ -38,3 +38,8 @@ passer à `statut: "valide"` et renseigner `validePar: "Dr X"` : le badge devien
 - **Favoris** et **récemment consultés** (mémorisés sur l'appareil).
 - **Points à préciser** : page qui rassemble automatiquement toutes les zones `[[à préciser]]` des fiches, avec un bouton pour copier la liste.
 - Thème clair uniquement, taille du texte réglable, impression / PDF (toutes les sections sont dépliées à l'impression).
+
+## Composants tiers
+
+- **Motion** (version « mini », `js/motion-mini.js`, licence MIT, voir `js/motion-LICENSE.md`) : micro-animations, désactivées si l'appareil demande moins d'animations.
+- **Figtree** (police, `css/fonts/`, licence SIL OFL 1.1) : hébergée avec le site, aucune requête vers un service externe.
