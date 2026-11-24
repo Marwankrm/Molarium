@@ -27,7 +27,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Dent dépulpée avec **peu de parois restantes** (reconstitution par tenon fibré non envisageable)", "Rétention insuffisante pour la couronne prévue"],
       contreIndications: ["Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
-      prerequis: ["Radiographie : qualité de l'obturation canalaire, longueur et anatomie radiculaires", "Absence de symptôme ou de lésion périapicale non traitée"],
       materiel: [
         "Digue ; instruments de désobturation (fraises, forets canalaires) [[références à préciser]]",
         "Empreinte du logement : **directe** (résine à maquette **GC Pattern Resin LS**, dont la notice prévoit l'usage en bouche pour une maquette de reconstitution) ou **indirecte** (silicone, avec tenon d'empreinte)",
@@ -85,7 +84,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Dent dépulpée avec parois restantes en nombre suffisant et ferrule présente", "Rétention insuffisante pour la couronne prévue sans reconstitution"],
       contreIndications: ["Parois restantes insuffisantes : inlay-core", "Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
-      prerequis: ["Radiographie : qualité de l'obturation canalaire, longueur et anatomie radiculaires", "Absence de symptôme ou de lésion périapicale non traitée", "Dent isolable sous digue"],
       materiel: [
         "Digue, matrice et cales",
         "Foret canalaire du système de tenon [[marque non connue]]",
@@ -153,7 +151,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Pose d'une couronne unitaire en zircone"],
       contreIndications: ["Collage impossible si la préparation ne peut pas être isolée (contamination par la salive ou le sang)", "Occlusion non contrôlée ou couronne mal adaptée : renvoyer au laboratoire"],
-      prerequis: ["Couronne reçue du laboratoire, provisoire en place", "Préparation propre, sans résidu de ciment provisoire"],
       materiel: [
         "**Panavia V5 Paste** (Universal A2 ou Clear) et embout mélangeur",
         "**Clearfil Ceramic Primer Plus** et **Panavia V5 Tooth Primer** ; godet de mélange, micro-brosses",
@@ -233,7 +230,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Pose d'une couronne unitaire céramo-métallique"],
       contreIndications: ["Occlusion non contrôlée ou couronne mal adaptée : renvoyer au laboratoire"],
-      prerequis: ["Couronne reçue du laboratoire, provisoire en place", "Préparation propre, sans résidu de ciment provisoire"],
       materiel: [
         "Ciment de scellement **GC Fuji PLUS** (capsule) et **GC Fuji PLUS Conditioner** ; malaxeur et applicateur de capsules",
         "Isolation : coton et écarteurs",
@@ -293,7 +289,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Lésion carieuse ou restauration étendue d'une dent postérieure sans cuspide fragilisée", "Remplacement d'une restauration défectueuse"],
       contreIndications: ["Cuspides fragilisées : onlay", "Isolation impossible (collage)", "Parafonction non contrôlée"],
-      prerequis: ["Dent vitale ou traitement endodontique de qualité", "Dent isolable sous digue", "Consentement éclairé et devis remis"],
       materiel: [
         "Fraises de préparation [[références]]",
         "Empreinte au **silicone** ; alginate pour l'antagoniste",
@@ -358,7 +353,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Dent postérieure avec **cuspides fragilisées** à recouvrir", "Dent dépulpée nécessitant une protection cuspidienne"],
       contreIndications: ["Perte de substance trop importante : couronne", "Isolation impossible (collage)", "Parafonction non contrôlée"],
-      prerequis: ["Dent vitale ou traitement endodontique de qualité", "Dent isolable sous digue", "Consentement éclairé et devis remis"],
       materiel: [
         "Fraises de préparation [[références]]",
         "Empreinte au **silicone** ; alginate pour l'antagoniste",
@@ -432,7 +426,6 @@ window.DISCIPLINES.push({
         "**Parafonction** marquée (anatomie occlusale abrupte, usure, facettes)",
         "Prémolaires et dents antérieures : usage discuté (surface de collage réduite, forces non axiales)"
       ],
-      prerequis: ["Traitement endodontique de qualité vérifié, dent asymptomatique", "Dent isolable pour le collage"],
       materiel: [
         "Fraises diamantées : cylindro-conique (conicité de l'ordre de 7° pour la chambre) et fraise boule/roue pour la table occlusale [[références à préciser]]",
         "Empreinte au **silicone** (**Express 2**, 3M ESPE) ou au **polyéther** (**Impregum Penta**), produits du service, ou empreinte optique [[à préciser]] ; fabrication de la zircone [[CFAO au service ou laboratoire : à préciser]]",
@@ -488,7 +481,6 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       indications: ["Délabrement coronaire ne permettant plus une restauration directe ou une pièce partielle", "Dent dépulpée fragilisée", "Rétablissement de l'esthétique ou de la fonction"],
       contreIndications: ["Parodonte non assaini", "Dent non conservable ou hygiène insuffisante", "Parafonction non contrôlée (précautions, gouttière)"],
-      prerequis: ["Dent vitale ou traitement endodontique de qualité vérifié (radiographie)", "Assainissement parodontal et carieux préalable", "Consentement éclairé et devis remis"],
       materiel: [
         "Examen : sonde, miroir, radiographie rétro-alvéolaire, alginate pour modèles d'étude",
         "Fraises de préparation [[références et granulométrie à préciser]]",

@@ -344,10 +344,6 @@
 
     // en-tête
     var chips = [statusChip(p)];
-    if (p.duree) chips.push(el('span', { class: 'chip plain', text: 'Durée : ' + p.duree }));
-    if (p.niveau) chips.push(el('span', { class: 'chip plain', text: p.niveau }));
-    if (p.maj) chips.push(el('span', { class: 'chip plain', text: 'Mis à jour : ' + p.maj }));
-    if (p.sourceType) chips.push(el('span', { class: 'chip src', text: 'Source : ' + p.sourceType }));
     var favB = el('button', { class: 'btn' + (isFav(p._key) ? ' fav-on on' : ''), type: 'button', onclick: function () {
       var on = toggleFav(p._key); favB.classList.toggle('fav-on', on); favB.classList.toggle('on', on); if (on && window.UIFX) window.UIFX.pop(favB); favB.lastChild.textContent = on ? 'Dans mes favoris' : 'Favori';
     } }, [icon('star', 18), el('span', { text: isFav(p._key) ? 'Dans mes favoris' : 'Favori' })]);
@@ -361,7 +357,7 @@
       actions.push(wakeBtn);
     }
     if ((p.materiel && p.materiel.length) || (p.etapes || []).some(function (x) { return x.materiel && x.materiel.length; })) {
-      actions.unshift(el('button', { class: 'btn primary', type: 'button', onclick: function () { openPrep(d, p); } }, [icon('box', 18), el('span', { text: 'Préparer la séance' })]));
+      actions.unshift(el('button', { class: 'btn primary', type: 'button', onclick: function () { openPrep(d, p); } }, [icon('box', 18), el('span', { text: 'Préparer la séance (matériel)' })]));
     }
     actions.push(el('button', { class: 'btn', type: 'button', onclick: function () { window.print(); } }, [icon('print', 18), el('span', { text: 'Imprimer / PDF' })]));
     actions.push(el('button', { class: 'btn', type: 'button', onclick: function () {
@@ -372,7 +368,7 @@
     } }, [icon(navigator.share ? 'share' : 'link', 18), el('span', { text: navigator.share ? 'Partager' : 'Copier le lien' })]));
 
     frag.appendChild(el('header', { class: 'page-head', style: colorStyle(d) }, [
-      el('h1', { text: p.titre }), el('p', { class: 'psum', text: p.resume }),
+      el('h1', { text: p.titre }),
       el('div', { class: 'chips' }, chips), el('div', { class: 'actions' }, actions)
     ]));
 
@@ -401,15 +397,13 @@
       });
       void ('s-apercu', 'Aperçu', el('section', { class: 'overview', id: 's-apercu' }, [el('h2', { text: 'Aperçu de la fiche' }), facts, el('h3', { class: 'ov-h', text: 'Les étapes d\'un coup d\'œil' }), ovl]));
     }
-    if (p.alertes && p.alertes.length) add('s-alertes', 'Vigilance', acc('s-alertes', 'Points de vigilance', ul(p.alertes), { cls: 'alert', open: true, icon: 'warn' }));
+    if (p.alertes && p.alertes.length) add('s-alertes', 'Vigilance', acc('s-alertes', 'Points de vigilance', ul(p.alertes), { cls: 'alert', open: false, icon: 'warn' }));
     if (p.indications || p.contreIndications) {
       var two = el('div', { class: 'two' });
       if (p.indications) two.appendChild(el('div', null, [el('h3', { text: 'Indications' }), ul(p.indications)]));
       if (p.contreIndications) two.appendChild(el('div', null, [el('h3', { text: 'Contre-indications / précautions' }), ul(p.contreIndications)]));
-      add('s-indic', 'Indications', acc('s-indic', 'Indications et précautions', two, { open: !narrow, icon: 'clip', cls: 'sec-blue' }));
+      add('s-indic', 'Indications', acc('s-indic', 'Indications et précautions', two, { open: false, icon: 'clip', cls: 'sec-blue' }));
     }
-    if (p.prerequis && p.prerequis.length) add('s-prereq', 'Pré-requis', acc('s-prereq', 'Pré-requis', ul(p.prerequis), { open: !narrow, icon: 'list', cls: 'sec-blue' }));
-    if (p.materiel && p.materiel.length) add('s-mat', 'Matériel', acc('s-mat', 'Matériel à préparer', ul(p.materiel), { open: !narrow, count: p.materiel.length, icon: 'box', cls: 'sec-blue' }));
 
     if (p.etapes && p.etapes.length) {
       var bar = el('i'), label = el('span');
@@ -447,8 +441,8 @@
     (p.annexes || []).forEach(function (x, i) {
       add('s-annexe-' + i, x.court || x.titre, acc('s-annexe-' + i, x.titre, annexeBody(x), { open: false, icon: x.icone || 'book', cls: 'sec-blue' }));
     });
-    if (p.consignes && p.consignes.length) add('s-consignes', 'Consignes patient', acc('s-consignes', 'Consignes à donner au patient', ul(p.consignes), { open: !narrow, icon: 'chat', cls: 'sec-ok' }));
-    if (p.suivi && p.suivi.length) add('s-suivi', 'Suivi', acc('s-suivi', 'Suivi', ul(p.suivi), { open: !narrow, icon: 'cal', cls: 'sec-blue' }));
+    if (p.consignes && p.consignes.length) add('s-consignes', 'Consignes patient', acc('s-consignes', 'Consignes à donner au patient', ul(p.consignes), { open: false, icon: 'chat', cls: 'sec-ok' }));
+    if (p.suivi && p.suivi.length) add('s-suivi', 'Suivi', acc('s-suivi', 'Suivi', ul(p.suivi), { open: false, icon: 'cal', cls: 'sec-blue' }));
     if (p.complications && p.complications.length) add('s-compl', 'Complications', acc('s-compl', 'Complications et conduite à tenir', ul(p.complications), { open: false, icon: 'warn', cls: 'sec-warn' }));
     if (p.erreurs && p.erreurs.length) add('s-erreurs', 'Erreurs fréquentes', acc('s-erreurs', 'Erreurs fréquentes à éviter', ul(p.erreurs), { open: false, icon: 'close', cls: 'sec-danger' }));
     if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false, icon: 'book', cls: 'sec-grey' }));

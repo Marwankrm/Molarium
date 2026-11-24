@@ -29,7 +29,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Dent non conservable (carie profonde non restaurable, fracture, mobilité terminale, parodontite avancée)", "Dent temporaire persistante, dent surnuméraire accessible", "Indication orthodontique ou prothétique"],
       contreIndications: ["Infection avec signes de gravité (cellulite, trismus serré, dysphagie) : orientation hospitalière", "Patient à haut risque d'ostéonécrose des mâchoires ou d'endocardite : protocole adapté avant le geste", "Patient sous antithrombotiques : voir la fiche dédiée"],
-      prerequis: ["Questionnaire médical à jour, risque évalué (voir fiche « Consultation initiale »)", "Radiographie pré-opératoire : rapports radiculaires, sinus, canal alvéolaire inférieur ; **panoramique et CBCT selon le cas**", "Consentement éclairé"],
       materiel: [
         "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** (**Eludril Perio**, Pierre Fabre, sans alcool, flacon avec godet doseur de 10 mL) : bain de bouche avant le geste (HAS 2026 : 0,1 à 0,2 %) et irrigation",
@@ -104,7 +103,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Plusieurs dents non conservables dans la même séance (assainissement avant prothèse, avant radiothérapie ou traitement à risque, parodontite avancée)", "Préparation d'une prothèse amovible ou d'une prothèse transitoire"],
       contreIndications: ["Patient à haut risque d'ostéonécrose, d'endocardite ou sous antithrombotiques : protocole adapté, fractionner les séances", "Infection avec signes de gravité : orientation hospitalière"],
-      prerequis: ["Panoramique ; **CBCT selon le cas**", "Plan par quadrant : nombre de dents, ordre de passage, séances prévues", "Consentement éclairé, risque médical évalué"],
       materiel: [
         "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** (bain de bouche avant le geste, irrigation)",
@@ -171,7 +169,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Dent délabrée ou racines résiduelles non accessibles au davier", "Molaire pluriradiculée à racines divergentes, courbes ou ankylosées", "Fracture radiculaire, échec d'une avulsion simple"],
       contreIndications: ["Infection avec signes de gravité : orientation hospitalière", "Rapports étroits avec le canal alvéolaire inférieur ou le sinus non évalués : imagerie complémentaire (CBCT selon le cas)", "Patient à risque particulier (antithrombotiques, ostéonécrose, endocardite) : protocole adapté"],
-      prerequis: ["Panoramique ; **CBCT selon le cas** (rapports sinus, canal alvéolaire inférieur, nerf mentonnier)", "Consentement éclairé, risque médical évalué"],
       materiel: [
         "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "**Chlorhexidine 0,2 %** : bain de bouche avant et **irrigation**",
@@ -258,12 +255,6 @@ window.DISCIPLINES.push({
         "Sujet sain de plus de 30 ans sans symptôme : avulsion systématique non recommandée (surveillance clinique et radiographique)",
         "L'inclusion ou l'ectopie ne sont pas, en soi, des critères de décision : seuls comptent le caractère symptomatique et/ou pathologique"
       ],
-      prerequis: [
-        "Bilan médical (interrogatoire, examen clinique) et **panoramique dentaire de première intention** (HAS 2019)",
-        "**CBCT** (ou à défaut dentascanner) si lésion ostéolytique/ostéocondensante associée, rapport étroit avec le nerf alvéolaire inférieur, ou pour préciser les rapports anatomiques ; **au service : demandé si rapport avec le nerf ou difficulté visible sur la rétro-alvéolaire ou le panoramique**",
-        "Remise au patient : consentement éclairé signé, feuille d'information sur l'intervention, prescription médicamenteuse",
-        "Patient informé des risques : douleur, œdème, trismus, saignement, infection, alvéolite, lésions nerveuses, rarement fracture mandibulaire ou projection de la dent"
-      ],
       materiel: [
         "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "Antiseptique : bain de bouche chlorhexidine 0,1–0,2 % ou povidone iodée 10 % avant le geste (HAS 2026)",
@@ -325,7 +316,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Communication entre la cavité buccale et le sinus maxillaire après avulsion d'une molaire ou prémolaire maxillaire", "Fistule bucco-sinusienne persistante"],
       contreIndications: ["**Sinusite non traitée** : traiter l'infection avant ou en même temps (la fermeture doit se faire dans un sinus sain)", "Corps étranger dans le sinus : l'éliminer avant la fermeture"],
-      prerequis: ["Diagnostic : taille, ancienneté, écoulement, sinusite ; **panoramique ou CBCT selon le cas**", "Avis du senior pour le choix de la technique"],
       materiel: [
         "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
         "Sérum physiologique et seringue pour le **lavage du sinus** par la CBS",

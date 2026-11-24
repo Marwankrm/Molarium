@@ -105,7 +105,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Édentement total maxillaire et mandibulaire", "Dents restantes à pronostic défavorable, avulsées ou à avulser avant réhabilitation", "Patient informé des alternatives (dont prothèse sur implants)"],
       contreIndications: ["Lésions muqueuses non diagnostiquées ou non cicatrisées", "Foyers infectieux ou racines résiduelles non traités", "Absence de motivation ou de capacité d'adaptation du patient (à discuter)"],
-      prerequis: ["Avulsions cicatrisées et chirurgie pré-prothétique réalisée si nécessaire", "Consentement éclairé", "**Délai laboratoire : 7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire"],
       materiel: [
         "**Empreintes primaires** : porte-empreintes du commerce maxillaire et mandibulaire, alginate",
         "**Porte-empreintes individuels (PEI)** en résine",
@@ -200,7 +199,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Situations où des **extractions sont nécessaires** et où les crêtes vont évoluer (prothèse transitoire)", "Remplacement provisoire des dents manquantes avant la prothèse définitive (châssis métallique ou autre)"],
       contreIndications: ["Hygiène bucco-dentaire insuffisante non améliorable", "Pathologie parodontale non stabilisée sur les dents d'appui"],
-      prerequis: ["Plan de traitement établi : dents à extraire, prothèse définitive envisagée", "Bilan radiologique et parodontal, consentement éclairé", "**Délai laboratoire : 7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire"],
       materiel: [
         "Porte-empreintes du commerce (empreinte primaire), **alginate**",
         "**Porte-empreinte individuel (PEI)** pour l'empreinte secondaire",
@@ -290,7 +288,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Édentement partiel étendu ou terminal (classes de Kennedy-Applegate)", "Prothèse définitive après une éventuelle prothèse transitoire", "Alternative à un bridge ou à un traitement implantaire (refus, contre-indication, coût)"],
       contreIndications: ["Hygiène bucco-dentaire insuffisante non améliorable", "Pathologie parodontale non stabilisée", "Dents d'appui à pronostic défavorable"],
-      prerequis: ["Assainissement préalable : caries, parodonte, avulsions, restaurations défectueuses", "Bilan radiologique et parodontal, consentement éclairé", "**Délai laboratoire : 7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire"],
       materiel: [
         "Empreintes d'étude : porte-empreintes du commerce, **alginate**",
         "Fraises de préparation (plans guides, logements de taquets) : seulement si nécessaire",
@@ -386,11 +383,6 @@ window.DISCIPLINES.push({
         "**Allergie connue aux méthacrylates** : GC Reline, Coe-Soft (et aux **salicylates** pour le Coe-Soft)",
         "**F.I.T.T.** (notice Kerr 2024 affichée au service) : **aucune contre-indication connue** ; ne pas l'utiliser en cas d'**allergie connue au méthacrylate** ; **pas de matériau à l'eugénol** avec ce produit (gêne le durcissement) ; **restrictions d'utilisation** : inflammations sévères et infections fongiques (texte partiellement masqué sur la photo)",
         "Prothèse dont la **dimension verticale** ou l'**occlusion en relation centrée** est incorrecte : la refaire plutôt que la rebaser (critères de la thèse de Lille)"
-      ],
-      prerequis: [
-        "Examen de la prothèse et des muqueuses : **dimension verticale, occlusion, extensions**",
-        "**Matériau choisi selon la situation** (voir le tableau des matériaux)",
-        "Accord de l'encadrant avant de commencer [[à préciser : validation de l'indication et du matériau par l'encadrant]]"
       ],
       materiel: [
         "**GC Reline** (rebasage dur) : poudre, liquide, **bonding agent**, godets, doseurs, pinceau, spatule plastique",

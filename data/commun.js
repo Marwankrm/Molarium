@@ -44,10 +44,6 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       indications: ["Avant tout acte bucco-dentaire invasif pour décider d'une antibioprophylaxie", "Devant une infection d'origine bucco-dentaire pour décider d'une antibiothérapie curative"],
       contreIndications: ["Patients à **risque d'endocardite infectieuse** : recommandation HAS 2024 dédiée « Prise en charge bucco-dentaire des patients à risque d'endocardite infectieuse »", "Cellulite avec signes systémiques, ostéomyélite, ostéonécrose infectée : prise en charge hospitalière, voie IV possible"],
-      prerequis: [
-        "**3 catégories de patients** : population générale ; patients à risque infectieux augmenté ; patients à **haut risque d'ostéonécrose des mâchoires** (radiothérapie ≥ 40 Gy, dénosumab si dernière injection < 6 mois, bisphosphonates pour pathologie maligne ou ≥ 5 ans cumulés pour pathologie bénigne, anti-angiogéniques)",
-        "Sont **assimilés à la population générale** : rémission d'une pathologie maligne, prothèse articulaire, fumeurs, diabétiques avec HbA1c < 9 %, obèses, femmes enceintes, personnes âgées, bisphosphonates bénins < 5 ans"
-      ],
       materiel: [
         "Antiseptique avant tout geste : bain de bouche **chlorhexidine 0,1 à 0,2 %** ou **povidone iodée 10 %**",
         "Amoxicilline (antibiotique de 1re intention) ; alternatives : clarithromycine, azithromycine, pristinamycine, clindamycine, céphalosporines selon l'indication"

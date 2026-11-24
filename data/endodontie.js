@@ -47,7 +47,6 @@ window.DISCIPLINES.push({
       ],
       indications: ["Pulpite irréversible", "Nécrose pulpaire avec ou sans parodontite apicale", "Traitement pré-prothétique nécessitant un ancrage radiculaire"],
       contreIndications: ["Dent non restaurable", "Fracture radiculaire verticale", "Dent sans intérêt stratégique chez un patient à risque (avis senior)"],
-      prerequis: ["Diagnostic pulpaire et péri-apical établi", "Radiographie pré-opératoire exploitable", "Évaluation de la restaurabilité de la dent", "Consentement éclairé, patient prévenu que **des douleurs post-opératoires sont fréquentes**"],
       materiel: [
         "Digue, clamps, cadre",
         "Hypochlorite de sodium **R&S 2,5 %** (Magnum Dental, flacon de 500 mL)",
@@ -126,8 +125,8 @@ window.DISCIPLINES.push({
         ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "matériel de thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "IRM ou CVI photopolymérisable", "radiographies"], validation: "essayage de la gutta et obturation" }
       ],
       consignes: [
-        "**Douleurs après le traitement : elles sont fréquentes** (environ 1 patient sur 5 est gêné dans sa vie quotidienne, et jusqu'à 10 % gardent une douleur jusqu'à 6 mois selon une revue) ; elles sont le plus souvent maximales dans les premières 24 à 48 heures.",
-        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication. Adulte de 50 kg ou plus : **1 g par prise, au moins 4 h entre deux prises, 3 g par jour au maximum** sans avis du prescripteur ; poids < 50 kg, maladie du foie ou des reins, consommation fréquente d'alcool : **60 mg/kg/jour au maximum, sans dépasser 3 g**. **Pas plus de 5 jours** sans avis médical (ANSM).",
+        "**Douleurs après le traitement : elles sont fréquentes**, le plus souvent maximales dans les premières 24 à 48 heures.",
+        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication.",
         "**Consulter en urgence** en cas de gonflement, fièvre, douleur qui augmente ou difficulté à ouvrir la bouche ou à avaler.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
         "**Pansement provisoire** : s'il se détache ou se fracture, reprendre rendez-vous rapidement (risque de recontamination).",
@@ -136,7 +135,7 @@ window.DISCIPLINES.push({
       ],
       erreurs: [
         "Traiter **sans digue** ou avec une digue non étanche",
-        "Accès insuffisant : canaux manqués (MB2 des molaires maxillaires), instruments qui travaillent mal",
+        "Accès insuffisant : canaux manqués (**MV2** des molaires maxillaires), instruments qui travaillent mal",
         "**Longueur de travail** mal déterminée (sur- ou sous-instrumentation, extrusion)",
         "Irrigation **sous pression** ou aiguille coincée ; terminer par l'EDTA ; oublier le rinçage à l'eau entre irrigants",
         "Obturation trop courte ou trop longue (extrusion de gutta ou de ciment)",
@@ -145,17 +144,15 @@ window.DISCIPLINES.push({
       ],
       suivi: ["Contrôle clinique et radiologique à 6 et 12 mois"],
       complications: [
-        "Extrusion d'hypochlorite : douleur immédiate, œdème, ecchymose → arrêt de l'irrigation, antalgie, avis senior, antibiothérapie (HAS 2026)",
-        "Extrusion d'hydroxyde de calcium ou de ciment : surveillance clinique et radiologique ; chirurgie endodontique en cas de symptômes persistants ou d'atteinte du sinus/du nerf",
-        "Fracture d'instrument, perforation : arrêter, documenter, avis du senior"
+        "**Extrusion d'hypochlorite** : douleur immédiate, œdème, ecchymose → **arrêt de l'irrigation**, antalgie, **avis senior**, antibiothérapie (HAS 2026)",
+        "**Extrusion d'hydroxyde de calcium ou de ciment** : **surveillance clinique et radiologique** ; **chirurgie endodontique** en cas de symptômes persistants ou d'atteinte du sinus ou du nerf",
+        "**Fracture d'instrument, perforation** : **arrêter**, documenter, **avis du senior**"
       ],
       references: [
-        "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[ANSM – Le paracétamol : posologie, dose maximale et durée (adulte)](https://ansm.sante.fr/dossiers-thematiques/le-paracetamol/impression/520)", "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/)",
-        "[Di Spirito F. et al. Post-operative endodontic pain management: an overview of systematic reviews. Healthcare 2022;10:760](https://pmc.ncbi.nlm.nih.gov/articles/PMC9141195/) — douleur post-endodontique fréquente (environ 1 patient sur 5 gêné au quotidien)",
+        "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/)",
+        "[Di Spirito F. et al. Post-operative endodontic pain management: an overview of systematic reviews. Healthcare 2022;10:760](https://pmc.ncbi.nlm.nih.gov/articles/PMC9141195/)",
         "[Schwendicke F., Göstemeyer G. Single-visit or multiple-visit root canal treatment. BMJ Open 2017;7](https://pmc.ncbi.nlm.nih.gov/articles/PMC5293988/)",
-        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
-        "Duncan H.F. et al. ESE S3-level clinical practice guideline: treatment of pulpal and apical disease. Int Endod J 2023;56 Suppl 3:238-295 (doi 10.1111/iej.13974) : **texte non consulté pour cette fiche**, à intégrer.",
-        "Antalgiques : aucune recommandation française spécifique à l'endodontie trouvée ; posologie du paracétamol d'après l'ANSM (voir les consignes)."
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
     },
     {
@@ -189,11 +186,6 @@ window.DISCIPLINES.push({
         "Dent **non restaurable** ou fracture radiculaire verticale",
         "Patient à haut risque d'ostéonécrose ou d'endocardite : mesures spécifiques avant tout geste (voir fiche antibiotiques)",
         "Retraitement non indispensable si la dent est asymptomatique, sans lésion et correctement obturée"
-      ],
-      prerequis: [
-        "**Cause de l'échec identifiée** (radiographie, éventuel CBCT, examen de la restauration coronaire)",
-        "Évaluation de la **restaurabilité** et du pronostic ; **alternatives expliquées** : retraitement non chirurgical, chirurgie apicale (échecs comparables à long terme selon une méta-analyse), extraction",
-        "Consentement éclairé, patient prévenu que **des douleurs post-opératoires sont fréquentes**"
       ],
       materiel: [
         "Digue, clamps ; ultrasons et fraises pour la dépose de la restauration, de la couronne ou du tenon",
@@ -268,7 +260,7 @@ window.DISCIPLINES.push({
       ],
       consignes: [
         "**Douleurs après un retraitement : fréquentes**, surtout dans les premières 24 à 48 heures ; elles sont plus marquées qu'après un traitement initial dans certaines séries.",
-        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication. Adulte de 50 kg ou plus : **1 g par prise, au moins 4 h entre deux prises, 3 g par jour au maximum** sans avis du prescripteur ; poids < 50 kg, maladie du foie ou des reins, consommation fréquente d'alcool : **60 mg/kg/jour au maximum, sans dépasser 3 g**. **Pas plus de 5 jours** sans avis médical (ANSM).",
+        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication.",
         "**Gonflement, fièvre, difficulté à ouvrir la bouche ou à avaler** : consulter en urgence.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
         "**Pansement provisoire** : s'il se détache, reprendre rendez-vous rapidement.",
@@ -290,14 +282,13 @@ window.DISCIPLINES.push({
         "Accident d'hypochlorite : voir la fiche « Traitement endodontique »"
       ],
       references: [
-        "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[ANSM – Le paracétamol : posologie, dose maximale et durée (adulte)](https://ansm.sante.fr/dossiers-thematiques/le-paracetamol/impression/520)", "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",
+        "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",
         "[Dioguardi M. et al. Analysis of endodontic successes and failures in the removal of fractured endodontic instruments during retreatment. Healthcare 2024;12:1390](https://pmc.ncbi.nlm.nih.gov/articles/PMC11276083/)",
         "[Shah T. et al. Endodontic retreatment efficacy with and without solvents: a systematic review. J Conserv Dent Endod 2023;26](https://pmc.ncbi.nlm.nih.gov/articles/PMC10823971/)",
         "[Scardini I.L. et al. Postoperative pain following nonsurgical endodontic retreatment. Iran Endod J 2023;18](https://pmc.ncbi.nlm.nih.gov/articles/PMC10155107/)",
         "[Di Spirito F. et al. Post-operative endodontic pain management: an overview of systematic reviews. Healthcare 2022;10:760](https://pmc.ncbi.nlm.nih.gov/articles/PMC9141195/)",
         "[Zou X. et al. Expert consensus on irrigation and intracanal medication in root canal therapy. Int J Oral Sci 2024;16:23](https://pmc.ncbi.nlm.nih.gov/articles/PMC10907616/) — le consensus décrit aussi la chlorhexidine 2 % (non utilisée au service) et l'activation de l'irrigant : manuelle au service (cône de gutta-percha ou lime), sans équipement d'activation",
-        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 1](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
-        "Le guideline ESE (Duncan et al. 2023) n'a pas pu être consulté. Produits non précisés et validations à confirmer par le service."
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 1](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
     },
     {
@@ -327,7 +318,7 @@ window.DISCIPLINES.push({
         { titre: "Antibiothérapie si indiquée (adulte, 1re intention)", details: ["**Amoxicilline 1 g × 3/jour pendant 3 jours** (prolonger de 2 jours si symptômes persistants)", "Allergie : clarithromycine 500 mg × 2/j, azithromycine 500 mg × 1/j ou pristinamycine 1 g × 2/j, 3 jours", "**Réévaluation à 3 jours** ; 2e intention : amoxicilline + métronidazole 1 g/500 mg × 3/j ou amoxicilline + acide clavulanique 1 g/125 mg × 3/j"] },
         { titre: "Consignes", details: ["Rendez-vous de traitement définitif", "Signes à surveiller : gonflement, fièvre, trismus, gêne à la déglutition → consulter en urgence"] }
       ],
-      references: ["[ANSM – Le paracétamol : posologie, dose maximale et durée (adulte)](https://ansm.sante.fr/dossiers-thematiques/le-paracetamol/impression/520)", "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"]
+      references: [ "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"]
     }
   ]
 });

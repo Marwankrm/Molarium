@@ -24,7 +24,6 @@ window.DISCIPLINES.push({
         "**Validation par l'encadrant** : après le sondage"
       ],
       indications: ["Tout nouveau patient du service", "Suspicion de maladie parodontale (saignement, mobilité, migration, récession, halitose)"],
-      prerequis: ["Questionnaire médical à jour (voir fiche « Consultation initiale »)", "Radiographies disponibles ou prescrites"],
       materiel: [
         "Sonde parodontale graduée [[marque à préciser]]",
         "Logiciel **Logos** pour le charting parodontal",
@@ -55,7 +54,6 @@ window.DISCIPLINES.push({
       ],
       references: [
         "[Sanz M. et al. Treatment of stage I-III periodontitis – The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47 Suppl 22:4-60](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
-        "Caton J.G. et al. Classification des maladies parodontales et péri-implantaires, 2018 : texte non consulté, à intégrer."
       ]
     },
     {
@@ -132,7 +130,6 @@ window.DISCIPLINES.push({
       references: [
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableaux 2 et 13](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
         "[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
-        "Chapple I.L. et al. Primary prevention of periodontitis: managing gingivitis. J Clin Periodontol 2015 : texte non consulté, à intégrer."
       ]
     },
     {
@@ -340,7 +337,6 @@ window.DISCIPLINES.push({
       erreurs: ["Prescrire un antibiotique sans geste local", "Passer à côté d'une origine endodontique", "Ne pas rechercher les signes de gravité", "Ne pas programmer le traitement parodontal ensuite"],
       references: [
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableaux 13 et 14](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
-        "Herrera D. et al. Acute periodontal lesions and endo-periodontal lesions. J Clin Periodontol 2018 : texte non consulté, à intégrer."
       ]
     }
   ]
