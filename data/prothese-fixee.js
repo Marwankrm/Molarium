@@ -304,7 +304,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Préparation, empreinte et provisoire", details: [
-          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation de la cavité** : parois légèrement expulsives, angles arrondis, **sans recouvrement des cuspides** ; **isthme d'au moins 1,5 mm de large**, parois expulsives de 6 à 12°, **épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet 1 mm de profondeur et de largeur au minimum) ; teinte au teintier",
+          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation de la cavité** : parois légèrement divergentes, angles arrondis, **sans recouvrement des cuspides** ; **isthme d'au moins 1,5 mm de large**, parois divergentes de 6 à 12°, **épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet 1 mm de profondeur et de largeur au minimum) ; teinte au teintier",
           "**Empreinte au silicone** (rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet, Acteon), empreinte de l'antagoniste, occlusion ; **provisoire**"
         ], materiel: ["fraises de préparation", "silicone d'empreinte", "alginate", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'inlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
@@ -371,7 +371,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Préparation, empreinte et provisoire", details: [
-          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation avec recouvrement des cuspides fragilisées** : réduction cuspidienne d'**au moins 1,5 mm** et **épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet environ 1 mm, épaulement d'au moins 1 mm), angles arrondis, parois expulsives de 6 à 12° ; teinte au teintier",
+          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation avec recouvrement des cuspides fragilisées** : réduction cuspidienne d'**au moins 1,5 mm** et **épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet environ 1 mm, épaulement d'au moins 1 mm), angles arrondis, parois divergentes de 6 à 12° ; teinte au teintier",
           "**Empreinte au silicone** (rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet, Acteon), empreinte de l'antagoniste, occlusion ; **provisoire**"
         ], materiel: ["fraises de préparation", "silicone d'empreinte", "alginate", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'onlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
