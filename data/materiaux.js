@@ -460,6 +460,45 @@ window.MATERIAUX = {
      ]
     },
     {
+     "id": "biodentine-xp-septodont",
+     "nom": "Biodentine XP (Septodont)",
+     "type": "Substitut dentinaire bioactif à base de silicate tricalcique (cartouche à mélanger au Biodentine Mixer)",
+     "statut": "lue",
+     "ind": [
+      "**Coiffage pulpaire direct et indirect**, dents **temporaires** (à partir de 2 ans) et **permanentes**, immatures ou matures : très utilisée au service chez l'enfant et chez l'adulte",
+      "**Pulpotomie** en cas de pulpite réversible ou irréversible, **si le saignement est maîtrisé dans les 5 minutes**",
+      "**Restauration dentinaire** définitive sous composite, inlay ou onlay, restauration amélo-dentinaire non définitive, lésions profondes ou volumineuses (technique sandwich), lésions cervicales",
+      "**Racine** (dents permanentes) : réparation des perforations radiculaires et du plancher pulpaire, résorptions, obturation apicale rétrograde ; **apexification** et revascularisation des dents immatures"
+     ],
+     "ci": [
+      "**Hypersensibilité** à un constituant",
+      "**Grandes pertes de substance** soumises à de fortes contraintes",
+      "Espace pulpaire dont la restauration finale nécessite une **couronne sur pivot ou sur inlay-core**",
+      "Peut irriter les yeux : protection individuelle ; **digue** pour éviter le contact avec la muqueuse et l'ingestion"
+     ],
+     "met": [
+      "**Activer** la cartouche avec le **Biodentine Mixer**, puis la mettre **tout de suite** sur le bras mélangeur ; **ne pas l'utiliser si plus de 3 minutes** se sont écoulées entre l'activation et le mélange",
+      "**Mélange : 30 secondes** (le bouton START devient vert puis clignote et émet deux bips)",
+      "Monter la cartouche sur le **Biodentine Gun**, **amorcer progressivement** jusqu'à voir le produit dans l'embout, puis extruder ; l'embout peut être plié (pas plus de 4 fois à 90°)",
+      "Consistance **homogène et crémeuse** : sinon **ne pas l'utiliser**",
+      "**Application** directe dans la cavité avec le pistolet, ou avec un porte-amalgame, une spatule ou un pistolet pour canal",
+      "**Temps de travail** : au moins 1 minute ; **prise moyenne 12 minutes** à partir de la fin du mélange (de 9 à 25 minutes selon les conditions)",
+      "**Éviter l'eau et les fluides** pendant la prise initiale ; **attendre la fin de la prise** avant la restauration définitive de l'émail ou le retrait de la matrice",
+      "Procédures endodontiques : rincer au sérum physiologique stérile et sécher **sans dessécher** le canal"
+     ],
+     "ret": [
+      "**Usage unique** : ne pas utiliser le même produit mélangé chez plusieurs patients",
+      "Notice reçue : celle de la version **XP** (cartouche, Mixer et Gun) ; **à confirmer** si le service utilise cette version ou les capsules",
+      "Bioactif : formation d'hydroxyapatite ; résistance à la compression ≥ 150 MPa à 24 h, 260 à 300 MPa à 28 jours (proche de la dentine saine)"
+     ],
+     "src": [
+      {
+       "t": "Notice Biodentine XP (Septodont, 2023), copie d'un distributeur",
+       "u": "https://www.proclinic.es/media/proclinic-es/annexes/89009_89022_ifu_es_en_de_fr_it.pdf"
+      }
+     ]
+    },
+    {
      "id": "calcimol-lc-voco",
      "nom": "Calcimol LC (Voco)",
      "type": "Hydroxyde de calcium photopolymérisable monocomposant, radio-opaque",
@@ -1184,7 +1223,7 @@ window.MATERIAUX = {
   },
   {
    "t": "Protection de la pulpe",
-   "x": "**Coiffage direct** : **Dycal** (hydroxyde de calcium). **Coiffage indirect ou liner** : **Dycal** ou **Calcimol LC** (photopolymérisable, pas à moins de 0,5 mm de la pulpe). **Base** : **CVI** (Fuji II LC, Ionofil Molar AC), jamais sur la pulpe directement."
+   "x": "**Coiffage direct et pulpotomie** (enfant et adulte) : **Biodentine**, très utilisée au service ; **Dycal** (hydroxyde de calcium) possible. **Coiffage indirect ou liner** : **Biodentine**, **Dycal** ou **Calcimol LC** (photopolymérisable, pas à moins de 0,5 mm de la pulpe). **Base** : **CVI** (Fuji II LC, Ionofil Molar AC), jamais sur la pulpe directement."
   },
   {
    "t": "Restauration directe",

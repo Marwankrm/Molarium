@@ -35,8 +35,8 @@ window.DISCIPLINES.push({
         { titre: "Évaluer", details: ["Risque carieux, comportement de l'enfant", "Radiographie : profondeur de la lésion, état de la furcation et du périapex", "Symptômes pulpaires (douleur spontanée, fistule, mobilité)"] },
         { titre: "Mesures non invasives", details: ["**SDF 38 %** : une à deux fois par an, avantage pour l'arrêt de la carie, meilleurs résultats avec deux applications annuelles ; intéressant chez l'enfant à haut risque carieux ou très jeune pour retarder un traitement invasif"] },
         { titre: "Technique de Hall", details: ["Couronne préformée métallique posée **sans anesthésie ni élimination de la carie** : réduit le risque de douleur et d'échec de la restauration ; mieux acceptée par enfants et parents", "Les couronnes préformées sont aussi recommandées sur les molaires temporaires traitées endodontiquement"] },
-        { titre: "Élimination sélective du tissu carié", details: ["**Curetage sélectif (en une étape) ou en deux temps** : à envisager pour les lésions atteignant le tiers ou le quart interne de la dentine, en l'absence de signes de pulpite irréversible, afin d'éviter l'exposition pulpaire", "Coiffage indirect : taux de succès élevé"] },
-        { titre: "Pulpotomie (si exposition ou pulpite réversible)", details: ["Recommandée : taux de succès élevés", "Médicaments équivalents : **MTA** ou **sulfate ferrique** ; formocrésol à abandonner ; **hydroxyde de calcium : le moins performant, déconseillé**", "Coiffage direct : usage limité (dents asymptomatiques, conditions non infectieuses)", "Pulpectomie : pas en 1re intention sur molaire temporaire vitale ; envisageable plutôt que l'avulsion si perte d'espace ou absence de successeur"] },
+        { titre: "Élimination sélective du tissu carié", details: ["**Curetage sélectif (en une étape) ou en deux temps** : à envisager pour les lésions atteignant le tiers ou le quart interne de la dentine, en l'absence de signes de pulpite irréversible, afin d'éviter l'exposition pulpaire", "Coiffage indirect : taux de succès élevé ; **Biodentine** très utilisée au service"] },
+        { titre: "Pulpotomie (si exposition ou pulpite réversible)", details: ["Recommandée : taux de succès élevés", "Au service : **Biodentine** (très utilisée). Recommandations : **MTA** ou **sulfate ferrique** équivalents ; formocrésol à abandonner ; **hydroxyde de calcium : le moins performant, déconseillé**", "Coiffage direct : usage limité (dents asymptomatiques, conditions non infectieuses)", "Pulpectomie : pas en 1re intention sur molaire temporaire vitale ; envisageable plutôt que l'avulsion si perte d'espace ou absence de successeur"] },
         { titre: "Restauration", details: [
           "**Classe I** : verre ionomère (GIC, HVGIC, RMGIC), compomère ou composite hybride / bulk-fill",
           "**Classe II** : compomère, composite hybride ou bulk-fill ; HVGIC/RMGIC avec prudence ; **verre ionomère renforcé de métal et glass carbomer non recommandés**",
@@ -61,15 +61,15 @@ window.DISCIPLINES.push({
       contreIndications: ["Abcès, fistule, mobilité pathologique", "Résorption radiculaire avancée", "Lésion de la furcation", "Enfant à risque d'endocardite : prise en charge selon la recommandation dédiée"],
       alertes: [
         "**Pas d'antibioprophylaxie en population générale** pour la pulpotomie de dent temporaire (HAS 2026, accord d'experts) ; recommandée au cas par cas chez l'enfant à risque infectieux augmenté.",
-        "Médicament : **MTA ou sulfate ferrique** (résultats comparables) ; **ne pas utiliser le formocrésol** (toxicité) ni l'hydroxyde de calcium (moins bons résultats).",
+        "Médicament : **Biodentine** au service (très utilisée) ; recommandations : **MTA ou sulfate ferrique** (résultats comparables) ; **ne pas utiliser le formocrésol** (toxicité) ni l'hydroxyde de calcium (moins bons résultats).",
         "**Consentement des représentants légaux.**"
       ],
-      materiel: ["Digue", "Fraises, curette", "Médicament de pulpotomie : MTA ou sulfate ferrique [[produit utilisé au CHU à préciser]]", "Matériau de restauration étanche : couronne préformée ou composite/compomère"],
+      materiel: ["Digue", "Fraises, curette", "Médicament de pulpotomie : **Biodentine** (MTA ou sulfate ferrique selon les recommandations)", "Matériau de restauration étanche : couronne préformée ou composite/compomère"],
       etapes: [
         { titre: "Évaluation et accord", details: ["Radiographie, évaluation du comportement", "Information et consentement des parents"] },
         { titre: "Anesthésie et isolation", details: ["Anesthésie locale adaptée à l'enfant", "Digue"] },
         { titre: "Exérèse de la pulpe coronaire", details: ["Ouverture de la chambre", "Amputation de la pulpe coronaire (curette ou fraise)", "Hémostase par compression"], astuce: "Une hémostase non obtenue rapidement oriente vers une pulpectomie ou une avulsion." },
-        { titre: "Application du médicament", details: ["Placer le médicament choisi sur les moignons radiculaires [[protocole du produit]]", "Obturer la chambre"] },
+        { titre: "Application du médicament", details: ["**Hémostase** d'abord (la notice de la Biodentine demande un saignement maîtrisé en **5 minutes** ; sinon retirer davantage de tissu pulpaire)", "Placer la **Biodentine** sur les moignons radiculaires (mélange selon la notice, voir la page Matériaux)", "Obturer la chambre"] },
         { titre: "Restauration définitive", details: ["Étanchéité immédiate : couronne préformée ou restauration adhésive", "Contrôle radiographique"] }
       ],
       suivi: ["Évaluation **clinique** à 6 mois puis annuelle", "Surveillance jusqu'à l'exfoliation"],
