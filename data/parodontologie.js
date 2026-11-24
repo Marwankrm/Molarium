@@ -199,7 +199,7 @@ window.DISCIPLINES.push({
         ], materiel: ["sonde parodontale", "anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum"], validation: "sondage, puis surfaçage" },
         { titre: "Séance 2 – Surfaçage de la seconde moitié et consignes", details: [
           "**Anesthésie** et **surfaçage** de la seconde moitié de la bouche ; irrigation ; validation par l'encadrant après le surfaçage",
-          "**Consignes** et **prescription d'un bain de bouche** (**Eludril Perio** (chlorhexidine 0,20 %)) ; rendez-vous de réévaluation [[délai à préciser]]"
+          "**Consignes** et **prescription d'un bain de bouche** (**Eludril Perio** (chlorhexidine 0,20 %)) ; rendez-vous de réévaluation **pas avant 8 semaines** (de 2 à 6 mois selon le contrôle de plaque)"
         ], materiel: ["anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum", "ordonnance"], validation: "surfaçage" }
       ],
       consignes: [
@@ -218,7 +218,7 @@ window.DISCIPLINES.push({
         "Prescrire un antibiotique en dehors des cas de la HAS 2026",
         "Oublier de programmer la réévaluation"
       ],
-      suivi: ["**Réévaluation** après une cicatrisation suffisante [[délai à préciser]]"],
+      suivi: ["**Réévaluation** : **jamais avant 8 semaines** après l'instrumentation sous-gingivale ; de 2 à 6 mois selon le contrôle de plaque du patient (EFP)"],
       references: [
         "[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – étape 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableaux 2, 13 et 14](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
@@ -233,7 +233,7 @@ window.DISCIPLINES.push({
       statut: "brouillon",
       sourceType: "Guideline EFP S3 2020 + pratique courante – à compléter par le service",
       maj: "2026-11",
-      indications: ["Après une cicatrisation suffisante suivant l'instrumentation sous-gingivale [[délai du service à préciser]]"],
+      indications: ["**Pas avant 8 semaines** après l'instrumentation sous-gingivale ; en général **2 à 6 mois**, selon le contrôle de plaque (EFP)"],
       materiel: ["Sonde parodontale", "Logiciel Logos", "Révélateur de plaque", "Radiographies si besoin"],
       alertes: ["**Objectifs de santé** : aucune poche **≥ 5 mm avec saignement** et aucune poche profonde **≥ 6 mm** ; si atteints, passage en maintenance ; sinon, étape 3 (EFP)."],
       etapes: [
@@ -241,7 +241,7 @@ window.DISCIPLINES.push({
       ],
       consignes: ["**Résultat** du traitement expliqué au patient ; objectifs et prochaines étapes ; **maintenance** à rythme personnalisé."],
       erreurs: ["Réévaluation trop précoce, avant la cicatrisation", "Sondage incomplet", "Absence de décision écrite (maintenance ou étape 3)"],
-      references: ["[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – réévaluation après l'étape 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)"]
+      references: ["[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – réévaluation après l'étape 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)", "[EFP – Mariano Sanz répond aux questions sur le guideline : délai de réévaluation (avis d'expert, pas avant 8 semaines)](https://www.efp.org/news-events/news/mariano-sanz-answers-questions-on-efp-clinical-practice-guideline-30525/)"]
     },
     {
       id: "chirurgie-parodontale",
@@ -326,7 +326,7 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Temps 1 – Diagnostic", details: ["Sondage, mobilité, suppuration ; **test de vitalité** et radiographie pour distinguer une origine parodontale, endodontique ou combinée", "Évaluation de l'état général (fièvre, adénopathies, trismus)"], materiel: ["sonde parodontale", "test de vitalité", "radiographie"] },
         { titre: "Temps 2 – Geste local", details: ["Anesthésie ; **drainage** par la poche ou incision, **débridement** doux à l'insert et aux curettes, irrigation", "Lésion endodontique associée : traitement endodontique (voir les fiches d'endodontie)"], materiel: ["anesthésique", "inserts fins", "curettes", "irrigation"] },
-        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques : **paracétamol** (4 g par jour au maximum, en 4 prises) ; bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle à 48-72 h** puis traitement parodontal complet après l'urgence [[délai à confirmer]]"], materiel: ["ordonnance"] }
+        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques : **paracétamol** (4 g par jour au maximum, en 4 prises) ; bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle rapidement après l'urgence**, puis traitement parodontal complet"], materiel: ["ordonnance"] }
       ],
       consignes: [
         "**Hygiène** douce mais maintenue ; ne pas arrêter le brossage.",
