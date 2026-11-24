@@ -1174,19 +1174,12 @@ window.MATERIAUX = {
       "**F.I.T.T.** (notice Kerr 2024 du service) : **aucune contre-indication connue** ; pas d'allergie connue au **méthacrylate** ; **pas de matériau à l'eugénol** avec ce produit ; restrictions : inflammations sévères et infections fongiques",
       "Ancienne notice F.I.T.T. (06-2016) : mention du **dibutylphtalate** (ni grossesse, ni enfant) : **absente de la notice 2024** affichée au service"
      ],
-     "met": [
-      "Voir la **fiche « Rebasage direct »** du site (étapes détaillées pour les trois produits)"
-     ],
+     "met": [],
      "ret": [
       "Rebasage direct = solution temporaire ; référence = rebasage indirect au laboratoire (thèse de Lille, 2022)",
       "**F.I.T.T. (notice 2024)** : environ **1 dose de poudre pour 1 de liquide** (fin) à **1,5 pour 1** (plus de corps) ; gobelets gradués 7 mL (poudre) et 5 mL (liquide) ; mélange d'environ 1 min ; retrait 2 à 3 min après la pose ; peut être porté plusieurs jours"
      ],
-     "src": [
-      {
-       "t": "Fiche du site : Rebasage direct",
-       "u": "#/prothese-amovible/rebasage-direct"
-      }
-     ]
+     "src": []
     },
     {
      "id": "gc-tri-plaque-id-gel",
@@ -1260,7 +1253,7 @@ window.MATERIAUX = {
   },
   {
    "t": "Rebasage",
-   "x": "**GC Reline** (dur), **Coe-Soft** (souple temporaire), **F.I.T.T.** (tissus à remettre en état) : voir la fiche « Rebasage direct »."
+   "x": "**GC Reline** (dur), **Coe-Soft** (souple temporaire), **F.I.T.T.** (tissus à remettre en état)."
   }
  ]
 };

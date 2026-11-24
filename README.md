@@ -51,3 +51,7 @@ passer à `statut: "valide"` et renseigner `validePar: "Dr X"` : le badge devien
 ## Photos des produits (page « Matériaux »)
 
 Les photos de `img/materiaux/` ont été récupérées sur les sites des fabricants ou de revendeurs (liste, crédit et lien de chaque photo dans `data/materiaux-img.js`). Elles restent la propriété de leurs détenteurs et ne sont là qu'à titre d'illustration pédagogique, sans but commercial ; elles seront retirées sur simple demande. Pour ajouter ou remplacer une photo : déposer le fichier dans `img/materiaux/<id du produit>.jpg` et ajouter la ligne correspondante dans `data/materiaux-img.js`.
+
+## Archive
+
+Le dossier `archive/` contient des fiches retirées du site mais conservées (non chargées par `index.html`), par exemple `archive/rebasage-direct.js`, avec la marche à suivre pour les remettre en ligne.
