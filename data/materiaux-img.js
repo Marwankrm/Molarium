@@ -118,8 +118,7 @@ window.MATERIAUX_IMG = {
  },
  "glyde-file-prep-dentsply-sirona": {
   "f": "img/materiaux/glyde-file-prep-dentsply-sirona.jpg",
-  "credit": "DD Group (revendeur)",
-  "page": "https://www.ddgroup.com/endodontics/irrigation/evm005--glyde-file-prep-intro-kit/"
+  "credit": ""
  },
  "durelon-3m": {
   "f": "img/materiaux/durelon-3m.jpg",
@@ -164,6 +163,10 @@ window.MATERIAUX_IMG = {
  },
  "aluwax": {
   "f": "img/materiaux/aluwax.jpg",
+  "credit": ""
+ },
+ "desocclusol-orange-acteon": {
+  "f": "img/materiaux/desocclusol-orange-acteon.jpg",
   "credit": ""
  }
 };
