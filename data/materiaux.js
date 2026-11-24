@@ -576,7 +576,7 @@ window.MATERIAUX = {
      "id": "filtek-3m-capsules-bright-natural-warm",
      "nom": "Filtek Easy Match (3M / Solventum), capsules Bright, Natural, Warm",
      "type": "Composite universel simplifié à 3 teintes (capsules ou seringues), nanochargé",
-     "statut": "part",
+     "statut": "lue",
      "ind": [
       "**Restaurations antérieures et postérieures** avec une sélection de teinte simplifiée : **3 teintes** seulement",
       "Restauration en **teinte unique** (pas conçu pour les restaurations multiteintes ; pour cela, Filtek Supreme Ultra)"
@@ -591,12 +591,9 @@ window.MATERIAUX = {
       "**Couches de 2 mm au maximum** ; **photopolymérisation** : **10 s** avec une lampe LED de 1 000 à 2 000 mW/cm², **20 s** avec une lampe halogène (couche de 2 mm, les 3 teintes)",
       "Matériau ferme et non collant (ne colle pas aux instruments) ; opacité **naturellement adaptative** : translucidité de type émail sur les bords",
       "Dentine décolorée à masquer : **opacifiant rose** du Filtek Universal, appliqué sous le composite (couche de 1 mm)",
-      "Compatible avec le composite fluide **Filtek Supreme** (teintes correspondantes) ; capsules **réchauffables à 70 °C maximum pendant 1 h au plus**, avec un réchauffeur de composite du commerce (pas de bain d'eau chaude ni de plaque chauffante)"
+      "Compatible avec le composite fluide **Filtek Supreme** (teintes correspondantes)"
      ],
-     "ret": [
-      "**Radio-opaque** (2,4 mmAl, légèrement plus que l'émail)",
-      "D'après la **FAQ du fabricant** (2024) : lire aussi la notice de la boîte"
-     ],
+     "ret": [],
      "src": [
       {
        "t": "FAQ Filtek Easy Match (Solventum, 2024), reçue du service",
