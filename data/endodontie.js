@@ -19,6 +19,7 @@ var PTG_ANNEXE = {
 window.DISCIPLINES.push({
   id: "endodontie",
   ordre: 3,
+  ordreSections: ["s-indic", "s-etapes", "s-suivi", "s-consignes", "s-compl", "s-annexe", "s-alertes", "s-erreurs", "s-refs", "s-todo"],
   nom: "Endodontie",
   sigle: "EN",
   couleur: "#b3262e",

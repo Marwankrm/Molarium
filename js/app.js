@@ -448,7 +448,12 @@
     if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false, icon: 'book', cls: 'sec-grey' }));
     if (p._todoN) add('s-todo', 'À préciser', acc('s-todo', 'Points à préciser par le service', ul(p._todos), { cls: 'todo-acc', open: false, count: p._todoN }));
 
-    items.sort(function (x, y) { var rx = x.id in RANK ? RANK[x.id] : 10 + x.i, ry = y.id in RANK ? RANK[y.id] : 10 + y.i; return rx - ry; });
+    var ORD = d.ordreSections;
+    function rk(it) {
+      if (ORD) { var k = ORD.indexOf(it.id.indexOf('s-annexe') === 0 ? 's-annexe' : it.id); return (k < 0 ? 100 : k) * 100 + it.i; }
+      return it.id in RANK ? RANK[it.id] : 10 + it.i;
+    }
+    items.sort(function (x, y) { return rk(x) - rk(y); });
     items.forEach(function (it) { secs.push(it.node); toc.push({ id: it.id, label: it.label }); });
 
     // sommaire (barre mobile + colonne desktop)
