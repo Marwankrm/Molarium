@@ -661,9 +661,9 @@ window.MATERIAUX = {
      "id": "sof-lex-3m-strips-et-disques-stripmat-po",
      "nom": "Sof-Lex (3M), strips et disques ; Stripmat (Polydentia)",
      "type": "Finition et polissage ; bandes de polyester",
-     "statut": "abs",
+     "statut": "lue",
      "ind": [
-      "Notices **non trouvées**"
+      "**Finition et polissage** des restaurations (strips et disques Sof-Lex) ; **Stripmat** : bande polyester pour la matrice et la mise en forme"
      ],
      "ci": [],
      "met": [
