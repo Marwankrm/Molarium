@@ -304,7 +304,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Préparation, empreinte et provisoire", details: [
-          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation de la cavité** : parois légèrement expulsives, angles arrondis, **sans recouvrement des cuspides** [[épaisseurs minimales selon le matériau à préciser]] ; teinte au teintier",
+          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation de la cavité** : parois légèrement expulsives, angles arrondis, **sans recouvrement des cuspides** ; **isthme d'au moins 1,5 mm de large**, parois expulsives de 6 à 12°, **épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet 1 mm de profondeur et de largeur au minimum) ; teinte au teintier",
           "**Empreinte au silicone** (rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet, Acteon), empreinte de l'antagoniste, occlusion ; **provisoire**"
         ], materiel: ["fraises de préparation", "silicone d'empreinte", "alginate", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'inlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
@@ -331,7 +331,9 @@ window.DISCIPLINES.push({
       ],
       references: [
         "[Kuraray Noritake – PANAVIA V5, fiche protocole (12/2014) : inlays/onlays, Tooth Primer 20 s, isolation 3 min](https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf) — à comparer à la notice en vigueur",
-        "Séquence rédigée d'après la pratique courante (3e séance, épaisseurs de réduction et produit de traitement de l'intrados à confirmer par le service).",
+        "[Disilicate de lithium vs composite CAD/CAM en onlays : préparation (isthme 1,5 mm, épaisseur occlusale 1,5 à 2 mm, cuspides recouvertes de 1,5 mm au moins), PMC7790784](https://pmc.ncbi.nlm.nih.gov/articles/PMC7790784/)",
+        "[GC Initial LiSi Block – manuel technique : épaisseurs minimales du disilicate de lithium (inlay, onlay)](https://www.gc.dental/america/sites/america.gc.dental/files/products/downloads/gcinitiallisiblock/technical%20manual/gc-initial-lisi-block-technical-manual.pdf)",
+        "Séquence rédigée d'après la pratique courante (3e séance et produit de traitement de l'intrados à confirmer par le service).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
     },
@@ -369,7 +371,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Préparation, empreinte et provisoire", details: [
-          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation avec recouvrement des cuspides fragilisées** : réduction cuspidienne suffisante pour le matériau [[épaisseurs à préciser]], angles arrondis, parois expulsives ; teinte au teintier",
+          "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie ; **préparation avec recouvrement des cuspides fragilisées** : réduction cuspidienne d'**au moins 1,5 mm** et **épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet environ 1 mm, épaulement d'au moins 1 mm), angles arrondis, parois expulsives de 6 à 12° ; teinte au teintier",
           "**Empreinte au silicone** (rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet, Acteon), empreinte de l'antagoniste, occlusion ; **provisoire**"
         ], materiel: ["fraises de préparation", "silicone d'empreinte", "alginate", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'onlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
@@ -396,7 +398,9 @@ window.DISCIPLINES.push({
       ],
       references: [
         "[Kuraray Noritake – PANAVIA V5, fiche protocole (12/2014) : inlays/onlays, Tooth Primer 20 s, isolation 3 min](https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf) — à comparer à la notice en vigueur",
-        "Séquence rédigée d'après la pratique courante (3e séance, épaisseurs de réduction et produit de traitement de l'intrados à confirmer par le service).",
+        "[Disilicate de lithium vs composite CAD/CAM en onlays : préparation (isthme 1,5 mm, épaisseur occlusale 1,5 à 2 mm, cuspides recouvertes de 1,5 mm au moins), PMC7790784](https://pmc.ncbi.nlm.nih.gov/articles/PMC7790784/)",
+        "[GC Initial LiSi Block – manuel technique : épaisseurs minimales du disilicate de lithium (inlay, onlay)](https://www.gc.dental/america/sites/america.gc.dental/files/products/downloads/gcinitiallisiblock/technical%20manual/gc-initial-lisi-block-technical-manual.pdf)",
+        "Séquence rédigée d'après la pratique courante (3e séance et produit de traitement de l'intrados à confirmer par le service).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
     },
