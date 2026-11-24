@@ -194,11 +194,11 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Sondage, anesthésie et surfaçage de la première moitié de la bouche", details: [
-          "**Sondage de contrôle** et indices ; validation par l'encadrant ; **anesthésie** de la zone [[technique à préciser]]",
-          "**Surfaçage** de la première moitié de la bouche aux **inserts parodontaux** (curettes en complément), **irrigation à la chlorhexidine ou au sérum** ; validation après le surfaçage [[moitié droite/gauche à confirmer]]"
-        ], materiel: ["sonde parodontale", "anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum"], validation: "sondage, puis surfaçage" },
+          "**Sondage de contrôle** et indices ; validation par l'encadrant ; **anesthésie** de la zone",
+          "**Surfaçage** de la première moitié de la bouche aux **inserts parodontaux** (curettes en complément), **irrigation à la chlorhexidine ou au sérum** ; **validation du surfaçage par l'encadrant**"
+        ], materiel: ["sonde parodontale", "anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum"], validation: "du sondage, puis du surfaçage" },
         { titre: "Séance 2 – Surfaçage de la seconde moitié et consignes", details: [
-          "**Anesthésie** et **surfaçage** de la seconde moitié de la bouche ; irrigation ; validation par l'encadrant après le surfaçage",
+          "**Anesthésie** et **surfaçage** de la seconde moitié de la bouche ; irrigation ; **validation du surfaçage par l'encadrant**",
           "**Consignes** et **prescription d'un bain de bouche** (**Eludril Perio** (chlorhexidine 0,20 %)) ; rendez-vous de **réévaluation à 3 mois**"
         ], materiel: ["anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum", "ordonnance"], validation: "surfaçage" }
       ],
