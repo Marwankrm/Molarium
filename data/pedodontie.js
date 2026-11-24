@@ -69,7 +69,7 @@ window.DISCIPLINES.push({
         { titre: "Évaluation et accord", details: ["Radiographie, évaluation du comportement", "Information et consentement des parents"] },
         { titre: "Anesthésie et isolation", details: ["Anesthésie locale adaptée à l'enfant", "Digue"] },
         { titre: "Exérèse de la pulpe coronaire", details: ["Ouverture de la chambre", "Amputation de la pulpe coronaire (curette ou fraise)", "Hémostase par compression"], astuce: "Une hémostase non obtenue rapidement oriente vers une pulpectomie ou une avulsion." },
-        { titre: "Application du médicament", details: ["**Hémostase** d'abord (la notice de la Biodentine demande un saignement maîtrisé en **5 minutes** ; sinon retirer davantage de tissu pulpaire)", "Placer la **Biodentine** sur les moignons radiculaires (mélange selon la notice, voir la page Matériaux)", "Obturer la chambre"] },
+        { titre: "Application du médicament", details: ["**Hémostase** d'abord : indispensable avant d'appliquer la Biodentine", "Placer la **Biodentine** directement dans la chambre pulpaire, bien adaptée aux parois (mélange en capsule : voir la page Matériaux)", "Obturer la chambre"] },
         { titre: "Restauration définitive", details: ["Étanchéité immédiate : couronne préformée ou restauration adhésive", "Contrôle radiographique"] }
       ],
       suivi: ["Évaluation **clinique** à 6 mois puis annuelle", "Surveillance jusqu'à l'exfoliation"],

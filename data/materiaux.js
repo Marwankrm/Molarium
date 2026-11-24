@@ -460,41 +460,39 @@ window.MATERIAUX = {
      ]
     },
     {
-     "id": "biodentine-xp-septodont",
-     "nom": "Biodentine XP (Septodont)",
-     "type": "Substitut dentinaire bioactif à base de silicate tricalcique (cartouche à mélanger au Biodentine Mixer)",
+     "id": "biodentine-septodont",
+     "nom": "Biodentine (Septodont), capsules",
+     "type": "Substitut dentinaire bioactif à base de silicate tricalcique (capsule de poudre + monodose de liquide)",
      "statut": "lue",
      "ind": [
-      "**Coiffage pulpaire direct et indirect**, dents **temporaires** (à partir de 2 ans) et **permanentes**, immatures ou matures : très utilisée au service chez l'enfant et chez l'adulte",
-      "**Pulpotomie** en cas de pulpite réversible ou irréversible, **si le saignement est maîtrisé dans les 5 minutes**",
-      "**Restauration dentinaire** définitive sous composite, inlay ou onlay, restauration amélo-dentinaire non définitive, lésions profondes ou volumineuses (technique sandwich), lésions cervicales",
-      "**Racine** (dents permanentes) : réparation des perforations radiculaires et du plancher pulpaire, résorptions, obturation apicale rétrograde ; **apexification** et revascularisation des dents immatures"
+      "**Coiffage pulpaire** et **pulpotomie** : très utilisée au service chez l'enfant et chez l'adulte",
+      "**Restauration dentinaire** définitive sous composite, inlay ou onlay ; restauration amélo-dentinaire non définitive ; lésions profondes ou volumineuses (technique sandwich) ; lésions cervicales",
+      "**Racine** : réparation des perforations radiculaires et du plancher pulpaire, résorptions perforantes internes et externes ; **apexification** ; obturation apicale rétrograde"
      ],
      "ci": [
-      "**Hypersensibilité** à un constituant",
-      "**Grandes pertes de substance** soumises à de fortes contraintes",
-      "Espace pulpaire dont la restauration finale nécessite une **couronne sur pivot ou sur inlay-core**",
-      "Peut irriter les yeux : protection individuelle ; **digue** pour éviter le contact avec la muqueuse et l'ingestion"
+      "**Allergie** à un constituant",
+      "**Limites** : grandes pertes de substance soumises à de fortes contraintes ; **restauration esthétique du secteur antérieur** ; **dents à pulpite irréversible** (évaluer d'abord la vitalité pulpaire)"
      ],
      "met": [
-      "**Activer** la cartouche avec le **Biodentine Mixer**, puis la mettre **tout de suite** sur le bras mélangeur ; **ne pas l'utiliser si plus de 3 minutes** se sont écoulées entre l'activation et le mélange",
-      "**Mélange : 30 secondes** (le bouton START devient vert puis clignote et émet deux bips)",
-      "Monter la cartouche sur le **Biodentine Gun**, **amorcer progressivement** jusqu'à voir le produit dans l'embout, puis extruder ; l'embout peut être plié (pas plus de 4 fois à 90°)",
-      "Consistance **homogène et crémeuse** : sinon **ne pas l'utiliser**",
-      "**Application** directe dans la cavité avec le pistolet, ou avec un porte-amalgame, une spatule ou un pistolet pour canal",
-      "**Temps de travail** : au moins 1 minute ; **prise moyenne 12 minutes** à partir de la fin du mélange (de 9 à 25 minutes selon les conditions)",
-      "**Éviter l'eau et les fluides** pendant la prise initiale ; **attendre la fin de la prise** avant la restauration définitive de l'émail ou le retrait de la matrice",
-      "Procédures endodontiques : rincer au sérum physiologique stérile et sécher **sans dessécher** le canal"
+      "**Mélange en capsule** : taper la capsule pour détasser la poudre, l'ouvrir sur le support blanc, verser **5 gouttes** de la monodose, refermer",
+      "Placer sur un **vibreur** (Technomix, Tac 400, Silamat, CapMix, Rotomix, Ultramat…) à **4 000-4 200 oscillations/min**, **30 secondes**",
+      "Ouvrir et vérifier la consistance : si plus épaisse souhaitée, attendre **30 s à 1 min** sans dépasser le temps de travail ; récupérer avec la spatule du coffret, ou un porte-amalgame",
+      "**Coiffage** : digue, retirer la dentine cariée (garder la dentine affectée), **hémostase indispensable**, placer la Biodentine **directement sur la pulpe exposée sans compression**",
+      "**Pulpotomie** : excision de la pulpe camérale, hémostase, Biodentine placée dans la chambre pulpaire, bien adaptée aux parois",
+      "**Perforations** : champ opératoire, canal rincé à l'hypochlorite et séché, Biodentine mise en place puis comprimée au fouloir, radiographie de contrôle",
+      "**Éviter l'eau et les fluides** pendant la prise initiale (**12 minutes**) ; attendre la fin de la prise avant de déposer la matrice ; un vernis sur la surface améliore les propriétés et facilite la dépose",
+      "**Vérifier l'occlusion** ; **d'une semaine à six mois** plus tard, préparer la cavité pour la restauration définitive : la Biodentine restante peut rester en profondeur, compatible avec tous les adhésifs",
+      "Rincer et nettoyer rapidement les instruments"
      ],
      "ret": [
-      "**Usage unique** : ne pas utiliser le même produit mélangé chez plusieurs patients",
-      "Notice reçue : celle de la version **XP** (cartouche, Mixer et Gun) ; **à confirmer** si le service utilise cette version ou les capsules",
-      "Bioactif : formation d'hydroxyapatite ; résistance à la compression ≥ 150 MPa à 24 h, 260 à 300 MPa à 28 jours (proche de la dentine saine)"
+      "**Usage unique**, un seul patient ; conserver à l'abri de l'humidité",
+      "Boîte de 5 capsules et 5 monodoses (ou 15 selon le conditionnement)",
+      "Aucun effet indésirable connu à ce jour (notice)"
      ],
      "src": [
       {
-       "t": "Notice Biodentine XP (Septodont, 2023), copie d'un distributeur",
-       "u": "https://www.proclinic.es/media/proclinic-es/annexes/89009_89022_ifu_es_en_de_fr_it.pdf"
+       "t": "Notice Biodentine capsules (Septodont), copie d'un distributeur",
+       "u": "https://www.proclinic.es/media/proclinic-es/annexes/19062_biodentine.pdf"
       }
      ]
     },

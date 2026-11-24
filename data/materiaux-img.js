@@ -173,5 +173,9 @@ window.MATERIAUX_IMG = {
   "f": "img/materiaux/relyx-unicem-2.jpg",
   "credit": "DD Group (revendeur)",
   "page": "https://www.ddgroup.com/bonding--cements/self-adhesive-cement/fwm100--relyx-unicem-2-clicker-translucent/"
+ },
+ "biodentine-septodont": {
+  "f": "img/materiaux/biodentine-septodont.jpg",
+  "credit": ""
  }
 };

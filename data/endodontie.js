@@ -208,7 +208,7 @@ window.DISCIPLINES.push({
         "**Hypochlorite de sodium R&S 2,5 %** (Magnum Dental), **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
         "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes, ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
         "**Hydroxyde de calcium** en pâte prête à l'emploi en seringue (**Supracal**, R&S), si 2e séance",
-        "**IRM** ou **CVI photopolymérisable** pour l'étanchéité ; matériau de réparation de perforation [[à préciser]]",
+        "**IRM** ou **CVI photopolymérisable** pour l'étanchéité ; réparation de perforation à la **Biodentine** (indication de la notice)",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
       ],
       alertes: [
@@ -233,7 +233,7 @@ window.DISCIPLINES.push({
           "**Désobturation de la gutta-percha** au **Desocclusol Orange** (Acteon), puis aux limes rotatives **ProTaper Universal Retreatment**, utilisées **en séquence** : **D1** (pointe coupante, pénétration initiale), **D2** (tiers moyen), **D3** (tiers apical)",
           "**Repérage des canaux manqués**, négociation",
           "**Perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie)",
-          "Retrait des fragments ou réparation d'une perforation selon la situation [[matériau du service]]"
+          "Retrait des fragments ou réparation d'une perforation selon la situation : **Biodentine** pour la perforation"
         ], materiel: ["Desocclusol Orange (Acteon)", "limes ProTaper Universal Retreatment D1, D2, D3", "localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
           "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
