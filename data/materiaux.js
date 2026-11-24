@@ -1085,32 +1085,6 @@ window.MATERIAUX = {
      ]
     },
     {
-     "id": "hygenic-bite-wafers-coltene-alminax-rose",
-     "nom": "Hygenic Bite Wafers (Coltene) ; Alminax rose (Kemdent) ; Pinnacle Modelling Wax (Dentsply Sirona)",
-     "type": "Cires d'occlusion et de modelage",
-     "statut": "part",
-     "ind": [
-      "**Hygenic Bite Wafers** : enregistrement de la relation entre dents du haut et du bas, **indiqués chez les patients **dentés**",
-      "Alminax : cire d'enregistrement d'occlusion ; Pinnacle : cire de modelage"
-     ],
-     "ci": [
-      "Hygenic : aucune contre-indication connue"
-     ],
-     "met": [
-      "Hygenic : ramollir au besoin à l'eau tiède, **laisser refroidir avant de retirer**, excès avec un instrument chaud, refroidissement final à l'eau froide"
-     ],
-     "ret": [
-      "Hygenic : **jeter la cire cassante** (risque d'inhalation) ; **pas de cire chaude** (brûlures)",
-      "Notices d'Alminax et de Pinnacle **non trouvées**"
-     ],
-     "src": [
-      {
-       "t": "Notice Coltene cires Hygenic",
-       "u": "https://products.coltene.com/DE/ZW/media/DOC_IFU_20005530A-08-23-Wax-IFU_IND.pdf?sprache=EN"
-      }
-     ]
-    },
-    {
      "id": "gc-reline-coe-soft-f-i-t-t-rebasage",
      "nom": "GC Reline, Coe-Soft, F.I.T.T. : rebasage",
      "type": "Rebasage dur, rebasage souple, conditionneur tissulaire",
@@ -1207,7 +1181,7 @@ window.MATERIAUX = {
   },
   {
    "t": "Enregistrement de l'occlusion",
-   "x": "Chez l'**édenté** : **Aluwax** ou **pâte de Kerr** (pratique du service), vérifier la DVO au compas. Les **Hygenic Bite Wafers** sont indiqués pour les patients **dentés**. Le **Futar D** (silicone) est une option plus précise, notice à compléter."
+   "x": "Chez l'**édenté** : **Aluwax** ou **pâte de Kerr** (pratique du service), vérifier la DVO au compas. Le **Futar D** (silicone) est une option plus précise, avec une prise rigide."
   },
   {
    "t": "Rebasage",
