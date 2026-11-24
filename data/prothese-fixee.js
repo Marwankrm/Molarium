@@ -438,7 +438,7 @@ window.DISCIPLINES.push({
       ],
       alertes: [
         "**Pas de tenon** : la rétention vient de la chambre pulpaire et du collage ; la qualité de l'**isolation** et du protocole de collage est déterminante.",
-        "**La zircone ne peut pas être mordancée** : le collage repose sur le sablage et un primer à base de MDP ; une revue de 2023 signale que la zircone présente le taux le plus élevé d'**échecs catastrophiques** (fractures) parmi les matériaux d'endo-couronne, et recommande le disilicate de lithium pour sa résistance et sa capacité à être collé. [[Choix du service à confirmer]]",
+        "**La zircone ne peut pas être mordancée** : le collage repose sur le sablage et un primer à base de MDP.",
         "**Résidus de ciment endodontique à l'eugénol** : ils peuvent gêner la polymérisation de la colle ; nettoyer les parois de la chambre.",
         "Éliminer soigneusement les **excès de colle**, surtout si la limite est sous-gingivale ; radiographie de contrôle si besoin.",
         "**Pas d'antibioprophylaxie** pour les soins prothétiques ni les prises d'empreintes en population générale (HAS 2026)."
@@ -467,7 +467,6 @@ window.DISCIPLINES.push({
         "Parafonction non contrôlée (fracture)"
       ],
       references: [
-        "[AlDabeeb D.S. et al. Endocrowns: Indications, Preparation Techniques, and Material Selection. Cureus 2023;15](https://pmc.ncbi.nlm.nih.gov/articles/PMC10697178/)",
         "[Kuraray Noritake – PANAVIA V5, fiche protocole (12/2014) : zircone](https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf) — à comparer à la notice en vigueur",
         "Séquence déduite du protocole du service (zircone, Panavia V5) et de la littérature : nombre de séances, empreinte et fabrication à confirmer.",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
