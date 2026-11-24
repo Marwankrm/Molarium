@@ -715,7 +715,7 @@ window.MATERIAUX = {
      "id": "desocclusol-orange-acteon",
      "nom": "Desocclusol Orange (Acteon)",
      "type": "Solvant des ciments d'obturation de type eugénate (huile essentielle d'orange douce, plus de 90 %)",
-     "statut": "part",
+     "statut": "lue",
      "ind": [
       "Retraitement endodontique : dissoudre les ciments **oxyde de zinc-eugénol** et la gutta"
      ],
