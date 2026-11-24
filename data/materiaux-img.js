@@ -74,8 +74,7 @@ window.MATERIAUX_IMG = {
  },
  "irm-dentsply-sirona": {
   "f": "img/materiaux/irm-dentsply-sirona.jpg",
-  "credit": "TryCare (revendeur)",
-  "page": "https://www.trycare.co.uk/dental/categories/cements-liners/irm-intermediate-restorative-material/irm-intermediate-restorative-material"
+  "credit": "photo fournie par le service"
  },
  "dycal-dentsply-sirona": {
   "f": "img/materiaux/dycal-dentsply-sirona.jpg",
@@ -116,8 +115,7 @@ window.MATERIAUX_IMG = {
  },
  "pulp-canal-sealer-ewt-kerr": {
   "f": "img/materiaux/pulp-canal-sealer-ewt-kerr.jpg",
-  "credit": "DD Group (revendeur)",
-  "page": "https://www.ddgroup.com/endodontics/sealers/evk315--pulp-canal-sealer-ewt-standard-pack/"
+  "credit": "photo fournie par le service"
  },
  "glyde-file-prep-dentsply-sirona": {
   "f": "img/materiaux/glyde-file-prep-dentsply-sirona.jpg",
@@ -143,9 +141,7 @@ window.MATERIAUX_IMG = {
  },
  "filtek-3m-capsules-bright-natural-warm": {
   "f": "img/materiaux/filtek-3m-capsules-bright-natural-warm.jpg",
-  "credit": "DD Group (revendeur)",
-  "page": "https://www.ddgroup.com/restoratives/composite/flm270--3m-filtek-easy-match-universal-restorative-syringe-kit-multiple-shades/",
-  "note": "Photo des seringues Filtek Easy Match (le service utilise les capsules)."
+  "credit": "photo fournie par le service"
  },
  "protaper-universal-retreatment-dentsply-sirona": {
   "f": "img/materiaux/protaper-universal-retreatment-dentsply-sirona.jpg",
@@ -156,5 +152,13 @@ window.MATERIAUX_IMG = {
   "f": "img/materiaux/silan-it-itena-clinical.jpg",
   "credit": "Itena Clinical (fiche produit)",
   "page": "https://www.itena-clinical.com"
+ },
+ "p-te-de-kerr-verte": {
+  "f": "img/materiaux/p-te-de-kerr-verte.jpg",
+  "credit": "photo fournie par le service"
+ },
+ "supracal-r-s": {
+  "f": "img/materiaux/supracal-r-s.jpg",
+  "credit": "photo fournie par le service"
  }
 };
