@@ -88,14 +88,14 @@ window.DISCIPLINES.push({
         "Digue, matrice et cales",
         "Foret canalaire du système de tenon [[marque non connue]]",
         "Tenon fibré [[marque non connue]]",
-        "**Silane Silan-IT** (Itena) pour le tenon fibré ; ciment résine auto-adhésif **RelyX Unicem 2** (3M) avec embout mélangeur et **Endo Tip** ; pointes de papier, alcool",
+        "**Silane Silan-IT** (Itena) pour le tenon fibré ; ciment de collage du tenon [[produit à préciser]] avec embout mélangeur et **Endo Tip** ; pointes de papier, alcool",
         "Adhésif **G-Premio Bond** et composite **Bulk Fill** de reconstitution ; lampe à photopolymériser"
       ],
       alertes: [
         "Conserver au moins **4 à 5 mm de gutta-percha** apicale pour l'étanchéité.",
         "Rechercher une **ferrule** de 1,5 à 2 mm.",
         "Attention aux ciments endodontiques à l'**eugénol**, qui peuvent gêner le collage.",
-        "**RelyX Unicem 2 : pour la RMIPP uniquement** (mention du service) ; les autres collages se font au **Panavia V5**.",
+        "Pour la RMIPP, le ciment de collage du tenon est à préciser ; les autres collages se font au **Panavia V5**.",
         "Travailler sous **digue** pour le collage.",
         "**Pas d'antibioprophylaxie** pour les soins prothétiques ni les prises d'empreintes en population générale (HAS 2026)."
       ],
@@ -107,11 +107,11 @@ window.DISCIPLINES.push({
         ], materiel: ["digue", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
           "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
-          "**Préparation du ciment** : installer l'embout mélangeur puis l'**Endo Tip** sur le **RelyX Unicem 2** ; **purger une petite quantité** avant utilisation",
+          "**Préparation du ciment** : installer l'embout mélangeur puis l'**Endo Tip** sur le **ciment** ; **purger une petite quantité** avant utilisation",
           "**Injection** du ciment **du fond du canal vers la partie coronaire**, en **retirant progressivement l'embout** pendant l'injection (évite les bulles)",
           "**Mise en place du tenon** : enduire légèrement le tenon de ciment, l'insérer **immédiatement avec une pression constante** ; **retirer soigneusement les excès** avant la polymérisation finale",
           "**Photopolymérisation : 40 s** (la mention « pour un tenon translucide » est barrée sur la feuille du service) ; **tenon opaque** : la polymérisation chimique assure la prise, photopolymériser la partie coronaire si possible"
-        ], materiel: ["Silan-IT", "RelyX Unicem 2 + embout mélangeur + Endo Tip", "lampe à photopolymériser"] },
+        ], materiel: ["Silan-IT", "ciment de collage du tenon + embout mélangeur + Endo Tip", "lampe à photopolymériser"] },
         { titre: "Temps 3 – Reconstitution coronaire en phase plastique", details: [
           "**Après stabilisation du tenon**, appliquer l'**adhésif G-Premio Bond**, puis réaliser le **faux-moignon** au **composite Bulk Fill** de reconstitution, selon les recommandations du fabricant ; **photopolymériser chaque incrément** si nécessaire ; **finaliser la forme** avant la préparation prothétique (matrice si nécessaire)",
           "Contrôle de l'occlusion ; **préparation de la couronne dans la même séance si le temps le permet** (voir la fiche couronne), sinon à la séance suivante"
@@ -129,7 +129,7 @@ window.DISCIPLINES.push({
         "Logement trop large : paroi radiculaire amincie"
       ],
       references: [
-        "Séquence d'après la **feuille « Scellement du tenon fibré avec silanisation et reconstitution du faux-moignon au composite Bulk Fill »** affichée au service (annotations manuscrites : RelyX Unicem 2 pour la RMIPP uniquement ; silane = Silan-IT ; adhésif = G-Premio Bond).",
+        "Séquence d'après la **feuille « Scellement du tenon fibré avec silanisation et reconstitution du faux-moignon au composite Bulk Fill »** affichée au service (annotations manuscrites : silane = Silan-IT ; adhésif = G-Premio Bond).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
     },

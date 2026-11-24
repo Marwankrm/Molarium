@@ -129,11 +129,6 @@ window.MATERIAUX_IMG = {
   "credit": "DD Group (revendeur)",
   "page": "https://www.ddgroup.com/bonding--cements/carboxylate/lac012--durelon-powder-regular/"
  },
- "relyx-unicem-2": {
-  "f": "img/materiaux/relyx-unicem-2.jpg",
-  "credit": "DD Group (revendeur)",
-  "page": "https://www.ddgroup.com/bonding--cements/self-adhesive-cement/fwm100--relyx-unicem-2-clicker-translucent/"
- },
  "impregum-penta-super-quick-3m-adh-sif-po": {
   "f": "img/materiaux/impregum-penta-super-quick-3m-adh-sif-po.jpg",
   "credit": "DD Group (revendeur)",
