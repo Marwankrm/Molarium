@@ -175,7 +175,6 @@ window.DISCIPLINES.push({
         ], materiel: ["sonde", "fil dentaire", "papier à articuler"], validation: "essayage" },
         { titre: "Temps 2 – Choix du mode d'assemblage : CVI ou collage", details: [
           "**Critère usuel : la géométrie de la préparation.** Préparation **rétentive** (parois hautes, peu de conicité) : scellement au CVI possible ; préparation **courte ou très conique**, ou si on veut la rétention maximale : **collage**",
-          "**Ce que dit la littérature** : les ciments résine à base de MDP donnent les adhésions les plus élevées mais sont les plus **sensibles à la technique** ; une méta-analyse (74 études, 6 370 restaurations) ne montre pas de décimentation avec le CVI modifié par résine ; le sablage seul ne semble pas réduire le risque de décimentation. [[Règle du service à confirmer]]"
         ], materiel: ["radiographie ou modèle pour juger la hauteur de préparation"] },
         { titre: "Temps 3A – Collage au Panavia V5 (protocole du fabricant)", details: [
           "**1.** Sabler l'intrados à l'alumine, **nettoyer aux ultrasons** et sécher ; **2.** appliquer le **Clearfil Ceramic Primer Plus** et sécher ; **3.** appliquer le **Panavia V5 Tooth Primer** sur la dent, **laisser 20 secondes**, sécher",
