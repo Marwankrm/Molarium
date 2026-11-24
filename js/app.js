@@ -670,12 +670,10 @@
 
   // --- matériaux du service ---
   var MAT_TOTAL = window.MATERIAUX ? window.MATERIAUX.sections.reduce(function (n, x) { return n + x.produits.length; }, 0) : 0;
-  var MAT_STATUT = { lue: ['valid', 'Notice lue'], part: ['draft', 'Notice partielle'], abs: ['todo-c', 'Notice non trouvée'] };
   function matBlock(cls, titre, items) {
     return items && items.length ? el('div', { class: 'mblk ' + cls }, [el('h3', { text: titre }), ul(items)]) : null;
   }
   function matCard(p) {
-    var st = MAT_STATUT[p.statut] || MAT_STATUT.abs;
     var src = p.src && p.src.length ? el('p', { class: 'msrc' }, [document.createTextNode('Source : ')].concat(p.src.reduce(function (acc2, x, i) {
       if (i) acc2.push(document.createTextNode(' · '));
       acc2.push(x.u === '#/materiaux' ? document.createTextNode(x.t) : /^https?:/.test(x.u) ? el('a', { href: x.u, target: '_blank', rel: 'noopener noreferrer', text: x.t }) : el('a', { href: x.u, text: x.t }));
@@ -688,7 +686,6 @@
     ]) : null;
     var body = el('div', null, [fig, el('p', { class: 'mtype', text: p.type }), matBlock('m-ind', 'Indications', p.ind), matBlock('m-ci', 'Contre-indications et précautions', p.ci), matBlock('m-met', 'Méthode d\'utilisation', p.met), matBlock('m-ret', 'À retenir', p.ret), src]);
     var d = acc('mat-' + p.id, p.nom.replace(/\*\*/g, ''), body, { open: false, icon: 'box', cls: 'mat-acc' });
-    var sum = d.firstChild; sum.insertBefore(el('span', { class: 'chip ' + st[0], text: st[1] }), sum.lastChild);
     d._hay = plain([p.nom, p.type, (p.ind || []).join(' '), (p.ci || []).join(' '), (p.met || []).join(' '), (p.ret || []).join(' ')].join(' ')).toLowerCase();
     return d;
   }

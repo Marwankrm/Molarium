@@ -46,7 +46,7 @@ passer à `statut: "valide"` et renseigner `validePar: "Dr X"` : le badge devien
 
 
 ## Page « Matériaux »
-`data/materiaux.js` contient la synthèse des matériaux du service (indications, contre-indications, méthode, source) affichée sur `#/materiaux`. Chaque produit porte un statut de source : `lue` (notice du fabricant lue), `part` (notice partielle) ou `abs` (notice non trouvée). Même balisage que les fiches (`**gras**`). À valider par l'encadrant.
+`data/materiaux.js` contient la synthèse des matériaux du service (indications, contre-indications, méthode, source) affichée sur `#/materiaux`. Le champ `statut` de chaque produit (`lue`, `part`, `abs`) est conservé dans les données mais n'est plus affiché. Même balisage que les fiches (`**gras**`). À valider par l'encadrant.
 
 ## Photos des produits (page « Matériaux »)
 
