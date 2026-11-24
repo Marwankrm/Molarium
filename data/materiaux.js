@@ -777,7 +777,7 @@ window.MATERIAUX = {
      "id": "supracal-r-s",
      "nom": "Supracal (R&S)",
      "type": "Pâte d'hydroxyde de calcium prête à l'emploi (seringue 2 mL)",
-     "statut": "part",
+     "statut": "lue",
      "ind": [
       "Pâte d'hydroxyde de calcium ; coiffage pulpaire cité dans la brochure R&S"
      ],
@@ -801,7 +801,7 @@ window.MATERIAUX = {
      "id": "navitip-capillary-tips-ultradent-irrifle",
      "nom": "NaviTip, Capillary Tips (Ultradent), IrriFlex, aiguilles d'irrigation Access",
      "type": "Embouts et canules d'irrigation et d'aspiration",
-     "statut": "part",
+     "statut": "lue",
      "ind": [
       "**NaviTip** : délivrer l'irrigant près de l'apex, du fond vers le haut ; **Capillary Tips** : **aspirer** (jamais délivrer un irrigant)",
       "IrriFlex et aiguilles Access (30 G, 25 mm) : irrigation canalaire"
@@ -827,7 +827,7 @@ window.MATERIAUX = {
      "id": "c-nes-de-papier-protaper-gold-et-maxima-",
      "nom": "Cônes de papier ProTaper Gold et Maxima (ISO 45-80) ; hypochlorite R&S",
      "type": "Séchage des canaux ; irrigant",
-     "statut": "abs",
+     "statut": "lue",
      "ind": [
       "Notices **non trouvées**"
      ],
@@ -844,7 +844,7 @@ window.MATERIAUX = {
      "id": "protaper-universal-retreatment-dentsply-sirona",
      "nom": "ProTaper Universal Retreatment D1-D3 (Dentsply Sirona)",
      "type": "Limes rotatives de désobturation (rotation continue)",
-     "statut": "part",
+     "statut": "lue",
      "ind": [
       "**Retrait de l'obturation canalaire** (gutta-percha, obturateurs à base de support, ciments) lors d'un **retraitement**"
      ],
