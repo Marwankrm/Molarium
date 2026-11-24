@@ -685,21 +685,28 @@ window.MATERIAUX = {
       "**Obturation permanente** du canal avec des cônes (ISO 6876)"
      ],
      "ci": [
-      "Aucune connue (mais il contient de l'**eugénol**)"
+      "Aucune connue, mais l'**eugénol** peut **irriter la peau, les yeux et la muqueuse** et provoquer une **réaction allergique** chez quelques patients : prudence",
+      "En cas de contact avec la peau ou la muqueuse : retirer le produit et rincer abondamment à l'eau ; **yeux** : rincer immédiatement et consulter ; **ingestion** : faire boire beaucoup d'eau"
      ],
      "met": [
       "**Une cuillère de poudre** (première graduation) et **une goutte de liquide** sur le bloc",
       "Incorporer la poudre au liquide sur 1 à 2 cm, **en cercles en appuyant**, jusqu'à une pâte lisse, non collante, sans grains d'argent",
       "Appliquer au Lentulo ou à la lime, enduire le cône, l'enfoncer **lentement**",
-      "EWT : **plus de 6 h** de temps de travail sur le bloc, prise en bouche en **moins de 2 h**"
+      "EWT : temps de travail **supérieur à 6 h** sur le bloc (à 21-27 °C et 40-60 % d'humidité), prise en bouche en **moins de 2 h** (à 37 °C) ; la chaleur et l'humidité accélèrent la prise",
+      "**Prise trop rapide** : ajouter un peu de liquide en humidifiant la pointe de la spatule ; **prise trop lente ou absente** : chercher une contamination du liquide, de la poudre ou du bloc ; garder le compte-gouttes propre et sec, reboucher les flacons"
      ],
      "ret": [
       "**Ne pas trop remplir** le canal (lésion péri-apicale) ; l'**argent** peut colorer la dent ; **digue** recommandée",
-      "Inflammation péri-apicale possible les premiers jours"
+      "Inflammation péri-apicale possible les premiers jours",
+      "Bloc de mélange **à usage unique, pour un seul patient** ; conservation au frais et au sec, à l'abri de la chaleur et de l'humidité ; ne pas utiliser un produit périmé"
      ],
      "src": [
       {
-       "t": "Notice Kerr Pulp Canal Sealer / EWT",
+       "t": "Notice Pulp Canal Sealer / EWT (SybronEndo, Kerr), reçue du service",
+       "u": "#/materiaux"
+      },
+      {
+       "t": "Notice Kerr (copie en ligne)",
        "u": "https://www.adamdental.com.au/Documents/Brand%20Management/Kerr/Pulp%20Canal%20Sealer/Instructions.pdf"
       }
      ]
