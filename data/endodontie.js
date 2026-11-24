@@ -16,6 +16,19 @@ var PTG_ANNEXE = {
     ]
   }
 };
+// Limes de retraitement ProTaper Universal : fiche produit Dentsply Sirona France.
+var PTU_RETRAIT = {
+  titre: "Limes ProTaper Universal Retreatment : repères", court: "Limes de désobturation", icone: "tooth",
+  intro: "Trois limes rotatives à utiliser **en séquence** pour retirer la gutta-percha, les obturateurs à base de support et les ciments (fiche produit Dentsply Sirona). Vitesse et couple : se reporter à la notice et au moteur du service [[à préciser]].",
+  table: {
+    cols: ["Lime", "Pointe / conicité / longueur", "Rôle"],
+    rows: [
+      ["**D1**", "30/100 mm, 9 %, 16 mm", "Pointe **coupante** : facilite la pénétration initiale dans l'obturation"],
+      ["**D2**", "25/100 mm, 8 %, 18 mm", "Pointe non coupante : retire le matériau du **tiers moyen**"],
+      ["**D3**", "20/100 mm, 7 %, 22 mm", "Pointe non coupante : retire le matériau du **tiers apical**"]
+    ]
+  }
+};
 window.DISCIPLINES.push({
   id: "endodontie",
   ordre: 3,
@@ -163,13 +176,13 @@ window.DISCIPLINES.push({
       duree: "Le plus souvent 1 séance ; 2 séances si nécessaire",
       niveau: "Interne / étudiant encadré",
       statut: "brouillon",
-      annexes: [PTG_ANNEXE],
+      annexes: [PTU_RETRAIT, PTG_ANNEXE],
       sourceType: "Pratique du service (CHU) + revues systématiques + consensus 2024 + HAS 2026",
       maj: "2026-11",
       hopital: [
         "Retraitement **très souvent réalisé en une seule séance** ; **2e séance** en cas de **manque de temps, de suintement ou de douleur** (avec **hydroxyde de calcium** entre les séances)",
         "**Desocclusol Orange** (Acteon), solvant à l'huile essentielle d'orange",
-        "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** ; instruments de désobturation [[à préciser]]",
+        "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** ; désobturation aux limes **ProTaper Universal Retreatment (D1, D2, D3)**",
         "**Localisateur d'apex** utilisé",
         "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
         "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
@@ -190,7 +203,7 @@ window.DISCIPLINES.push({
       ],
       materiel: [
         "Digue, clamps ; ultrasons et fraises pour la dépose de la restauration, de la couronne ou du tenon",
-        "**Desocclusol Orange (Acteon)** ; instruments de désobturation [[à préciser]]",
+        "**Desocclusol Orange (Acteon)** ; limes **ProTaper Universal Retreatment D1, D2, D3** (Dentsply Sirona)",
         "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; localisateur d'apex **NSK iPex II**",
         "**Hypochlorite de sodium R&S 2,5 %** (Magnum Dental), **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
         "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes, ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
@@ -217,11 +230,11 @@ window.DISCIPLINES.push({
           "**Pose de la digue**, désinfection du champ"
         ], materiel: ["cassette de fraises « Soins » (Komet)", "digue et clamps"] },
         { titre: "Temps 3 – Désobturation et longueur de travail", details: [
-          "**Désobturation de la gutta-percha** au **Desocclusol Orange** (Acteon) et aux instruments [[à préciser]]",
+          "**Désobturation de la gutta-percha** au **Desocclusol Orange** (Acteon), puis aux limes rotatives **ProTaper Universal Retreatment**, utilisées **en séquence** : **D1** (pointe coupante, pénétration initiale), **D2** (tiers moyen), **D3** (tiers apical)",
           "**Repérage des canaux manqués**, négociation",
           "**Perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie)",
           "Retrait des fragments ou réparation d'une perforation selon la situation [[matériau du service]]"
-        ], materiel: ["Desocclusol Orange (Acteon)", "localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
+        ], materiel: ["Desocclusol Orange (Acteon)", "limes ProTaper Universal Retreatment D1, D2, D3", "localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
           "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
           "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
@@ -283,6 +296,7 @@ window.DISCIPLINES.push({
         "**Accident d'hypochlorite** : voir la fiche « Traitement endodontique »"
       ],
       references: [
+        "[Dentsply Sirona France – ProTaper Universal : limes en rotation continue de retraitement (D1, D2, D3)](https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html)",
         "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",
         "[Dioguardi M. et al. Analysis of endodontic successes and failures in the removal of fractured endodontic instruments during retreatment. Healthcare 2024;12:1390](https://pmc.ncbi.nlm.nih.gov/articles/PMC11276083/)",
         "[Shah T. et al. Endodontic retreatment efficacy with and without solvents: a systematic review. J Conserv Dent Endod 2023;26](https://pmc.ncbi.nlm.nih.gov/articles/PMC10823971/)",

@@ -816,6 +816,33 @@ window.MATERIAUX = {
       "Concentration de l'hypochlorite non précisée sur le site, comme convenu"
      ],
      "src": []
+    },
+    {
+     "id": "protaper-universal-retreatment-dentsply-sirona",
+     "nom": "ProTaper Universal Retreatment D1-D3 (Dentsply Sirona)",
+     "type": "Limes rotatives de désobturation (rotation continue)",
+     "statut": "part",
+     "ind": [
+      "**Retrait de l'obturation canalaire** (gutta-percha, obturateurs à base de support, ciments) lors d'un **retraitement**"
+     ],
+     "ci": [
+      "Ne pas forcer en cas de blocage : avis du senior"
+     ],
+     "met": [
+      "Utiliser les trois limes **en séquence** : **D1** (30/100, 9 %, 16 mm, pointe coupante) pour pénétrer, **D2** (25/100, 8 %, 18 mm) pour le tiers moyen, **D3** (20/100, 7 %, 22 mm) pour le tiers apical",
+      "D2 et D3 ont une pointe non coupante",
+      "Désobturation associée au **Desocclusol Orange** (Acteon) au service",
+      "Mise en forme ensuite aux **ProTaper Gold**"
+     ],
+     "ret": [
+      "Fiche produit seulement : **vitesse et couple à confirmer** dans la notice et sur le moteur du service"
+     ],
+     "src": [
+      {
+       "t": "Dentsply Sirona France – fiche produit",
+       "u": "https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html"
+      }
+     ]
     }
    ]
   },

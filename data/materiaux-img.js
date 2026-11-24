@@ -151,5 +151,10 @@ window.MATERIAUX_IMG = {
   "credit": "DD Group (revendeur)",
   "page": "https://www.ddgroup.com/restoratives/composite/flm270--3m-filtek-easy-match-universal-restorative-syringe-kit-multiple-shades/",
   "note": "Photo des seringues Filtek Easy Match (mêmes teintes ; le service utilise des capsules)."
+ },
+ "protaper-universal-retreatment-dentsply-sirona": {
+  "f": "img/materiaux/protaper-universal-retreatment-dentsply-sirona.jpg",
+  "credit": "Dentsply Sirona",
+  "page": "https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html"
  }
 };
