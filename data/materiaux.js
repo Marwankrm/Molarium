@@ -1001,21 +1001,39 @@ window.MATERIAUX = {
     {
      "id": "futar-d-kettenbach",
      "nom": "Futar D (Kettenbach)",
-     "type": "Silicone par addition pour enregistrement de l'occlusion",
-     "statut": "part",
+     "type": "Silicone par addition (VPS) pour enregistrement de l'occlusion, en cartouche 50 mL (ISO 4823)",
+     "statut": "lue",
      "ind": [
-      "Enregistrements occlusaux précis"
+      "**Enregistrement de l'occlusion** de grande précision : détermination des rapports intermaxillaires",
+      "Les **Futar D** donnent un **articulé rigide** en silicone (dureté Shore D 43) : variantes **D Fast** (travaux courts) et **D Slow** (travaux étendus)",
+      "Patients soignés dans le cadre d'un traitement bucco-dentaire"
      ],
      "ci": [
-      "Non lues"
+      "**Ne jamais l'utiliser pour une empreinte classique** : la dureté finale empêche le retrait de la bouche et peut entraîner une **avulsion accidentelle**",
+      "**Allergie connue** à un composant (platine, 4-méthoxyphénol) ou allergie de contact",
+      "Ne pas laisser de résidus dans la gouttière ou la cavité buccale ; ne pas avaler ; yeux : rincer immédiatement à l'eau",
+      "**Gants en latex à éviter** : ils perturbent la prise ; tester la compatibilité de tout autre gant",
+      "Le **soufre actif**, le **chlorure d'aluminium** et les composés azotés (fils de rétraction au sulfate ferrique, polysulfures) perturbent la prise : **rincer abondamment** la zone avant"
      ],
      "met": [
-      "**30 s** de temps de travail, **1 min 30** de prise en bouche à 23 °C (résumés du fabricant)"
+      "**Cartouche dans le pistolet Applyfix 4 DS-50 (1:1 / 2:1)**, encoches de la base vers le bas ; retirer le bouchon, **purger une petite quantité** pour que les deux pâtes sortent de façon régulière, puis visser l'**embout mélangeur**",
+      "**Injecter directement** sur les surfaces occlusales du patient ou sur les **bourrelets occlusaux**",
+      "**Temps à 23 °C** (depuis le début du mélange) : **Futar D** : préparation **30 s**, mise en bouche **1 min 30**, fin de prise **2 min** ; **D Fast** : **15 s**, **45 s**, **1 min** ; **D Slow** : **1 min 30**, **3 min**, **4 min 30**",
+      "Respecter **scrupuleusement** les temps : un matériau utilisé loin de 23 °C change nettement la prise",
+      "Après usage : remettre le bouchon ; avant de reprendre la cartouche, vérifier que les orifices ne sont pas bouchés par du matériau durci",
+      "**Pistolet** : retirer la cartouche, essuyer la pâte non durcie à l'alcool, désinfection par trempage (glutaraldéhyde recommandé)",
+      "**Désinfection de l'enregistrement** : par exemple glutaraldéhyde à 2 %, selon le mode d'emploi du désinfectant"
      ],
      "ret": [
-      "Notice complète non lue"
+      "**Variante utilisée au service à confirmer** : D, D Fast ou D Slow (temps différents)",
+      "Stockage : au sec, à l'abri du soleil, à température ambiante ; ne pas utiliser après la date de péremption",
+      "Éviter le contact avec les vêtements (ne part pas au nettoyage chimique) ; ne pas jeter les résidus à l'évier ; matériau durci à jeter selon les règles locales"
      ],
      "src": [
+      {
+       "t": "Mode d'emploi Futar (Kettenbach, mise à jour juillet 2025), reçu du service",
+       "u": "#/materiaux"
+      },
       {
        "t": "Aegis Dental, Futar D",
        "u": "https://www.aegisdentalnetwork.com/id/products/kettenbach/futar-d-slow"
