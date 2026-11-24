@@ -190,7 +190,7 @@ window.DISCIPLINES.push({
         ], materiel: ["GC Fuji PLUS (capsule)", "GC Fuji PLUS Conditioner", "malaxeur à capsules", "applicateur de capsules", "boulettes de coton", "sonde", "fil dentaire"] },
         { titre: "Temps 4 – Contrôle final", details: [
           "Contrôle de l'**occlusion** (statique et dynamique) et retouches ; contrôle des contacts proximaux au fil dentaire",
-          "Consignes au patient ; contrôle selon le protocole du service [[délais à préciser]]"
+          "Consignes au patient ; **contrôle à 1-2 semaines**, puis à **6 mois** et **chaque année** (calendrier des essais cliniques sur les restaurations collées)"
         ], materiel: ["papier à articuler", "fraises de finition"], validation: "pose" }
       ],
       consignes: [
@@ -311,9 +311,9 @@ window.DISCIPLINES.push({
           "Dépose du provisoire, **essayage à sec** : adaptation, contacts proximaux, teinte ; validation du patient",
           "**Collage au Panavia V5 sous isolation** (notice, inlays/onlays) : intrados traité (céramique silicatée : **Porcelain Etch** 90 s, rinçage, séchage ; composite : sablage, **K-Etchant**, rinçage, séchage) puis **Clearfil Ceramic Primer Plus** ; **Tooth Primer 20 s** sur la dent, séchage ; pâte Panavia V5, mise en place, **excès retiré après 3 à 5 s de photopolymérisation** (ou au pinceau) ; **isolation maintenue 3 minutes** ou photopolymérisation ; finition et **contrôle de l'occlusion**"
         ], materiel: ["isolation (digue)", "Porcelain Etch (céramique) ou sablage et K-Etchant (composite)", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe", "papier à articuler"], validation: "essayage et collage", astuce: "Nettoyer l'intrados après l'essayage (sablage ou protocole du fabricant) avant le primer : la salive diminue l'adhésion." },
-        { titre: "Séance 3 (éventuelle) – [[à préciser : contrôle, retouches ou autre]]", details: [
-          "Contrôle de l'occlusion et des contacts, état de la limite de collage",
-          "Consignes d'hygiène ; planification des contrôles"
+        { titre: "Séance 3 (éventuelle) – Contrôle et retouches", details: [
+          "**Contrôle à 1-2 semaines** : occlusion et contacts, état de la limite de collage ; **retouches** si besoin",
+          "Consignes d'hygiène ; **contrôles suivants à 6 mois, puis chaque année**"
         ], materiel: ["papier à articuler", "sonde", "fil dentaire"] }
       ],
       consignes: [
@@ -333,6 +333,7 @@ window.DISCIPLINES.push({
         "[Kuraray Noritake – PANAVIA V5, fiche protocole (12/2014) : inlays/onlays, Tooth Primer 20 s, isolation 3 min](https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf) — à comparer à la notice en vigueur",
         "[Disilicate de lithium vs composite CAD/CAM en onlays : préparation (isthme 1,5 mm, épaisseur occlusale 1,5 à 2 mm, cuspides recouvertes de 1,5 mm au moins), PMC7790784](https://pmc.ncbi.nlm.nih.gov/articles/PMC7790784/)",
         "[GC Initial LiSi Block – manuel technique : épaisseurs minimales du disilicate de lithium (inlay, onlay)](https://www.gc.dental/america/sites/america.gc.dental/files/products/downloads/gcinitiallisiblock/technical%20manual/gc-initial-lisi-block-technical-manual.pdf)",
+        "Calendrier de contrôle (1-2 semaines, 6 mois, puis annuel) d'après les essais cliniques sur inlays et onlays : Özsoy A. et al. J Adhes Sci Technol 2016 (onlays et overlays en composite) ; Tagtekin D. et al. Oper Dent 2009 (onlays en céramique). Aucune recommandation officielle trouvée.",
         "Séquence rédigée d'après la pratique courante (3e séance et produit de traitement de l'intrados à confirmer par le service).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
@@ -378,9 +379,9 @@ window.DISCIPLINES.push({
           "Dépose du provisoire, **essayage à sec** : adaptation, contacts proximaux, occlusion, teinte ; validation du patient",
           "**Collage au Panavia V5 sous isolation** (notice, inlays/onlays) : intrados traité (céramique silicatée : **Porcelain Etch** 90 s, rinçage, séchage ; composite : sablage, **K-Etchant**, rinçage, séchage) puis **Clearfil Ceramic Primer Plus** ; **Tooth Primer 20 s** sur la dent, séchage ; pâte Panavia V5, mise en place, **excès retiré après 3 à 5 s de photopolymérisation** (ou au pinceau) ; **isolation maintenue 3 minutes** ou photopolymérisation ; finition et **contrôle de l'occlusion**"
         ], materiel: ["isolation (digue)", "Porcelain Etch (céramique) ou sablage et K-Etchant (composite)", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe", "papier à articuler"], validation: "essayage et collage", astuce: "Nettoyer l'intrados après l'essayage (sablage ou protocole du fabricant) avant le primer : la salive diminue l'adhésion." },
-        { titre: "Séance 3 (éventuelle) – [[à préciser : contrôle, retouches ou autre]]", details: [
-          "Contrôle de l'occlusion et des contacts, état de la limite de collage",
-          "Consignes d'hygiène ; planification des contrôles"
+        { titre: "Séance 3 (éventuelle) – Contrôle et retouches", details: [
+          "**Contrôle à 1-2 semaines** : occlusion et contacts, état de la limite de collage ; **retouches** si besoin",
+          "Consignes d'hygiène ; **contrôles suivants à 6 mois, puis chaque année**"
         ], materiel: ["papier à articuler", "sonde", "fil dentaire"] }
       ],
       consignes: [
@@ -400,6 +401,7 @@ window.DISCIPLINES.push({
         "[Kuraray Noritake – PANAVIA V5, fiche protocole (12/2014) : inlays/onlays, Tooth Primer 20 s, isolation 3 min](https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf) — à comparer à la notice en vigueur",
         "[Disilicate de lithium vs composite CAD/CAM en onlays : préparation (isthme 1,5 mm, épaisseur occlusale 1,5 à 2 mm, cuspides recouvertes de 1,5 mm au moins), PMC7790784](https://pmc.ncbi.nlm.nih.gov/articles/PMC7790784/)",
         "[GC Initial LiSi Block – manuel technique : épaisseurs minimales du disilicate de lithium (inlay, onlay)](https://www.gc.dental/america/sites/america.gc.dental/files/products/downloads/gcinitiallisiblock/technical%20manual/gc-initial-lisi-block-technical-manual.pdf)",
+        "Calendrier de contrôle (1-2 semaines, 6 mois, puis annuel) d'après les essais cliniques sur inlays et onlays : Özsoy A. et al. J Adhes Sci Technol 2016 (onlays et overlays en composite) ; Tagtekin D. et al. Oper Dent 2009 (onlays en céramique). Aucune recommandation officielle trouvée.",
         "Séquence rédigée d'après la pratique courante (3e séance et produit de traitement de l'intrados à confirmer par le service).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
