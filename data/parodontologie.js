@@ -326,7 +326,7 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Temps 1 – Diagnostic", details: ["Sondage, mobilité, suppuration ; **test de vitalité** et radiographie pour distinguer une origine parodontale, endodontique ou combinée", "Évaluation de l'état général (fièvre, adénopathies, trismus)"], materiel: ["sonde parodontale", "test de vitalité", "radiographie"] },
         { titre: "Temps 2 – Geste local", details: ["Anesthésie ; **drainage** par la poche ou incision, **débridement** doux à l'insert et aux curettes, irrigation", "Lésion endodontique associée : traitement endodontique (voir les fiches d'endodontie)"], materiel: ["anesthésique", "inserts fins", "curettes", "irrigation"] },
-        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques [[prescription du service]] ; bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle à 48-72 h** puis traitement parodontal complet après l'urgence [[délai à confirmer]]"], materiel: ["ordonnance"] }
+        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques : **paracétamol** (4 g par jour au maximum, en 4 prises) ; bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle à 48-72 h** puis traitement parodontal complet après l'urgence [[délai à confirmer]]"], materiel: ["ordonnance"] }
       ],
       consignes: [
         "**Hygiène** douce mais maintenue ; ne pas arrêter le brossage.",
