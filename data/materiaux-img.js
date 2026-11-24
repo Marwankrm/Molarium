@@ -145,7 +145,7 @@ window.MATERIAUX_IMG = {
   "f": "img/materiaux/filtek-3m-capsules-bright-natural-warm.jpg",
   "credit": "DD Group (revendeur)",
   "page": "https://www.ddgroup.com/restoratives/composite/flm270--3m-filtek-easy-match-universal-restorative-syringe-kit-multiple-shades/",
-  "note": "Photo des seringues Filtek Easy Match (mêmes teintes ; le service utilise des capsules)."
+  "note": "Photo des seringues Filtek Easy Match (le service utilise les capsules)."
  },
  "protaper-universal-retreatment-dentsply-sirona": {
   "f": "img/materiaux/protaper-universal-retreatment-dentsply-sirona.jpg",

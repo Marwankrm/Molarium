@@ -574,20 +574,35 @@ window.MATERIAUX = {
     },
     {
      "id": "filtek-3m-capsules-bright-natural-warm",
-     "nom": "Filtek (3M), capsules Bright, Natural, Warm",
-     "type": "Composite universel en capsules",
-     "statut": "abs",
+     "nom": "Filtek Easy Match (3M / Solventum), capsules Bright, Natural, Warm",
+     "type": "Composite universel simplifié à 3 teintes (capsules ou seringues), nanochargé",
+     "statut": "part",
      "ind": [
-      "Notice **non trouvée** pour la gamme de vos photos"
+      "**Restaurations antérieures et postérieures** avec une sélection de teinte simplifiée : **3 teintes** seulement",
+      "Restauration en **teinte unique** (pas conçu pour les restaurations multiteintes ; pour cela, Filtek Supreme Ultra)"
      ],
-     "ci": [],
+     "ci": [
+      "**Pas un composite bulk fill** : couches de **2 mm maximum**",
+      "Éviter toute **lumière directe** avant la polymérisation (lampe du fauteuil, lampe de loupe) : utiliser un pare-lumière sur le bloc de mélange",
+      "Contient du **bis-GMA** (pas de BPA ajouté) ; pour un produit sans dérivé de BPA : Filtek Universal ou One Bulk Fill (3M)"
+     ],
      "met": [
-      "Teintes regroupées en Bright (B), Natural (N) et Warm (W) selon l'étiquette du tiroir"
+      "**Choix de la teinte** : **Naturelle (N)** pour la majorité des patients (A2, A3, C2, D3, D4) ; **Lumineuse (L)** pour blanchiment, A1, B1, B2, C1, D2 ; **Chaleureuse (C)** pour A3.5, A4, B3, B4, C3, C4 (correspondance VITA classique)",
+      "**Couches de 2 mm au maximum** ; **photopolymérisation** : **10 s** avec une lampe LED de 1 000 à 2 000 mW/cm², **20 s** avec une lampe halogène (couche de 2 mm, les 3 teintes)",
+      "Matériau ferme et non collant (ne colle pas aux instruments) ; opacité **naturellement adaptative** : translucidité de type émail sur les bords",
+      "Dentine décolorée à masquer : **opacifiant rose** du Filtek Universal, appliqué sous le composite (couche de 1 mm)",
+      "Compatible avec le composite fluide **Filtek Supreme** (teintes correspondantes) ; capsules **réchauffables à 70 °C maximum pendant 1 h au plus**, avec un réchauffeur de composite du commerce (pas de bain d'eau chaude ni de plaque chauffante)"
      ],
      "ret": [
-      "Envoyer une photo de la boîte pour identifier la gamme exacte"
+      "**Radio-opaque** (2,4 mmAl, légèrement plus que l'émail)",
+      "D'après la **FAQ du fabricant** (2024) : lire aussi la notice de la boîte"
      ],
-     "src": []
+     "src": [
+      {
+       "t": "FAQ Filtek Easy Match (Solventum, 2024), reçue du service",
+       "u": "#/materiaux"
+      }
+     ]
     },
     {
      "id": "caries-marker-voco",
