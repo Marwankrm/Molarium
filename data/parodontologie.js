@@ -29,7 +29,7 @@ window.DISCIPLINES.push({
         "Sonde parodontale graduée [[marque à préciser]]",
         "Logiciel **Logos** pour le charting parodontal",
         "Radiographies : **bilan long cône, panoramique, bite-wings**",
-        "Révélateur de plaque [[produit à préciser]] ; miroir, sonde, précelle"
+        "Révélateur de plaque **GC Tri Plaque ID Gel** (rose ou rouge : plaque récente ; bleu clair : plaque de plus de 48 h) ; miroir, sonde, précelle"
       ],
       alertes: [
         "Informer le patient du **diagnostic, des causes, des facteurs de risque, des alternatives et des risques/bénéfices**, y compris les conséquences d'un refus de traitement ; convenir d'un plan de soins personnalisé (EFP).",
@@ -38,7 +38,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Temps 1 – Anamnèse ciblée", details: ["Antécédents parodontaux, familiaux ; **diabète (HbA1c), tabagisme** (quantité, durée)", "Médicaments gingivo-hyperplasiants, traitements immunosuppresseurs"], materiel: ["questionnaire médical"] },
-        { titre: "Temps 2 – Examen clinique et sondage", details: ["**Indices de plaque et de saignement**, mobilité, atteinte de furcation (classes I à III), récessions, défauts intra-osseux", "**Sondage 6 sites par dent** : profondeur de poche, niveau d'attache clinique, saignement au sondage ; saisie dans **Logos**"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque [[à préciser]]"], validation: "sondage" },
+        { titre: "Temps 2 – Examen clinique et sondage", details: ["**Indices de plaque et de saignement**, mobilité, atteinte de furcation (classes I à III), récessions, défauts intra-osseux", "**Sondage 6 sites par dent** : profondeur de poche, niveau d'attache clinique, saignement au sondage ; saisie dans **Logos**"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque (GC Tri Plaque ID Gel)"], validation: "sondage" },
         { titre: "Temps 3 – Examen radiologique", details: ["**Bilan long cône, panoramique et bite-wings** : niveau osseux, lésions intra-osseuses, furcations", "Facteurs rétentifs de plaque : tartre, débords de restauration"], materiel: ["radiographies"] },
         { titre: "Temps 4 – Diagnostic et plan de traitement", details: ["Classification 2018 : **stade (I à IV)** selon la sévérité et la complexité ; **grade (A à C)** selon la vitesse de progression et les facteurs de risque", "**Plan par étapes (EFP)** : étape 1 hygiène et facteurs de risque, étape 2 instrumentation, étape 3 sites non répondeurs, étape 4 maintenance ; consentement"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
       ],
@@ -72,7 +72,7 @@ window.DISCIPLINES.push({
       ],
       indications: ["Tout patient atteint de gingivite ou de parodontite, **avant** l'instrumentation sous-gingivale", "Réinstructions à chaque séance de maintenance"],
       materiel: [
-        "Révélateur de plaque [[produit à préciser]]",
+        "Révélateur de plaque **GC Tri Plaque ID Gel**",
         "Brosse à dents (manuelle ou électrique), **brossettes interdentaires** de tailles adaptées, éventuellement fil dentaire [[produits au choix de l'étudiant]]",
         "Miroir, modèle ou typodont de démonstration [[à préciser]]",
         "Fiche de conseils d'hygiène [[à préciser]]"
@@ -125,7 +125,7 @@ window.DISCIPLINES.push({
       ],
       consignes: [
         "**Brossage** soigneux deux à trois fois par jour et **brossettes interdentaires** ; le saignement doit diminuer en quelques jours.",
-        "**Bain de bouche** : seulement s'il est prescrit [[produit et durée à préciser]] ; pas d'antibiotiques pour la gingivite.",
+        "**Bain de bouche** : seulement s'il est prescrit (**Eludril Perio** (chlorhexidine 0,20 %)) ; pas d'antibiotiques pour la gingivite.",
         "**Contrôle** : revenir pour vérifier que la gencive est saine."
       ],
       erreurs: ["Confondre gingivite et parodontite (sondage oublié)", "Prescrire des antibiotiques", "Détartrer sans enseigner l'hygiène"],
@@ -145,7 +145,7 @@ window.DISCIPLINES.push({
       sourceType: "Guideline EFP S3 2020 + recommandation HAS 2026 + pratique courante – à compléter par le service",
       maj: "2026-11",
       indications: ["Gingivite, et étape 1 du traitement parodontal (contrôle professionnel de plaque)", "Séances de maintenance"],
-      materiel: ["Détartreur ultrasonique et inserts [[marque et modèle à préciser]]", "Curettes manuelles [[à préciser]]", "Cupule et pâte à polir [[produits à préciser]]", "Révélateur de plaque", "Irrigant : eau (ultrasons)"],
+      materiel: ["Détartreur ultrasonique **Satelec** (pièce à main **Newtron Slim**) et inserts", "Curettes manuelles [[à préciser]]", "Cupule et pâte à polir [[produits à préciser]]", "Révélateur de plaque", "Irrigant : eau (ultrasons)"],
       alertes: [
         "**Pas d'antibioprophylaxie** pour le détartrage, le sondage et le polissage en population générale (HAS 2026).",
         "Le **contrôle professionnel de la plaque et des facteurs rétentifs** est un élément fondamental de l'étape 1 (EFP)."
@@ -176,17 +176,17 @@ window.DISCIPLINES.push({
       hopital: [
         "**Séances** : **2 séances pour une bouche entière** selon le patient",
         "**Instrumentation** : **inserts parodontaux dédiés** (ultrasons)",
-        "**Irrigation** : possible à la **chlorhexidine** ou au sérum physiologique ; **bain de bouche** prescrit [[produit et concentration à préciser]]",
+        "**Irrigation** : possible à la **chlorhexidine** ou au sérum physiologique ; **bain de bouche** prescrit (**Eludril Perio** (chlorhexidine 0,20 %))",
         "**Antibiotiques** : selon la recommandation **HAS 2026**",
         "**Validation par l'encadrant** : **après le sondage** et **après le surfaçage**"
       ],
       indications: ["Parodontite de stade I à III (étape 2 pour tous)"],
       contreIndications: ["Patient à haut risque d'endocardite : prise en charge selon la recommandation HAS 2024", "Pathologie systémique instable : avis médical"],
       materiel: [
-        "**Inserts parodontaux** dédiés pour ultrasons [[marque et modèle à préciser]] ; curettes manuelles [[à préciser]] ; pierre d'affûtage",
+        "**Inserts parodontaux** dédiés pour ultrasons **Satelec** (pièce à main **Newtron Slim**) ; curettes manuelles [[à préciser]] ; pierre d'affûtage",
         "Anesthésique local [[produit à préciser]] ; sonde parodontale",
-        "**Chlorhexidine** ou sérum physiologique pour l'irrigation [[concentration à préciser]]",
-        "Bain de bouche prescrit [[produit à préciser]]"
+        "**Chlorhexidine** (**Eludril Perio** (chlorhexidine 0,20 %)) ou sérum physiologique pour l'irrigation",
+        "Bain de bouche prescrit : **Eludril Perio** (chlorhexidine 0,20 %)"
       ],
       alertes: [
         "**Antibiotiques systémiques en routine : non recommandés** en complément de l'instrumentation (EFP, grade A). HAS 2026 : antibiothérapie recommandée **après la dernière séance d'instrumentation** pour une **parodontite stade III/IV avec inadéquation entre le biofilm et la destruction et ratio perte osseuse/âge > 1** ; maladie nécrosante avec atteinte systémique.",
@@ -202,14 +202,14 @@ window.DISCIPLINES.push({
         ], materiel: ["sonde parodontale", "anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum"], validation: "sondage, puis surfaçage" },
         { titre: "Séance 2 – Surfaçage de la seconde moitié et consignes", details: [
           "**Anesthésie** et **surfaçage** de la seconde moitié de la bouche ; irrigation ; validation par l'encadrant après le surfaçage",
-          "**Consignes** et **prescription d'un bain de bouche** [[produit à préciser]] ; rendez-vous de réévaluation [[délai à préciser]]"
+          "**Consignes** et **prescription d'un bain de bouche** (**Eludril Perio** (chlorhexidine 0,20 %)) ; rendez-vous de réévaluation [[délai à préciser]]"
         ], materiel: ["anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum", "ordonnance"], validation: "surfaçage" }
       ],
       consignes: [
         "**Sensibilité** au froid et au chaud possible plusieurs jours ; dentifrice pour dents sensibles.",
         "**Saignement** léger et gencive sensible les premiers jours ; poursuivre le brossage doux.",
         "**Alimentation** : éviter les aliments très chauds, durs ou épicés tant que l'anesthésie persiste et que la gencive est sensible.",
-        "**Bain de bouche** : selon l'ordonnance [[produit, concentration et durée à préciser]].",
+        "**Bain de bouche** : **Eludril Perio** (chlorhexidine 0,20 %) selon l'ordonnance.",
         "**Hygiène** : brossettes interdentaires comme appris ; l'efficacité du traitement dépend de l'hygiène à la maison.",
         "**Prochains rendez-vous** : réévaluation puis maintenance.",
         "**Consulter** en cas de gonflement, de douleur forte ou de fièvre."
@@ -295,7 +295,7 @@ window.DISCIPLINES.push({
       ],
       indications: ["Tous les patients après un traitement actif réussi : risque élevé de récidive ou de progression"],
       alertes: ["**L'adhésion à la maintenance est déterminante** pour la stabilité parodontale à long terme.", "Objectifs de santé : aucune poche > 4 mm avec saignement, aucune poche profonde ≥ 6 mm."],
-      materiel: ["Sonde parodontale, ultrasons et inserts [[à préciser]]", "Brossettes interdentaires adaptées aux espaces", "Éventuellement brosse électrique (alternative possible à la brosse manuelle)", "Dentifrice ou bain de bouche antiseptique si indiqué : chlorhexidine, huiles essentielles, chlorure de cétylpyridinium (suggérés par l'EFP)"],
+      materiel: ["Sonde parodontale, ultrasons **Satelec Newtron Slim** et inserts", "Brossettes interdentaires adaptées aux espaces", "Éventuellement brosse électrique (alternative possible à la brosse manuelle)", "Dentifrice ou bain de bouche antiseptique si indiqué : chlorhexidine, huiles essentielles, chlorure de cétylpyridinium (suggérés par l'EFP)"],
       etapes: [
         { titre: "Fréquence des visites", details: ["Intervalle **à partir de 3 mois**, jusqu'à 12 mois au maximum, personnalisé selon le profil de risque et l'état parodontal (EFP)"] },
         { titre: "Contenu de la séance", details: ["Instructions d'hygiène répétées et individualisées, incluant le nettoyage interdentaire", "**Débridement mécanique professionnel de plaque** (suggéré), sondage des sites à risque, réévaluation"] },
@@ -318,7 +318,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       indications: ["Tuméfaction gingivale douloureuse avec poche profonde et suppuration (abcès parodontal)", "Douleur, ulcération des papilles, halitose (maladie parodontale nécrosante)", "Lésion endo-parodontale"],
       contreIndications: ["Signes de gravité (trismus, dysphagie, tuméfaction cervico-faciale, fièvre élevée) : orientation hospitalière"],
-      materiel: ["Anesthésique local [[à préciser]]", "Sonde parodontale, curettes et inserts ultrasoniques fins", "Sérum physiologique ou chlorhexidine pour l'irrigation [[à préciser]]", "Test de vitalité pulpaire (diagnostic différentiel endodontique)"],
+      materiel: ["Anesthésique local [[à préciser]]", "Sonde parodontale, curettes et inserts ultrasoniques fins", "Sérum physiologique ou chlorhexidine (**Eludril Perio** (chlorhexidine 0,20 %)) pour l'irrigation", "Test de vitalité pulpaire (diagnostic différentiel endodontique)"],
       alertes: [
         "**Le geste local est prioritaire** : drainage et débridement ; l'antibiothérapie s'ajoute au geste local (HAS 2026, grade A).",
         "**Abcès parodontal et abcès endo-parodontal** : antibiothérapie **non recommandée** sauf patient à haut risque d'endocardite ou à risque infectieux augmenté, signe d'extension locale, régionale ou systémique (adénopathie, fièvre), ou geste local impossible.",
@@ -329,7 +329,7 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Temps 1 – Diagnostic", details: ["Sondage, mobilité, suppuration ; **test de vitalité** et radiographie pour distinguer une origine parodontale, endodontique ou combinée", "Évaluation de l'état général (fièvre, adénopathies, trismus)"], materiel: ["sonde parodontale", "test de vitalité", "radiographie"] },
         { titre: "Temps 2 – Geste local", details: ["Anesthésie ; **drainage** par la poche ou incision, **débridement** doux à l'insert et aux curettes, irrigation", "Lésion endodontique associée : traitement endodontique (voir les fiches d'endodontie)"], materiel: ["anesthésique", "inserts fins", "curettes", "irrigation"] },
-        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques [[prescription du service]] ; bain de bouche [[à préciser]]", "**Contrôle à 48-72 h** puis traitement parodontal complet après l'urgence [[délai à confirmer]]"], materiel: ["ordonnance"] }
+        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques [[prescription du service]] ; bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle à 48-72 h** puis traitement parodontal complet après l'urgence [[délai à confirmer]]"], materiel: ["ordonnance"] }
       ],
       consignes: [
         "**Hygiène** douce mais maintenue ; ne pas arrêter le brossage.",

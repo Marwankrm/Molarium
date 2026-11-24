@@ -196,6 +196,7 @@
     $sidebar.appendChild(link('#/', 'home', 'Accueil', null, route === '#/' || route === '#' || route === ''));
     $sidebar.appendChild(link('#/favoris', 'star', 'Favoris', favs.length || null, /favoris/.test(route)));
     $sidebar.appendChild(link('#/a-completer', 'tasks', 'À préciser', TODO_TOTAL || null, /a-completer/.test(route)));
+    if (window.MATERIAUX) $sidebar.appendChild(link('#/materiaux', 'box', 'Matériaux', MAT_TOTAL || null, /materiaux/.test(route)));
     $sidebar.appendChild(el('div', { class: 'side-title', text: 'Disciplines' }));
     DISCIPLINES.forEach(function (d) {
       var on = d.id === active;
@@ -218,6 +219,7 @@
     var b = el('button', { type: 'button', onclick: function () { openMenu(true); } }, [icon('grid', 22), el('span', { text: 'Disciplines' })]);
     $tabbar.appendChild(b);
     $tabbar.appendChild(tab('#/favoris', 'star', 'Favoris', /favoris/.test(route), favs.length || null));
+    if (window.MATERIAUX) $tabbar.appendChild(tab('#/materiaux', 'box', 'Matériaux', /materiaux/.test(route), null));
     $tabbar.appendChild(tab('#/a-completer', 'tasks', 'À préciser', /a-completer/.test(route), null));
   }
   function openMenu(on) {
@@ -240,7 +242,7 @@
     });
     return nav;
   }
-  function mount(node) { $main.textContent = ''; $main.appendChild(node); }
+  function mount(node) { $main.textContent = ''; $main.appendChild(node); if (window.UIFX) window.UIFX.page($main); }
   function banner() {
     try { if (sessionStorage.getItem('bannerOff')) return null; } catch (e) {}
     var b = el('div', { class: 'banner', role: 'note' }, [
@@ -254,16 +256,15 @@
   function renderHome() {
     setTitle(''); setDisc(null); refreshChrome(null, null);
     var frag = document.createDocumentFragment();
-    var form = el('form', { class: 'hero-search', role: 'search', onsubmit: function (e) {
-      e.preventDefault(); var v = inp.value.trim(); if (v) location.hash = '#/recherche/' + encodeURIComponent(v);
-    } });
-    var inp = el('input', { type: 'search', placeholder: 'Ex. : thermocompaction, empreinte, digue…', 'aria-label': 'Rechercher un protocole' });
-    form.appendChild(inp); form.appendChild(el('button', { type: 'submit', text: 'Rechercher' }));
+    var heroBtns = el('div', { class: 'hero-cta' }, [
+      el('button', { type: 'button', class: 'hero-btn main', onclick: function () { window.scrollTo(0, 0); $q.focus(); } }, [icon('search', 18), el('span', { text: 'Rechercher un protocole' })]),
+      el('button', { type: 'button', class: 'hero-btn', onclick: function () { var g = document.querySelector('.grid'); if (g) g.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); } }, [el('span', { text: 'Parcourir les disciplines' })])
+    ]);
     var tooth = icon('tooth', 150, '1.2'); tooth.setAttribute('class', 'hero-tooth');
     frag.appendChild(el('section', { class: 'hero' }, [
       el('h1', { text: 'Protocoles cliniques d\'odontologie' }),
       el('p', { text: 'Molarium. Fiches de protocoles d\'odontologie, discipline par discipline : séances, matériel, points de vigilance et consignes au patient.' }),
-      form, tooth
+      heroBtns, tooth
     ]));
     var bn = banner(); if (bn) frag.appendChild(bn);
     frag.appendChild(el('div', { class: 'stats' }, [
@@ -295,6 +296,15 @@
       ]));
     });
     frag.appendChild(grid);
+    if (window.MATERIAUX) {
+      frag.appendChild(el('div', { class: 'section-title' }, [el('h2', { text: 'Matériaux' })]));
+      frag.appendChild(el('a', { class: 'card', href: '#/materiaux', style: colorStyle({ couleur: '#1d5fa8' }) }, [
+        el('span', { class: 'badge-ico', 'aria-hidden': 'true', text: 'MA' }),
+        el('h3', { text: 'Matériaux du service' }),
+        el('p', { text: 'Indications, contre-indications, méthode d\'utilisation et choix selon la situation, d\'après les notices.' }),
+        el('div', { class: 'meta' }, [el('b', { text: plural(MAT_TOTAL, 'produit') })])
+      ]));
+    }
     mount(frag);
   }
 
@@ -303,7 +313,7 @@
     var frag = document.createDocumentFragment();
     var todo = d.protocoles.reduce(function (n, p) { return n + p._todoN; }, 0);
     frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: d.nom }]));
-    frag.appendChild(el('header', { class: 'page-head', style: colorStyle(d) }, [
+    frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [
       el('h1', { text: d.nom }), el('p', { class: 'psum', text: d.description }),
       el('p', { class: 'scroll-hint' }, [document.createTextNode(plural(d.protocoles.length, 'fiche') + ' à ouvrir, juste en dessous'), icon('chev', 18, '2.6')])
     ]));
@@ -339,7 +349,7 @@
     if (p.maj) chips.push(el('span', { class: 'chip plain', text: 'Mis à jour : ' + p.maj }));
     if (p.sourceType) chips.push(el('span', { class: 'chip src', text: 'Source : ' + p.sourceType }));
     var favB = el('button', { class: 'btn' + (isFav(p._key) ? ' fav-on on' : ''), type: 'button', onclick: function () {
-      var on = toggleFav(p._key); favB.classList.toggle('fav-on', on); favB.classList.toggle('on', on); favB.lastChild.textContent = on ? 'Dans mes favoris' : 'Favori';
+      var on = toggleFav(p._key); favB.classList.toggle('fav-on', on); favB.classList.toggle('on', on); if (on && window.UIFX) window.UIFX.pop(favB); favB.lastChild.textContent = on ? 'Dans mes favoris' : 'Favori';
     } }, [icon('star', 18), el('span', { text: isFav(p._key) ? 'Dans mes favoris' : 'Favori' })]);
     var wake = null, wakeBtn = null;
     var actions = [favB];
@@ -367,8 +377,9 @@
     ]));
 
     // sections
-    var secs = [], toc = [];
-    function add(id, label, node) { secs.push(node); toc.push({ id: id, label: label }); }
+    var secs = [], toc = [], items = [];
+    function add(id, label, node) { items.push({ id: id, label: label, node: node, i: items.length }); }
+    var RANK = { 's-etapes': 0, 's-alertes': 1, 's-mat': 2, 's-prereq': 3, 's-indic': 4 };
 
     if (p.etapes && p.etapes.length) {
       var nVal = p.etapes.filter(function (x) { return x.validation; }).length;
@@ -388,7 +399,7 @@
         var box = document.getElementById('s-etapes'); if (box) box.setAttribute('open', '');
         var st = document.getElementById('step-' + a.getAttribute('data-step')); if (st) st.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
-      add('s-apercu', 'Aperçu', el('section', { class: 'overview', id: 's-apercu' }, [el('h2', { text: 'Aperçu de la fiche' }), facts, el('h3', { class: 'ov-h', text: 'Les étapes d\'un coup d\'œil' }), ovl]));
+      void ('s-apercu', 'Aperçu', el('section', { class: 'overview', id: 's-apercu' }, [el('h2', { text: 'Aperçu de la fiche' }), facts, el('h3', { class: 'ov-h', text: 'Les étapes d\'un coup d\'œil' }), ovl]));
     }
     if (p.alertes && p.alertes.length) add('s-alertes', 'Vigilance', acc('s-alertes', 'Points de vigilance', ul(p.alertes), { cls: 'alert', open: true, icon: 'warn' }));
     if (p.indications || p.contreIndications) {
@@ -407,7 +418,7 @@
       var save2 = function () { save(storeKey, done); };
       var update = function () {
         var n = Object.keys(done).filter(function (k) { return done[k]; }).length;
-        bar.style.width = (100 * n / p.etapes.length) + '%'; label.textContent = n + ' / ' + p.etapes.length + ' faites';
+        bar.style.transform = 'scaleX(' + (n / p.etapes.length) + ')'; label.textContent = n + ' / ' + p.etapes.length + ' faites';
         prog.setAttribute('aria-valuenow', String(n));
       };
       var reset = el('button', { class: 'reset', type: 'button', text: 'Réinitialiser le suivi', onclick: function () {
@@ -417,7 +428,7 @@
         var lab = stepLabel(s.titre, i);
         var li = el('li', { class: 'step' + (done[i] ? ' done' : ''), id: 'step-' + i });
         var n = el('button', { class: 'step-n', type: 'button', 'data-n': lab.n, 'aria-pressed': done[i] ? 'true' : 'false', 'aria-label': 'Marquer l\'étape ' + lab.n + ' comme faite', onclick: function () {
-          done[i] = !done[i]; li.classList.toggle('done', !!done[i]); n.setAttribute('aria-pressed', done[i] ? 'true' : 'false'); save2(); update();
+          done[i] = !done[i]; li.classList.toggle('done', !!done[i]); n.setAttribute('aria-pressed', done[i] ? 'true' : 'false'); save2(); update(); if (done[i] && window.UIFX) window.UIFX.done(li, n);
         } });
         var head = el('div', { class: 'step-head' }, [lab.kind ? el('span', { class: 'eyebrow', text: lab.kind + ' ' + lab.n }) : null, el('h3', { text: lab.title }), lab.note ? el('p', { class: 'step-note', text: lab.note.charAt(0).toUpperCase() + lab.note.slice(1) }) : null]);
         var body = el('div', { class: 'step-body' }, [head]);
@@ -442,6 +453,9 @@
     if (p.erreurs && p.erreurs.length) add('s-erreurs', 'Erreurs fréquentes', acc('s-erreurs', 'Erreurs fréquentes à éviter', ul(p.erreurs), { open: false, icon: 'close', cls: 'sec-danger' }));
     if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false, icon: 'book', cls: 'sec-grey' }));
     if (p._todoN) add('s-todo', 'À préciser', acc('s-todo', 'Points à préciser par le service', ul(p._todos), { cls: 'todo-acc', open: false, count: p._todoN }));
+
+    items.sort(function (x, y) { var rx = x.id in RANK ? RANK[x.id] : 10 + x.i, ry = y.id in RANK ? RANK[y.id] : 10 + y.i; return rx - ry; });
+    items.forEach(function (it) { secs.push(it.node); toc.push({ id: it.id, label: it.label }); });
 
     // sommaire (barre mobile + colonne desktop)
     function tocLinks(cls) {
@@ -535,7 +549,7 @@
         });
         body.appendChild(chips);
       }
-      var prog = el('div', { class: 'prep-prog' }, [el('strong', { text: n + ' / ' + keys.length + ' prêts' }), el('div', { class: 'bar' }, [el('i', { style: 'width:' + (keys.length ? 100 * n / keys.length : 0) + '%' })])]);
+      var prog = el('div', { class: 'prep-prog' }, [el('strong', { text: n + ' / ' + keys.length + ' prêts' }), el('div', { class: 'bar' }, [el('i', { style: 'transform:scaleX(' + (keys.length ? n / keys.length : 0) + ')' })])]);
       body.appendChild(prog);
       if (n === keys.length && keys.length) body.appendChild(el('p', { class: 'prep-done', text: 'Tout est prêt. Bonne séance !' }));
       groups.forEach(function (g) {
@@ -655,6 +669,67 @@
     frag.appendChild(g); mount(frag);
   }
 
+  // --- matériaux du service ---
+  var MAT_TOTAL = window.MATERIAUX ? window.MATERIAUX.sections.reduce(function (n, x) { return n + x.produits.length; }, 0) : 0;
+  var MAT_STATUT = { lue: ['valid', 'Notice lue'], part: ['draft', 'Notice partielle'], abs: ['todo-c', 'Notice non trouvée'] };
+  function matBlock(cls, titre, items) {
+    return items && items.length ? el('div', { class: 'mblk ' + cls }, [el('h3', { text: titre }), ul(items)]) : null;
+  }
+  function matCard(p) {
+    var st = MAT_STATUT[p.statut] || MAT_STATUT.abs;
+    var src = p.src && p.src.length ? el('p', { class: 'msrc' }, [document.createTextNode('Source : ')].concat(p.src.reduce(function (acc2, x, i) {
+      if (i) acc2.push(document.createTextNode(' · '));
+      acc2.push(x.u === '#/materiaux' ? document.createTextNode(x.t) : /^https?:/.test(x.u) ? el('a', { href: x.u, target: '_blank', rel: 'noopener noreferrer', text: x.t }) : el('a', { href: x.u, text: x.t }));
+      return acc2;
+    }, []))) : null;
+    var im = window.MATERIAUX_IMG && window.MATERIAUX_IMG[p.id];
+    var fig = im ? el('figure', { class: 'mfig' }, [
+      el('img', { src: im.f, alt: 'Photo : ' + p.nom.replace(/\*\*/g, ''), loading: 'lazy', width: '180', height: '180' }),
+      el('figcaption', null, [document.createTextNode((im.note ? im.note + ' ' : '') + 'Image : ' + im.credit + ' · '), el('a', { href: im.page, target: '_blank', rel: 'noopener noreferrer', text: 'page du produit' })])
+    ]) : null;
+    var body = el('div', null, [fig, el('p', { class: 'mtype', text: p.type }), matBlock('m-ind', 'Indications', p.ind), matBlock('m-ci', 'Contre-indications et précautions', p.ci), matBlock('m-met', 'Méthode d\'utilisation', p.met), matBlock('m-ret', 'À retenir', p.ret), src]);
+    var d = acc('mat-' + p.id, p.nom.replace(/\*\*/g, ''), body, { open: false, icon: 'box', cls: 'mat-acc' });
+    var sum = d.firstChild; sum.insertBefore(el('span', { class: 'chip ' + st[0], text: st[1] }), sum.lastChild);
+    d._hay = plain([p.nom, p.type, (p.ind || []).join(' '), (p.ci || []).join(' '), (p.met || []).join(' '), (p.ret || []).join(' ')].join(' ')).toLowerCase();
+    return d;
+  }
+  function renderMateriaux() {
+    setTitle('Matériaux'); setDisc(null); refreshChrome(null, null);
+    var M = window.MATERIAUX; if (!M) return renderNotFound();
+    var frag = document.createDocumentFragment();
+    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: 'Matériaux' }]));
+    frag.appendChild(el('h1', { text: 'Matériaux du service' }));
+    frag.appendChild(el('p', { class: 'muted', text: MAT_TOTAL + ' produits : indications, contre-indications, méthode d\'utilisation et choix selon la situation, d\'après les notices des fabricants et des thèses. Vérifier la notice du lot et faire valider par l\'encadrant.' }));
+    var q = el('input', { type: 'search', class: 'mat-search', placeholder: 'Filtrer : produit ou usage…', 'aria-label': 'Filtrer les matériaux' });
+    frag.appendChild(el('div', { class: 'toolbar' }, [q]));
+
+    var choix = el('div', { class: 'mchoix' });
+    M.choix.forEach(function (c) { choix.appendChild(el('div', { class: 'mc' }, [el('h3', { text: c.t }), el('p', null, [rich(c.x)])])); });
+    var choixAcc = acc('mat-choix', 'Quel matériau dans quelle situation ?', choix, { open: true, icon: 'list', cls: 'sec-blue' });
+    frag.appendChild(choixAcc);
+
+    var groups = [];
+    M.sections.forEach(function (sec) {
+      var head = el('div', { class: 'section-title' }, [el('h2', { text: sec.titre })]);
+      var cards = sec.produits.map(matCard);
+      frag.appendChild(head); cards.forEach(function (c) { frag.appendChild(c); });
+      groups.push({ head: head, cards: cards });
+    });
+    var none = el('div', { class: 'empty', text: 'Aucun produit ne correspond.', hidden: 'hidden' });
+    frag.appendChild(none);
+    q.addEventListener('input', function () {
+      var v = q.value.trim().toLowerCase(), any = false;
+      choixAcc.hidden = !!v;
+      groups.forEach(function (g) {
+        var n = 0;
+        g.cards.forEach(function (c) { var ok = !v || c._hay.indexOf(v) >= 0; c.hidden = !ok; if (ok) n++; if (v && ok) c.setAttribute('open', ''); });
+        g.head.hidden = !n; any = any || n > 0;
+      });
+      none.hidden = any || !v;
+    });
+    mount(frag);
+  }
+
   // --- points à préciser ---
   var todoFilter = 'all';
   function renderTodo() {
@@ -708,6 +783,7 @@
     if (!parts.length) return renderHome();
     if (parts[0] === 'favoris') return renderFavs();
     if (parts[0] === 'a-completer') return renderTodo();
+    if (parts[0] === 'materiaux') return renderMateriaux();
     var d = findDisc(parts[0]);
     if (!d) return renderNotFound();
     if (parts.length === 1) return renderDiscipline(d);

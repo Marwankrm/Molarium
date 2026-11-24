@@ -38,3 +38,16 @@ passer à `statut: "valide"` et renseigner `validePar: "Dr X"` : le badge devien
 - **Favoris** et **récemment consultés** (mémorisés sur l'appareil).
 - **Points à préciser** : page qui rassemble automatiquement toutes les zones `[[à préciser]]` des fiches, avec un bouton pour copier la liste.
 - Thème clair uniquement, taille du texte réglable, impression / PDF (toutes les sections sont dépliées à l'impression).
+
+## Composants tiers
+
+- **Motion** (version « mini », `js/motion-mini.js`, licence MIT, voir `js/motion-LICENSE.md`) : micro-animations, désactivées si l'appareil demande moins d'animations.
+- **Figtree** (police, `css/fonts/`, licence SIL OFL 1.1) : hébergée avec le site, aucune requête vers un service externe.
+
+
+## Page « Matériaux »
+`data/materiaux.js` contient la synthèse des matériaux du service (indications, contre-indications, méthode, source) affichée sur `#/materiaux`. Chaque produit porte un statut de source : `lue` (notice du fabricant lue), `part` (notice partielle) ou `abs` (notice non trouvée). Même balisage que les fiches (`**gras**`). À valider par l'encadrant.
+
+## Photos des produits (page « Matériaux »)
+
+Les photos de `img/materiaux/` ont été récupérées sur les sites des fabricants ou de revendeurs (liste, crédit et lien de chaque photo dans `data/materiaux-img.js`). Elles restent la propriété de leurs détenteurs et ne sont là qu'à titre d'illustration pédagogique, sans but commercial ; elles seront retirées sur simple demande. Pour ajouter ou remplacer une photo : déposer le fichier dans `img/materiaux/<id du produit>.jpg` et ajouter la ligne correspondante dans `data/materiaux-img.js`.

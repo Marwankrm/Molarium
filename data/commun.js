@@ -28,7 +28,7 @@ window.DISCIPLINES.push({
         { titre: "Accueil et motif de consultation", details: ["Recueillir le motif dans les mots du patient", "Évaluer la douleur (EVA) et l'urgence", "Vérifier l'identité et le consentement aux soins pédagogiques"] },
         { titre: "Anamnèse médicale", details: ["Antécédents médicaux, chirurgicaux, familiaux", "Traitements en cours (liste exhaustive, dont automédication)", "Allergies et intolérances", "Habitudes : tabac, alcool, hygiène bucco-dentaire, bruxisme"], astuce: "Faire signer / dater le questionnaire médical et le mettre à jour à chaque consultation de contrôle." },
         { titre: "Examen clinique", details: ["Examen extra-oral : asymétrie, adénopathies, ATM", "Examen des muqueuses (dépistage cancer buccal)", "Bilan dentaire : caries, restaurations, mobilités, occlusion", "Bilan parodontal : indices de plaque et de saignement, sondage"] },
-        { titre: "Examens complémentaires", details: ["Imagerie adaptée (principe ALARA)", "Tests de vitalité pulpaire si besoin", "Photographies, modèles d'étude selon le plan de traitement"] },
+        { titre: "Examens complémentaires", details: ["Imagerie adaptée (principe ALARA)", "Tests de vitalité pulpaire si besoin (spray au froid **CryoPulp**, Septodont)", "Photographies, modèles d'étude selon le plan de traitement"] },
         { titre: "Diagnostic et plan de traitement", details: ["Poser le diagnostic et hiérarchiser : urgences → étiologique → réhabilitation → maintenance", "Présenter les alternatives et obtenir le consentement éclairé", "Planifier les séances et orienter vers les disciplines concernées"] }
       ],
       suivi: ["Remettre au patient le plan de traitement et les consignes d'hygiène adaptées", "Planifier les rendez-vous de contrôle"]

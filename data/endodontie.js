@@ -27,7 +27,7 @@ window.DISCIPLINES.push({
     {
       id: "traitement-endodontique",
       titre: "Traitement endodontique",
-      resume: "Le plus souvent en une seule séance, sous digue : accès, mise en forme aux limes rotatives ProTaper Gold, irrigation, essayage de la gutta, obturation par thermocompaction et restauration coronaire. Une 2e séance avec hydroxyde de calcium si nécessaire.",
+      resume: "Le plus souvent en une seule séance : accès, digue, mise en forme aux limes rotatives ProTaper Gold, irrigation, essayage de la gutta, obturation par thermocompaction et restauration coronaire. Une 2e séance avec hydroxyde de calcium si nécessaire.",
       duree: "Le plus souvent 1 séance ; 2 séances si nécessaire",
       niveau: "Étudiant encadré",
       statut: "brouillon",
@@ -39,9 +39,9 @@ window.DISCIPLINES.push({
         "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)**",
         "**Localisateur d'apex** utilisé",
         "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
-        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes de gutta-percha assortis aux ProTaper Gold** ; ciment endodontique",
-        "**Étanchéité provisoire** : matériau d'obturation temporaire",
-        "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Hycal**, pâte prête à l'emploi en seringue",
+        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
+        "**Étanchéité provisoire** : matériau d'obturation temporaire : **IRM** (Dentsply Sirona), ou **CVI photopolymérisable** pour une étanchéité totale",
+        "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Supracal** (R&S), pâte prête à l'emploi en seringue",
         "**Validation par l'encadrant** : longueur de travail, essayage de la gutta (maître-cône) et obturation",
         "**3 radiographies** : **pré-opératoire**, **essayage de la gutta**, **contrôle d'obturation**"
       ],
@@ -50,17 +50,17 @@ window.DISCIPLINES.push({
       prerequis: ["Diagnostic pulpaire et péri-apical établi", "Radiographie pré-opératoire exploitable", "Évaluation de la restaurabilité de la dent", "Consentement éclairé, patient prévenu que **des douleurs post-opératoires sont fréquentes**"],
       materiel: [
         "Digue, clamps, cadre",
-        "Hypochlorite de sodium",
+        "Hypochlorite de sodium **R&S 2,5 %** (Magnum Dental, flacon de 500 mL)",
         "**CanalPro EDTA 17 %** (Coltène, flacon de 500 mL) ; eau pour rincer entre les irrigants",
-        "Seringue 5 mL à embout **Luer-Lock** et aiguille **30 G** (Ø externe 0,298–0,320 mm), à ouverture latérale (réduit l'extrusion apicale)",
-        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** : S1, S2, F1, F2 (SX et F3 si besoin) ; limes manuelles de cathétérisme (jusqu'au 15/100) et gel d'EDTA ; localisateur d'apex",
-        "**Cônes de gutta-percha assortis aux ProTaper Gold** et matériel de **thermocompaction (Dentsply Sirona)** ; ciment endodontique",
-        "Hydroxyde de calcium en pâte prête à l'emploi en seringue (**Hycal**), si 2e séance",
-        "Matériau d'obturation temporaire pour l'étanchéité coronaire",
+        "Seringue 5 mL à embout **Luer-Lock** et aiguille **30 G** (Ø externe 0,298–0,320 mm), à ouverture latérale (réduit l'extrusion apicale) ; aiguilles du service : **Access** (30 G, 25 mm), **NaviTip** double sideport (Ultradent), **IrriFlex** (30 G) ; **Capillary Tips** (Ultradent) pour **aspirer** (jamais pour délivrer un irrigant)",
+        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** : S1, S2, F1, F2 (SX et F3 si besoin) ; limes manuelles de cathétérisme (jusqu'au 15/100) et gel d'EDTA (**Glyde File Prep**, Dentsply Sirona) ; localisateur d'apex **NSK iPex II**",
+        "**Cônes ProTaper Gold Conform Fit** (Dentsply Sirona), assortis aux limes, et matériel de **thermocompaction (Dentsply Sirona)** ; **ciment canalaire des étudiants : Pulp Canal Sealer EWT** (Kerr)",
+        "Hydroxyde de calcium en pâte prête à l'emploi en seringue (**Supracal**, R&S), si 2e séance",
+        "**IRM** (Dentsply Sirona, poudre 40 g et liquide 15 mL) ou **CVI photopolymérisable** (étanchéité totale) pour l'étanchéité coronaire",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
       ],
       alertes: [
-        "**Digue obligatoire** pendant l'irrigation (protège la muqueuse, évite l'ingestion de l'irrigant).",
+        "**Digue obligatoire** pendant l'irrigation (protège la muqueuse, évite l'ingestion de l'irrigant) : elle se pose **après la cavité d'accès**, avant tout contact avec l'hypochlorite.",
         "**Ne jamais forcer l'irrigant** vers l'apex : aiguille libre dans le canal, mouvements verticaux de faible amplitude, **sans pression excessive**. L'extrusion d'hypochlorite cause une lésion des tissus péri-apicaux.",
         "**Rincer à l'eau entre les irrigants** : l'EDTA fait perdre à l'hypochlorite son pouvoir de dissolution tissulaire ; **ne pas terminer par l'EDTA** (il continue à ramollir la dentine).",
         "**Respecter la longueur de travail** (mise en forme, irrigation, obturation) : éviter l'extrusion de débris, d'irrigant, de gutta-percha ou de ciment, principales causes de douleurs post-opératoires.",
@@ -69,22 +69,22 @@ window.DISCIPLINES.push({
         "**Une séance ou deux ?** Au service, le traitement est **très souvent fait en une seule séance**. Une 2e séance avec hydroxyde de calcium est surtout envisagée pour une dent avec lésion péri-apicale, fistule ou exsudat, ou si le temps manque. **Au service : 2e séance en cas de manque de temps, de suintement ou de douleur.** Une méta-analyse de 2017 trouve plus de flare-ups après une séance unique (preuve faible), sans différence de complications ni de douleur."
       ],
       etapes: [
-        { titre: "Temps 1 (séance 1, le plus souvent séance unique) – Anesthésie, isolation et accès", details: [
+        { titre: "Temps 1 (séance 1, le plus souvent séance unique) – Anesthésie et cavité d'accès (avant la digue)", details: [
           "**Anesthésie locale**",
           "Dépose des anciennes restaurations et des caries ; reconstruction d'une paroi si besoin",
+          "**Cavité d'accès réalisée AVANT la pose de la digue**, directe aux orifices : faire l'accès après avoir posé la digue expose à un **risque de perforation**"
+        ], materiel: ["cassette de fraises « Soins » (Komet)"] },
+        { titre: "Temps 2 – Pose de la digue, repérage et négociation des canaux", details: [
           "**Pose de la digue**, désinfection du champ",
-          "**Cavité d'accès** directe aux orifices"
-        ], materiel: ["digue et clamps", "fraises d'accès"] },
-        { titre: "Temps 2 – Repérage et négociation des canaux", details: [
-          "**Dès l'ouverture de la chambre : injecter l'hypochlorite** pour remplir la chambre et les canaux",
+          "**Dès l'ouverture de la chambre sous digue : injecter l'hypochlorite** pour remplir la chambre et les canaux",
           "Repérer les orifices",
-          "**Cathétérisme manuel** avec des limes **jusqu'au 15/100** (10 puis 15), **avant les limes rotatives**, avec du **gel d'EDTA**",
+          "**Cathétérisme manuel** avec des limes **jusqu'au 15/100** (10 puis 15), **avant les limes rotatives**, avec du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
           "Obtenir un **chemin de glisse** lisse et reproductible : la notice ne l'autorise que dans ces conditions"
-        ], materiel: ["hypochlorite", "seringue Luer-Lock + aiguille 30 G", "limes manuelles de cathétérisme (jusqu'au 15/100)", "gel d'EDTA"] },
+        ], materiel: ["digue et clamps", "hypochlorite", "seringue Luer-Lock + aiguille 30 G", "limes manuelles de cathétérisme (jusqu'au 15/100)", "gel d'EDTA (Glyde File Prep)"] },
         { titre: "Temps 3 – Longueur de travail", details: [
-          "**Mesure au localisateur d'apex**",
+          "**Mesure au localisateur d'apex** (**NSK iPex II**)",
           "**Confirmation par radiographie**"
-        ], materiel: ["localisateur d'apex", "radiographies"], validation: "longueur de travail" },
+        ], materiel: ["localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
           "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
           "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
@@ -101,20 +101,21 @@ window.DISCIPLINES.push({
           "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant (consensus 2024)",
           "**Rinçage à l'eau entre chaque irrigant**",
           "Séchage (rinçage à l'éthanol 95 %, 3 mL par canal, possible)"
-        ], materiel: ["hypochlorite, EDTA 17 %, eau", "pointes de papier"] },
+        ], materiel: ["hypochlorite, EDTA 17 %, eau", "pointes de papier (ProTaper Gold, Maxima ISO 45-80)"] },
         { titre: "Temps 6 – Essayage de la gutta", details: [
           "**Cône de gutta-percha assorti à la dernière lime**",
           "**Radiographie d'essayage**",
-          "**Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer.** Poser l'hydroxyde de calcium (**Hycal**) sur toute la longueur de travail, étanchéifier avec un matériau d'obturation temporaire, puis poursuivre en séance 2"
+          "**Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer.** Poser l'hydroxyde de calcium (**Supracal**, R&S) sur toute la longueur de travail, étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale), puis poursuivre en séance 2"
         ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
         { titre: "Temps 7 – Obturation", details: [
           "**Obturation par thermocompaction** (Dentsply Sirona) avec le ciment endodontique",
+          "**Ciment canalaire des étudiants : Pulp Canal Sealer EWT (Kerr)**, à l'oxyde de zinc-eugénol : **une cuillère de poudre pour une goutte de liquide**, mélange en cercles jusqu'à une pâte **lisse, non collante, sans grains d'argent** ; application à la lime ou au Lentulo puis enrobage du cône ; **ne pas trop remplir le canal** ; plus de 6 h de temps de travail sur le bloc, prise en bouche en moins de 2 h (notice Kerr)",
           "**Radiographie de contrôle**"
-        ], materiel: ["matériel de thermocompaction", "ciment endodontique", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
+        ], materiel: ["matériel de thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
         { titre: "Temps 8 – Restauration coronaire", details: [
-          "**Restauration coronaire étanche immédiate** avec un matériau d'obturation temporaire",
+          "**Restauration coronaire étanche immédiate** : **IRM** (matériau d'obturation temporaire) ou **CVI photopolymérisable** pour une étanchéité totale",
           "Restauration définitive (onlay, couronne) dans les meilleurs délais"
-        ], materiel: ["matériau d'obturation temporaire"], astuce: "L'étanchéité coronaire conditionne le succès à long terme." },
+        ], materiel: ["IRM (poudre et liquide)", "CVI photopolymérisable", "lampe à photopolymériser"], astuce: "L'étanchéité coronaire conditionne le succès à long terme. **L'IRM contient de l'eugénol** (oxyde de zinc-eugénol renforcé) : le retirer complètement avant une restauration collée ou scellée, car l'eugénol gêne la prise et l'adhésion de certains matériaux." },
         { titre: "Temps 9 (séance 2, si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
           "**Quand ?** Au service : manque de temps, suintement (exsudat) ou douleur ; plus généralement canal infecté avec lésion ou fistule. Intervalle entre les séances : **1 à 2 semaines**",
           "**Dépose de l'étanchéité provisoire** puis de l'hydroxyde de calcium, par **irrigation abondante** (limes de calibrage si besoin)",
@@ -122,7 +123,7 @@ window.DISCIPLINES.push({
           "**Essayage de la gutta**",
           "**Obturation par thermocompaction**, radiographie de contrôle",
           "**Restauration coronaire étanche immédiate**"
-        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "matériel de thermocompaction", "ciment endodontique", "matériau d'obturation temporaire", "radiographies"], validation: "essayage de la gutta et obturation" }
+        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "matériel de thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "IRM ou CVI photopolymérisable", "radiographies"], validation: "essayage de la gutta et obturation" }
       ],
       consignes: [
         "**Douleurs après le traitement : elles sont fréquentes** (environ 1 patient sur 5 est gêné dans sa vie quotidienne, et jusqu'à 10 % gardent une douleur jusqu'à 6 mois selon une revue) ; elles sont le plus souvent maximales dans les premières 24 à 48 heures.",
@@ -160,7 +161,7 @@ window.DISCIPLINES.push({
     {
       id: "retraitement-endodontique",
       titre: "Retraitement endodontique",
-      resume: "Le plus souvent en une seule séance, sous digue : évaluation, désobturation au solvant à l'orange (Dentsply Sirona) et aux limes, mise en forme ProTaper Gold, obturation par thermocompaction et restauration coronaire. Une 2e séance avec hydroxyde de calcium si nécessaire.",
+      resume: "Le plus souvent en une seule séance : évaluation, accès puis digue, désobturation au Desocclusol Orange (Acteon) et aux limes, mise en forme ProTaper Gold, obturation par thermocompaction et restauration coronaire. Une 2e séance avec hydroxyde de calcium si nécessaire.",
       duree: "Le plus souvent 1 séance ; 2 séances si nécessaire",
       niveau: "Interne / étudiant encadré",
       statut: "brouillon",
@@ -169,13 +170,13 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "Retraitement **très souvent réalisé en une seule séance** ; **2e séance** en cas de **manque de temps, de suintement ou de douleur** (avec **hydroxyde de calcium** entre les séances)",
-        "**Solvant à l'orange** (huile d'orange), de la **même marque : Dentsply Sirona**",
+        "**Desocclusol Orange** (Acteon), solvant à l'huile essentielle d'orange",
         "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** ; instruments de désobturation [[à préciser]]",
         "**Localisateur d'apex** utilisé",
         "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
-        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes de gutta-percha assortis aux ProTaper Gold** ; ciment endodontique",
-        "**Étanchéité provisoire** : matériau d'obturation temporaire",
-        "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Hycal**, pâte prête à l'emploi en seringue",
+        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
+        "**Étanchéité provisoire** : matériau d'obturation temporaire : **IRM** (Dentsply Sirona), ou **CVI photopolymérisable** pour une étanchéité totale",
+        "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Supracal** (R&S), pâte prête à l'emploi en seringue",
         "**Validation par l'encadrant** : longueur de travail, essayage de la gutta (maître-cône) et obturation",
         "**3 radiographies** : **pré-opératoire**, **essayage de la gutta**, **contrôle d'obturation**"
       ],
@@ -196,19 +197,19 @@ window.DISCIPLINES.push({
       ],
       materiel: [
         "Digue, clamps ; ultrasons et fraises pour la dépose de la restauration, de la couronne ou du tenon",
-        "**Solvant à l'orange (Dentsply Sirona)** ; instruments de désobturation [[à préciser]]",
-        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; localisateur d'apex",
-        "**Hypochlorite de sodium**, **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
-        "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes de gutta-percha assortis aux ProTaper Gold**, ciment endodontique",
-        "**Hydroxyde de calcium** en pâte prête à l'emploi en seringue (**Hycal**), si 2e séance",
-        "Matériau d'obturation temporaire ; matériau de réparation de perforation [[à préciser]]",
+        "**Desocclusol Orange (Acteon)** ; instruments de désobturation [[à préciser]]",
+        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; localisateur d'apex **NSK iPex II**",
+        "**Hypochlorite de sodium R&S 2,5 %** (Magnum Dental), **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
+        "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes, ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
+        "**Hydroxyde de calcium** en pâte prête à l'emploi en seringue (**Supracal**, R&S), si 2e séance",
+        "**IRM** ou **CVI photopolymérisable** pour l'étanchéité ; matériau de réparation de perforation [[à préciser]]",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
       ],
       alertes: [
         "**Digue indispensable** ; reconstruire une paroi si nécessaire pour l'étanchéité.",
         "**Le retraitement est plus long et moins prévisible** qu'un traitement initial : informer le patient des douleurs post-opératoires fréquentes, des risques (perforation, fracture d'instrument, canal non négociable) et des alternatives.",
         "**Instruments fracturés** : l'échec de retrait est plus fréquent dans le **tiers apical (21 %)** que dans le tiers moyen ou coronaire (8,8 %) (méta-analyse 2024) ; ne pas forcer et demander l'avis du senior.",
-        "**Solvants** : les données ne montrent pas de différence sur la douleur post-opératoire ni la prise d'antalgiques (peu d'essais randomisés) ; le solvant à l'orange est utilisé au service.",
+        "**Solvants** : les données ne montrent pas de différence sur la douleur post-opératoire ni la prise d'antalgiques (peu d'essais randomisés) ; le **Desocclusol Orange** (solvant à l'huile essentielle d'orange, qui dissout les ciments à l'oxyde de zinc-eugénol et la gutta) est utilisé au service.",
         "**Antibioprophylaxie** : non recommandée pour la reprise de traitement en population générale ; recommandée chez les patients à risque infectieux augmenté ; non recommandée chez les patients à haut risque d'ostéonécrose (HAS 2026, tableau 1).",
         "**Rincer à l'eau entre les irrigants** ; **EDTA jamais en dernier** ; irrigation **sans pression**."
       ],
@@ -217,19 +218,19 @@ window.DISCIPLINES.push({
           "**Évaluation** : radiographie, CBCT si besoin, qualité de l'obturation, fuite coronaire, lésion",
           "**Dépose de la restauration, de la couronne ou du tenon** si nécessaire (ultrasons)"
         ], materiel: ["radiographies", "ultrasons et fraises"] },
-        { titre: "Temps 2 – Anesthésie, isolation et accès", details: [
+        { titre: "Temps 2 – Anesthésie, accès (avant la digue) puis isolation", details: [
           "**Anesthésie locale**",
-          "**Pose de la digue**",
-          "**Accès** aux canaux"
-        ], materiel: ["digue", "fraises d'accès"] },
+          "**Accès** aux canaux **AVANT la pose de la digue** : faire l'accès après avoir posé la digue expose à un **risque de perforation**",
+          "**Pose de la digue**, désinfection du champ"
+        ], materiel: ["cassette de fraises « Soins » (Komet)", "digue et clamps"] },
         { titre: "Temps 3 – Désobturation et longueur de travail", details: [
-          "**Désobturation de la gutta-percha** au **solvant à l'orange** (Dentsply Sirona) et aux instruments [[à préciser]]",
+          "**Désobturation de la gutta-percha** au **Desocclusol Orange** (Acteon) et aux instruments [[à préciser]]",
           "**Repérage des canaux manqués**, négociation",
           "**Perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie)",
           "Retrait des fragments ou réparation d'une perforation selon la situation [[matériau du service]]"
-        ], materiel: ["solvant à l'orange (Dentsply Sirona)", "localisateur d'apex", "radiographies"], validation: "longueur de travail" },
+        ], materiel: ["Desocclusol Orange (Acteon)", "localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
-          "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec du **gel d'EDTA**",
+          "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
           "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
           "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
           "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus** ; apex en général jusqu'au 25/100",
@@ -246,16 +247,16 @@ window.DISCIPLINES.push({
         { titre: "Temps 6 – Essayage de la gutta", details: [
           "**Cône de gutta-percha assorti à la dernière lime**",
           "**Radiographie d'essayage**",
-          "**Désobturation longue, lésion étendue, fistule ou exsudat : ne pas obturer.** Poser l'hydroxyde de calcium radio-opaque aqueux sur toute la longueur de travail, étanchéifier avec un matériau d'obturation temporaire, puis poursuivre en séance 2"
+          "**Désobturation longue, lésion étendue, fistule ou exsudat : ne pas obturer.** Poser l'hydroxyde de calcium radio-opaque aqueux sur toute la longueur de travail, étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale), puis poursuivre en séance 2"
         ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
         { titre: "Temps 7 – Obturation", details: [
           "**Obturation par thermocompaction**",
           "**Radiographie de contrôle**"
-        ], materiel: ["thermocompaction", "ciment endodontique", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
+        ], materiel: ["thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
         { titre: "Temps 8 – Restauration coronaire", details: [
           "**Restauration coronaire étanche immédiate**",
           "Restauration définitive (onlay, couronne) dans les meilleurs délais"
-        ], materiel: ["matériau d'obturation temporaire"], astuce: "La restauration coronaire étanche est aussi importante que l'obturation pour le succès du retraitement." },
+        ], materiel: ["IRM (poudre et liquide)", "CVI photopolymérisable", "lampe à photopolymériser"], astuce: "La restauration coronaire étanche est aussi importante que l'obturation pour le succès du retraitement." },
         { titre: "Temps 9 (séance 2, si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
           "**Quand ?** Retraitement avec lésion étendue, fistule ou exsudat (médication à l'hydroxyde de calcium indiquée), travail inachevé en séance 1. Au service : manque de temps, suintement ou douleur. Intervalle entre les séances : **1 à 2 semaines**",
           "**Dépose de l'étanchéité provisoire** puis de l'hydroxyde de calcium, par **irrigation abondante**",
@@ -263,7 +264,7 @@ window.DISCIPLINES.push({
           "**Essayage de la gutta**",
           "**Obturation par thermocompaction**, radiographie de contrôle",
           "**Restauration coronaire étanche immédiate**"
-        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "thermocompaction", "ciment endodontique", "matériau d'obturation temporaire", "radiographies"], validation: "essayage de la gutta et obturation" }
+        ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "IRM ou CVI photopolymérisable", "radiographies"], validation: "essayage de la gutta et obturation" }
       ],
       consignes: [
         "**Douleurs après un retraitement : fréquentes**, surtout dans les premières 24 à 48 heures ; elles sont plus marquées qu'après un traitement initial dans certaines séries.",
@@ -319,7 +320,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Interrogatoire de la douleur", details: ["Début, durée, déclenchement, irradiation, soulagement", "Intensité (EVA)"] },
-        { titre: "Examen clinique et tests", details: ["Inspection, palpation, percussion", "Test au froid / électrique selon le cas", "Sondage parodontal (diagnostic différentiel parodontal ou fêlure)"] },
+        { titre: "Examen clinique et tests", details: ["Inspection, palpation, percussion", "Test au froid (spray **CryoPulp**, Septodont, menthe) ou test électrique selon le cas", "Sondage parodontal (diagnostic différentiel parodontal ou fêlure)"] },
         { titre: "Radiographie", details: ["Rétro-alvéolaire ± panoramique"] },
         { titre: "Diagnostic", details: ["Pulpite irréversible symptomatique", "Nécrose avec parodontite apicale aiguë, abcès apical aigu", "Origine non dentaire (douleur projetée, sinusite…)"] },
         { titre: "Geste local", details: ["Pulpite : pulpectomie ou pulpotomie d'urgence [[conduite du service]]", "Nécrose/abcès : accès, mise en forme/drainage canalaire, drainage par incision si collection", "Si l'accès canalaire est impossible (ancrage, obturation) : antibiothérapie possible avec traitement étiologique programmé au plus tôt"] },

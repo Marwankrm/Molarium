@@ -92,7 +92,7 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Sélection et nettoyage", details: ["Évaluer le risque carieux", "Nettoyage des sillons et rinçage"] },
         { titre: "Isolation", details: ["Digue ou cotons et aspiration continue", "Séchage soigneux"] },
-        { titre: "Mordançage et collage", details: ["Mordançage / adhésif selon le produit [[à préciser]]", "Application du matériau de scellement, photopolymérisation [[matériau du service]]"] },
+        { titre: "Mordançage et collage", details: ["Mordançage / adhésif selon le produit [[à préciser]]", "Application du matériau de scellement : **Fuji Triage** (CVI de protection des sillons, teinte rose photopolymérisable) ou composite fluide **Tetric EvoFlow**, présents au service [[à confirmer lequel]] ; photopolymérisation"] },
         { titre: "Contrôle", details: ["Rétention et occlusion", "Contrôle à chaque visite"] }
       ],
       references: ["Aucune source externe n'a encore été intégrée à cette fiche : protocole et matériaux du service à renseigner."]

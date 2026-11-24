@@ -18,7 +18,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
-        "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
+        "**Chlorhexidine 0,2 %** (**Eludril Perio**, Pierre Fabre, sans alcool, flacon avec godet doseur de 10 mL) : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
@@ -32,7 +32,7 @@ window.DISCIPLINES.push({
       prerequis: ["Questionnaire médical à jour, risque évalué (voir fiche « Consultation initiale »)", "Radiographie pré-opératoire : rapports radiculaires, sinus, canal alvéolaire inférieur ; **panoramique et CBCT selon le cas**", "Consentement éclairé"],
       materiel: [
         "**Kit de chirurgie du service** : il contient **tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.)",
-        "**Chlorhexidine 0,2 %** : bain de bouche avant le geste (HAS 2026 : 0,1 à 0,2 %) et irrigation",
+        "**Chlorhexidine 0,2 %** (**Eludril Perio**, Pierre Fabre, sans alcool, flacon avec godet doseur de 10 mL) : bain de bouche avant le geste (HAS 2026 : 0,1 à 0,2 %) et irrigation",
         "Anesthésique **articaïne Septodont avec adrénaline 1/200 000** et seringue",
         "Syndesmotome, élévateurs, daviers adaptés à la dent (tous types disponibles)",
         "Curette de Lucas, compresses stériles, seringue d'irrigation",
@@ -93,7 +93,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
-        "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
+        "**Chlorhexidine 0,2 %** (**Eludril Perio**, Pierre Fabre, sans alcool, flacon avec godet doseur de 10 mL) : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
@@ -160,7 +160,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Lambeau en enveloppe** (incision intrasulculaire, sans décharge) ; le lambeau triangulaire est réservé aux dents de sagesse",
         "**Anesthésie** : para-apicale, tronculaire ou intraligamentaire, **selon les dents** ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
-        "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
+        "**Chlorhexidine 0,2 %** (**Eludril Perio**, Pierre Fabre, sans alcool, flacon avec godet doseur de 10 mL) : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales** disponibles",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",
@@ -235,7 +235,7 @@ window.DISCIPLINES.push({
         "**Dent incluse ou non** : même fiche ; l'antibioprophylaxie dépend de l'inclusion (dent incluse, enclavée ou en désinclusion : recommandée ; dent sur arcade : non recommandée en population générale, HAS 2026)",
         "**Anesthésie** : tronculaire et locale, selon la dent ; anesthésique **articaïne Septodont avec adrénaline 1/200 000**",
         "**Lambeau triangulaire**",
-        "**Chlorhexidine 0,2 %** : bain de bouche avant le geste et **irrigation** du site opératoire",
+        "**Chlorhexidine 0,2 %** (**Eludril Perio**, Pierre Fabre, sans alcool, flacon avec godet doseur de 10 mL) : bain de bouche avant le geste et **irrigation** du site opératoire",
         "**Kit de chirurgie** : le service dispose de **kits contenant tout le matériel chirurgical** (seringue, davier, syndesmotome, curette de Lucas, pince gouge, etc.) ; tous types de daviers et de syndesmotomes ; **pièces à main chirurgicales**",
         "**Sutures** : fil **Polysorb 4-0** (Covidien, tressé résorbable, aiguille CVF-23 1/2 cercle 17 mm), **points simples ou en croix**",
         "**Protocole hémostase, pour les patients à risque hémorragique** (SFCO 2015 : patients traités par antithrombotiques) : **Cellistypt** (cellulose oxydée résorbable) **ou Pangen** (éponge hémostatique) dans l'alvéole, puis **acide tranexamique en ampoule** : **compresse imbibée posée sur l'alvéole** ou **application directe dans l'alvéole** ; **patient non à risque** : compression et sutures",

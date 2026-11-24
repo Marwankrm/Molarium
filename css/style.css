@@ -1,3 +1,4 @@
+@font-face{font-family:"Figtree";font-style:normal;font-weight:300 900;font-display:swap;src:url(fonts/figtree-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* ============ Jetons de design ============ */
 :root{
   color-scheme:light;
@@ -10,7 +11,7 @@
   --shadow-1:0 1px 2px rgba(18,34,45,.05),0 4px 14px rgba(18,34,45,.05);
   --shadow-2:0 2px 6px rgba(18,34,45,.06),0 14px 32px rgba(18,34,45,.10);
   --topbar-h:64px; --tocbar-h:50px; --sidebar-w:296px; --tabbar-h:62px;
-  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font:"Figtree","Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --d:var(--brand); --scale:1;
 }
 *{box-sizing:border-box}
@@ -491,3 +492,56 @@ mark{background:#ffe27a;color:#000;border-radius:3px;padding:0 2px}
 .pcard:hover .go svg{transform:translateX(3px)}
 .pcard .go svg{transition:transform .15s}
 @media (prefers-reduced-motion:reduce){.scroll-hint svg{animation:none}}
+
+/* ---- en-tête de discipline : texte simple, sans carte (pas cliquable) ---- */
+.disc-head{margin:6px 0 4px;padding:0}
+.disc-head h1{margin:0 0 8px;color:var(--d,var(--ink))}
+.disc-head .psum{max-width:70ch;color:var(--muted);margin:0 0 4px}
+.disc-head .scroll-hint{margin-top:10px}
+.list-title{margin-top:18px}
+
+/* ---- finitions : retour tactile et lisibilité ---- */
+.btn,.pcard,.chip,.pchip,.step-n,.icon-btn{-webkit-tap-highlight-color:transparent}
+.btn:active,.icon-btn:active,.pchip:active{transform:scale(.97)}
+.pcard:active{transform:scale(.99)}
+h1,h2,h3{font-feature-settings:"ss01" 0}
+body{font-optical-sizing:auto}
+@media (prefers-reduced-motion:reduce){.btn:active,.icon-btn:active,.pchip:active,.pcard:active{transform:none}}
+
+/* ---- audit du skill UI UX Pro Max : zones tactiles, contraste, animation ---- */
+.progress .bar i{width:100%;transform-origin:left center;transform:scaleX(0);transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.prep-prog .bar i{width:100%;transform-origin:left center;transition:transform .25s cubic-bezier(.22,1,.36,1)}
+.stat b{color:var(--brand-strong)}
+.fav-btn{width:44px;height:44px}
+.reset{min-height:44px;display:inline-flex;align-items:center}
+.banner button{min-width:40px;min-height:40px;display:grid;place-items:center;padding:0}
+.crumbs a{display:inline-flex;align-items:center;min-height:32px;padding:0 2px}
+.pchip{min-height:40px;padding:6px 14px}
+.toc-bar a{min-height:40px;display:inline-flex;align-items:center;padding:6px 14px}
+.toc-side a{padding:9px 12px}
+.sidebar a{min-height:40px}
+.seg button{min-height:40px}
+@media (prefers-reduced-motion:reduce){.progress .bar i,.prep-prog .bar i{transition:none}}
+.card .meta b{color:color-mix(in srgb,var(--d) 82%,#000)}
+.crumbs a{min-height:40px}
+.refs li a{display:inline-block;padding:4px 0}
+.toc-side a{padding:10px 12px}
+
+/* ---- en-tête de fiche plus compact (mobile) ---- */
+.chip.plain,.chip.src{border-radius:12px;white-space:normal;padding:3px 11px;line-height:1.45}
+@media (max-width:640px){
+  .page-head .actions{gap:8px}
+  .page-head .actions .btn.primary{flex:1 1 100%;justify-content:center;min-height:48px;font-size:.98rem}
+  .page-head .actions .btn:not(.primary){flex:1 1 0;justify-content:center;padding:9px 0;min-width:0}
+  .page-head .actions .btn:not(.primary) span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
+
+/* ---- accueil : une seule barre de recherche (celle du haut) ---- */
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.hero-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 20px;border-radius:999px;border:2px solid rgba(255,255,255,.7);background:transparent;color:#fff;font:inherit;font-size:.98rem;font-weight:650;cursor:pointer;transition:background .15s,transform .1s}
+.hero-btn:hover{background:rgba(255,255,255,.14)}
+.hero-btn:active{transform:scale(.97)}
+.hero-btn.main{background:#fff;border-color:#fff;color:var(--brand-strong);box-shadow:0 8px 24px rgba(0,0,0,.16)}
+.hero-btn.main:hover{background:#f1fafb}
+@media (max-width:620px){.hero-cta{flex-direction:column}.hero-btn{width:100%}}
+.step.done .step-body{transition:opacity .3s}
