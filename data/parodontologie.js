@@ -271,7 +271,7 @@ window.DISCIPLINES.push({
         { titre: "Lésions de furcation", details: ["Traitement parodontal recommandé sur molaires de classes II et III avec poches résiduelles : **l'atteinte de furcation n'est pas une raison d'extraction**", "Classe II mandibulaire et classe II vestibulaire maxillaire : régénération recommandée ; classe III et lésions complexes : tunnelisation, séparation ou résection radiculaire possibles"] },
         { titre: "Réévaluation après l'étape 3", details: ["Mêmes objectifs : aucune poche ≥ 5 mm avec saignement, aucune poche ≥ 6 mm ; puis maintenance"] }
       ],
-      consignes: ["Consignes post-opératoires, bain de bouche et contrôle selon l'acte réalisé [[à préciser avec le praticien qui opère]]."],
+      consignes: ["Consignes post-opératoires, bain de bouche et contrôle selon l'acte réalisé."],
       erreurs: ["Opérer un patient sans contrôle de plaque satisfaisant", "Chirurgie réalisée par un opérateur non formé", "Maintenance non planifiée après la chirurgie"],
       references: [
         "[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – étape 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
