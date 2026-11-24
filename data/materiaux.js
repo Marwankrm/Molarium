@@ -377,16 +377,26 @@ window.MATERIAUX = {
       "Au service : mordançage avant le **G-Premio Bond** (fiches de composite)"
      ],
      "ci": [
-      "Produit **corrosif** (pictogramme sur l'étiquette) : éviter le contact avec la peau, les yeux et les muqueuses ; notice du fabricant **non trouvée**"
+      "Produit **corrosif** (mention « Danger ») : **brûlures graves de la peau** et **lésions oculaires graves** ; peut aussi corroder les **métaux**",
+      "**Ne pas respirer** les vapeurs ni les brouillards ; ne pas manger, boire ni fumer en l'utilisant ; se laver les mains après",
+      "Porter **lunettes**, **gants** et vêtements de protection ; protéger le patient (digue, lunettes) pour éviter tout contact avec la peau, les yeux et les muqueuses"
      ],
      "met": [
       "Temps utilisés dans les fiches du site : **10 à 15 s**, **rinçage 5 s**, séchage doux (notice GC du G-Premio Bond)",
-      "Fiche produit Henry Schein : gel de faible viscosité, **autolimitant** (arrête le mordançage à la bonne profondeur)"
+      "Fiche produit Henry Schein : gel de faible viscosité, **autolimitant** (arrête le mordançage à la bonne profondeur)",
+      "**En cas de contact** : **peau** : laver abondamment à l'eau **au moins 20 minutes** et retirer les vêtements souillés ; **yeux** : rincer à l'eau claire **20 à 30 minutes** (retirer les lentilles), avis médical immédiat ; **ingestion** : rincer la bouche, **ne pas faire vomir**, avis médical ou centre antipoison",
+      "**Stockage** : dans le flacon d'origine, au frais, dans un endroit ventilé et fermé à clé ; éviter le contact avec les **métaux** et les oxydants",
+      "**Déversement** : absorber avec un matériau inerte (argile) et éliminer comme déchet spécial"
      ],
      "ret": [
-      "Les temps varient selon les fabricants (30 s sur émail pour certains gels) : **vérifier la notice de la seringue**"
+      "Les temps varient selon les fabricants (30 s sur émail pour certains gels) : **vérifier la notice de la seringue**",
+      "La fiche de sécurité reçue concerne l'**Etch Gel 40 %** de Henry Schein (acide phosphorique 38 à 42 %, gel bleu, pH 1 à 1,5), version nord-américaine : **à vérifier** qu'elle correspond bien à votre seringue à 37 %"
      ],
      "src": [
+      {
+       "t": "Fiche de sécurité Henry Schein, Etch Gel 40 % (mai 2020)",
+       "u": "#/materiaux"
+      },
       {
        "t": "Fiche produit Henry Schein",
        "u": "https://henryschein.co.uk/dental-gb/products/henry-schein-etch-gel-37.aspx?hssc=4"
