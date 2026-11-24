@@ -714,21 +714,31 @@ window.MATERIAUX = {
     {
      "id": "desocclusol-orange-acteon",
      "nom": "Desocclusol Orange (Acteon)",
-     "type": "Solvant pour retraitement (huile essentielle d'orange)",
+     "type": "Solvant des ciments d'obturation de type eugénate (huile essentielle d'orange douce, plus de 90 %)",
      "statut": "part",
      "ind": [
       "Retraitement endodontique : dissoudre les ciments **oxyde de zinc-eugénol** et la gutta"
      ],
      "ci": [
-      "Non lues (dispositif de classe IIa, usage professionnel)"
+      "**Allergie cutanée** possible (huile essentielle d'orange) et **irritation de la peau** : éviter le contact, **gants** et lunettes de protection, vêtement de protection",
+      "**Liquide inflammable** (point d'éclair 47 °C) : à l'écart de la chaleur, des flammes et des étincelles ; ne pas fumer",
+      "**Ne pas avaler** : peut être mortel en cas d'ingestion avec pénétration dans les voies respiratoires ; **ne pas faire vomir**, appeler un centre antipoison ou un médecin",
+      "Ne pas respirer les vapeurs ; très toxique pour les organismes aquatiques : **ne pas rejeter dans l'évier**"
      ],
      "met": [
-      "Mode d'emploi **non trouvé**"
+      "Mode d'emploi du retraitement **non trouvé** (la fiche de sécurité reçue ne le donne pas) : au service, utilisé **avant les limes** ProTaper Universal Retreatment",
+      "**Peau** : laver immédiatement à l'eau ; **yeux** : rincer abondamment à l'eau **au moins 15 minutes**, paupières écartées, puis consulter un ophtalmologiste",
+      "**Stockage** : flacon d'origine bien fermé, à l'abri de la lumière et de la chaleur, **sous 25 °C** ; incompatible avec l'**eau**",
+      "**Déversement** : absorber avec un matériau inerte (sable), laver à l'eau la zone souillée"
      ],
      "ret": [
-      "Répond au « à préciser » de la fiche de retraitement sur l'instrument de désobturation : à confirmer avec le service"
+      "Fiche de sécurité Acteon (FDS 226 022, 2017) : liquide orange, insoluble dans l'eau, densité 0,8"
      ],
      "src": [
+      {
+       "t": "Fiche de sécurité Desocclusol Orange (Acteon), reçue du service",
+       "u": "#/materiaux"
+      },
       {
        "t": "Fiche produit Acteon",
        "u": "https://www.medicalexpo.com/prod/acteon-group/product-71216-1161024.html"
