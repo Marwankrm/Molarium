@@ -1076,9 +1076,7 @@ window.MATERIAUX = {
      "met": [
       "Les thèses la décrivent sur des **encoches** du bourrelet, en petite quantité (voir la fiche RIM)"
      ],
-     "ret": [
-      "Une étude in vitro la trouve **moins précise sur la dimension verticale** que le polyéther et le silicone"
-     ],
+     "ret": [],
      "src": [
       {
        "t": "Étude 2024 (PMC)",
