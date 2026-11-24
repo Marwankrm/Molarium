@@ -25,7 +25,7 @@ window.DISCIPLINES.push({
       ],
       indications: ["Tout nouveau patient du service", "Suspicion de maladie parodontale (saignement, mobilité, migration, récession, halitose)"],
       materiel: [
-        "Sonde parodontale graduée [[marque à préciser]]",
+        "Sonde parodontale graduée",
         "Logiciel **Logos** pour le charting parodontal",
         "Radiographies : **bilan long cône, panoramique, bite-wings**",
         "Révélateur de plaque **GC Tri Plaque ID Gel** (rose ou rouge : plaque récente ; bleu clair : plaque de plus de 48 h) ; miroir, sonde, précelle"
@@ -71,9 +71,9 @@ window.DISCIPLINES.push({
       indications: ["Tout patient atteint de gingivite ou de parodontite, **avant** l'instrumentation sous-gingivale", "Réinstructions à chaque séance de maintenance"],
       materiel: [
         "Révélateur de plaque **GC Tri Plaque ID Gel**",
-        "Brosse à dents (manuelle ou électrique), **brossettes interdentaires** de tailles adaptées, éventuellement fil dentaire [[produits au choix de l'étudiant]]",
-        "Miroir, modèle ou typodont de démonstration [[à préciser]]",
-        "Fiche de conseils d'hygiène [[à préciser]]"
+        "Brosse à dents (manuelle ou électrique), **brossettes interdentaires** de tailles adaptées, éventuellement fil dentaire",
+        "Miroir, modèle ou typodont de démonstration",
+        "Fiche de conseils d'hygiène"
       ],
       alertes: [
         "**Les pratiques d'hygiène sont déterminantes à toutes les étapes** du traitement (EFP).",
@@ -112,7 +112,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       indications: ["Gencive rouge, œdématiée, saignant au sondage ou au brossage, **sans perte d'attache**"],
       contreIndications: ["Perte d'attache ou poches : diagnostic de parodontite (voir les fiches de traitement parodontal)"],
-      materiel: ["Révélateur de plaque", "Brosse, brossettes interdentaires", "Détartreur ultrasonique et curettes", "Cupule et pâte à polir [[à préciser]]"],
+      materiel: ["Révélateur de plaque", "Brosse, brossettes interdentaires", "Détartreur ultrasonique et curettes", "Cupule et pâte à polir"],
       alertes: [
         "**Gingivite : antibiothérapie non recommandée** (HAS 2026, grade B). **Pas d'antibioprophylaxie** pour le détartrage ni le polissage en population générale (HAS 2026).",
         "Éliminer les **facteurs rétentifs de plaque** (tartre, débords de restauration)."
@@ -142,7 +142,7 @@ window.DISCIPLINES.push({
       sourceType: "Guideline EFP S3 2020 + recommandation HAS 2026 + pratique courante – à compléter par le service",
       maj: "2026-11",
       indications: ["Gingivite, et étape 1 du traitement parodontal (contrôle professionnel de plaque)", "Séances de maintenance"],
-      materiel: ["Détartreur ultrasonique **Satelec** (pièce à main **Newtron Slim**) et inserts", "Curettes manuelles [[à préciser]]", "Cupule et pâte à polir [[produits à préciser]]", "Révélateur de plaque", "Irrigant : eau (ultrasons)"],
+      materiel: ["Détartreur ultrasonique **Satelec** (pièce à main **Newtron Slim**) et inserts", "Curettes manuelles", "Cupule et pâte à polir", "Révélateur de plaque", "Irrigant : eau (ultrasons)"],
       alertes: [
         "**Pas d'antibioprophylaxie** pour le détartrage, le sondage et le polissage en population générale (HAS 2026).",
         "Le **contrôle professionnel de la plaque et des facteurs rétentifs** est un élément fondamental de l'étape 1 (EFP)."
@@ -180,8 +180,8 @@ window.DISCIPLINES.push({
       indications: ["Parodontite de stade I à III (étape 2 pour tous)"],
       contreIndications: ["Patient à haut risque d'endocardite : prise en charge selon la recommandation HAS 2024", "Pathologie systémique instable : avis médical"],
       materiel: [
-        "**Inserts parodontaux** dédiés pour ultrasons **Satelec** (pièce à main **Newtron Slim**) ; curettes manuelles [[à préciser]] ; pierre d'affûtage",
-        "Anesthésique local [[produit à préciser]] ; sonde parodontale",
+        "**Inserts parodontaux** dédiés pour ultrasons **Satelec** (pièce à main **Newtron Slim**) ; curettes manuelles ; pierre d'affûtage",
+        "Anesthésique local ; sonde parodontale",
         "**Chlorhexidine** (**Eludril Perio** (chlorhexidine 0,20 %)) ou sérum physiologique pour l'irrigation",
         "Bain de bouche prescrit : **Eludril Perio** (chlorhexidine 0,20 %)"
       ],
@@ -234,7 +234,7 @@ window.DISCIPLINES.push({
       sourceType: "Guideline EFP S3 2020 + pratique courante – à compléter par le service",
       maj: "2026-11",
       indications: ["Après une cicatrisation suffisante suivant l'instrumentation sous-gingivale [[délai du service à préciser]]"],
-      materiel: ["Sonde parodontale [[marque à préciser]]", "Logiciel Logos", "Révélateur de plaque", "Radiographies si besoin"],
+      materiel: ["Sonde parodontale", "Logiciel Logos", "Révélateur de plaque", "Radiographies si besoin"],
       alertes: ["**Objectifs de santé** : aucune poche **≥ 5 mm avec saignement** et aucune poche profonde **≥ 6 mm** ; si atteints, passage en maintenance ; sinon, étape 3 (EFP)."],
       etapes: [
         { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", "**Décision** : maintenance si objectifs atteints ; sinon ré-instrumentation ciblée ou chirurgie (étape 3) ; consignes d'hygiène"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
@@ -315,7 +315,7 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       indications: ["Tuméfaction gingivale douloureuse avec poche profonde et suppuration (abcès parodontal)", "Douleur, ulcération des papilles, halitose (maladie parodontale nécrosante)", "Lésion endo-parodontale"],
       contreIndications: ["Signes de gravité (trismus, dysphagie, tuméfaction cervico-faciale, fièvre élevée) : orientation hospitalière"],
-      materiel: ["Anesthésique local [[à préciser]]", "Sonde parodontale, curettes et inserts ultrasoniques fins", "Sérum physiologique ou chlorhexidine (**Eludril Perio** (chlorhexidine 0,20 %)) pour l'irrigation", "Test de vitalité pulpaire (diagnostic différentiel endodontique)"],
+      materiel: ["Anesthésique local", "Sonde parodontale, curettes et inserts ultrasoniques fins", "Sérum physiologique ou chlorhexidine (**Eludril Perio** (chlorhexidine 0,20 %)) pour l'irrigation", "Test de vitalité pulpaire (diagnostic différentiel endodontique)"],
       alertes: [
         "**Le geste local est prioritaire** : drainage et débridement ; l'antibiothérapie s'ajoute au geste local (HAS 2026, grade A).",
         "**Abcès parodontal et abcès endo-parodontal** : antibiothérapie **non recommandée** sauf patient à haut risque d'endocardite ou à risque infectieux augmenté, signe d'extension locale, régionale ou systémique (adénopathie, fièvre), ou geste local impossible.",

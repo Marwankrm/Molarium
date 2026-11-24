@@ -28,10 +28,10 @@ window.DISCIPLINES.push({
       indications: ["Dent dépulpée avec **peu de parois restantes** (reconstitution par tenon fibré non envisageable)", "Rétention insuffisante pour la couronne prévue"],
       contreIndications: ["Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
-        "Digue ; instruments de désobturation (fraises, forets canalaires) [[références à préciser]]",
+        "Digue ; instruments de désobturation (fraises, forets canalaires)",
         "Empreinte du logement : **directe** (résine à maquette **GC Pattern Resin LS**, dont la notice prévoit l'usage en bouche pour une maquette de reconstitution) ou **indirecte** (silicone, avec tenon d'empreinte)",
         "**Tenon métallique Dentoclic** (Itena Clinical) de même diamètre comme tenon provisoire ; résine de provisoire **Unifast Trad** ; ciment provisoire **Temp-Bond** ou **Temp-Bond NE**, **seulement sur les bords de la couronne** et pas sur le tenon (notice Dentoclic)",
-        "Inlay-core coulé en métal [[alliage à préciser]]",
+        "Inlay-core coulé en métal",
         "**Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus** ; sablage à l'alumine, bain ultrasonique, lampe à photopolymériser"
       ],
       alertes: [
@@ -86,8 +86,8 @@ window.DISCIPLINES.push({
       contreIndications: ["Parois restantes insuffisantes : inlay-core", "Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
         "Digue, matrice et cales",
-        "Foret canalaire du système de tenon [[marque non connue]]",
-        "Tenon fibré [[marque non connue]]",
+        "Foret canalaire du système de tenon",
+        "Tenon fibré",
         "**Silane Silan-IT** (Itena) pour le tenon fibré ; ciment résine auto-adhésif **RelyX Unicem 2** (3M) avec embout mélangeur et **Endo Tip** ; pointes de papier, alcool",
         "Adhésif **G-Premio Bond** et composite **Bulk Fill** de reconstitution ; lampe à photopolymériser"
       ],
@@ -102,7 +102,7 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Temps 1 – Évaluation et préparation du logement", details: [
           "Évaluation (radiographie, parois restantes, ferrule) ; **digue** ; élimination des anciennes restaurations et des tissus fragiles",
-          "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha ; forage du logement avec le foret du système [[marque]] ; **rincer puis sécher avec des pointes de papier**, sans dessécher excessivement la dentine ; isolation sous **digue** recommandée",
+          "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha ; forage du logement avec le foret du système ; **rincer puis sécher avec des pointes de papier**, sans dessécher excessivement la dentine ; isolation sous **digue** recommandée",
           "**Essayage du tenon fibré** : vérifier la **longueur et l'adaptation** (radiographie) ; **nettoyer le tenon à l'alcool**, puis sécher"
         ], materiel: ["digue", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
@@ -154,9 +154,9 @@ window.DISCIPLINES.push({
       materiel: [
         "**Panavia V5 Paste** (Universal A2 ou Clear) et embout mélangeur",
         "**Clearfil Ceramic Primer Plus** et **Panavia V5 Tooth Primer** ; godet de mélange, micro-brosses",
-        "Sablage à l'alumine de l'intrados [[taille des particules et pression : se référer à la notice du fabricant de la zircone]] ; bain ultrasonique",
+        "Sablage à l'alumine de l'intrados (taille des particules et pression : selon la notice du fabricant de la zircone) ; bain ultrasonique",
         "Lampe à photopolymériser (longueur d'onde 400-515 nm) ; sonde",
-        "Isolation : digue ou coton/fil de rétraction et aspiration [[à préciser]]",
+        "Isolation : digue ou coton/fil de rétraction et aspiration",
         "**CVI de scellement GC Fuji PLUS** (capsule) et **GC Fuji PLUS Conditioner**, malaxeur et applicateur de capsules : pas l'EQUIA Forte, qui est un matériau de restauration",
         "Fil dentaire, papier à articuler"
       ],
@@ -290,7 +290,7 @@ window.DISCIPLINES.push({
       indications: ["Lésion carieuse ou restauration étendue d'une dent postérieure sans cuspide fragilisée", "Remplacement d'une restauration défectueuse"],
       contreIndications: ["Cuspides fragilisées : onlay", "Isolation impossible (collage)", "Parafonction non contrôlée"],
       materiel: [
-        "Fraises de préparation [[références]]",
+        "Fraises de préparation",
         "Empreinte au **silicone** ; alginate pour l'antagoniste",
         "Composite provisoire **Telio Onlay** (Ivoclar, seringue de 2,5 g, teinte universelle) et ciment provisoire **Kerr** (Temporary Cement + accélérateur)",
         "Isolation (digue) ; **Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus**",
@@ -354,7 +354,7 @@ window.DISCIPLINES.push({
       indications: ["Dent postérieure avec **cuspides fragilisées** à recouvrir", "Dent dépulpée nécessitant une protection cuspidienne"],
       contreIndications: ["Perte de substance trop importante : couronne", "Isolation impossible (collage)", "Parafonction non contrôlée"],
       materiel: [
-        "Fraises de préparation [[références]]",
+        "Fraises de préparation",
         "Empreinte au **silicone** ; alginate pour l'antagoniste",
         "Composite provisoire **Telio Onlay** (Ivoclar, seringue de 2,5 g, teinte universelle) et ciment provisoire **Kerr** (Temporary Cement + accélérateur)",
         "Isolation (digue) ; **Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus**",
@@ -427,11 +427,11 @@ window.DISCIPLINES.push({
         "Prémolaires et dents antérieures : usage discuté (surface de collage réduite, forces non axiales)"
       ],
       materiel: [
-        "Fraises diamantées : cylindro-conique (conicité de l'ordre de 7° pour la chambre) et fraise boule/roue pour la table occlusale [[références à préciser]]",
-        "Empreinte au **silicone** (**Express 2**, 3M ESPE) ou au **polyéther** (**Impregum Penta**), produits du service, ou empreinte optique [[à préciser]] ; fabrication de la zircone [[CFAO au service ou laboratoire : à préciser]]",
+        "Fraises diamantées : cylindro-conique (conicité de l'ordre de 7° pour la chambre) et fraise boule/roue pour la table occlusale",
+        "Empreinte au **silicone** (**Express 2**, 3M ESPE) ou au **polyéther** (**Impregum Penta**), produits du service, ou empreinte optique ; fabrication de la zircone",
         "Provisoire : résine **Unifast Trad**, ciment provisoire **Temp-Bond** ou **Temp-Bond NE**",
         "**Panavia V5 Paste**, **Tooth Primer**, **Clearfil Ceramic Primer Plus**, sablage à l'alumine, lampe à photopolymériser",
-        "Isolation : digue [[à préciser]]"
+        "Isolation : digue"
       ],
       alertes: [
         "**Pas de tenon** : la rétention vient de la chambre pulpaire et du collage ; la qualité de l'**isolation** et du protocole de collage est déterminante.",
@@ -483,9 +483,9 @@ window.DISCIPLINES.push({
       contreIndications: ["Parodonte non assaini", "Dent non conservable ou hygiène insuffisante", "Parafonction non contrôlée (précautions, gouttière)"],
       materiel: [
         "Examen : sonde, miroir, radiographie rétro-alvéolaire, alginate pour modèles d'étude",
-        "Fraises de préparation [[références et granulométrie à préciser]]",
-        "Rétraction gingivale : fil(s) rétracteur(s) [[produit à préciser]]",
-        "Empreinte de précision au **silicone** (**Express 2**) ou au **polyéther** (**Impregum Penta Super Quick**), ou empreinte optique [[à préciser]] ; alginate pour l'arcade antagoniste",
+        "Fraises de préparation",
+        "Rétraction gingivale : fil(s) rétracteur(s)",
+        "Empreinte de précision au **silicone** (**Express 2**) ou au **polyéther** (**Impregum Penta Super Quick**), ou empreinte optique ; alginate pour l'arcade antagoniste",
         "Provisoire : résine **Unifast Trad**, clé en silicone, ciment provisoire **Temp-Bond** ou **Temp-Bond NE**",
         "Teintier",
         "Ciment d'assemblage : **scellement** au **Fuji PLUS** ou **collage** au **Panavia V5**, selon le matériau (prétraitement : feuille Panavia V5 du service)",
