@@ -59,8 +59,7 @@ window.MATERIAUX_IMG = {
  },
  "temp-bond-et-temp-bond-ne-kerr": {
   "f": "img/materiaux/temp-bond-et-temp-bond-ne-kerr.jpg",
-  "credit": "Henry Schein (revendeur)",
-  "page": "https://www.henryschein.co.uk/p/temp-bond-unidose-temp-cement-2-4g-50pk/900515"
+  "credit": ""
  },
  "panavia-v5-kuraray": {
   "f": "img/materiaux/panavia-v5-kuraray.jpg",
@@ -124,8 +123,7 @@ window.MATERIAUX_IMG = {
  },
  "durelon-3m": {
   "f": "img/materiaux/durelon-3m.jpg",
-  "credit": "DD Group (revendeur)",
-  "page": "https://www.ddgroup.com/bonding--cements/carboxylate/lac012--durelon-powder-regular/"
+  "credit": ""
  },
  "impregum-penta-super-quick-3m-adh-sif-po": {
   "f": "img/materiaux/impregum-penta-super-quick-3m-adh-sif-po.jpg",
@@ -150,8 +148,7 @@ window.MATERIAUX_IMG = {
  },
  "silan-it-itena-clinical": {
   "f": "img/materiaux/silan-it-itena-clinical.jpg",
-  "credit": "Itena Clinical (fiche produit)",
-  "page": "https://www.itena-clinical.com"
+  "credit": ""
  },
  "p-te-de-kerr-verte": {
   "f": "img/materiaux/p-te-de-kerr-verte.jpg",
@@ -159,6 +156,14 @@ window.MATERIAUX_IMG = {
  },
  "supracal-r-s": {
   "f": "img/materiaux/supracal-r-s.jpg",
+  "credit": ""
+ },
+ "futar-d-kettenbach": {
+  "f": "img/materiaux/futar-d-kettenbach.jpg",
+  "credit": ""
+ },
+ "aluwax": {
+  "f": "img/materiaux/aluwax.jpg",
   "credit": ""
  }
 };
