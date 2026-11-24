@@ -106,7 +106,7 @@ window.DISCIPLINES.push({
           "**Essayage du tenon fibré** : vérifier la **longueur et l'adaptation** (radiographie) ; **nettoyer le tenon à l'alcool**, puis sécher"
         ], materiel: ["digue", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
-          "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir selon le fabricant (**généralement 60 s**) ; sécher à l'**air doux**",
+          "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
           "**Préparation du ciment** : installer l'embout mélangeur puis l'**Endo Tip** sur le **RelyX Unicem 2** ; **purger une petite quantité** avant utilisation",
           "**Injection** du ciment **du fond du canal vers la partie coronaire**, en **retirant progressivement l'embout** pendant l'injection (évite les bulles)",
           "**Mise en place du tenon** : enduire légèrement le tenon de ciment, l'insérer **immédiatement avec une pression constante** ; **retirer soigneusement les excès** avant la polymérisation finale",

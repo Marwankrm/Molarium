@@ -238,25 +238,36 @@ window.MATERIAUX = {
     {
      "id": "silan-it-itena-clinical",
      "nom": "Silan-IT (Itena Clinical)",
-     "type": "Primaire silane monocomposant",
-     "statut": "part",
+     "type": "Agent de couplage pour céramique : silane monocomposant (flacon de 5 mL)",
+     "statut": "lue",
      "ind": [
-      "Au service : **silane du tenon fibré** (feuille « Scellement du tenon fibré avec silanisation… ») ; autres usages selon la notice : réparation de céramiques à base de verre"
+      "**Primaire** : adhésion durable entre le composite de scellement et les restaurations en **vitrocéramique ou céramique à base d'oxyde**, en **métal**, en **composite** et les restaurations avec **tenon en fibre de verre**",
+      "Au service : **silane du tenon fibré** (RMIPP, inlay-core, tenon)"
      ],
      "ci": [
-      "Non lues"
+      "Ne convient pas en cas d'**exposition pulpaire** ni de pulpite nécessitant un traitement",
+      "**Hypersensibilité** possible à un composant",
+      "La résine de méthacrylate non polymérisée peut provoquer une **dermatite de contact** : éviter la peau, les yeux et les tissus mous"
      ],
      "met": [
-      "Appliquer le silane sur **toute la surface** du tenon fibré, laisser agir selon le fabricant (**généralement 60 s**), sécher à l'**air doux** (feuille du service)",
-      "Flacon d'environ 5 mL (96 % d'éthanol, 4 % de silane selon un revendeur) ; notice complète non obtenue"
+      "Appliquer une quantité suffisante dans l'**intrados** de la restauration en porcelaine **mordancée ou sablée**, ou sur la structure en céramique **sablée** (zircone, alumine) ; pour le tenon fibré : sur **toute la surface** du tenon",
+      "Laisser **immobile 60 secondes**, **sans toucher la surface avec les doigts**",
+      "**Sécher à l'air**",
+      "Micro-brosse **à usage unique** (une par patient) ; **reboucher le flacon aussitôt** (solvants inflammables, évaporation rapide)",
+      "Compatible avec les adhésifs photopolymérisables ou à prise duale"
      ],
      "ret": [
-      "Demander la notice à Itena Clinical ou lire celle de la boîte"
+      "Ne plus utiliser si **rien ne sort du flacon** alors qu'il en reste, ou si une **résine d'aspect soyeux** apparaît à l'application",
+      "Conservation : **2 à 25 °C**, à l'abri de la lumière, **2 ans** à partir de la fabrication"
      ],
      "src": [
       {
-       "t": "Fiche GUDID Silan-IT",
-       "u": "https://accessgudid.nlm.nih.gov/devices/03760260223119"
+       "t": "Notice Silan-IT (Itena Clinical), reçue du service",
+       "u": "#/materiaux"
+      },
+      {
+       "t": "Fiche produit Itena Clinical (04/2024)",
+       "u": "#/materiaux"
       },
       {
        "t": "Fiche de la RMIPP (site)",

@@ -156,5 +156,10 @@ window.MATERIAUX_IMG = {
   "f": "img/materiaux/protaper-universal-retreatment-dentsply-sirona.jpg",
   "credit": "Dentsply Sirona",
   "page": "https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html"
+ },
+ "silan-it-itena-clinical": {
+  "f": "img/materiaux/silan-it-itena-clinical.jpg",
+  "credit": "Itena Clinical (fiche produit)",
+  "page": "https://www.itena-clinical.com"
  }
 };
