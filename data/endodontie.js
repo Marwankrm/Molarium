@@ -127,7 +127,7 @@ window.DISCIPLINES.push({
       ],
       consignes: [
         "**Douleurs après le traitement : elles sont fréquentes**, le plus souvent maximales dans les premières 24 à 48 heures.",
-        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication.",
+        "**Antalgiques** : **paracétamol en première intention** (4 g par jour au maximum, en 4 prises), en l'absence de contre-indication.",
         "**Consulter en urgence** en cas de gonflement, fièvre, douleur qui augmente ou difficulté à ouvrir la bouche ou à avaler.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
         "**Pansement provisoire** : s'il se détache ou se fracture, reprendre rendez-vous rapidement (risque de recontamination).",
@@ -261,7 +261,7 @@ window.DISCIPLINES.push({
       ],
       consignes: [
         "**Douleurs après un retraitement : fréquentes**, surtout dans les premières 24 à 48 heures.",
-        "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication.",
+        "**Antalgiques** : **paracétamol en première intention** (4 g par jour au maximum, en 4 prises), en l'absence de contre-indication.",
         "**Gonflement, fièvre, difficulté à ouvrir la bouche ou à avaler** : consulter en urgence.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
         "**Pansement provisoire** : s'il se détache, reprendre rendez-vous rapidement.",

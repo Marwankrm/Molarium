@@ -60,7 +60,7 @@ window.DISCIPLINES.push({
         "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
         "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
         "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
-        "**Antalgiques** : paracétamol en première intention ; ibuprofène possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
+        "**Antalgiques** : paracétamol en première intention (4 g par jour au maximum, en 4 prises) ; **ibuprofène 400 mg** possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
         "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
         "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
@@ -74,7 +74,7 @@ window.DISCIPLINES.push({
         "Consignes non remises ou urgences (le 15, urgences dentaires) non rappelées"
       ],
       suivi: ["**Contrôle à 7 jours** (cicatrisation) ; fils résorbables, pas de dépose", "Contrôle téléphonique à 24-48 h pour les patients sous antithrombotiques"],
-      complications: ["**Hémorragie non contrôlée par compression** : **reprise chirurgicale de l'hémostase** (anesthésie locale, curetage du caillot, révision, hémostase locale) ; **hospitalisation** si persistance (SFCO 2015)", "**Alvéolite** : soins locaux et antalgiques ; antibiotiques non systématiques (HAS 2026)", "**Communication bucco-sinusienne** : **antibiothérapie** recommandée (HAS 2026) et **avis du senior**"],
+      complications: ["**Hémorragie non contrôlée par compression** : **reprise chirurgicale de l'hémostase** (anesthésie locale, curetage du caillot, révision, hémostase locale) ; **hospitalisation** si persistance (SFCO 2015)", "**Alvéolite** : soins locaux et antalgiques ; antibiotiques non systématiques (HAS 2026)", "**Communication bucco-sinusienne** : **antibiothérapie** recommandée (**amoxicilline 2 g par jour pendant 5 jours**, HAS 2026) et **avis du senior**"],
       references: [
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (adoptée le 16 juillet 2026)](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
         "[SFCO – Gestion péri-opératoire des patients traités par antithrombotiques en chirurgie orale (juillet 2015)](https://www.jomos.org/articles/mbcb/pdf/2015/04/mbcb150044-s.pdf)",
@@ -128,7 +128,7 @@ window.DISCIPLINES.push({
         "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
         "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
         "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
-        "**Antalgiques** : paracétamol en première intention ; ibuprofène possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
+        "**Antalgiques** : paracétamol en première intention (4 g par jour au maximum, en 4 prises) ; **ibuprofène 400 mg** possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
         "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
         "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
@@ -198,7 +198,7 @@ window.DISCIPLINES.push({
         "**Saignement** : compression avec une compresse propre et humide pendant 20 minutes ; si le saignement persiste, consulter en urgence.",
         "**Gonflement** : poche de glace par intermittence le jour même ; un œdème et une gêne à l'ouverture de la bouche sont normaux les premiers jours.",
         "**Hygiène** : brosser doucement les autres dents dès le soir ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
-        "**Antalgiques** : paracétamol en première intention ; ibuprofène possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
+        "**Antalgiques** : paracétamol en première intention (4 g par jour au maximum, en 4 prises) ; **ibuprofène 400 mg** possible en l'absence de contre-indication et hors infection (HAS 2019) ; **patient sous anticoagulant ou antiagrégant : pas d'AINS ni d'aspirine sans avis médical** ; à adapter par le prescripteur.",
         "**Antibiotiques** : seulement s'ils sont prescrits (voir la fiche « Antibioprophylaxie et antibiothérapie ») ; les prendre comme indiqué.",
         "**Consulter** en cas de fièvre, de gonflement qui augmente, de douleur qui s'aggrave après le 3e jour (alvéolite) ou de saignement persistant ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours** ; les fils sont résorbables (pas de dépose nécessaire)."
@@ -212,7 +212,7 @@ window.DISCIPLINES.push({
         "Consignes non remises"
       ],
       suivi: ["**Contrôle à 7 jours** (cicatrisation) ; fils résorbables, pas de dépose", "Contrôle téléphonique à 24-48 h pour les patients sous antithrombotiques"],
-      complications: ["**Communication bucco-sinusienne** : **antibiothérapie** (HAS 2026) et conduite selon la fiche de fermeture", "**Hypoesthésie du nerf alvéolaire inférieur ou lingual** : traçabilité et **orientation spécialisée**", "**Alvéolite, hémorragie** : voir la fiche « Avulsion dentaire simple »"],
+      complications: ["**Communication bucco-sinusienne** : **antibiothérapie** (**amoxicilline 2 g par jour pendant 5 jours**, HAS 2026) et conduite selon la fiche de fermeture", "**Hypoesthésie du nerf alvéolaire inférieur ou lingual** : traçabilité et **orientation spécialisée**", "**Alvéolite, hémorragie** : voir la fiche « Avulsion dentaire simple »"],
       references: [
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 4](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)",
         "[HAS – Avulsion des 3es molaires (2019) – protection des nerfs, sutures](https://www.has-sante.fr/upload/docs/application/pdf/2019-07/avulsion_des_3es_molaires_indications_techniques_et_modalites_-_recommandations.pdf)",
@@ -277,7 +277,7 @@ window.DISCIPLINES.push({
         { titre: "Dégagement osseux et avulsion", details: ["**Ostéotomie à la fraise (moteur chirurgical, fraises Zekrya)** sous irrigation ; la HAS 2019 ne privilégie pas la piézochirurgie faute de données suffisantes (grade B)", "Section de la dent en plusieurs fragments si nécessaire", "Coronectomie : cas très exceptionnels uniquement"], validation: "dent extraite", astuce: "La découpe en fragments protège le plus souvent le nerf alvéolaire inférieur." },
         { titre: "Révision alvéolaire et sutures", details: ["Curetage : débris dentaires, poudre d'os, granulome, reliquat de sac péricoronaire", "**Lavage de la cavité à la chlorhexidine** (service ; aucun produit n'est démontré supérieur, HAS 2019)", "**Suture du lambeau recommandée** (HAS 2019) : **fil 4-0, points simples ou en croix** (service)", "**Patient à risque hémorragique** (SFCO 2015 : patient traité par antithrombotique) : **protocole hémostase** : **Cellistypt** ou **Pangen** dans l'alvéole, puis **acide tranexamique en ampoule** (compresse imbibée sur l'alvéole ou application directe)"] },
         { titre: "Mesures locales complémentaires", details: ["**Bain de bouche à la chlorhexidine** en post-opératoire (au service : à partir de **48 h**, **pendant 1 semaine**) pour prévenir l'alvéolite (HAS 2019 : gel ou rinçage, grade B) ; pas de gel au service", "PRF et régénération tissulaire guidée : **ne pas utiliser de façon systématique**"] },
-        { titre: "Prescription et consignes", details: ["Antalgie : **paracétamol en première intention** ; ibuprofène 400 mg (sans contre-indication, hors contexte infectieux) ou association ibuprofène + paracétamol, à préférer au tramadol", "Feuille de consignes post-opératoires, avec le numéro à appeler ou l'hôpital le plus proche en cas de complication grave"] }
+        { titre: "Prescription et consignes", details: ["Antalgie : **paracétamol en première intention** (4 g par jour au maximum, en 4 prises) ; **ibuprofène 400 mg** (sans contre-indication, hors contexte infectieux) ou association ibuprofène + paracétamol, à préférer au tramadol", "Feuille de consignes post-opératoires, avec le numéro à appeler ou l'hôpital le plus proche en cas de complication grave"] }
       ],
       suivi: [
         "**Contrôle à 7 jours** (cicatrisation) ; fils résorbables, pas de dépose",
@@ -287,7 +287,7 @@ window.DISCIPLINES.push({
       complications: [
         "**Les plus fréquentes** : **douleur, œdème, trismus** ; puis saignement, infection, alvéolite, lésions nerveuses ; rarement fracture mandibulaire ou projection dans le plancher buccal, le sinus ou la fosse infra-temporale",
         "**Alvéolite sèche** : pas d'antibiotique ; alvéolite suppurée : **antibiothérapie** seulement avec signes d'extension (HAS 2026)",
-        "**Communication bucco-sinusienne** : **antibiothérapie** (HAS 2026) + **avis senior**"
+        "**Communication bucco-sinusienne** : **antibiothérapie** (**amoxicilline 2 g par jour pendant 5 jours**, HAS 2026) + **avis senior**"
       ],
       references: [
         "[HAS – Avulsion des 3es molaires : indications, techniques et modalités (mai 2019)](https://www.has-sante.fr/upload/docs/application/pdf/2019-07/avulsion_des_3es_molaires_indications_techniques_et_modalites_-_recommandations.pdf)",
@@ -344,7 +344,7 @@ window.DISCIPLINES.push({
         "**Pas de mouchage** pendant les premières semaines ; éternuer **la bouche ouverte** ; éviter les efforts, le sport intense, les pailles et le tabac.",
         "**Alimentation** : molle, froide ou tiède, du côté opposé.",
         "**Nez** : **lavages du nez au sérum physiologique**, comme expliqué par l'équipe.",
-        "**Antibiotiques** : les prendre comme prescrits.",
+        "**Antibiotiques** : les prendre comme prescrits (amoxicilline 2 g par jour pendant 5 jours).",
         "**Hygiène** : brosser doucement ; **bain de bouche à la chlorhexidine 0,2 %** à partir de **48 h**, **pendant 1 semaine**.",
         "**Consulter** en cas d'écoulement nasal purulent, de fièvre, de douleur sinusienne ou d'un liquide qui passe par le nez ; **en urgence, appeler le 15** ; en cas de besoin, vous pouvez **venir aux urgences dentaires**.",
         "**Contrôle à 7 jours**, puis selon l'évolution."
