@@ -620,7 +620,7 @@ window.MATERIAUX = {
      "id": "palodent-360-dentsply-sirona",
      "nom": "Palodent 360 (Dentsply Sirona)",
      "type": "Matrices circonférentielles à usage unique",
-     "statut": "part",
+     "statut": "lue",
      "ind": [
       "Restaurations directes de classe II, surtout sans dent adjacente, avec peu de structure ou avec une dent déplacée"
      ],
