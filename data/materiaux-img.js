@@ -74,7 +74,7 @@ window.MATERIAUX_IMG = {
  },
  "irm-dentsply-sirona": {
   "f": "img/materiaux/irm-dentsply-sirona.jpg",
-  "credit": "photo fournie par le service"
+  "credit": ""
  },
  "dycal-dentsply-sirona": {
   "f": "img/materiaux/dycal-dentsply-sirona.jpg",
@@ -115,7 +115,7 @@ window.MATERIAUX_IMG = {
  },
  "pulp-canal-sealer-ewt-kerr": {
   "f": "img/materiaux/pulp-canal-sealer-ewt-kerr.jpg",
-  "credit": "photo fournie par le service"
+  "credit": ""
  },
  "glyde-file-prep-dentsply-sirona": {
   "f": "img/materiaux/glyde-file-prep-dentsply-sirona.jpg",
@@ -141,7 +141,7 @@ window.MATERIAUX_IMG = {
  },
  "filtek-3m-capsules-bright-natural-warm": {
   "f": "img/materiaux/filtek-3m-capsules-bright-natural-warm.jpg",
-  "credit": "photo fournie par le service"
+  "credit": ""
  },
  "protaper-universal-retreatment-dentsply-sirona": {
   "f": "img/materiaux/protaper-universal-retreatment-dentsply-sirona.jpg",
@@ -155,10 +155,10 @@ window.MATERIAUX_IMG = {
  },
  "p-te-de-kerr-verte": {
   "f": "img/materiaux/p-te-de-kerr-verte.jpg",
-  "credit": "photo fournie par le service"
+  "credit": ""
  },
  "supracal-r-s": {
   "f": "img/materiaux/supracal-r-s.jpg",
-  "credit": "photo fournie par le service"
+  "credit": ""
  }
 };

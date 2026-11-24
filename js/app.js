@@ -682,7 +682,7 @@
     var im = window.MATERIAUX_IMG && window.MATERIAUX_IMG[p.id];
     var fig = im ? el('figure', { class: 'mfig' }, [
       el('img', { src: im.f, alt: 'Photo : ' + p.nom.replace(/\*\*/g, ''), loading: 'lazy', width: '180', height: '180' }),
-      el('figcaption', null, [document.createTextNode((im.note ? im.note + ' ' : '') + 'Image : ' + im.credit + (im.page ? ' · ' : '')), im.page ? el('a', { href: im.page, target: '_blank', rel: 'noopener noreferrer', text: 'page du produit' }) : null])
+      im.credit ? el('figcaption', null, [document.createTextNode((im.note ? im.note + ' ' : '') + 'Image : ' + im.credit + (im.page ? ' · ' : '')), im.page ? el('a', { href: im.page, target: '_blank', rel: 'noopener noreferrer', text: 'page du produit' }) : null]) : null
     ]) : null;
     var body = el('div', null, [fig, el('p', { class: 'mtype', text: p.type }), matBlock('m-ind', 'Indications', p.ind), matBlock('m-ci', 'Contre-indications et précautions', p.ci), matBlock('m-met', 'Méthode d\'utilisation', p.met), matBlock('m-ret', 'À retenir', p.ret), src]);
     var d = acc('mat-' + p.id, p.nom.replace(/\*\*/g, ''), body, { open: false, icon: 'box', cls: 'mat-acc' });
