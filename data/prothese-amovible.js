@@ -168,7 +168,7 @@ window.DISCIPLINES.push({
         "Oublier l'**équilibration occlusale** ou le contrôle à 48 h"
       ],
       suivi: ["Contrôle annuel (muqueuses, adaptation, usure)", "Rebasage si perte de rétention liée à la résorption des crêtes"],
-      complications: ["Blessure muqueuse : retouche ciblée de l'intrados", "Manque de rétention : vérifier le joint périphérique, envisager un rebasage"],
+      complications: ["**Blessure muqueuse** : **retouche ciblée de l'intrados**", "**Manque de rétention** : vérifier le joint périphérique, envisager un rebasage"],
       references: [
         "[Papadiochou S., Polyzois G. Hygiene practices in removable prosthodontics: a systematic review. Int J Dent Hyg 2018](https://pubmed.ncbi.nlm.nih.gov/29120113/) · [Schmutzler A. et al. Cleaning of removable dental prostheses: a systematic review. J Evid Based Dent Pract 2021](https://pubmed.ncbi.nlm.nih.gov/34922732/) · [Felton D. et al. Evidence-based guidelines for the care and maintenance of complete dentures (ACP). J Prosthodont 2011](https://pubmed.ncbi.nlm.nih.gov/21324026/) · [McReynolds D.E. et al. Denture stomatitis: an interdisciplinary clinical review. J Prosthodont 2023](https://pubmed.ncbi.nlm.nih.gov/36988151/)",
         "[Denture adhesives: network meta-analysis (Clin Oral Investig 2024)](https://pubmed.ncbi.nlm.nih.gov/38183500/) : crèmes et poudres améliorent la rétention mandibulaire et la force de mastication (certitude modérée), surtout sur prothèses neuves bien adaptées.",

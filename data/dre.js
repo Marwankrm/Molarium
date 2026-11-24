@@ -38,7 +38,7 @@ window.DISCIPLINES.push({
         { titre: "Finition, polissage, occlusion", details: ["Dépose digue, contrôle occlusal au papier", "Retouche des contacts prématurés", "Polissage"] }
       ],
       suivi: ["Contrôle clinique à 6-12 mois", "Conseils d'hygiène et de prévention (fluor, alimentation)"],
-      complications: ["Sensibilité post-opératoire : contrôler l'occlusion et l'adaptation", "Fracture ou défaut marginal : réfection ou réparation"],
+      complications: ["**Sensibilité post-opératoire** : contrôler l'occlusion et l'adaptation", "**Fracture ou défaut marginal** : **réfection ou réparation**"],
       references: [
         "[Wolff D. et al. Direct Composite Restorations on Permanent Teeth in the Anterior and Posterior Region – An Evidence-Based Clinical Practice Guideline, Part 1. J Adhes Dent 2024;26:185-200](https://pmc.ncbi.nlm.nih.gov/articles/PMC11748041/)",
         "Ce guideline porte sur les **indications**, pas sur le protocole opératoire. Adhésif et mordançage : pratique du service (G-Premio Bond, MR2) et [notice GC G-Premio Bond](https://gc.dental/europe/sites/europe.gc.dental/files/products/downloads/repairkit/ifu/8360_IFU_G-Premio_BOND_E.pdf)."

@@ -259,7 +259,7 @@ window.DISCIPLINES.push({
         ], materiel: ["hypochlorite, EDTA, eau", "cônes de gutta-percha", "thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "IRM ou CVI photopolymérisable", "radiographies"], validation: "essayage de la gutta et obturation" }
       ],
       consignes: [
-        "**Douleurs après un retraitement : fréquentes**, surtout dans les premières 24 à 48 heures ; elles sont plus marquées qu'après un traitement initial dans certaines séries.",
+        "**Douleurs après un retraitement : fréquentes**, surtout dans les premières 24 à 48 heures.",
         "**Antalgiques** : **paracétamol en première intention**, en l'absence de contre-indication.",
         "**Gonflement, fièvre, difficulté à ouvrir la bouche ou à avaler** : consulter en urgence.",
         "**Dent fragilisée** : éviter de mâcher dessus jusqu'à la restauration définitive.",
@@ -276,10 +276,10 @@ window.DISCIPLINES.push({
       ],
       suivi: ["Contrôle clinique et radiologique à 6 mois et 1 an, puis selon l'évolution de la lésion"],
       complications: [
-        "Perforation : arrêter, documenter, réparer selon le matériau du service ; avis du senior",
-        "Fracture d'instrument : ne pas forcer ; avis du senior",
-        "Flare-up ou douleur persistante : contrôler l'étanchéité, l'occlusion et les canaux ; reconsidérer la stratégie (chirurgie apicale)",
-        "Accident d'hypochlorite : voir la fiche « Traitement endodontique »"
+        "**Perforation** : **arrêter**, documenter, réparer selon le matériau du service ; **avis du senior**",
+        "**Fracture d'instrument** : ne pas forcer ; **avis du senior**",
+        "**Flare-up ou douleur persistante** : contrôler l'étanchéité, l'occlusion et les canaux ; reconsidérer la stratégie (chirurgie apicale)",
+        "**Accident d'hypochlorite** : voir la fiche « Traitement endodontique »"
       ],
       references: [
         "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",

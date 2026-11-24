@@ -436,7 +436,7 @@
         li.appendChild(n); li.appendChild(body); steps.appendChild(li);
       });
       update();
-      add('s-etapes', 'Déroulement', acc('s-etapes', 'Déroulement', el('div', null, [el('div', { class: 'progress-wrap' }, [prog]), steps, reset]), { open: true, count: p.etapes.length, icon: 'steps', cls: 'main-acc' }));
+      add('s-etapes', 'Déroulement', acc('s-etapes', 'Déroulement', el('div', null, [el('div', { class: 'progress-wrap' }, [prog]), steps, reset]), { open: false, count: p.etapes.length, icon: 'steps', cls: 'main-acc' }));
     }
     (p.annexes || []).forEach(function (x, i) {
       add('s-annexe-' + i, x.court || x.titre, acc('s-annexe-' + i, x.titre, annexeBody(x), { open: false, icon: x.icone || 'book', cls: 'sec-blue' }));

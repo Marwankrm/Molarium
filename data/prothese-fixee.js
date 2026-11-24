@@ -527,7 +527,7 @@ window.DISCIPLINES.push({
         "Teinte prise après l'anesthésie ou dent déshydratée"
       ],
       suivi: ["Hygiène adaptée aux limites cervicales", "Contrôle lors du suivi annuel"],
-      complications: ["Sensibilité post-opératoire : vérifier l'occlusion et l'adaptation", "Descellement : refaire un assemblage après nettoyage et analyse de la rétention", "Gingivite ou récession autour de la couronne : hygiène, ajustement"],
+      complications: ["**Sensibilité post-opératoire** : vérifier l'occlusion et l'adaptation", "**Descellement** : refaire un assemblage après nettoyage et analyse de la rétention", "**Gingivite ou récession autour de la couronne** : hygiène, ajustement"],
       references: [
         "Séquence rédigée d'après la pratique courante (valeurs et produits à confirmer par le service).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
