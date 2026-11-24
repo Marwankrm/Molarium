@@ -276,6 +276,33 @@ window.MATERIAUX = {
      ]
     },
     {
+     "id": "relyx-unicem-2",
+     "nom": "RelyX Unicem 2 (3M)",
+     "type": "Ciment résine auto-adhésif (cartouche avec embout mélangeur et Endo Tip)",
+     "statut": "part",
+     "ind": [
+      "Au service : **scellement du tenon fibré, pour la RMIPP uniquement** (annotation du service)"
+     ],
+     "ci": [
+      "Notice du fabricant **non lue** : contre-indications à vérifier"
+     ],
+     "met": [
+      "Installer l'**embout mélangeur** puis l'**Endo Tip** ; **purger** une petite quantité avant utilisation",
+      "Injecter **du fond du canal vers la partie coronaire**, en retirant progressivement l'embout (évite les bulles)",
+      "Enduire légèrement le tenon de ciment, l'insérer **immédiatement, pression constante** ; retirer les excès avant la polymérisation finale",
+      "**Photopolymériser 40 s** ; tenon opaque : la prise chimique suffit, photopolymériser la partie coronaire si possible"
+     ],
+     "ret": [
+      "Les autres collages se font au **Panavia V5**"
+     ],
+     "src": [
+      {
+       "t": "Fiche de la RMIPP (site)",
+       "u": "#/prothese-fixee/rmipp"
+      }
+     ]
+    },
+    {
      "id": "panavia-v5-kuraray",
      "nom": "Panavia V5 (Kuraray) : prétraitement et collage",
      "type": "Ciment résine de collage avec Tooth Primer et Clearfil Ceramic Primer Plus",
