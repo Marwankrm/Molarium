@@ -916,17 +916,28 @@ window.MATERIAUX = {
       "Ne pas forcer en cas de blocage : avis du senior"
      ],
      "met": [
-      "Utiliser les trois limes **en séquence** : **D1** (30/100, 9 %, 16 mm, pointe coupante) pour pénétrer, **D2** (25/100, 8 %, 18 mm) pour le tiers moyen, **D3** (20/100, 7 %, 22 mm) pour le tiers apical",
-      "D2 et D3 ont une pointe non coupante",
-      "Désobturation associée au **Desocclusol Orange** (Acteon) au service",
-      "Mise en forme ensuite aux **ProTaper Gold**"
+      "Utiliser les trois limes **en séquence** : **D1** (30/100, 9 %, 16 mm, pointe coupante) pour le tiers **coronaire**, **D2** (25/100, 8 %, 18 mm) pour le tiers **moyen**, **D3** (20/100, 7 %, 22 mm) pour le tiers **apical**",
+      "**Vitesse** : **500 à 700 tr/min** pour la gutta-percha et les obturateurs à base de support ; **300 tr/min** pour les ciments (pâtes)",
+      "Moteur à **contrôle de couple** (la notice ne donne pas de valeur de couple pour ces limes)",
+      "**Chemin initial** aux petites limes manuelles avec solvant, instrument chauffant ou ultrasons ; appuyer **doucement la D1 sans engager la dentine**",
+      "**Retirer les limes souvent**, inspecter et nettoyer les spires, puis réinsérer ; continuer tant que du matériau est visible entre les lames",
+      "Dans le tiers apical d'une anatomie complexe : limes manuelles et solvant (**Desocclusol Orange** au service) ; mise en forme ensuite aux **ProTaper Gold**"
      ],
      "ret": [
-      "Fiche produit seulement : **vitesse et couple à confirmer** dans la notice et sur le moteur du service"
+      "Limes à **usage unique**, pour un seul patient ; la chaleur et la friction aident à retirer l'obturation",
+      "Radiographies bien angulées et accès rectiligne avant de commencer"
      ],
      "src": [
       {
-       "t": "Dentsply Sirona France – fiche produit",
+       "t": "Mode d'emploi ProTaper Universal (Dentsply Sirona)",
+       "u": "https://www.dentsplysirona.com/content/dam/dentsply/pim/manufacturer/Endodontics/Glide_Path__Shaping/Rotary__Reciprocating_Files/Shaping/ProTaper_Universal_Retreatment_Files/ProTaper-Universal-Endodontic-System-rvyvmdf-en-1402"
+      },
+      {
+       "t": "Fiche technique du retraitement ProTaper Universal (Dentsply Sirona)",
+       "u": "https://www.dentsplysirona.com/content/dam/master/regions-countries/north-america/product-procedure-brand/endodontics/product-categories/restoration/retreatment-files/documents/END-Step-By-Step-ProTaper-Universal-Retreatment-Files-EN.pdf"
+      },
+      {
+       "t": "Fiche produit Dentsply Sirona France",
        "u": "https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html"
       }
      ]

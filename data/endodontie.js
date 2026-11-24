@@ -19,13 +19,13 @@ var PTG_ANNEXE = {
 // Limes de retraitement ProTaper Universal : fiche produit Dentsply Sirona France.
 var PTU_RETRAIT = {
   titre: "Limes ProTaper Universal Retreatment : repères", court: "Limes de désobturation", icone: "tooth",
-  intro: "Trois limes rotatives à utiliser **en séquence** pour retirer la gutta-percha, les obturateurs à base de support et les ciments (fiche produit Dentsply Sirona). Vitesse et couple : se reporter à la notice et au moteur du service [[à préciser]].",
+  intro: "Trois limes rotatives à utiliser **en séquence** pour retirer la gutta-percha, les obturateurs à base de support et les ciments (fiche produit Dentsply Sirona). **Vitesse** : **500 à 700 tr/min** pour la gutta-percha et les obturateurs à base de support, **300 tr/min** pour les ciments (pâtes) ; moteur à **contrôle de couple** (la notice ne donne pas de valeur de couple pour ces limes). Limes à usage **unique**, pour un seul patient.",
   table: {
     cols: ["Lime", "Pointe / conicité / longueur", "Rôle"],
     rows: [
-      ["**D1**", "30/100 mm, 9 %, 16 mm", "Pointe **coupante** : facilite la pénétration initiale dans l'obturation"],
-      ["**D2**", "25/100 mm, 8 %, 18 mm", "Pointe non coupante : retire le matériau du **tiers moyen**"],
-      ["**D3**", "20/100 mm, 7 %, 22 mm", "Pointe non coupante : retire le matériau du **tiers apical**"]
+      ["**D1**", "30/100 mm, 9 %, 16 mm", "Tiers **coronaire** ; pointe **coupante** : facilite la pénétration initiale dans l'obturation"],
+      ["**D2**", "25/100 mm, 8 %, 18 mm", "Tiers **moyen** ; pointe non coupante"],
+      ["**D3**", "20/100 mm, 7 %, 22 mm", "Tiers **apical** ; pointe non coupante"]
     ]
   }
 };
@@ -231,6 +231,7 @@ window.DISCIPLINES.push({
         ], materiel: ["cassette de fraises « Soins » (Komet)", "digue et clamps"] },
         { titre: "Temps 3 – Désobturation et longueur de travail", details: [
           "**Désobturation de la gutta-percha** au **Desocclusol Orange** (Acteon), puis aux limes rotatives **ProTaper Universal Retreatment**, utilisées **en séquence** : **D1** (pointe coupante, pénétration initiale), **D2** (tiers moyen), **D3** (tiers apical)",
+          "**Technique des limes D** : créer un **chemin initial** avec de petites limes manuelles et le solvant ; appuyer **doucement la D1 sans engager la dentine**, puis D2, puis D3 ; **retirer les limes souvent** et nettoyer les spires, jusqu'à ne plus voir de matériau entre les lames ; dans le tiers apical d'une anatomie complexe, limes manuelles et solvant",
           "**Repérage des canaux manqués**, négociation",
           "**Perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie)",
           "Retrait des fragments ou réparation d'une perforation selon la situation : **Biodentine** pour la perforation"
@@ -296,6 +297,7 @@ window.DISCIPLINES.push({
         "**Accident d'hypochlorite** : voir la fiche « Traitement endodontique »"
       ],
       references: [
+        "[Dentsply Sirona – ProTaper Universal : mode d'emploi (vitesse et technique de retraitement)](https://www.dentsplysirona.com/content/dam/dentsply/pim/manufacturer/Endodontics/Glide_Path__Shaping/Rotary__Reciprocating_Files/Shaping/ProTaper_Universal_Retreatment_Files/ProTaper-Universal-Endodontic-System-rvyvmdf-en-1402)",
         "[Dentsply Sirona France – ProTaper Universal : limes en rotation continue de retraitement (D1, D2, D3)](https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html)",
         "[Dentsply Sirona – ProTaper Gold : fiche technique (tip card)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf)", "[Dentsply Sirona – ProTaper Gold : mode d'emploi (version US, 2021)](https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/ifu/END-IFU-PROTAPER-GOLD-EN-2021-02.pdf)", "[Dioguardi M. et al. Comparison of endodontic failures between nonsurgical retreatment and endodontic surgery: systematic review and meta-analysis. Medicina 2022;58:894](https://pmc.ncbi.nlm.nih.gov/articles/PMC9324533/)",
         "[Dioguardi M. et al. Analysis of endodontic successes and failures in the removal of fractured endodontic instruments during retreatment. Healthcare 2024;12:1390](https://pmc.ncbi.nlm.nih.gov/articles/PMC11276083/)",
