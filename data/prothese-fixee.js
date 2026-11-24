@@ -505,7 +505,7 @@ window.DISCIPLINES.push({
           "**Empreinte d'étude** à l'alginate (modèles, éventuelle clé en silicone), **choix de la teinte** au teintier et photographies si besoin"
         ], materiel: ["sonde, miroir, radiographie", "alginate", "teintier", "appareil photo (si besoin)"], validation: "plan de traitement", astuce: "Au laboratoire : modèles d'étude, éventuel projet esthétique (wax-up)." },
         { titre: "Séance 2 – Préparation, empreinte et provisoire", details: [
-          "**Anesthésie locale** puis **préparation** : réduction occlusale et axiale respectant l'épaisseur du matériau, faible convergence des parois, **limite cervicale** nette et arrondie respectant le parodonte [[valeurs de réduction à préciser par le service]]",
+          "**Anesthésie locale** puis **préparation** : réduction occlusale et axiale respectant l'épaisseur du matériau, faible convergence des parois, **limite cervicale** nette et arrondie respectant le parodonte",
           "**Rétraction gingivale**, **empreinte de précision**, empreinte de l'antagoniste et enregistrement de l'occlusion ; **provisoire** réalisé avec la clé en silicone, ajusté puis posé au ciment provisoire"
         ], materiel: ["fraises de préparation", "fil rétracteur", "matériau d'empreinte (Express 2 ou Impregum Penta)", "alginate (antagoniste)", "résine (Unifast Trad) et clé en silicone pour provisoire", "ciment provisoire (Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée du modèle de travail et confection de la couronne." },
         { titre: "Séance 3 – Essayage et scellement", details: [
