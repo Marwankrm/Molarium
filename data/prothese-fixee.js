@@ -54,11 +54,11 @@ window.DISCIPLINES.push({
           { t: "**Préparation du logement** sous digue", sub: ["**Tooth Primer** pendant 20 s", "Retirer l'excès de liquide", "Séchage"] },
           { t: "**Scellement au Panavia V5** (notice, tenons métalliques)", sub: ["Pâte sur l'inlay-core ou sur la dent", "Mise en place **rapide avec une légère vibration**", "Excès étalé sur la base coronaire et la tête du tenon", "Photopolymérisation (teinte opaque : prise de 3 min)"] },
           "**Préparation de la dent 6 minutes après la pose** pour enchaîner la couronne",
-          "**Empreinte de l'inlay-core et des tissus environnants**",
+          "**Empreinte de l'inlay-core et des tissus environnants** (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther) ; rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet, Acteon)",
           "**Empreinte de l'antagoniste** à l'**alginate**",
           "**Empreinte de l'occlusion** avec le **Futar D**",
           "**Demande de la couronne** au laboratoire"
-        ], materiel: ["inlay-core", "digue", "sablage", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe à photopolymériser", "radiographie", "alginate", "**Futar D** (enregistrement de l'occlusion)"], validation: "essayage, scellement et empreintes", astuce: "Si la préparation de la couronne est faite dans la même séance, attendre 6 minutes après la pose de l'inlay-core." }
+        ], materiel: ["inlay-core", "digue", "sablage", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe à photopolymériser", "radiographie", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (enregistrement de l'occlusion)"], validation: "essayage, scellement et empreintes", astuce: "Si la préparation de la couronne est faite dans la même séance, attendre 6 minutes après la pose de l'inlay-core." }
       ],
       consignes: [
         "**Provisoire** : éviter de mordre dans des aliments durs ; s'il se décolle, prendre rendez-vous rapidement.",
