@@ -38,9 +38,16 @@
   function plain(text) { return String(text).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/\[([^\[\]]+)\]\(https?:\/\/[^)\s]+\)/g, '$1'); }
   function ul(items) {
     return el('ul', null, items.map(function (t) {
-      if (t && typeof t === 'object') return el('li', null, [rich(t.t), ul(t.sub || [])]);
-      return el('li', null, [rich(t)]);
+      var obj = t && typeof t === 'object', txt = obj ? t.t : t;
+      var li = el('li', null, obj ? [rich(txt), ul(t.sub || [])] : [rich(txt)]);
+      if (/^\*\*\d+\./.test(txt)) li.className = 'num';
+      return li;
     }));
+  }
+  function flatItems(items) {
+    var out = [];
+    (items || []).forEach(function (x) { if (x && typeof x === 'object') { out.push(x.t); out = out.concat(flatItems(x.sub)); } else out.push(x); });
+    return out;
   }
 
   function annexeBody(x) {
@@ -138,9 +145,9 @@
   DISCIPLINES.forEach(function (d) {
     d.protocoles.forEach(function (p) {
       p._d = d; p._key = d.id + '/' + p.id;
-      var parts = [d.nom, p.titre, p.resume, (p.indications || []).map(function (x) { return x && typeof x === 'object' ? [x.t].concat(x.sub || []).join(' ') : x; }).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.consignes || []).join(' ')];
+      var parts = [d.nom, p.titre, p.resume, flatItems(p.indications).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.consignes || []).join(' ')];
       (p.annexes || []).forEach(function (x) { parts.push(x.titre, x.intro || ''); (x.table ? x.table.rows : []).forEach(function (r) { parts.push(r.join(' ')); }); (x.sections || []).forEach(function (z) { parts.push(z.titre, z.texte || '', (z.items || []).join(' ')); }); });
-      (p.etapes || []).forEach(function (s) { parts.push(s.titre, (s.details || []).join(' '), (s.materiel || []).join(' '), s.astuce || ''); });
+      (p.etapes || []).forEach(function (s) { parts.push(s.titre, flatItems(s.details).join(' '), (s.materiel || []).join(' '), s.astuce || ''); });
       p._hay = norm(plain(parts.join(' ')));
       ALL.push(p);
     });

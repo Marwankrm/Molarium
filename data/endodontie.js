@@ -121,11 +121,11 @@ window.DISCIPLINES.push({
         { titre: "Temps 6 – Essayage de la gutta", details: [
           "**Cône de gutta-percha assorti à la dernière lime**",
           "**Radiographie d'essayage**",
-          "**Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer.** Poser l'hydroxyde de calcium (**Supracal**, R&S) sur toute la longueur de travail, étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale), puis poursuivre en séance 2"
+          { t: "**Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer**", sub: ["Poser l'hydroxyde de calcium (**Supracal**, R&S) sur toute la longueur de travail", "Étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale)", "Puis poursuivre en séance 2"] }
         ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
         { titre: "Temps 7 – Obturation", details: [
           "**Obturation par thermocompaction** avec le ciment endodontique",
-          "**Ciment canalaire : Pulp Canal Sealer EWT (Kerr)**, à l'oxyde de zinc-eugénol : **une cuillère de poudre pour une goutte de liquide**, mélange en cercles jusqu'à une pâte **lisse, non collante, sans grains d'argent** ; application à la lime ou au Lentulo puis enrobage du cône ; **ne pas trop remplir le canal** ; plus de 6 h de temps de travail sur le bloc, prise en bouche en moins de 2 h",
+          { t: "**Ciment canalaire : Pulp Canal Sealer EWT (Kerr)**, à l'oxyde de zinc-eugénol", sub: ["Mélange : **une cuillère de poudre pour une goutte de liquide**, en cercles jusqu'à une pâte **lisse, non collante, sans grains d'argent**", "Application à la lime ou au Lentulo puis enrobage du cône", "**Ne pas trop remplir le canal**", "Plus de 6 h de temps de travail sur le bloc, prise en bouche en moins de 2 h"] },
           "**Radiographie de contrôle**"
         ], materiel: ["matériel de thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
         { titre: "Temps 8 – Restauration coronaire", details: [
@@ -133,7 +133,8 @@ window.DISCIPLINES.push({
           "Restauration définitive (onlay, couronne) dans les meilleurs délais"
         ], materiel: ["IRM (poudre et liquide)", "CVI photopolymérisable", "lampe à photopolymériser"], astuce: "L'étanchéité coronaire conditionne le succès à long terme. **L'IRM contient de l'eugénol** (oxyde de zinc-eugénol renforcé) : le retirer complètement avant une restauration collée ou scellée, car l'eugénol gêne la prise et l'adhésion de certains matériaux." },
         { titre: "Temps 9 (séance 2, si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
-          "**Quand ?** Au service : manque de temps, suintement (exsudat) ou douleur ; plus généralement canal infecté avec lésion ou fistule. Intervalle entre les séances : **1 à 2 semaines**",
+          { t: "**Quand ?** Au service", sub: ["Manque de temps, suintement (exsudat) ou douleur", "Plus généralement : canal infecté avec lésion ou fistule"] },
+          "Intervalle entre les séances : **1 à 2 semaines**",
           "**Dépose de l'étanchéité provisoire** puis de l'hydroxyde de calcium, par **irrigation abondante** (limes de calibrage si besoin)",
           "**Irrigation finale** : hypochlorite, EDTA, hypochlorite (**activation manuelle**), rinçage à l'eau ; séchage",
           "**Essayage de la gutta**",
@@ -233,8 +234,8 @@ window.DISCIPLINES.push({
           "**Pose de la digue**, désinfection du champ"
         ], materiel: ["cassette de fraises « Soins » (Komet)", "digue et clamps"] },
         { titre: "Temps 3 – Désobturation et longueur de travail", details: [
-          "**Désobturation de la gutta-percha** au **Desocclusol Orange** (Acteon), puis aux limes rotatives **ProTaper Universal Retreatment**, utilisées **en séquence** : **D1** (pointe coupante, pénétration initiale), **D2** (tiers moyen), **D3** (tiers apical)",
-          "**Technique des limes D** : créer un **chemin initial** avec de petites limes manuelles et le solvant ; appuyer **doucement la D1 sans engager la dentine**, puis D2, puis D3 ; **retirer les limes souvent** et nettoyer les spires, jusqu'à ne plus voir de matériau entre les lames ; dans le tiers apical d'une anatomie complexe, limes manuelles et solvant",
+          { t: "**Désobturation de la gutta-percha**", sub: ["Au **Desocclusol Orange** (Acteon)", { t: "Puis aux limes rotatives **ProTaper Universal Retreatment**, utilisées **en séquence**", sub: ["**D1** (pointe coupante, pénétration initiale)", "**D2** (tiers moyen)", "**D3** (tiers apical)"] }] },
+          { t: "**Technique des limes D**", sub: ["Créer un **chemin initial** avec de petites limes manuelles et le solvant", "Appuyer **doucement la D1 sans engager la dentine**, puis D2, puis D3", "**Retirer les limes souvent** et nettoyer les spires, jusqu'à ne plus voir de matériau entre les lames", "Dans le tiers apical d'une anatomie complexe, limes manuelles et solvant"] },
           "**Repérage des canaux manqués**, négociation",
           "**Perméabilisation jusqu'à la longueur de travail** (localisateur d'apex, radiographie)",
           "Retrait des fragments ou réparation d'une perforation selon la situation : **Biodentine** pour la perforation"
@@ -243,7 +244,7 @@ window.DISCIPLINES.push({
           "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec, **si besoin**, du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
           "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
           "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
-          "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus** ; apex en général jusqu'au 25/100",
+          { t: "**F1 puis F2** (**F3** si le canal est plus large)", sub: ["**Sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus**", "Apex en général jusqu'au 25/100"] },
           "**Pression apicale minimale** : ne jamais forcer",
           "**Vitesse : 300 tr/min**",
           "**Couple S1 et SX : 5,1 N·cm**",
@@ -260,7 +261,7 @@ window.DISCIPLINES.push({
         { titre: "Temps 6 – Essayage de la gutta", details: [
           "**Cône de gutta-percha assorti à la dernière lime**",
           "**Radiographie d'essayage**",
-          "**Désobturation longue, lésion étendue, fistule ou exsudat : ne pas obturer.** Poser l'hydroxyde de calcium radio-opaque aqueux sur toute la longueur de travail, étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale), puis poursuivre en séance 2"
+          { t: "**Désobturation longue, lésion étendue, fistule ou exsudat : ne pas obturer**", sub: ["Poser l'hydroxyde de calcium radio-opaque aqueux sur toute la longueur de travail", "Étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale)", "Puis poursuivre en séance 2"] }
         ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
         { titre: "Temps 7 – Obturation", details: [
           "**Obturation par thermocompaction**",
@@ -271,7 +272,8 @@ window.DISCIPLINES.push({
           "Restauration définitive (onlay, couronne) dans les meilleurs délais"
         ], materiel: ["IRM (poudre et liquide)", "CVI photopolymérisable", "lampe à photopolymériser"], astuce: "La restauration coronaire étanche est aussi importante que l'obturation pour le succès du retraitement." },
         { titre: "Temps 9 (séance 2, si nécessaire) – Retrait de l'hydroxyde de calcium et obturation", details: [
-          "**Quand ?** Retraitement avec lésion étendue, fistule ou exsudat (médication à l'hydroxyde de calcium indiquée), travail inachevé en séance 1. Au service : manque de temps, suintement ou douleur. Intervalle entre les séances : **1 à 2 semaines**",
+          { t: "**Quand ?**", sub: ["Retraitement avec lésion étendue, fistule ou exsudat (médication à l'hydroxyde de calcium indiquée)", "Travail inachevé en séance 1", "Au service : manque de temps, suintement ou douleur"] },
+          "Intervalle entre les séances : **1 à 2 semaines**",
           "**Dépose de l'étanchéité provisoire** puis de l'hydroxyde de calcium, par **irrigation abondante**",
           "**Irrigation finale** : hypochlorite, EDTA, hypochlorite (**activation manuelle**), rinçage à l'eau ; séchage",
           "**Essayage de la gutta**",

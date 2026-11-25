@@ -68,13 +68,13 @@ window.DISCIPLINES.push({
           "Acte exposant l'os chez un patient à haut risque d'ostéonécrose : amoxicilline 2 g 1 h avant, puis 500 mg × 3/jour pendant 7 jours"
         ] },
         { titre: "Principales indications d'antibioprophylaxie (population générale)", details: [
-          "**Recommandée** : avulsion de dent incluse, ectopique ou en désinclusion (grade A) ; autotransplantation ; greffe osseuse et élévation sinusienne pré-implantaires",
-          "**Non recommandée** : avulsion de dent sur arcade/racines (grade A), endodontie (pulpotomie, traitement et reprise, chirurgie apicale), sondage, détartrage, surfaçage, soins restaurateurs, digue, prothèse et empreintes, anesthésies locales, radiographies, orthodontie collée",
-          "Pose d'implant : non recommandée en systématique ; envisageable selon le profil du patient (antécédent de complication d'ostéo-intégration, os peu vascularisé) ou la complexité (> 3 implants, avulsion-implantation immédiate, durée > 1 h 30)"
+          { t: "**Recommandée**", sub: ["Avulsion de dent incluse, ectopique ou en désinclusion (grade A)", "Autotransplantation", "Greffe osseuse et élévation sinusienne pré-implantaires"] },
+          { t: "**Non recommandée**", sub: ["Avulsion de dent sur arcade/racines (grade A)", "Endodontie (pulpotomie, traitement et reprise, chirurgie apicale)", "Sondage", "Détartrage", "Surfaçage", "Soins restaurateurs", "Digue", "Prothèse et empreintes", "Anesthésies locales", "Radiographies", "Orthodontie collée"] },
+          { t: "Pose d'implant", sub: ["Non recommandée en systématique", "Envisageable selon le profil du patient (antécédent de complication d'ostéo-intégration, os peu vascularisé) ou la complexité (> 3 implants, avulsion-implantation immédiate, durée > 1 h 30)"] }
         ] },
         { titre: "Antibiothérapie curative : quand ?", details: [
-          "**Non recommandée** : pulpite, parodontite apicale chronique, gingivite, parodontite (cas général), alvéolite sèche, mucosite péri-implantaire, péricoronarite sans extension",
-          "**Recommandée** : infection avec extension locale (suppuration), régionale (tuméfaction, trismus) ou systémique (lymphadénopathie, fièvre) ; cellulite ; ostéite/ostéomyélite ; sinusite maxillaire aiguë d'origine dentaire ; infection de greffe ; maladie parodontale nécrosante avec atteinte systémique",
+          { t: "**Non recommandée**", sub: ["Pulpite", "Parodontite apicale chronique", "Gingivite", "Parodontite (cas général)", "Alvéolite sèche", "Mucosite péri-implantaire", "Péricoronarite sans extension"] },
+          { t: "**Recommandée**", sub: ["Infection avec extension locale (suppuration), régionale (tuméfaction, trismus) ou systémique (lymphadénopathie, fièvre)", "Cellulite", "Ostéite/ostéomyélite", "Sinusite maxillaire aiguë d'origine dentaire", "Infection de greffe", "Maladie parodontale nécrosante avec atteinte systémique"] },
           "Parodontite aiguë/abcès apical/abcès parodontal : non recommandée sauf patient à haut risque d'endocardite, risque infectieux augmenté, signes d'extension, ou geste local impossible",
           "Parodontite stades III/IV avec inadéquation plaque/destruction et ratio perte osseuse/âge > 1 : antibiothérapie après la dernière séance d'instrumentation"
         ] },

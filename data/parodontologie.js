@@ -39,7 +39,8 @@ window.DISCIPLINES.push({
         { titre: "Temps 1 – Anamnèse ciblée", details: ["Antécédents parodontaux, familiaux ; **diabète (HbA1c), tabagisme** (quantité, durée)", "Médicaments gingivo-hyperplasiants, traitements immunosuppresseurs"], materiel: ["questionnaire médical"] },
         { titre: "Temps 2 – Examen clinique et sondage", details: ["**Indices de plaque et de saignement**, mobilité, atteinte de furcation (classes I à III), récessions, défauts intra-osseux", "**Sondage 6 sites par dent** : profondeur de poche, niveau d'attache clinique, saignement au sondage ; saisie dans **Logos**"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque (GC Tri Plaque ID Gel)"], validation: "sondage" },
         { titre: "Temps 3 – Examen radiologique", details: ["**Bilan long cône, panoramique et bite-wings** : niveau osseux, lésions intra-osseuses, furcations", "Facteurs rétentifs de plaque : tartre, débords de restauration"], materiel: ["radiographies"] },
-        { titre: "Temps 4 – Diagnostic et plan de traitement", details: ["Classification 2018 : **stade (I à IV)** selon la sévérité et la complexité ; **grade (A à C)** selon la vitesse de progression et les facteurs de risque", "**Plan par étapes (EFP)** : étape 1 hygiène et facteurs de risque, étape 2 instrumentation, étape 3 sites non répondeurs, étape 4 maintenance ; consentement"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
+        { titre: "Temps 4 – Diagnostic et plan de traitement", details: [{ t: "Classification 2018", sub: ["**Stade (I à IV)** selon la sévérité et la complexité", "**Grade (A à C)** selon la vitesse de progression et les facteurs de risque"] }, { t: "**Plan par étapes (EFP)**", sub: ["Étape 1 : hygiène et facteurs de risque", "Étape 2 : instrumentation", "Étape 3 : sites non répondeurs", "Étape 4 : maintenance"] },
+          "Consentement"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
       ],
       consignes: [
         "**Diagnostic expliqué** : maladie de la gencive et de l'os, qui se soigne mais demande une hygiène quotidienne rigoureuse et un suivi.",
@@ -118,7 +119,8 @@ window.DISCIPLINES.push({
         "Éliminer les **facteurs rétentifs de plaque** (tartre, débords de restauration)."
       ],
       etapes: [
-        { titre: "Séance 1 – Diagnostic, motivation et détartrage", details: ["**Sondage** (absence de perte d'attache), indices de plaque et de saignement ; **enseignement de l'hygiène** (voir la fiche « Motivation à l'hygiène »)", "**Détartrage supra-gingival et polissage** ; suppression des facteurs rétentifs"], materiel: ["sonde parodontale", "révélateur de plaque", "ultrasons", "cupule et pâte à polir"], validation: "sondage" },
+        { titre: "Séance 1 – Diagnostic, motivation et détartrage", details: ["**Sondage** (absence de perte d'attache), indices de plaque et de saignement",
+          "**Enseignement de l'hygiène** (voir la fiche « Motivation à l'hygiène »)", "**Détartrage supra-gingival et polissage** ; suppression des facteurs rétentifs"], materiel: ["sonde parodontale", "révélateur de plaque", "ultrasons", "cupule et pâte à polir"], validation: "sondage" },
         { titre: "Séance 2 (si nécessaire) – Contrôle", details: ["Nouveau relevé de plaque et de saignement ; renforcement de l'hygiène", "Si la gencive reste inflammatoire : rechercher une cause locale ou générale"], materiel: ["sonde parodontale", "révélateur de plaque"] }
       ],
       consignes: [
@@ -148,7 +150,9 @@ window.DISCIPLINES.push({
         "Le **contrôle professionnel de la plaque et des facteurs rétentifs** est un élément fondamental de l'étape 1 (EFP)."
       ],
       etapes: [
-        { titre: "Séance – Détartrage supra-gingival et polissage", details: ["Indices de plaque et de saignement ; **détartrage supra-gingival aux ultrasons**, complété à la curette si besoin", "**Polissage** des surfaces ; suppression des facteurs rétentifs de plaque ; enseignement de l'hygiène"], materiel: ["ultrasons + inserts", "curettes", "cupule et pâte à polir", "révélateur de plaque"] }
+        { titre: "Séance – Détartrage supra-gingival et polissage", details: ["Indices de plaque et de saignement ; **détartrage supra-gingival aux ultrasons**, complété à la curette si besoin", "**Polissage** des surfaces",
+          "Suppression des facteurs rétentifs de plaque",
+          "Enseignement de l'hygiène"], materiel: ["ultrasons + inserts", "curettes", "cupule et pâte à polir", "révélateur de plaque"] }
       ],
       consignes: [
         "**Sensibilité** : sensibilité au froid possible quelques jours ; dentifrice pour dents sensibles si besoin.",
@@ -194,11 +198,16 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Sondage, anesthésie et surfaçage de la première moitié de la bouche", details: [
-          "**Sondage de contrôle** et indices ; validation par l'encadrant ; **anesthésie** de la zone",
-          "**Surfaçage** de la première moitié de la bouche aux **inserts parodontaux** (curettes en complément), **irrigation à la chlorhexidine ou au sérum** ; **validation du surfaçage par l'encadrant**"
+          "**Sondage de contrôle** et indices",
+          "Validation par l'encadrant",
+          "**Anesthésie** de la zone",
+          "**Surfaçage** de la première moitié de la bouche aux **inserts parodontaux** (curettes en complément), **irrigation à la chlorhexidine ou au sérum**",
+          "**Validation du surfaçage par l'encadrant**"
         ], materiel: ["sonde parodontale", "anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum"], validation: "du sondage, puis du surfaçage" },
         { titre: "Séance 2 – Surfaçage de la seconde moitié et consignes", details: [
-          "**Anesthésie** et **surfaçage** de la seconde moitié de la bouche ; irrigation ; **validation du surfaçage par l'encadrant**",
+          "**Anesthésie** et **surfaçage** de la seconde moitié de la bouche",
+          "Irrigation",
+          "**Validation du surfaçage par l'encadrant**",
           "**Consignes** et **prescription d'un bain de bouche** (**Eludril Perio** (chlorhexidine 0,20 %)) ; rendez-vous de **réévaluation à 3 mois**"
         ], materiel: ["anesthésique", "inserts parodontaux", "curettes", "chlorhexidine ou sérum", "ordonnance"], validation: "surfaçage" }
       ],
@@ -237,7 +246,7 @@ window.DISCIPLINES.push({
       materiel: ["Sonde parodontale", "Logiciel Logos", "Révélateur de plaque", "Radiographies si besoin"],
       alertes: ["**Objectifs de santé** : aucune poche **≥ 5 mm avec saignement** et aucune poche profonde **≥ 6 mm** ; si atteints, passage en maintenance ; sinon, étape 3 (EFP)."],
       etapes: [
-        { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", "**Décision** : maintenance si objectifs atteints ; sinon ré-instrumentation ciblée ou chirurgie (étape 3) ; consignes d'hygiène"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
+        { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", { t: "**Décision**", sub: ["Maintenance si objectifs atteints", "Sinon ré-instrumentation ciblée ou chirurgie (étape 3)", "Consignes d'hygiène"] }], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
       ],
       consignes: ["**Résultat** du traitement expliqué au patient ; objectifs et prochaines étapes ; **maintenance** à rythme personnalisé."],
       erreurs: ["Réévaluation trop précoce, avant la cicatrisation", "Sondage incomplet", "Absence de décision écrite (maintenance ou étape 3)"],
@@ -268,7 +277,8 @@ window.DISCIPLINES.push({
         { titre: "Poches résiduelles modérées (4-5 mm)", details: ["Répéter l'instrumentation sous-gingivale, avec ou sans lambeau d'accès, dans un contexte d'étapes 1 et 2 de qualité et de maintenance fréquente"] },
         { titre: "Poches résiduelles profondes (≥ 6 mm)", details: ["**Lambeau d'accès** recommandé (différents dessins possibles)", "Chirurgie résectrice : possible, avec risque d'augmentation de la récession"] },
         { titre: "Défauts intra-osseux ≥ 3 mm", details: ["**Chirurgie régénératrice** recommandée", "Régénération : **membranes** ou **dérivés de la matrice amélaire**, avec ou sans greffe d'origine osseuse ; lambeaux de préservation papillaire"] },
-        { titre: "Lésions de furcation", details: ["Traitement parodontal recommandé sur molaires de classes II et III avec poches résiduelles : **l'atteinte de furcation n'est pas une raison d'extraction**", "Classe II mandibulaire et classe II vestibulaire maxillaire : régénération recommandée ; classe III et lésions complexes : tunnelisation, séparation ou résection radiculaire possibles"] },
+        { titre: "Lésions de furcation", details: ["Traitement parodontal recommandé sur molaires de classes II et III avec poches résiduelles : **l'atteinte de furcation n'est pas une raison d'extraction**", "Classe II mandibulaire et classe II vestibulaire maxillaire : régénération recommandée",
+          "Classe III et lésions complexes : tunnelisation, séparation ou résection radiculaire possibles"] },
         { titre: "Réévaluation après l'étape 3", details: ["Mêmes objectifs : aucune poche ≥ 5 mm avec saignement, aucune poche ≥ 6 mm ; puis maintenance"] }
       ],
       consignes: ["Consignes post-opératoires, bain de bouche et contrôle selon l'acte réalisé."],
@@ -297,7 +307,8 @@ window.DISCIPLINES.push({
         { titre: "Fréquence des visites", details: ["Intervalle **à partir de 3 mois**, jusqu'à 12 mois au maximum, personnalisé selon le profil de risque et l'état parodontal (EFP)"] },
         { titre: "Contenu de la séance", details: ["Instructions d'hygiène répétées et individualisées, incluant le nettoyage interdentaire", "**Débridement mécanique professionnel de plaque** (suggéré), sondage des sites à risque, réévaluation"] },
         { titre: "Hygiène à domicile", details: ["Brossage complété par **brossettes interdentaires** (recommandé) ; **fil dentaire non suggéré** en 1er choix chez le patient en maintenance"] },
-        { titre: "À ne pas faire", details: ["Doxycycline sub-antimicrobienne et thérapie photodynamique en complément : non suggérés ; remplacer le débridement mécanique par un laser Er:YAG : non suggéré"] },
+        { titre: "À ne pas faire", details: ["Doxycycline sub-antimicrobienne et thérapie photodynamique en complément : non suggérés",
+          "Remplacer le débridement mécanique par un laser Er:YAG : non suggéré"] },
         { titre: "Facteurs de risque", details: ["Maintenir les interventions d'arrêt du tabac et de contrôle du diabète"] }
       ],
       consignes: ["**Rendez-vous réguliers** à vie : la maintenance évite la récidive.", "**Hygiène** quotidienne avec brossettes interdentaires ; signaler tout saignement, mobilité ou gonflement."],
@@ -326,7 +337,9 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Temps 1 – Diagnostic", details: ["Sondage, mobilité, suppuration ; **test de vitalité** et radiographie pour distinguer une origine parodontale, endodontique ou combinée", "Évaluation de l'état général (fièvre, adénopathies, trismus)"], materiel: ["sonde parodontale", "test de vitalité", "radiographie"] },
         { titre: "Temps 2 – Geste local", details: ["Anesthésie ; **drainage** par la poche ou incision, **débridement** doux à l'insert et aux curettes, irrigation", "Lésion endodontique associée : traitement endodontique (voir les fiches d'endodontie)"], materiel: ["anesthésique", "inserts fins", "curettes", "irrigation"] },
-        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026** ; antalgiques : **paracétamol** (4 g par jour au maximum, en 4 prises) ; bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle rapidement après l'urgence**, puis traitement parodontal complet"], materiel: ["ordonnance"] }
+        { titre: "Temps 3 – Prescription et suite", details: ["Antibiotiques **seulement dans les cas de la HAS 2026**",
+          "Antalgiques : **paracétamol** (4 g par jour au maximum, en 4 prises)",
+          "Bain de bouche (**Eludril Perio** (chlorhexidine 0,20 %))", "**Contrôle rapidement après l'urgence**, puis traitement parodontal complet"], materiel: ["ordonnance"] }
       ],
       consignes: [
         "**Hygiène** douce mais maintenue ; ne pas arrêter le brossage.",

@@ -492,3 +492,5 @@ button.inst:hover,button.inst:focus-visible{background:var(--brand-soft);color:v
 .pp-body{padding:4px 20px 18px}
 @media (max-width:560px){.pp-head{grid-template-columns:96px minmax(0,1fr) auto;gap:12px;padding:16px 14px 10px}.pp-photo{min-height:96px;padding:8px}.pp-photo img{max-height:100px}.pp-title h2{font-size:1.2rem}.pp-body{padding:4px 14px 14px}}
 .step-body li>ul{margin:.3em 0 .1em}.step-body li>ul>li{margin:.2em 0;color:var(--ink-2,inherit)}
+.step-body li.num{list-style:none;margin-left:-1.1em}
+.step-body li.num>ul{margin-left:1.1em}

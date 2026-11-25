@@ -5,13 +5,13 @@ var RIM_PA = {
   steps: function (pap) {
     return [
       "**1. Repères faciaux** : tracer **2 points cutanés** (sous-nasal et menton) pour mesurer les dimensions verticales au compas.",
-      "**2. Mesure de la DVR** (bouche au repos, **sans base d'occlusion**) : relaxation du patient (épaules, bâillement, eau en bouche puis déglutition), puis mesure au compas. **Répéter 3 fois et prendre la moyenne.**",
-      "**3. Calcul de la DVO (étape clé)** : **DVO = DVR − espace libre (2 à 3 mm)**. Elle donne la hauteur cible du bourrelet mandibulaire ; elle n'est **jamais estimée à l'œil**.",
-      "**4. Base maxillaire, réglages** : adaptation pleine ; soutien labial ; plan de Fox parallèle à la ligne bipupillaire et au plan de Camper ; son **F/V** (la lèvre inférieure effleure le bourrelet) ; tracer la ligne interincisive (philtrum), la ligne du sourire et la position des canines.",
-      "**5. Base mandibulaire** : vérifier la pleine adaptation, puis ajuster la hauteur du bourrelet à la **DVO calculée**.",
-      "**6. Contrôle des deux bases ensemble** : absence d'interférences en ORC ; si interférences, **meuler en commençant par le maxillaire**.",
+      { t: "**2. Mesure de la DVR** (bouche au repos, **sans base d'occlusion**)", sub: ["Relaxation du patient (épaules, bâillement, eau en bouche puis déglutition)", "Mesure au compas", "**Répéter 3 fois et prendre la moyenne.**"] },
+      { t: "**3. Calcul de la DVO (étape clé)**", sub: ["**DVO = DVR − espace libre (2 à 3 mm)**", "Elle donne la hauteur cible du bourrelet mandibulaire", "Elle n'est **jamais estimée à l'œil**"] },
+      { t: "**4. Base maxillaire, réglages**", sub: ["Adaptation pleine", "Soutien labial", "Plan de Fox parallèle à la ligne bipupillaire et au plan de Camper", "Son **F/V** (la lèvre inférieure effleure le bourrelet)", "Tracer la ligne interincisive (philtrum), la ligne du sourire et la position des canines"] },
+      { t: "**5. Base mandibulaire**", sub: ["Vérifier la pleine adaptation", "Ajuster la hauteur du bourrelet à la **DVO calculée**"] },
+      { t: "**6. Contrôle des deux bases ensemble**", sub: ["Absence d'interférences en ORC", "Si interférences, **meuler en commençant par le maxillaire**"] },
       "**7. Triangles de Patterson (dièdres)** : dièdres divergents dans le bourrelet maxillaire, en regard des **5 et 6**, qui servent de cales mécaniques anti-glissement.",
-      "**8. Enregistrement de l'ORC** : **pâte de Kerr** (thermoplastique) sur le bourrelet mandibulaire en regard des 5 et 6 ; chauffer, placer, **guider le patient en ORC en lui demandant de mettre la langue au palais, en arrière**" + (pap ? " (matériau d'enregistrement : Futar, cire, Aluwax ou pâte de Kerr selon la préférence de l'opérateur)." : " (l'Aluwax reste possible selon la préférence de l'opérateur)."),
+      { t: "**8. Enregistrement de l'ORC**", sub: ["**Pâte de Kerr** (thermoplastique) sur le bourrelet mandibulaire en regard des 5 et 6", "Chauffer, placer", "**Guider le patient en ORC en lui demandant de mettre la langue au palais, en arrière**", pap ? "Matériau d'enregistrement : Futar, cire, Aluwax ou pâte de Kerr selon la préférence de l'opérateur" : "L'Aluwax reste possible selon la préférence de l'opérateur"] },
       "**9. Vérification finale de la DVO (étape souvent oubliée)** : reprendre le compas **après la fermeture sur la pâte de Kerr** et vérifier que la DVO obtenue = DVR − espace libre."
     ];
   },
@@ -127,7 +127,9 @@ window.DISCIPLINES.push({
           "**Empreintes primaires** maxillaire et mandibulaire à l'**alginate** dans des porte-empreintes du commerce, désinfection puis coulée des modèles primaires"
         ], materiel: ["porte-empreintes du commerce", "alginate, bol et spatule", "désinfectant d'empreintes"], validation: "empreintes primaires", astuce: "Au laboratoire (ou par l'étudiant) : confection des porte-empreintes individuels sur les modèles primaires." },
         { titre: "Séance 2 – Empreintes secondaires", details: [
-          "**Essayage et ajustage des PEI**, puis **joint périphérique à la pâte de Kerr**, modelé par les mouvements fonctionnels (déglutition, ouverture, mimique, protrusion de la langue) ; **joint postérieur maxillaire**",
+          "**Essayage et ajustage des PEI**",
+          "**Joint périphérique à la pâte de Kerr**, modelé par les mouvements fonctionnels (déglutition, ouverture, mimique, protrusion de la langue)",
+          "**Joint postérieur maxillaire**",
           "**Empreinte secondaire à la pâte d'oxyde de zinc-eugénol**, maxillaire puis mandibulaire ; vérification de l'absence de zones de compression"
         ], materiel: ["PEI", "pâte de Kerr et source de chaleur", "pâte d'oxyde de zinc-eugénol", "fraise à résine pour retouches"], validation: "empreintes secondaires", astuce: "Au laboratoire : coulée des modèles de travail et confection des bases d'occlusion avec bourrelets de cire." },
         { titre: "Séance 3 – Rapports intermaxillaires (RIM)", details: [
@@ -143,8 +145,9 @@ window.DISCIPLINES.push({
           "**Équilibration occlusale** (papier à articuler, relation centrée et excursions) ; consignes d'hygiène et d'utilisation"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main pour retouches", "fiche de consignes patient"], validation: "pose" },
         { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois, 2 mois, 6 mois, 1 an)", details: [
-          "Contrôle à **48 h** : recueillir les **doléances** du patient ; **révélateur de pression (Coltène PSI)** pour repérer les zones de compression ; **retouches à la fraise** ; nouveau contrôle de l'occlusion",
-          "Contrôles à **1 semaine**, **1 mois**, **2 mois**, **6 mois** et **1 an**, puis **tous les ans** ; évaluer l'intérêt d'un rebasage ou d'un projet implantaire"
+          { t: "Contrôle à **48 h**", sub: ["Recueillir les **doléances** du patient", "**Révélateur de pression (Coltène PSI)** pour repérer les zones de compression", "**Retouches à la fraise**", "Nouveau contrôle de l'occlusion"] },
+          "Contrôles à **1 semaine**, **1 mois**, **2 mois**, **6 mois** et **1 an**, puis **tous les ans**",
+          "Évaluer l'intérêt d'un rebasage ou d'un projet implantaire"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises pour retouches"] }
       ],
       consignes: [
@@ -216,7 +219,10 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Examen et empreinte primaire", details: [
-          "Examen clinique, radiologique et parodontal ; **classification de l'édentement** ; dents à extraire, dents d'appui et type de crochets ; plan de traitement et consentement",
+          "Examen clinique, radiologique et parodontal",
+          "**Classification de l'édentement**",
+          "Dents à extraire, dents d'appui et type de crochets",
+          "Plan de traitement et consentement",
           "**Empreinte primaire à l'alginate** des deux arcades, coulée des modèles"
         ], materiel: ["porte-empreintes du commerce", "alginate", "désinfectant d'empreintes"], validation: "empreinte primaire", astuce: "Au laboratoire (ou par l'étudiant) : confection du porte-empreinte individuel sur le modèle primaire." },
         { titre: "Séance 2 – Empreinte secondaire à l'alginate", details: [
@@ -225,7 +231,7 @@ window.DISCIPLINES.push({
         ], materiel: ["PEI", "alginate", "teintier"], validation: "empreinte secondaire", astuce: "Au laboratoire : modèle de travail, bases d'occlusion avec bourrelets de cire si nécessaire." },
         { titre: "Séance 3 – Rapports intermaxillaires", details: [
           "**Pas toujours nécessaire** (si les dents restantes assurent un calage stable) ; **l'occlusion est dans tous les cas enregistrée avec le Futar**",
-          "Si l'occlusion n'est pas stable : bases d'occlusion et bourrelets de cire, dimension verticale et relation de référence ; repères esthétiques ; montage sur articulateur"
+          { t: "Si l'occlusion n'est pas stable", sub: ["Bases d'occlusion et bourrelets de cire, dimension verticale et relation de référence", "Repères esthétiques", "Montage sur articulateur"] }
         ], materiel: ["Futar", "bases d'occlusion et bourrelets de cire (si besoin)", "règle de Fox"], validation: "enregistrement des rapports intermaxillaires", astuce: "Au laboratoire : montage des dents sur cire sur articulateur." },
         { titre: "Séance 4 – Essayage des dents montées", details: [
           "Contrôler **esthétique, phonétique, occlusion** et appuis sur les dents restantes ; validation par le patient",
@@ -236,8 +242,9 @@ window.DISCIPLINES.push({
           "Instructions d'hygiène et de manipulation, consignes remises au patient"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main", "fiche de consignes patient"], validation: "pose" },
         { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois, 2 mois, 6 mois, 1 an)", details: [
-          "Contrôle à **48 h** : recueillir les **doléances** du patient ; **révélateur de pression (Coltène PSI)** ; **retouches à la fraise** ; contrôle de l'occlusion",
-          "Contrôles à **1 semaine**, **1 mois**, **2 mois**, **6 mois** et **1 an**, puis **tous les ans** : appuis, crochets ; planification de la **prothèse définitive** à **3 à 4 mois**, une fois les crêtes stabilisées"
+          { t: "Contrôle à **48 h**", sub: ["Recueillir les **doléances** du patient", "**Révélateur de pression (Coltène PSI)**", "**Retouches à la fraise**", "Contrôle de l'occlusion"] },
+          "Contrôles à **1 semaine**, **1 mois**, **2 mois**, **6 mois** et **1 an**, puis **tous les ans** : appuis, crochets",
+          "Planification de la **prothèse définitive** à **3 à 4 mois**, une fois les crêtes stabilisées"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises pour retouches"] }
       ],
       consignes: [
@@ -306,12 +313,18 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Examen, empreintes d'étude et projet", details: [
-          "Examen clinique, radiologique et parodontal ; **classification de l'édentement** ; **empreintes d'étude à l'alginate**, enregistrement de l'occlusion, montage sur articulateur",
+          "Examen clinique, radiologique et parodontal",
+          "**Classification de l'édentement**",
+          "**Empreintes d'étude à l'alginate**",
+          "Enregistrement de l'occlusion",
+          "Montage sur articulateur",
           "**Étude des modèles** (axe d'insertion, zones de dépouille) et **fiche de prescription transmise au laboratoire, qui conçoit le châssis**"
         ], materiel: ["porte-empreintes du commerce", "alginate", "matériau d'enregistrement de l'occlusion", "fiche de prescription"], validation: "empreintes d'étude", astuce: "Au laboratoire : modèles d'étude coulés, conception du châssis, porte-empreinte individuel (PEI) pour la séance 2." },
         { titre: "Séance 2 – Préparations (si nécessaire) et empreinte secondaire", details: [
           "**Préparations** des dents d'appui **seulement si nécessaire** : plans guides, logements de taquets (plancher arrondi, sans bord vif)",
-          "**Empreinte secondaire** à l'**alginate dans le PEI** (essayage du PEI au préalable), maxillaire et mandibulaire ; enregistrement de l'occlusion si besoin ; choix de la teinte au **teintier**"
+          "**Empreinte secondaire** à l'**alginate dans le PEI** (essayage du PEI au préalable), maxillaire et mandibulaire",
+          "Enregistrement de l'occlusion si besoin",
+          "Choix de la teinte au **teintier**"
         ], materiel: ["PEI", "alginate", "fraises de préparation (si besoin)", "teintier"], validation: "empreinte secondaire", astuce: "Au laboratoire : modèle de travail et coulée du châssis métallique." },
         { titre: "Séance 3 – Essayage du châssis", details: [
           "Contrôler l'**insertion, la désinsertion, la stabilité**, la mise en place complète des taquets, l'absence de contact prématuré et de blessure",
@@ -409,7 +422,7 @@ window.DISCIPLINES.push({
   var pac = find('pac-bimaxillaire');
   if (pac) {
     var s3 = step(pac, 'Séance 3');
-    s3.details = RIM_PA.steps(false).concat(["**Après les RIM** : **arc facial** pour le montage du modèle maxillaire sur l'articulateur ; choix de la **teinte** au teintier, de la forme et de la taille des dents"]);
+    s3.details = RIM_PA.steps(false).concat([{ t: "**Après les RIM**", sub: ["**Arc facial** pour le montage du modèle maxillaire sur l'articulateur", "Choix de la **teinte** au teintier, de la forme et de la taille des dents"] }]);
     s3.materiel = mat(RIM_PA.materiel, ["arc facial", "Aluwax (selon préférence)", "teintier"]);
     pac.hopital = pac.hopital.map(function (h) {
       return h.indexOf('**Rapports intermaxillaires** : enregistrement') === 0

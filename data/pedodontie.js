@@ -33,13 +33,16 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Évaluer", details: ["Risque carieux, comportement de l'enfant", "Radiographie : profondeur de la lésion, état de la furcation et du périapex", "Symptômes pulpaires (douleur spontanée, fistule, mobilité)"] },
-        { titre: "Mesures non invasives", details: ["**SDF 38 %** : une à deux fois par an, avantage pour l'arrêt de la carie, meilleurs résultats avec deux applications annuelles ; intéressant chez l'enfant à haut risque carieux ou très jeune pour retarder un traitement invasif"] },
-        { titre: "Technique de Hall", details: ["Couronne préformée métallique posée **sans anesthésie ni élimination de la carie** : réduit le risque de douleur et d'échec de la restauration ; mieux acceptée par enfants et parents", "Les couronnes préformées sont aussi recommandées sur les molaires temporaires traitées endodontiquement"] },
+        { titre: "Mesures non invasives", details: [{ t: "**SDF 38 %**", sub: ["Une à deux fois par an, avantage pour l'arrêt de la carie, meilleurs résultats avec deux applications annuelles", "Intéressant chez l'enfant à haut risque carieux ou très jeune pour retarder un traitement invasif"] }] },
+        { titre: "Technique de Hall", details: [{ t: "Couronne préformée métallique posée **sans anesthésie ni élimination de la carie**", sub: ["Réduit le risque de douleur et d'échec de la restauration", "Mieux acceptée par enfants et parents"] }, "Les couronnes préformées sont aussi recommandées sur les molaires temporaires traitées endodontiquement"] },
         { titre: "Élimination sélective du tissu carié", details: ["**Curetage sélectif (en une étape) ou en deux temps** : à envisager pour les lésions atteignant le tiers ou le quart interne de la dentine, en l'absence de signes de pulpite irréversible, afin d'éviter l'exposition pulpaire", "Coiffage indirect : taux de succès élevé ; **Biodentine** très utilisée au service"] },
-        { titre: "Pulpotomie (si exposition ou pulpite réversible)", details: ["Recommandée : taux de succès élevés", "Au service : **Biodentine** (très utilisée). Recommandations : **MTA** ou **sulfate ferrique** équivalents ; formocrésol à abandonner ; **hydroxyde de calcium : le moins performant, déconseillé**", "Coiffage direct : usage limité (dents asymptomatiques, conditions non infectieuses)", "Pulpectomie : pas en 1re intention sur molaire temporaire vitale ; envisageable plutôt que l'avulsion si perte d'espace ou absence de successeur"] },
+        { titre: "Pulpotomie (si exposition ou pulpite réversible)", details: ["Recommandée : taux de succès élevés", "Au service : **Biodentine** (très utilisée)",
+          "Recommandations : **MTA** ou **sulfate ferrique** équivalents",
+          "Formocrésol à abandonner",
+          "**Hydroxyde de calcium : le moins performant, déconseillé**", "Coiffage direct : usage limité (dents asymptomatiques, conditions non infectieuses)", "Pulpectomie : pas en 1re intention sur molaire temporaire vitale ; envisageable plutôt que l'avulsion si perte d'espace ou absence de successeur"] },
         { titre: "Restauration", details: [
           "**Classe I** : verre ionomère (GIC, HVGIC, RMGIC), compomère ou composite hybride / bulk-fill",
-          "**Classe II** : compomère, composite hybride ou bulk-fill ; HVGIC/RMGIC avec prudence ; **verre ionomère renforcé de métal et glass carbomer non recommandés**",
+          { t: "**Classe II**", sub: ["Compomère, composite hybride ou bulk-fill", "HVGIC/RMGIC avec prudence", "**Verre ionomère renforcé de métal et glass carbomer non recommandés**"] },
           "Multi-faces : privilégier la couronne préformée"
         ], astuce: "Lampe calibrée et polymérisation suffisante (en tenant compte de la couche inhibée par l'oxygène)." },
         { titre: "Suivi", details: ["Le critère de succès principal est **clinique** ; ne pas réintervenir sur un seul échec radiographique"] }
