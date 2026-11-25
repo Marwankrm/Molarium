@@ -56,10 +56,11 @@ Les photos de `img/materiaux/` ont été récupérées sur les sites des fabrica
 
 Le dossier `archive/` contient des fiches retirées du site mais conservées (non chargées par `index.html`), par exemple `archive/rebasage-direct.js`, avec la marche à suivre pour les remettre en ligne.
 
-## Design « Aurora » (v4)
+## Design « Atlas » (v6)
 
-Identité : fond blanc, encre foncée et **une seule couleur de marque, le bleu-vert Molarium** (`--brand` dans `css/v4.css`). Le rouge n'est gardé que pour les alertes. Pas de couleur par discipline, pas de dégradé multicolore. Typographie : Space Grotesk (titres) et Figtree (texte). Barre de navigation flottante sur téléphone. Tout est dans `css/v4.css`, chargé après `style.css` et `v3.css` ; la police `css/fonts/space-grotesk-latin-wght-normal.woff2` est sous licence SIL OFL (`SpaceGrotesk-OFL.txt`).
+Un seul fichier de style, `css/v6.css`, chargé après `style.css` (les anciennes couches v3, v4 et v5 sont supprimées). Une seule couleur de marque, le bleu-vert Molarium (`--brand`).
 
-## Identité « Atlas » (v5)
-
-Le site est conçu comme un **atlas clinique** : planche anatomique au trait (molaire en coupe, dessinée en SVG dans `js/art.js`), odontogramme en notation FDI, icônes dessinées pour chaque discipline, étiquettes techniques et numérotation en chasse fixe (JetBrains Mono, licence SIL OFL), règle graduée sous les titres. Toujours une seule couleur de marque (`--brand`). Les styles sont dans `css/v5.css` (chargé après `v4.css`) ; les illustrations sont dans `js/art.js`.
+- **Navigation :** barre du haut (Accueil, Disciplines avec menu au survol, Matériaux, Favoris, recherche). Sur téléphone : barre flottante en bas et tiroir des disciplines.
+- **Accueil :** bandeau pleine largeur avec une **molaire interactive** (`js/art.js`) dont chaque zone ouvre une discipline, puis des pavés asymétriques.
+- **Signature visuelle :** coin « molaire » (trois angles arrondis, un presque carré), numérotation en chasse fixe (JetBrains Mono), bandeaux bleu-vert profond, listes éditoriales à la place des cartes, vitrine de produits pour les matériaux.
+- **Polices :** Space Grotesk (titres), Figtree (texte), JetBrains Mono (repères) ; licences SIL OFL dans `css/fonts/`.

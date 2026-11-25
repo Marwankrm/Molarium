@@ -217,6 +217,7 @@
     $('menuBtn').setAttribute('aria-expanded', on ? 'true' : 'false');
   }
   function refreshChrome(active, proto) {
+    if (typeof markNav === 'function') markNav();
     if (arguments.length === 0) { active = currentDisc; proto = currentProto; }
     currentDisc = active; currentProto = proto;
     buildSidebar(active, proto); buildTabbar();
@@ -232,7 +233,22 @@
     });
     return nav;
   }
-  function mount(node) { $main.textContent = ''; $main.appendChild(node); if (window.UIFX) window.UIFX.page($main); }
+  function mount(node, full) {
+    $main.textContent = ''; $main.className = '';
+    if (full) $main.appendChild(node); else { var w = el('div', { class: 'wrap' }); w.appendChild(node); $main.appendChild(w); }
+    if (window.UIFX) window.UIFX.page($main);
+  }
+  // bandeau d'en-tête pleine largeur (fil d'Ariane, repère, titre, éléments en plus)
+  function band(o) {
+    var inner = [];
+    if (o.crumbs) inner.push(crumbs(o.crumbs));
+    if (o.kicker) inner.push(el('p', { class: 'kicker', text: o.kicker }));
+    inner.push(el('h1', { text: o.title }));
+    (o.extra || []).forEach(function (x) { if (x) inner.push(x); });
+    var kids = [el('div', { class: 'wrap' }, inner)];
+    if (o.art) kids.unshift(el('span', { class: 'band-art', 'aria-hidden': 'true' }, [o.art]));
+    return el('header', { class: 'band ' + (o.cls || '') }, kids);
+  }
   function banner() {
     try { if (sessionStorage.getItem('bannerOff')) return null; } catch (e) {}
     var b = el('div', { class: 'banner', role: 'note' }, [
@@ -245,17 +261,34 @@
 
   function renderHome() {
     setTitle(''); setDisc(null); refreshChrome(null, null);
-    var frag = document.createDocumentFragment();
+    var A = window.MOLARIUM_ART, out = document.createDocumentFragment();
     var heroBtns = el('div', { class: 'hero-cta' }, [
       el('button', { type: 'button', class: 'hero-btn main', onclick: function () { window.scrollTo(0, 0); $q.focus(); } }, [icon('search', 18), el('span', { text: 'Rechercher un protocole' })]),
-      el('button', { type: 'button', class: 'hero-btn', onclick: function () { var g = document.querySelector('.grid'); if (g) g.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); } }, [el('span', { text: 'Parcourir les disciplines' })])
+      el('a', { class: 'hero-btn', href: '#/materiaux' }, [icon('box', 18), el('span', { text: 'Voir les matériaux' })])
     ]);
-    var A = window.MOLARIUM_ART;
-    frag.appendChild(el('section', { class: 'hero' }, [
+    var counts = {}; DISCIPLINES.forEach(function (d) { counts[d.id] = plural(d.protocoles.length, 'fiche'); });
+    var molar = el('figure', { class: 'molar' });
+    if (A) {
+      var svgNode = rawSvg(A.molar(counts));
+      var cap = el('figcaption', { class: 'molar-cap' }, [el('span', { class: 'mc-k', text: 'Molaire interactive' }), el('a', { class: 'mc-t', href: '#/', text: 'Touchez ou survolez une zone' })]);
+      var capK = cap.firstChild, capT = cap.lastChild, defaultT = capT.textContent;
+      Array.prototype.forEach.call(svgNode.querySelectorAll('.m-zone'), function (z) {
+        var id = z.getAttribute('data-disc'), d = findDisc(id);
+        function on() { svgNode.setAttribute('data-active', id); capK.textContent = d ? plural(d.protocoles.length, 'fiche') : ''; capT.textContent = (d ? d.nom : '') + ' →'; capT.setAttribute('href', '#/' + id); }
+        function off() { svgNode.removeAttribute('data-active'); capK.textContent = 'Molaire interactive'; capT.textContent = defaultT; capT.setAttribute('href', '#/'); }
+        z.addEventListener('mouseenter', on); z.addEventListener('focus', on); z.addEventListener('mouseleave', off); z.addEventListener('blur', off);
+        z.addEventListener('click', function () { if (window.matchMedia('(hover: none)').matches && svgNode.getAttribute('data-active') !== id) { on(); return; } location.hash = '#/' + id; });
+        z.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/' + id; } });
+      });
+      var more = el('div', { class: 'molar-more' }, [el('span', { text: 'Aussi' })]);
+      ['prothese-amovible', 'pedodontie', 'tronc-commun'].forEach(function (id) { var d = findDisc(id); if (d) more.appendChild(el('a', { href: '#/' + id, text: d.nom })); });
+      molar.appendChild(svgNode); molar.appendChild(cap); molar.appendChild(more);
+    }
+    out.appendChild(el('section', { class: 'hero' }, [el('div', { class: 'wrap hero-in' }, [
       el('div', { class: 'hero-copy' }, [
         el('p', { class: 'kicker', text: 'Atlas clinique · Odontologie' }),
-        el('h1', null, [document.createTextNode('Protocoles '), el('span', { class: 'hl', text: 'cliniques' }), document.createTextNode(' d\'odontologie')]),
-        el('p', { class: 'lead', text: 'Les fiches de protocoles du service, discipline par discipline : séances, matériel, points de vigilance et consignes au patient.' }),
+        el('h1', null, [document.createTextNode('Les protocoles '), el('span', { class: 'hl', text: 'cliniques' }), document.createTextNode(' du service')]),
+        el('p', { class: 'lead', text: 'Chaque séance, pas à pas : matériel, points de vigilance et consignes au patient, discipline par discipline.' }),
         heroBtns,
         el('div', { class: 'hero-meta' }, [
           el('div', null, [el('b', { text: pad2(DISCIPLINES.length) }), el('span', { text: 'disciplines' })]),
@@ -263,60 +296,57 @@
           el('a', { href: '#/materiaux' }, [el('b', { text: String(MAT_TOTAL) }), el('span', { text: 'matériaux' })])
         ])
       ]),
-      A ? el('figure', { class: 'plate' }, [
-        (function () { var f = el('div', { class: 'plate-frame' }); f.appendChild(rawSvg(A.plate())); return f; })(),
-        el('figcaption', null, [el('span', { text: 'Planche 01' }), document.createTextNode(' · Molaire en coupe')])
-      ]) : null
-    ]));
-    var bn = banner(); if (bn) frag.appendChild(bn);
-    if (A) {
-      var od = el('div', { class: 'odonto', role: 'presentation' }, [el('p', { class: 'kicker', text: 'Odontogramme · notation FDI' })]);
-      od.appendChild(rawSvg(A.odonto())); frag.appendChild(od);
-    }
+      molar
+    ])]));
 
+    var wrap = el('div', { class: 'wrap home-body' });
     var rec = recents.map(byKey).filter(Boolean).slice(0, 6);
     if (rec.length) {
-      frag.appendChild(el('div', { class: 'section-title' }, [el('h2', { text: 'Récemment consultés' })]));
-      var rail = el('div', { class: 'rail' }); rec.forEach(function (p) { rail.appendChild(protoCard(p, true)); }); frag.appendChild(rail);
+      wrap.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: 'Reprendre' }), el('h2', { text: 'Récemment consultés' })]));
+      var rail = el('div', { class: 'rail' }); rec.forEach(function (p) { rail.appendChild(protoCard(p, true)); }); wrap.appendChild(rail);
     }
     var fv = favs.map(byKey).filter(Boolean);
     if (fv.length) {
-      frag.appendChild(el('div', { class: 'section-title' }, [el('h2', { text: 'Favoris' }), el('a', { href: '#/favoris', text: 'Tout voir' })]));
-      var rail2 = el('div', { class: 'rail' }); fv.slice(0, 6).forEach(function (p) { rail2.appendChild(protoCard(p, true)); }); frag.appendChild(rail2);
+      wrap.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: 'Favoris' }), el('h2', { text: 'Vos fiches favorites' }), el('a', { href: '#/favoris', text: 'Tout voir' })]));
+      var rail2 = el('div', { class: 'rail' }); fv.slice(0, 6).forEach(function (p) { rail2.appendChild(protoCard(p, true)); }); wrap.appendChild(rail2);
     }
-
-    frag.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: '01' }), el('h2', { text: 'Disciplines' })]));
-    var grid = el('div', { class: 'grid' });
+    wrap.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: '01' }), el('h2', { text: 'Choisir une discipline' })]));
+    var bento = el('div', { class: 'bento' });
     DISCIPLINES.forEach(function (d, i) {
-      grid.appendChild(el('a', { class: 'card', href: '#/' + d.id, style: colorStyle(d) }, [
-        el('div', { class: 'card-top' }, [el('span', { class: 'badge-ico', 'aria-hidden': 'true' }, [discIco(d.id)]), el('span', { class: 'idx', text: pad2(i + 1) })]),
+      bento.appendChild(el('a', { class: 'tile tile-' + d.id, href: '#/' + d.id }, [
+        el('span', { class: 'tile-ico', 'aria-hidden': 'true' }, [discIco(d.id)]),
+        el('span', { class: 'tile-idx', text: pad2(i + 1) }),
         el('h3', { text: d.nom }),
-        el('p', { text: d.description }),
-        el('div', { class: 'meta' }, [el('b', { text: plural(d.protocoles.length, 'fiche') }), el('span', { class: 'arr' }, [icon('arrow', 18, '2.2')])])
+        el('p', { class: 'tile-sub', text: d.description }),
+        el('span', { class: 'tile-go' }, [el('b', { text: plural(d.protocoles.length, 'fiche') }), el('i', null, [icon('arrow', 18, '2.2')])])
       ]));
     });
-    frag.appendChild(grid);
     if (window.MATERIAUX) {
-      frag.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: '02' }), el('h2', { text: 'Matériaux' })]));
-      frag.appendChild(el('a', { class: 'card card-wide', href: '#/materiaux', style: colorStyle({ couleur: '#1d5fa8' }) }, [
-        el('div', { class: 'card-top' }, [el('span', { class: 'badge-ico', 'aria-hidden': 'true' }, [discIco('materiaux')]), el('span', { class: 'idx', text: String(MAT_TOTAL) })]),
+      var thumbs = el('span', { class: 'tile-thumbs', 'aria-hidden': 'true' });
+      var ids = ['irm-dentsply-sirona', 'biodentine-septodont', 'pulp-canal-sealer-ewt-kerr', 'futar-d-kettenbach'];
+      ids.forEach(function (id) { var im = window.MATERIAUX_IMG && window.MATERIAUX_IMG[id]; if (im) thumbs.appendChild(el('img', { src: im.f, alt: '', loading: 'lazy', width: '64', height: '64' })); });
+      bento.appendChild(el('a', { class: 'tile tile-materiaux', href: '#/materiaux' }, [
+        thumbs,
+        el('span', { class: 'tile-idx', text: pad2(DISCIPLINES.length + 1) }),
         el('h3', { text: 'Matériaux du service' }),
-        el('p', { text: 'Indications, contre-indications, méthode d\'utilisation et choix selon la situation, d\'après les notices.' }),
-        el('div', { class: 'meta' }, [el('b', { text: plural(MAT_TOTAL, 'produit') }), el('span', { class: 'arr' }, [icon('arrow', 18, '2.2')])])
+        el('p', { class: 'tile-sub', text: 'Indications, précautions et méthode d\'utilisation de chaque produit.' }),
+        el('span', { class: 'tile-go' }, [el('b', { text: plural(MAT_TOTAL, 'produit') }), el('i', null, [icon('arrow', 18, '2.2')])])
       ]));
     }
-    mount(frag);
+    wrap.appendChild(bento);
+    out.appendChild(wrap);
+    mount(out, true); $main.classList.add('home');
   }
 
   function renderDiscipline(d) {
     setTitle(d.nom); setDisc(d); refreshChrome(d.id, null);
-    var frag = document.createDocumentFragment();
-    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: d.nom }]));
+    var out = document.createDocumentFragment();
     var di = DISCIPLINES.indexOf(d) + 1;
-    frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [el('span', { class: 'dh-ico', 'aria-hidden': 'true' }, [discIco(d.id)]), el('p', { class: 'kicker', text: 'Discipline ' + pad2(di) + ' · ' + plural(d.protocoles.length, 'fiche') }), el('h1', { text: d.nom })]));
+    out.appendChild(band({ cls: 'band-disc', art: discIco(d.id), crumbs: [{ href: '#/', label: 'Accueil' }, { label: d.nom }], kicker: 'Discipline ' + pad2(di) + ' · ' + plural(d.protocoles.length, 'fiche'), title: d.nom }));
     var list = el('div', { class: 'plist' });
     d.protocoles.forEach(function (p) { list.appendChild(protoCard(p, false)); });
-    frag.appendChild(list); mount(frag);
+    out.appendChild(el('div', { class: 'wrap' }, [list]));
+    mount(out, true);
   }
 
   // --- page protocole ---
@@ -336,7 +366,8 @@
     var frag = document.createDocumentFragment();
 
     frag.appendChild(el('div', { class: 'print-head' }, [document.createTextNode('Molarium · Protocoles d\'odontologie · ' + d.nom + (p.statut === 'valide' ? '' : ' · DOCUMENT À VALIDER'))]));
-    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { href: '#/' + d.id, label: d.nom }, { label: p.titre }]));
+    var bandIn = document.createDocumentFragment();
+    bandIn.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { href: '#/' + d.id, label: d.nom }, { label: p.titre }]));
 
     // en-tête
     var chips = [statusChip(p)];
@@ -364,8 +395,7 @@
     } }, [icon(navigator.share ? 'share' : 'link', 18), el('span', { text: navigator.share ? 'Partager' : 'Copier le lien' })]));
 
     var pi = d.protocoles.indexOf(p) + 1;
-    frag.appendChild(el('header', { class: 'page-head', style: colorStyle(d) }, [
-      el('span', { class: 'ph-art', 'aria-hidden': 'true' }, [discIco(d.id)]),
+    bandIn.appendChild(el('div', { class: 'page-head', style: colorStyle(d) }, [
       el('p', { class: 'kicker', text: d.nom + ' · Fiche ' + pad2(pi) + '/' + pad2(d.protocoles.length) }),
       el('h1', { text: p.titre }),
       el('div', { class: 'chips' }, chips), el('div', { class: 'actions' }, actions)
@@ -469,7 +499,11 @@
 
     frag.appendChild(bar2);
     frag.appendChild(el('div', { class: 'pwrap', style: colorStyle(d) }, [el('div', null, secs), side]));
-    mount(frag);
+    var outP = document.createDocumentFragment();
+    var bw = el('div', { class: 'wrap' }); bw.appendChild(bandIn);
+    outP.appendChild(el('header', { class: 'band band-fiche' }, [el('span', { class: 'band-art', 'aria-hidden': 'true' }, [discIco(d.id)]), bw]));
+    var cw = el('div', { class: 'wrap' }); cw.appendChild(frag); outP.appendChild(cw);
+    mount(outP, true);
 
     // section active dans le sommaire
     if ('IntersectionObserver' in window) {
@@ -623,10 +657,9 @@
   function renderSearch(query) {
     setTitle('Recherche : ' + query); setDisc(null); refreshChrome(null, null);
     var r = search(query), frag = document.createDocumentFragment();
-    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: 'Recherche' }]));
-    frag.appendChild(el('h1', { text: 'Résultats pour « ' + query + ' »' }));
-    frag.appendChild(el('p', { class: 'muted', text: plural(r.hits.length, 'protocole trouvé', 'protocoles trouvés') }));
-    if (!r.hits.length) frag.appendChild(el('div', { class: 'empty', text: 'Aucun protocole ne correspond. Essayez un autre terme (ex. « digue », « empreinte », « sondage »).' }));
+    frag.appendChild(band({ cls: 'band-slim', crumbs: [{ href: '#/', label: 'Accueil' }, { label: 'Recherche' }], kicker: plural(r.hits.length, 'protocole trouvé', 'protocoles trouvés'), title: 'Résultats pour « ' + query + ' »' }));
+    var rw = el('div', { class: 'wrap' }); frag.appendChild(rw);
+    if (!r.hits.length) rw.appendChild(el('div', { class: 'empty', text: 'Aucun protocole ne correspond. Essayez un autre terme (ex. « digue », « empreinte », « sondage »).' }));
     var list = el('div', { class: 'plist', style: 'margin-top:16px' });
     r.hits.forEach(function (h) {
       var p = h.p;
@@ -635,7 +668,7 @@
       ]);
       var f = favButton(p); f.classList.add('fav'); a.appendChild(f); list.appendChild(a);
     });
-    frag.appendChild(list); mount(frag);
+    rw.appendChild(list); mount(frag, true);
   }
 
   // suggestions instantanées
@@ -657,12 +690,11 @@
   function renderFavs() {
     setTitle('Favoris'); setDisc(null); refreshChrome(null, null);
     var frag = document.createDocumentFragment();
-    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: 'Favoris' }]));
-    frag.appendChild(el('h1', { text: 'Favoris' }));
     var list = favs.map(byKey).filter(Boolean);
+    frag.appendChild(band({ cls: 'band-slim', crumbs: [{ href: '#/', label: 'Accueil' }, { label: 'Favoris' }], kicker: plural(list.length, 'fiche'), title: 'Favoris' }));
     if (!list.length) frag.appendChild(el('div', { class: 'empty', text: 'Aucun favori pour le moment. Touchez l\'étoile d\'une fiche pour l\'ajouter ici.' }));
     var g = el('div', { class: 'plist' }); list.forEach(function (p) { g.appendChild(protoCard(p, true)); });
-    frag.appendChild(g); mount(frag);
+    var cw2 = el('div', { class: 'wrap' }, [list.length ? null : frag.lastChild, g]); frag.appendChild(cw2); mount(frag, true);
   }
 
   // --- matériaux du service ---
@@ -683,6 +715,7 @@
     ]) : null;
     var body = el('div', null, [fig, el('p', { class: 'mtype', text: p.type }), matBlock('m-ind', 'Indications', p.ind), matBlock('m-ci', 'Contre-indications et précautions', p.ci), matBlock('m-met', 'Méthode d\'utilisation', p.met), matBlock('m-ret', 'À retenir', p.ret), src]);
     var d = acc('mat-' + p.id, p.nom.replace(/\*\*/g, ''), body, { open: false, icon: 'box', cls: 'mat-acc' });
+    d.firstChild.insertBefore(el('span', { class: 'mtype-s', text: p.type.replace(/\s*\(.*$/, '') }), d.firstChild.lastChild);
     if (im && im.f) { var ico = d.querySelector('.acc-ico'); if (ico) { ico.textContent = ''; ico.appendChild(el('img', { src: im.f, alt: '', loading: 'lazy', width: '56', height: '56' })); } }
     d._hay = plain([p.nom, p.type, (p.ind || []).join(' '), (p.ci || []).join(' '), (p.met || []).join(' '), (p.ret || []).join(' ')].join(' ')).toLowerCase();
     return d;
@@ -691,43 +724,70 @@
     setTitle('Matériaux'); setDisc(null); refreshChrome(null, null);
     var M = window.MATERIAUX; if (!M) return renderNotFound();
     var frag = document.createDocumentFragment();
-    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: 'Matériaux' }]));
-    frag.appendChild(el('h1', { text: 'Matériaux du service' }));
-    frag.appendChild(el('p', { class: 'muted', text: MAT_TOTAL + ' produits : indications, contre-indications, méthode d\'utilisation et choix selon la situation, d\'après les notices des fabricants et des thèses. Vérifier la notice du lot et faire valider par l\'encadrant.' }));
     var q = el('input', { type: 'search', class: 'mat-search', placeholder: 'Filtrer : produit ou usage…', 'aria-label': 'Filtrer les matériaux' });
-    frag.appendChild(el('div', { class: 'toolbar' }, [q]));
+    var body = document.createDocumentFragment();
+    frag.appendChild(band({ cls: 'band-mat', art: discIco('materiaux'), crumbs: [{ href: '#/', label: 'Accueil' }, { label: 'Matériaux' }], kicker: plural(MAT_TOTAL, 'produit'), title: 'Matériaux du service', extra: [el('p', { class: 'band-sub', text: 'Indications, contre-indications, méthode d\'utilisation et choix selon la situation, d\'après les notices des fabricants. Vérifier la notice du lot et faire valider par l\'encadrant.' }), q] }));
 
     var choix = el('div', { class: 'mchoix' });
     M.choix.forEach(function (c) { choix.appendChild(el('div', { class: 'mc' }, [el('h3', { text: c.t }), el('p', null, [rich(c.x)])])); });
     var choixAcc = acc('mat-choix', 'Quel matériau dans quelle situation ?', choix, { open: true, icon: 'list', cls: 'sec-blue' });
-    frag.appendChild(choixAcc);
+    body.appendChild(choixAcc);
 
     var groups = [];
     M.sections.forEach(function (sec) {
       var head = el('div', { class: 'section-title' }, [el('h2', { text: sec.titre })]);
-      var cards = sec.produits.map(matCard);
-      frag.appendChild(head); cards.forEach(function (c) { frag.appendChild(c); });
-      groups.push({ head: head, cards: cards });
+      var cards = sec.produits.map(matCard), grid = el('div', { class: 'mat-grid' });
+      body.appendChild(head); cards.forEach(function (c) { grid.appendChild(c); }); body.appendChild(grid);
+      groups.push({ head: head, cards: cards, grid: grid });
     });
     var none = el('div', { class: 'empty', text: 'Aucun produit ne correspond.', hidden: 'hidden' });
-    frag.appendChild(none);
+    body.appendChild(none);
     q.addEventListener('input', function () {
       var v = q.value.trim().toLowerCase(), any = false;
       choixAcc.hidden = !!v;
       groups.forEach(function (g) {
         var n = 0;
         g.cards.forEach(function (c) { var ok = !v || c._hay.indexOf(v) >= 0; c.hidden = !ok; if (ok) n++; if (v && ok) c.setAttribute('open', ''); });
-        g.head.hidden = !n; any = any || n > 0;
+        g.head.hidden = !n; g.grid.hidden = !n; any = any || n > 0;
       });
       none.hidden = any || !v;
     });
-    mount(frag);
+    frag.appendChild(el('div', { class: 'wrap' }, [body])); mount(frag, true);
   }
 
   function renderNotFound() {
     setTitle('Introuvable'); setDisc(null); refreshChrome(null, null);
     mount(el('div', { class: 'empty' }, [el('h1', { text: 'Page introuvable' }), el('a', { href: '#/', text: 'Retour à l\'accueil' })]));
   }
+
+
+  // ---------- navigation du haut : menu « Disciplines » qui s'ouvre au survol ----------
+  var $mega = $('mega'), $discBtn = $('discBtn'), $navDisc = $('navDisc'), megaTimer = null;
+  function buildMega() {
+    $mega.textContent = '';
+    var grid = el('div', { class: 'mega-grid' });
+    DISCIPLINES.forEach(function (d, i) {
+      var col = el('div', { class: 'mega-col' }, [el('a', { class: 'mega-head', href: '#/' + d.id }, [discIco(d.id, 'mega-ico'), el('span', null, [el('i', { text: pad2(i + 1) }), document.createTextNode(d.nom)])])]);
+      var list = el('ul');
+      d.protocoles.forEach(function (p) { list.appendChild(el('li', null, [el('a', { href: '#/' + d.id + '/' + p.id, text: p.titre })])); });
+      col.appendChild(list); grid.appendChild(col);
+    });
+    $mega.appendChild(grid);
+  }
+  function openMega(on) {
+    clearTimeout(megaTimer);
+    $mega.hidden = !on; $discBtn.setAttribute('aria-expanded', on ? 'true' : 'false'); $navDisc.classList.toggle('open', !!on);
+  }
+  $navDisc.addEventListener('mouseenter', function () { clearTimeout(megaTimer); megaTimer = setTimeout(function () { openMega(true); }, 90); });
+  $navDisc.addEventListener('mouseleave', function () { clearTimeout(megaTimer); megaTimer = setTimeout(function () { openMega(false); }, 180); });
+  $discBtn.addEventListener('click', function () { openMega($mega.hidden); });
+  $navDisc.addEventListener('focusout', function (e) { if (!$navDisc.contains(e.relatedTarget)) openMega(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') openMega(false); });
+  function markNav() {
+    var h = location.hash || '#/', which = (h === '#/' || h === '#' || h === '') ? 'home' : /^#\/materiaux/.test(h) ? 'materiaux' : /^#\/favoris/.test(h) ? 'favoris' : (/^#\/recherche/.test(h) ? '' : 'disc');
+    Array.prototype.forEach.call(document.querySelectorAll('#mainnav [data-nav]'), function (n) { n.classList.toggle('on', n.getAttribute('data-nav') === which); });
+  }
+  buildMega();
 
   // ---------- routeur ----------
   try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
@@ -738,7 +798,7 @@
   }
   function route() {
     var parts = location.hash.replace(/^#\/?/, '').split('/').map(decodeURIComponent).filter(Boolean);
-    closeSuggest(); openMenu(false);
+    closeSuggest(); openMenu(false); openMega(false);
     toTop();
     if (parts[0] === 'recherche') { var q = parts.slice(1).join('/'); $q.value = q; return renderSearch(q); }
     $q.value = '';
@@ -784,14 +844,8 @@
   // thème et taille du texte
   var root = document.documentElement;
   root.setAttribute('data-theme', 'light'); try { localStorage.removeItem('theme'); } catch (e) {}
-  var scales = [1, 1.12, 1.26], scaleIdx = Math.max(0, Math.min(2, load('scale', 0)));
-  function applyScale() { root.style.setProperty('--scale', scales[scaleIdx]); }
-  applyScale();
-  $('textBtn').addEventListener('click', function () { scaleIdx = (scaleIdx + 1) % scales.length; save('scale', scaleIdx); applyScale(); toast('Texte : ' + ['normal', 'grand', 'très grand'][scaleIdx]); });
-
-  put($('menuBtn'), 'menu'); put($('searchIco'), 'search', 18); put($('textBtn'), 'textsize');
+  put($('menuBtn'), 'menu'); put($('searchIco'), 'search', 18);
   var bm = $('brandMark'); bm.appendChild(window.MOLARIUM_ART ? rawSvg(window.MOLARIUM_ART.logo()) : icon('tooth', 22, '1.8'));
-  (function () { var A = window.MOLARIUM_ART, fi = document.querySelector('.foot-in'); if (A && fi) { var w = el('div', { class: 'foot-odonto', 'aria-hidden': 'true' }); w.appendChild(rawSvg(A.odonto())); fi.insertBefore(w, fi.firstChild); } })();
   $('footStats').textContent = plural(TOTAL, 'protocole') + ' · ' + plural(DISCIPLINES.length, 'discipline') + '.';
 
   window.addEventListener('beforeprint', function () { Array.prototype.forEach.call(document.querySelectorAll('details.acc'), function (x) { x.setAttribute('open', ''); }); });

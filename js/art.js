@@ -37,43 +37,35 @@
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#fff" d="M8.4 9.6C8.4 6.4 11.4 4.6 14.4 5.6c1 .3 2.2.3 3.2 0 3-1 6 .8 6 4 0 3.6-1.4 5.4-1.8 8.8-.5 3.4-1.1 8-3 8-1.8 0-1.8-4.4-2.8-4.4s-1 4.4-2.8 4.4c-1.9 0-2.5-4.6-3-8-.4-3.4-1.8-5.2-1.8-8.8z"/><path d="M13.2 11.2c1.8 1 3.8 1 5.6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>';
   };
 
-  // planche anatomique : molaire en coupe
-  A.plate = function () {
+  // molaire interactive : chaque zone ouvre la discipline correspondante
+  A.molar = function (labels) {
+    labels = labels || {};
     var T = 'M104 118C104 62 148 40 190 56C232 40 276 62 276 118C276 158 260 178 256 216C252 264 244 308 228 336C222 346 210 340 206 324C200 298 196 264 190 248C184 264 180 298 174 324C170 340 158 346 152 336C136 308 128 264 124 216C120 178 104 158 104 118Z';
-    var lab = function (x, y, t, anchor) { return '<text x="' + x + '" y="' + y + '" text-anchor="' + (anchor || 'start') + '">' + t + '</text>'; };
-    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 372" class="plate-svg" role="img" aria-label="Schéma d\'une molaire en coupe : émail, dentine, pulpe, cément" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">' +
-      '<g class="p-tooth"><path class="p-body" d="' + T + '" fill="currentColor" fill-opacity=".05" stroke-width="2.4"/>' +
-      '<path class="p-enamel" d="M118 120C118 74 152 56 190 70C228 56 262 74 262 120" stroke-width="2"/>' +
-      '<path class="p-cement" d="M122 168C140 178 168 182 190 182C212 182 240 178 258 168" stroke-width="1.2" stroke-dasharray="3 5"/>' +
-      '<path class="p-pulp" d="M150 128C150 112 230 112 230 128C230 148 216 158 206 168L174 168C164 158 150 148 150 128Z" fill="currentColor" fill-opacity=".22" stroke-width="2"/>' +
-      '<path class="p-canal" d="M176 170C172 214 168 270 162 322M204 170C208 214 212 270 218 322" stroke-width="2.4"/></g>' +
-      '<g class="p-lines" stroke-width="1" stroke-dasharray="2 3">' +
-        '<path d="M130 94L66 70H20"/><path d="M118 170L66 168H20"/><path d="M226 126L296 108H360"/><path d="M122 168L66 232H20"/><path d="M236 298L296 300H360"/></g>' +
-      '<g class="p-dots" fill="currentColor" stroke="none"><circle cx="130" cy="94" r="3.4"/><circle cx="140" cy="150" r="3.4"/><circle cx="226" cy="126" r="3.4"/><circle cx="122" cy="168" r="0"/><circle cx="236" cy="298" r="3.4"/><circle cx="154" cy="206" r="0"/></g>' +
-      '<g class="p-lab" fill="currentColor" stroke="none">' +
-        lab(20, 62, 'ÉMAIL') + lab(20, 160, 'DENTINE') + lab(360, 100, 'PULPE', 'end') + lab(20, 224, 'CÉMENT') + lab(360, 292, 'CANAL', 'end') + '</g></svg>';
-  };
-
-  // odontogramme FDI
-  A.odonto = function () {
-    var W = 460, cell = 27, gap = 18, out = '', rows = [
-      { y: 6, nums: [18, 17, 16, 15, 14, 13, 12, 11, 21, 22, 23, 24, 25, 26, 27, 28], up: true },
-      { y: 52, nums: [48, 47, 46, 45, 44, 43, 42, 41, 31, 32, 33, 34, 35, 36, 37, 38], up: false }
-    ];
-    function shape(n, x, y, up) {
-      var k = n % 10, w, h = 16, d, cx = x + cell / 2;
-      if (k <= 2) { w = k === 1 ? 14 : 12; d = 'M' + (cx - w / 2) + ' ' + (y + h) + 'V' + (y + 3) + 'Q' + (cx - w / 2) + ' ' + y + ' ' + (cx - w / 2 + 3) + ' ' + y + 'H' + (cx + w / 2 - 3) + 'Q' + (cx + w / 2) + ' ' + y + ' ' + (cx + w / 2) + ' ' + (y + 3) + 'V' + (y + h) + 'Z'; }
-      else if (k === 3) { w = 13; d = 'M' + (cx - w / 2) + ' ' + (y + 8) + 'L' + cx + ' ' + y + 'L' + (cx + w / 2) + ' ' + (y + 8) + 'V' + (y + h) + 'H' + (cx - w / 2) + 'Z'; }
-      else if (k <= 5) { w = 15; d = 'M' + (cx - w / 2) + ' ' + (y + h) + 'V' + (y + 4) + 'Q' + (cx - w / 2) + ' ' + y + ' ' + (cx - 3) + ' ' + y + 'H' + (cx + 3) + 'Q' + (cx + w / 2) + ' ' + y + ' ' + (cx + w / 2) + ' ' + (y + 4) + 'V' + (y + h) + 'Z M' + cx + ' ' + (y + 4) + 'V' + (y + h - 3); }
-      else { w = 22; d = 'M' + (cx - w / 2) + ' ' + (y + h) + 'V' + (y + 5) + 'Q' + (cx - w / 2) + ' ' + y + ' ' + (cx - w / 2 + 5) + ' ' + y + 'H' + (cx + w / 2 - 5) + 'Q' + (cx + w / 2) + ' ' + y + ' ' + (cx + w / 2) + ' ' + (y + 5) + 'V' + (y + h) + 'Z M' + (cx - 3) + ' ' + (y + 4) + 'V' + (y + h - 3) + ' M' + (cx + 3) + ' ' + (y + 4) + 'V' + (y + h - 3); }
-      return d;
+    var PULP = 'M150 128C150 112 230 112 230 128C230 148 216 158 206 168L174 168C164 158 150 148 150 128Z';
+    var CANAL = 'M176 170C172 214 168 270 162 322M204 170C208 214 212 270 218 322';
+    var GUML = 'M24 192C54 166 92 162 108 176C116 196 122 214 128 226C98 234 54 232 24 224Z';
+    var GUMR = 'M356 192C326 166 288 162 272 176C264 196 258 214 252 226C282 234 326 232 356 224Z';
+    function zone(id, label, shapes, pin, lab, anchor) {
+      var lx = lab[0], ly = lab[1];
+      return '<g class="m-zone" data-disc="' + id + '" tabindex="0" role="link" aria-label="' + label + '">' +
+        '<g class="m-fill">' + shapes + '</g>' +
+        '<path class="m-lead" d="M' + pin[0] + ' ' + pin[1] + 'L' + lx + ' ' + ly + (anchor === 'end' ? 'h-6' : 'h6') + '"/>' +
+        '<circle class="m-ring" cx="' + pin[0] + '" cy="' + pin[1] + '" r="9"/><circle class="m-dot" cx="' + pin[0] + '" cy="' + pin[1] + '" r="3.6"/>' +
+        '<text class="m-lab" x="' + (anchor === 'end' ? lx - 10 : lx + 10) + '" y="' + (ly + 4) + '" text-anchor="' + (anchor || 'start') + '">' + label + '</text>' +
+        '<text class="m-sub" x="' + (anchor === 'end' ? lx - 10 : lx + 10) + '" y="' + (ly + 18) + '" text-anchor="' + (anchor || 'start') + '">' + (labels[id] || '') + '</text>' +
+        '</g>';
     }
-    rows.forEach(function (r) {
-      r.nums.forEach(function (n, i) {
-        var x = 4 + i * cell + (i >= 8 ? gap : 0), ty = r.up ? r.y + 28 : r.y - 4;
-        out += '<g class="od-t"><path d="' + shape(n, x, r.y + (r.up ? 0 : 6), r.up) + '"/><text stroke="none" fill="currentColor" x="' + (x + cell / 2) + '" y="' + (r.up ? r.y + 30 : r.y + 3) + '" text-anchor="middle">' + n + '</text></g>';
-      });
-    });
-    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + (W + gap) + ' 80" class="odonto-svg" role="img" aria-label="Odontogramme, notation FDI" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round">' + out + '</svg>';
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 0 480 430" class="molar-svg" role="group" aria-label="Molaire interactive : survolez une zone pour ouvrir la discipline correspondante">' +
+      '<defs><clipPath id="mc-root"><rect x="0" y="228" width="380" height="150"/></clipPath><clipPath id="mc-enamel"><rect x="0" y="0" width="380" height="110"/></clipPath><clipPath id="mc-crown"><rect x="0" y="0" width="380" height="178"/></clipPath></defs>' +
+      '<g transform="translate(40 22)">' +
+      '<path class="m-base" d="' + T + '"/>' +
+      '<path class="m-enamel-line" d="M118 120C118 74 152 56 190 70C228 56 262 74 262 120"/>' +
+      '<path class="m-pulp-line" d="' + PULP + '"/><path class="m-canal-line" d="' + CANAL + '"/><path class="m-gum-line" d="' + GUML + '"/><path class="m-gum-line" d="' + GUMR + '"/>' +
+      zone('prothese-fixee', 'Prothèse fixée', '<path d="' + T + '" clip-path="url(#mc-crown)"/>', [112, 128], [-6, 74], 'end') +
+      zone('dre', 'Restauratrice', '<path d="' + T + '" clip-path="url(#mc-enamel)"/>', [250, 78], [330, 38]) +
+      zone('endodontie', 'Endodontie', '<path d="' + PULP + '"/><path d="' + CANAL + '" fill="none"/>', [226, 138], [344, 132]) +
+      zone('parodontologie', 'Parodontologie', '<path d="' + GUML + '"/><path d="' + GUMR + '"/>', [58, 206], [-6, 232], 'end') +
+      zone('chirurgie', 'Chirurgie orale', '<path d="' + T + '" clip-path="url(#mc-root)"/>', [236, 292], [330, 326]) +
+      '</g></svg>';
   };
 })();

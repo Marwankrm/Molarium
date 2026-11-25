@@ -14,9 +14,7 @@
   <link rel="preload" href="css/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="css/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/v3.css">
-  <link rel="stylesheet" href="css/v4.css">
-  <link rel="stylesheet" href="css/v5.css">
+  <link rel="stylesheet" href="css/v6.css">
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
@@ -25,19 +23,27 @@
   <header class="topbar">
     <div class="topbar-in">
       <button class="icon-btn only-narrow" id="menuBtn" type="button" aria-label="Ouvrir le menu des disciplines" aria-controls="sidebar" aria-expanded="false"></button>
-      <a class="brand" href="#/" aria-label="Accueil">
+      <a class="brand" href="#/" aria-label="Molarium, accueil">
         <span class="brand-mark" id="brandMark" aria-hidden="true"></span>
-        <span class="brand-txt"><strong>Molarium</strong><small>Protocoles d'odontologie · en relecture</small></span>
+        <span class="brand-txt"><strong>Molarium</strong><small>Atlas clinique</small></span>
       </a>
+      <nav class="mainnav" id="mainnav" aria-label="Navigation principale">
+        <a href="#/" data-nav="home">Accueil</a>
+        <div class="nav-item" id="navDisc">
+          <button type="button" id="discBtn" aria-expanded="false" aria-controls="mega" aria-haspopup="true" data-nav="disc">Disciplines<svg viewBox="0 0 12 12" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5"/></svg></button>
+          <div class="mega" id="mega" hidden></div>
+        </div>
+        <a href="#/materiaux" data-nav="materiaux">Matériaux</a>
+        <a href="#/favoris" data-nav="favoris">Favoris</a>
+      </nav>
       <div class="search-wrap">
         <form class="search" role="search" id="searchForm" autocomplete="off">
           <span class="search-ico" id="searchIco" aria-hidden="true"></span>
-          <input id="q" type="search" placeholder="Rechercher…" aria-label="Rechercher" aria-autocomplete="list" aria-controls="suggest" enterkeyhint="search">
+          <input id="q" type="search" placeholder="Rechercher un protocole…" aria-label="Rechercher" aria-autocomplete="list" aria-controls="suggest" enterkeyhint="search">
           <kbd class="only-wide" aria-hidden="true">/</kbd>
         </form>
         <div class="suggest" id="suggest" role="listbox" hidden></div>
       </div>
-      <button class="icon-btn" id="textBtn" type="button" aria-label="Taille du texte" title="Taille du texte"></button>
     </div>
   </header>
 
