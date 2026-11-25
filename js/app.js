@@ -251,7 +251,7 @@
     frag.appendChild(el('section', { class: 'hero' }, [
       el('h1', { text: 'Protocoles cliniques d\'odontologie' }),
       el('p', { text: 'Molarium. Fiches de protocoles d\'odontologie, discipline par discipline : séances, matériel, points de vigilance et consignes au patient.' }),
-      heroBtns, tooth
+      heroBtns, el('div', { class: 'hero-orb', 'aria-hidden': 'true' }, [el('i'), el('i'), el('i'), tooth])
     ]));
     var bn = banner(); if (bn) frag.appendChild(bn);
     frag.appendChild(el('div', { class: 'stats' }, [
@@ -669,6 +669,7 @@
     ]) : null;
     var body = el('div', null, [fig, el('p', { class: 'mtype', text: p.type }), matBlock('m-ind', 'Indications', p.ind), matBlock('m-ci', 'Contre-indications et précautions', p.ci), matBlock('m-met', 'Méthode d\'utilisation', p.met), matBlock('m-ret', 'À retenir', p.ret), src]);
     var d = acc('mat-' + p.id, p.nom.replace(/\*\*/g, ''), body, { open: false, icon: 'box', cls: 'mat-acc' });
+    if (im && im.f) { var ico = d.querySelector('.acc-ico'); if (ico) { ico.textContent = ''; ico.appendChild(el('img', { src: im.f, alt: '', loading: 'lazy', width: '56', height: '56' })); } }
     d._hay = plain([p.nom, p.type, (p.ind || []).join(' '), (p.ci || []).join(' '), (p.met || []).join(' '), (p.ret || []).join(' ')].join(' ')).toLowerCase();
     return d;
   }

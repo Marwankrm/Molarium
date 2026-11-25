@@ -55,3 +55,7 @@ Les photos de `img/materiaux/` ont été récupérées sur les sites des fabrica
 ## Archive
 
 Le dossier `archive/` contient des fiches retirées du site mais conservées (non chargées par `index.html`), par exemple `archive/rebasage-direct.js`, avec la marche à suivre pour les remettre en ligne.
+
+## Design « Aurora » (v4)
+
+Fond blanc, lignes fines, dégradé cyan → violet → magenta, typographie Space Grotesk (titres) et Figtree (texte), cartes lumineuses aux couleurs des disciplines, barre de navigation flottante sur téléphone. Tout est dans `css/v4.css`, chargé après `style.css` et `v3.css` ; la police `css/fonts/space-grotesk-latin-wght-normal.woff2` est sous licence SIL OFL (`SpaceGrotesk-OFL.txt`).
