@@ -109,9 +109,13 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Temps 1 – Évaluation et préparation du logement", details: [
-          "Évaluation (radiographie, parois restantes, ferrule) ; **digue** ; élimination des anciennes restaurations et des tissus fragiles",
-          "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha : utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3** ; forage du logement avec le foret du système ; **rincer puis sécher avec des pointes de papier**, sans dessécher excessivement la dentine ; isolation sous **digue** recommandée",
-          "**Essayage du tenon fibré** : vérifier la **longueur et l'adaptation** (radiographie) ; **nettoyer le tenon à l'alcool**, puis sécher"
+          { t: "**Évaluation**", sub: ["Radiographie", "Parois restantes", "Ferrule"] },
+          "**Isolation sous digue**",
+          "Élimination des anciennes restaurations et des tissus fragiles",
+          { t: "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**"] },
+          "**Forage du logement** avec le foret du système",
+          "**Rincer**, puis **sécher avec des pointes de papier**, sans dessécher excessivement la dentine",
+          { t: "**Essayage du tenon fibré**", sub: ["Vérifier la **longueur et l'adaptation** (radiographie)", "**Nettoyer le tenon à l'alcool**, puis sécher"] }
         ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
           "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
