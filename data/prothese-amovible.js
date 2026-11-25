@@ -98,7 +98,7 @@ window.DISCIPLINES.push({
         "**Mise en bouche** : zones de compression repérées avec le **Coltène PSI**",
         "**Résine de base** : choisie par le laboratoire",
         "**Le patient porte la prothèse jusqu'au contrôle à 48 h**",
-        "**Contrôles à 48 h, 1 semaine et 1 mois**",
+        "**Contrôles à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans**",
         "**Contrôle à 48 h** : recueil des **doléances du patient**, **révélateur de pression (Coltène PSI)** pour repérer les zones de compression, **retouches à la fraise**",
         "**Délai laboratoire** : **7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire",
         "**Validation par l'encadrant** : empreintes, rapports intermaxillaires (RIM), essayage et pose",
@@ -142,9 +142,9 @@ window.DISCIPLINES.push({
           "Vérifier l'intrados avec le **Coltène PSI** et retoucher les zones de compression ; contrôler les bords, la rétention et la stabilité",
           "**Équilibration occlusale** (papier à articuler, relation centrée et excursions) ; consignes d'hygiène et d'utilisation"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main pour retouches", "fiche de consignes patient"], validation: "pose" },
-        { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois)", details: [
+        { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois, 2 mois, 6 mois, 1 an)", details: [
           "Contrôle à **48 h** : recueillir les **doléances** du patient ; **révélateur de pression (Coltène PSI)** pour repérer les zones de compression ; **retouches à la fraise** ; nouveau contrôle de l'occlusion",
-          "Contrôles à **1 semaine** et **1 mois** ; évaluer l'intérêt d'un rebasage ou d'un projet implantaire"
+          "Contrôles à **1 semaine**, **1 mois**, **2 mois**, **6 mois** et **1 an**, puis **tous les ans** ; évaluer l'intérêt d'un rebasage ou d'un projet implantaire"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises pour retouches"] }
       ],
       consignes: [
@@ -158,7 +158,7 @@ window.DISCIPLINES.push({
         "**La nuit** : **retirer la prothèse chaque nuit** (le port nocturne favorise les levures *Candida* et la stomatite sous prothèse) ; la conserver **humide** : eau fraîche ou solution nettoyante pour prothèse ; ne jamais la laisser sécher ni la plonger dans l'eau bouillante.",
         "**Adhésif pour prothèse (crème, poudre)** : inutile si la prothèse est bien adaptée ; il peut améliorer la rétention et la mastication, mais **ne remplace pas** un rebasage ou une prothèse inadaptée : si elle bouge ou blesse, **revenir consulter**. Si utilisé, **retirer tous les résidus chaque jour**.",
         "**Cassure, fêlure ou perte de dent de la prothèse** : ne pas réparer soi-même (pas de colle), consulter.",
-        "**Contrôles** : à 48 h, 1 semaine, 1 mois puis une fois par an."
+        "**Contrôles** : à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans."
       ],
       erreurs: [
         "Porte-empreinte individuel **trop court ou trop long** : joint périphérique absent ou blessures",
@@ -168,7 +168,7 @@ window.DISCIPLINES.push({
         "Passer à l'étape suivante **sans validation de l'encadrant** (empreintes, RIM, essayage, pose)",
         "Oublier l'**équilibration occlusale** ou le contrôle à 48 h"
       ],
-      suivi: ["Contrôle annuel (muqueuses, adaptation, usure)", "Rebasage si perte de rétention liée à la résorption des crêtes"],
+      suivi: ["Contrôles à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis **tous les ans** (muqueuses, adaptation, usure)", "Rebasage si perte de rétention liée à la résorption des crêtes"],
       complications: ["**Blessure muqueuse** : **retouche ciblée de l'intrados**", "**Manque de rétention** : vérifier le joint périphérique, envisager un rebasage"],
       references: [
         "[Papadiochou S., Polyzois G. Hygiene practices in removable prosthodontics: a systematic review. Int J Dent Hyg 2018](https://pubmed.ncbi.nlm.nih.gov/29120113/) · [Schmutzler A. et al. Cleaning of removable dental prostheses: a systematic review. J Evid Based Dent Pract 2021](https://pubmed.ncbi.nlm.nih.gov/34922732/) · [Felton D. et al. Evidence-based guidelines for the care and maintenance of complete dentures (ACP). J Prosthodont 2011](https://pubmed.ncbi.nlm.nih.gov/21324026/) · [McReynolds D.E. et al. Denture stomatitis: an interdisciplinary clinical review. J Prosthodont 2023](https://pubmed.ncbi.nlm.nih.gov/36988151/)",
@@ -367,10 +367,41 @@ window.DISCIPLINES.push({
   if (!disc) return;
   function find(id) { return disc.protocoles.filter(function (p) { return p.id === id; })[0]; }
   function step(p, start) { return p.etapes.filter(function (e) { return e.titre.indexOf(start) === 0; })[0]; }
+  var ARC_TUTO = {
+    titre: "Tuto arc facial", court: "Tuto arc facial", icone: "play",
+    intro: "Arc facial **Quick** et articulateur **Quick Master** (FAG Dentaire). Vidéos de la faculté de médecine dentaire d'Aix-Marseille (articulateur Quick Master B2), dans l'ordre de la série : un clic ouvre la vidéo.",
+    liens: [
+      { t: "Présentation de l'arc facial", d: "0:39", u: "https://amupod.univ-amu.fr/video/27230-2-presentation-de-larc-facial/" },
+      { t: "Préparation de la fourchette occlusale", d: "1:18", u: "https://amupod.univ-amu.fr/video/27231-3-preparation-de-la-fourchette-occlusale/" },
+      { t: "Mise en place de l'arc facial sur le patient", d: "1:49", u: "https://amupod.univ-amu.fr/video/27233-4-mise-en-place-de-larc-facial-sur-le-patient/" },
+      { t: "Préparation des jeux de cire de relation centrée", d: "1:18", u: "https://amupod.univ-amu.fr/video/27236-5-preparation-des-jeux-de-cire-de-relation-centree/" },
+      { t: "Enregistrement de la relation centrée", d: "1:43", u: "https://amupod.univ-amu.fr/video/27234-6-enregistrement-de-la-relation-centree/" },
+      { t: "Programmation des déterminants postérieurs de l'articulateur", d: "1:54", u: "https://amupod.univ-amu.fr/video/27235-7-programmation-des-determinants-posterieurs-de-larticulateur/" },
+      { t: "Réalisation du split-cast", d: "0:55", u: "https://amupod.univ-amu.fr/video/27238-8-realisation-du-split-cast/" },
+      { t: "Démontage de l'arc facial", d: "0:57", u: "https://amupod.univ-amu.fr/video/27239-10-demontage-de-larc-facial/" },
+      { t: "Montage du modèle mandibulaire sur l'articulateur", d: "1:13", u: "https://amupod.univ-amu.fr/video/27241-11-montage-du-modele-mandibulaire-sur-larticulateur/" },
+      { t: "Validation du montage en relation centrée", d: "0:45", u: "https://amupod.univ-amu.fr/video/27242-12-validation-du-montage-en-relation-centree/" },
+      { t: "Différentiel OIM-ORC", d: "0:46", u: "https://amupod.univ-amu.fr/video/27243-13-differentiel-oim-orc/" },
+      { t: "Simulation des mouvements sur articulateur", d: "3:06", u: "https://amupod.univ-amu.fr/video/27244-14-simulation-des-mouvements-sur-articulateur/" },
+      { t: "Toute la série (15 vidéos)", d: "", u: "https://amupod.univ-amu.fr/ecole-de-medecine-dentaire/pour-toutes-les-promos-utilisation-de-larticulateur-quick-master-b2/" }
+    ],
+    sections: [
+      { titre: "Montage de l'arc facial (notice FAG Dentaire)", items: [
+        "**1.** Mettre en place et **stabiliser la fourchette** en bouche",
+        "**2.** Mettre en place l'**arc facial** et le **bloquer**",
+        "**3.** Mettre en place l'**appui nasal** et **serrer**",
+        "**4.** **Serrer** le dispositif qui solidarise la fourchette à l'arc : l'arc facial est en place"
+      ] },
+      { titre: "Notice et fiche produit", items: [
+        "[Notice de l'arc facial Quick (PDF, FAG Dentaire)](https://www.fag-dentaire.com/wp-content/uploads/2022/05/arc-facial-2022-notice-2.pdf)",
+        "[Mode d'emploi de l'articulateur Quick Master B2 (PDF, FAG Dentaire)](https://www.fag-dentaire.com/wp-content/uploads/2022/06/mode-demploi-articulateur-quick-master-b2.pdf)"
+      ] }
+    ]
+  };
   function addCommon(p, extraAlerte) {
     p.alertes = [RIM_PA.alerte].concat(extraAlerte ? [extraAlerte] : [], p.alertes || []);
     p.erreurs = (p.erreurs || []).filter(function (x) { return x.indexOf('**DVO trop haute**') !== 0; }).concat(RIM_PA.erreurs);
-    p.annexes = RIM_PA.annexes;
+    p.annexes = [ARC_TUTO].concat(RIM_PA.annexes);
     p.references = [RIM_PA.ref].concat(p.references || []);
   }
   function mat(a, b) { var out = a.slice(); b.forEach(function (x) { if (out.indexOf(x) < 0) out.push(x); }); return out; }

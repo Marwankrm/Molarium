@@ -49,6 +49,15 @@
       })));
       box.appendChild(el('div', { class: 'rtable-wrap' }, [tb]));
     }
+    if (x.liens && x.liens.length) {
+      var vl = el('ul', { class: 'vlinks' });
+      x.liens.forEach(function (l, i) {
+        vl.appendChild(el('li', null, [el('a', { href: l.u, target: '_blank', rel: 'noopener noreferrer' }, [
+          el('span', { class: 'vn', text: pad2(i + 1) }), el('span', { class: 'vt', text: l.t }), l.d ? el('span', { class: 'vd', text: l.d }) : null, icon('play', 20, '1.8')
+        ])]));
+      });
+      box.appendChild(vl);
+    }
     (x.sections || []).forEach(function (z) {
       var sec = el('div', { class: 'asec' }, [el('h3', { text: z.titre })]);
       if (z.texte) sec.appendChild(el('p', null, [rich(z.texte)]));
@@ -86,6 +95,7 @@
     textsize: 'M3 19L8 6l5 13M5 14h6M15 19l3-7 3 7M16 17h4',
     bulb: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5V16h8v-2.5A6 6 0 0 0 12 3z',
     arrow: 'M5 12h14M13 6l6 6-6 6',
+    play: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM10 8.5v7l6-3.5-6-3.5z',
     hospital: 'M3 21h18M5 21V8l7-5 7 5v13M10 12h4M12 10v4M10 21v-4h4v4',
     box: 'M21 8l-9-5-9 5v8l9 5 9-5V8zM3 8l9 5 9-5M12 13v8',
     list: 'M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2',

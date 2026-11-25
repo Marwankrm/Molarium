@@ -1192,6 +1192,73 @@ window.MATERIAUX = {
      ]
     },
     {
+     "id": "arc-facial-quick-fag",
+     "nom": "Arc facial Quick (FAG Dentaire)",
+     "type": "Arc facial auriculaire pour transférer la position du maxillaire à l'articulateur",
+     "statut": "lue",
+     "ind": [
+      "**Enregistrer la position du maxillaire** du patient par rapport au crâne et la **transférer à l'articulateur** (mise en articulateur du modèle maxillaire), lors des rapports intermaxillaires"
+     ],
+     "ci": [],
+     "met": [
+      "Fourni avec l'**arc facial** et **une fourchette plastique jetable** ; en accessoires : fourchettes jetables, fourchette en inox, support de fourchette, **embouts auriculaires jetables**, appui nasal",
+      "**1.** Mettre en place et **stabiliser la fourchette** en bouche",
+      "**2.** Mettre en place l'**arc facial** et le **bloquer**",
+      "**3.** Mettre en place l'**appui nasal** et **serrer**",
+      "**4.** **Serrer** le dispositif qui solidarise la fourchette à l'arc : l'arc facial est **en place**",
+      "Les vidéos pas à pas sont dans le menu **« Tuto arc facial »** de la fiche de prothèse adjointe complète"
+     ],
+     "ret": [
+      "Embouts auriculaires et fourchettes plastiques : **à usage unique**"
+     ],
+     "src": [
+      {
+       "t": "Notice de l'arc facial Quick (FAG Dentaire)",
+       "u": "https://www.fag-dentaire.com/wp-content/uploads/2022/05/arc-facial-2022-notice-2.pdf"
+      },
+      {
+       "t": "Fiche produit FAG Dentaire",
+       "u": "https://www.fag-dentaire.com/produit/arc-facial-quick/"
+      },
+      {
+       "t": "Série de vidéos (Aix-Marseille)",
+       "u": "https://amupod.univ-amu.fr/ecole-de-medecine-dentaire/pour-toutes-les-promos-utilisation-de-larticulateur-quick-master-b2/"
+      }
+     ]
+    },
+    {
+     "id": "articulateur-quick-master-fag",
+     "nom": "Articulateur Quick Master (FAG Dentaire)",
+     "type": "Articulateur semi-adaptable magnétique « Split Cast » (modèle B2)",
+     "statut": "lue",
+     "ind": [
+      "**Monter les modèles** maxillaire et mandibulaire en position (relation centrée) pour fabriquer les prothèses ; **simuler les mouvements** mandibulaires",
+      "Utilisé dans les facultés françaises d'odontologie : **référence française** des articulateurs"
+     ],
+     "ci": [],
+     "met": [
+      "Articulateur **semi-adaptable**, conception **arcon**, référencé Francfort, distance inter-condylienne de **110 mm**",
+      "**Pentes condyliennes** réglables de **0° à 70°** ; **angles de Bennett** à 0°, 10°, 15° et 20° ; propulsion de 0 à 6 mm ; blocage en **relation centrée**",
+      "**Montage du modèle maxillaire** avec un **arc facial** ou une table de transfert ; système **Split Cast** (plaques magnétiques) pour mettre et retirer facilement les modèles",
+      "Version **LAB 25** : pentes condyliennes préprogrammées à 25°, angles de Bennett réglables",
+      "Plâtre de mise en articulateur et plaques de montage magnétiques en consommables"
+     ],
+     "ret": [
+      "Articulateur **étalonné en usine** : le manipuler avec soin (une mauvaise manipulation peut demander un réétalonnage)",
+      "Programmation fine possible avec l'axiographe Quick-Axis"
+     ],
+     "src": [
+      {
+       "t": "Fiche produit Quick Master B2 (FAG Dentaire)",
+       "u": "https://www.fag-dentaire.com/produit/articulateur-dentaire-magnetique/"
+      },
+      {
+       "t": "Mode d'emploi du Quick Master B2 (FAG Dentaire)",
+       "u": "https://www.fag-dentaire.com/wp-content/uploads/2022/06/mode-demploi-articulateur-quick-master-b2.pdf"
+      }
+     ]
+    },
+    {
      "id": "gc-reline-coe-soft-f-i-t-t-rebasage",
      "nom": "GC Reline, Coe-Soft, F.I.T.T. : rebasage",
      "type": "Rebasage dur, rebasage souple, conditionneur tissulaire",
