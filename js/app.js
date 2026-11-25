@@ -298,11 +298,7 @@
     setTitle(d.nom); setDisc(d); refreshChrome(d.id, null);
     var frag = document.createDocumentFragment();
     frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: d.nom }]));
-    frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [
-      el('h1', { text: d.nom }), el('p', { class: 'psum', text: d.description }),
-      el('p', { class: 'scroll-hint' }, [document.createTextNode(plural(d.protocoles.length, 'fiche') + ' à ouvrir, juste en dessous'), icon('chev', 18, '2.6')])
-    ]));
-    frag.appendChild(el('h2', { class: 'list-title', text: 'Choisissez une fiche' }));
+    frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [el('h1', { text: d.nom })]));
     var list = el('div', { class: 'plist' });
     d.protocoles.forEach(function (p) { list.appendChild(protoCard(p, false)); });
     frag.appendChild(list); mount(frag);

@@ -261,3 +261,9 @@ a.stat:hover{transform:translateY(-3px);border-color:var(--vi);box-shadow:var(--
   .hero-orb{display:none}
   .tabbar{display:none}
 }
+
+/* ---------- titre de discipline : simple titre centré, souligné ---------- */
+.disc-head{background:none;border:0;border-radius:0;box-shadow:none;padding:0;margin:14px 0 30px;overflow:visible;text-align:center}
+.disc-head::before{display:none}
+.disc-head h1{margin:0;font-size:clamp(2rem,4.6vw,3rem);font-weight:800;letter-spacing:-.04em;color:var(--d,var(--ink));text-decoration:underline;text-decoration-color:var(--d,var(--brand));text-decoration-thickness:.1em;text-underline-offset:.24em;text-decoration-skip-ink:none}
+@media (max-width:760px){.disc-head{padding:0;border-radius:0;margin:8px 0 24px}.disc-head h1{font-size:1.9rem}}
