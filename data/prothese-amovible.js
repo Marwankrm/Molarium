@@ -194,7 +194,7 @@ window.DISCIPLINES.push({
         "**Articulateur** utilisé ; teinte au **teintier** ; résine choisie par le laboratoire",
         "**Validation par l'encadrant** : empreintes, rapports intermaxillaires, essayage et pose",
         "**Suite** : la prothèse transitoire est **remplacée par la prothèse définitive après 3 à 4 mois**",
-        "**Contrôles à 48 h, 1 semaine et 1 mois** ; **6 séances** : nombre validé",
+        "**Contrôles à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans** ; **6 séances** : nombre validé",
         "**Contrôle à 48 h** : recueil des **doléances du patient**, **révélateur de pression (Coltène PSI)** pour repérer les zones de compression, **retouches à la fraise**",
         "**Délai laboratoire** : **7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire",
       ],
@@ -235,9 +235,9 @@ window.DISCIPLINES.push({
           "**Pose** : contrôle de l'insertion, des crochets, de l'intrados (**Coltène PSI**), retouches ; **équilibration occlusale**",
           "Instructions d'hygiène et de manipulation, consignes remises au patient"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main", "fiche de consignes patient"], validation: "pose" },
-        { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois)", details: [
+        { titre: "Séance 6 – Contrôle à 48 h puis suivi (1 semaine, 1 mois, 2 mois, 6 mois, 1 an)", details: [
           "Contrôle à **48 h** : recueillir les **doléances** du patient ; **révélateur de pression (Coltène PSI)** ; **retouches à la fraise** ; contrôle de l'occlusion",
-          "Contrôles à **1 semaine** et **1 mois** : appuis, crochets ; planification de la **prothèse définitive** à **3 à 4 mois**, une fois les crêtes stabilisées"
+          "Contrôles à **1 semaine**, **1 mois**, **2 mois**, **6 mois** et **1 an**, puis **tous les ans** : appuis, crochets ; planification de la **prothèse définitive** à **3 à 4 mois**, une fois les crêtes stabilisées"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises pour retouches"] }
       ],
       consignes: [
@@ -250,7 +250,7 @@ window.DISCIPLINES.push({
         "**Nettoyage complet** : une fois par jour, associer le **brossage** et le **trempage dans un produit nettoyant pour prothèse** (selon la notice du produit) ; **rincer abondamment** avant de la remettre en bouche. L'association brossage + produit chimique est plus efficace que l'un des deux seul.",
         "**La nuit** : **retirer la prothèse chaque nuit** (le port nocturne favorise les levures *Candida* et la stomatite sous prothèse) ; la conserver **humide** : eau fraîche ou solution nettoyante pour prothèse ; ne jamais la laisser sécher ni la plonger dans l'eau bouillante.",
         "**Si la prothèse bouge ou blesse** : revenir consulter plutôt que de la fixer avec un adhésif ; ne pas la retoucher soi-même.",
-        "**Contrôles** : à 48 h, 1 semaine, 1 mois."
+        "**Contrôles** : à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans."
       ],
       erreurs: [
         "Dents d'appui non assainies (caries, parodonte) avant la pose",
@@ -259,7 +259,7 @@ window.DISCIPLINES.push({
         "Passer à l'étape suivante sans validation de l'encadrant",
         "Ne pas prévenir le patient du caractère **provisoire** de la prothèse"
       ],
-      suivi: ["Contrôle régulier jusqu'à la prothèse définitive", "Hygiène stricte des dents d'appui"],
+      suivi: ["Contrôles à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans", "Hygiène stricte des dents d'appui"],
       references: [
         "[Papadiochou S., Polyzois G. Hygiene practices in removable prosthodontics: a systematic review. Int J Dent Hyg 2018](https://pubmed.ncbi.nlm.nih.gov/29120113/) · [Schmutzler A. et al. Cleaning of removable dental prostheses: a systematic review. J Evid Based Dent Pract 2021](https://pubmed.ncbi.nlm.nih.gov/34922732/) · [Felton D. et al. Evidence-based guidelines for the care and maintenance of complete dentures (ACP). J Prosthodont 2011](https://pubmed.ncbi.nlm.nih.gov/21324026/) · [McReynolds D.E. et al. Denture stomatitis: an interdisciplinary clinical review. J Prosthodont 2023](https://pubmed.ncbi.nlm.nih.gov/36988151/)",
         "Séquence et produits confirmés par le service ; consignes et erreurs fréquentes rédigées d'après la pratique courante, à valider.",
@@ -283,7 +283,7 @@ window.DISCIPLINES.push({
         "**Empreinte secondaire à l'alginate, dans un porte-empreinte individuel (PEI)** fabriqué par le laboratoire ou l'étudiant ; **pas d'empreinte de correction des selles terminales**",
         "**Châssis métallique** : alliage choisi par le laboratoire ; **pas de test d'allergie au nickel**",
         "**Validation par l'encadrant** : empreintes, rapports intermaxillaires, essayage et pose",
-        "**Contrôles à 48 h, 1 semaine et 1 mois** ; **6 séances** : nombre validé",
+        "**Contrôles à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans** ; **6 séances** : nombre validé",
         "**Contrôle à 48 h** : recueil des **doléances du patient**, **révélateur de pression (Coltène PSI)** pour repérer les zones de compression, **retouches à la fraise**",
         "**Délai laboratoire** : **7 jours minimum** entre deux séances qui nécessitent un travail du laboratoire",
       ],
@@ -327,7 +327,7 @@ window.DISCIPLINES.push({
         ], materiel: ["prothèse sur cire", "miroir", "papier à articuler"], validation: "essayage", astuce: "Au laboratoire : mise en résine, finition, polissage." },
         { titre: "Séance 6 – Mise en bouche", details: [
           "**Pose** : contrôle de l'insertion, des crochets et des appuis (**Coltène PSI**), retouches ; **équilibration occlusale**",
-          "Instructions d'hygiène et de manipulation ; contrôles à **48 h, 1 semaine et 1 mois**",
+          "Instructions d'hygiène et de manipulation ; contrôles à **48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans**",
           "Contrôle à **48 h** : **doléances** du patient, **révélateur de pression (Coltène PSI)**, **retouches à la fraise**"
         ], materiel: ["Coltène PSI", "papier à articuler", "fraises et pièce à main", "fiche de consignes patient"], validation: "pose" }
       ],
@@ -341,7 +341,7 @@ window.DISCIPLINES.push({
         "**La nuit** : **retirer la prothèse chaque nuit** (le port nocturne favorise les levures *Candida* et la stomatite sous prothèse) ; la conserver **humide** : eau fraîche ou solution nettoyante pour prothèse ; ne jamais la laisser sécher ni la plonger dans l'eau bouillante.",
         "**Si la prothèse bouge ou blesse** : revenir consulter plutôt que de la fixer avec un adhésif ; ne pas la retoucher soi-même.",
         "**Signes à signaler** : démangeaisons, rougeur ou irritation de la muqueuse au contact du métal.",
-        "**Contrôles** : à 48 h, 1 semaine, 1 mois puis une fois par an."
+        "**Contrôles** : à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans."
       ],
       erreurs: [
         "Axe d'insertion non étudié sur les modèles : prothèse qui ne s'insère pas ou gêne",
@@ -351,7 +351,7 @@ window.DISCIPLINES.push({
         "Fiche de prescription incomplète transmise au laboratoire",
         "Passer à l'étape suivante sans validation de l'encadrant"
       ],
-      suivi: ["Hygiène stricte des dents d'appui et de la prothèse", "Contrôle des appuis, des crochets et des selles (rebasage éventuel) à chaque visite de maintenance"],
+      suivi: ["Contrôles à 48 h, 1 semaine, 1 mois, 2 mois, 6 mois, 1 an, puis tous les ans", "Hygiène stricte des dents d'appui et de la prothèse", "Contrôle des appuis, des crochets et des selles (rebasage éventuel) à chaque visite de maintenance"],
       references: [
         "[Papadiochou S., Polyzois G. Hygiene practices in removable prosthodontics: a systematic review. Int J Dent Hyg 2018](https://pubmed.ncbi.nlm.nih.gov/29120113/) · [Schmutzler A. et al. Cleaning of removable dental prostheses: a systematic review. J Evid Based Dent Pract 2021](https://pubmed.ncbi.nlm.nih.gov/34922732/) · [Felton D. et al. Evidence-based guidelines for the care and maintenance of complete dentures (ACP). J Prosthodont 2011](https://pubmed.ncbi.nlm.nih.gov/21324026/) · [McReynolds D.E. et al. Denture stomatitis: an interdisciplinary clinical review. J Prosthodont 2023](https://pubmed.ncbi.nlm.nih.gov/36988151/)",
         "Séquence et produits confirmés par le service ; consignes et erreurs fréquentes rédigées d'après la pratique courante, à valider.",
