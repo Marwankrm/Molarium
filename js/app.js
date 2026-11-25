@@ -138,7 +138,7 @@
   DISCIPLINES.forEach(function (d) {
     d.protocoles.forEach(function (p) {
       p._d = d; p._key = d.id + '/' + p.id;
-      var parts = [d.nom, p.titre, p.resume, (p.indications || []).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.consignes || []).join(' ')];
+      var parts = [d.nom, p.titre, p.resume, (p.indications || []).map(function (x) { return x && typeof x === 'object' ? [x.t].concat(x.sub || []).join(' ') : x; }).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.consignes || []).join(' ')];
       (p.annexes || []).forEach(function (x) { parts.push(x.titre, x.intro || ''); (x.table ? x.table.rows : []).forEach(function (r) { parts.push(r.join(' ')); }); (x.sections || []).forEach(function (z) { parts.push(z.titre, z.texte || '', (z.items || []).join(' ')); }); });
       (p.etapes || []).forEach(function (s) { parts.push(s.titre, (s.details || []).join(' '), (s.materiel || []).join(' '), s.astuce || ''); });
       p._hay = norm(plain(parts.join(' ')));

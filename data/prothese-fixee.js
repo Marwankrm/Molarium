@@ -86,11 +86,11 @@ window.DISCIPLINES.push({
       maj: "2026-11",
       hopital: [
         "**RMIPP** = reconstitution avec **matériau inséré en phase plastique**, avec **tenon fibré**",
-        "Choisie lorsque les **parois restantes sont suffisamment nombreuses** ; sinon : **inlay-core**",
+        "Choisie lorsqu'il reste **au moins 2 parois coronaires** (0,8 mm d'épaisseur, 1,5 mm de hauteur) après la préparation périphérique ; sinon : **inlay-core**",
         "**Préparation de la couronne dans la même séance**, en fonction du temps restant",
         "**Validation par l'encadrant** : empreintes, essayage et pose"
       ],
-      indications: ["Dent dépulpée avec parois restantes en nombre suffisant et ferrule présente", "Rétention insuffisante pour la couronne prévue sans reconstitution"],
+      indications: [{ t: "Dent dépulpée avec **parois résiduelles suffisantes**", sub: ["**Au moins 2 parois coronaires** après la préparation périphérique de la dent", "Chaque paroi : **épaisseur d'au moins 0,8 mm** et **hauteur d'au moins 1,5 mm**"] }, "**Ferrule** présente", "Rétention insuffisante pour la couronne prévue sans reconstitution"],
       contreIndications: ["Parois restantes insuffisantes : inlay-core", "Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
         "Digue, matrice et cales",
@@ -109,7 +109,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Temps 1 – Évaluation et préparation du logement", details: [
-          { t: "**Évaluation**", sub: ["Radiographie", "Parois restantes", "Ferrule"] },
+          { t: "**Évaluation**", sub: ["Radiographie", "Parois restantes : au moins 2 parois coronaires de 0,8 mm d'épaisseur et 1,5 mm de hauteur, après la préparation périphérique", "Ferrule"] },
           "**Isolation sous digue**",
           "Élimination des anciennes restaurations et des tissus fragiles",
           { t: "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**"] },
