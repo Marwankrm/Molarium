@@ -62,6 +62,9 @@
     var m = titre.match(/^(Séance|Temps|Étape|Phase)\s*(\d+[A-Z]?)\s*(\([^)]*\))?\s*[–-]\s*(.+)$/);
     return m ? { kind: m[1], n: m[2], note: m[3] ? m[3].slice(1, -1) : '', title: m[4] } : { kind: null, n: String(i + 1), note: '', title: titre };
   }
+  function rawSvg(str) { var w = document.createElement('span'); w.innerHTML = str; return w.firstChild; }
+  function discIco(id, cls) { var A = window.MOLARIUM_ART; return A ? rawSvg(A.discIcon(id, cls || 'dico')) : null; }
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
   function plural(n, s, p) { return n + ' ' + (n > 1 ? (p || s + 's') : s); }
 
   var ICONS = {
@@ -189,7 +192,7 @@
     DISCIPLINES.forEach(function (d) {
       var on = d.id === active;
       $sidebar.appendChild(el('a', { class: 'side-disc' + (on ? ' on' : ''), href: '#/' + d.id, style: colorStyle(d) }, [
-        el('span', { class: 'dot' }), el('span', { text: d.nom }), el('span', { class: 'badge', text: String(d.protocoles.length) })
+        discIco(d.id, 'side-ico'), el('span', { text: d.nom }), el('span', { class: 'badge', text: String(d.protocoles.length) })
       ]));
       var sub = el('div', { class: 'side-sub' });
       d.protocoles.forEach(function (p) { sub.appendChild(el('a', { href: '#/' + d.id + '/' + p.id, class: p.id === activeProto && on ? 'on' : '', text: p.titre })); });
@@ -247,18 +250,29 @@
       el('button', { type: 'button', class: 'hero-btn main', onclick: function () { window.scrollTo(0, 0); $q.focus(); } }, [icon('search', 18), el('span', { text: 'Rechercher un protocole' })]),
       el('button', { type: 'button', class: 'hero-btn', onclick: function () { var g = document.querySelector('.grid'); if (g) g.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); } }, [el('span', { text: 'Parcourir les disciplines' })])
     ]);
-    var tooth = icon('tooth', 150, '1.2'); tooth.setAttribute('class', 'hero-tooth');
+    var A = window.MOLARIUM_ART;
     frag.appendChild(el('section', { class: 'hero' }, [
-      el('h1', { text: 'Protocoles cliniques d\'odontologie' }),
-      el('p', { text: 'Molarium. Fiches de protocoles d\'odontologie, discipline par discipline : séances, matériel, points de vigilance et consignes au patient.' }),
-      heroBtns, el('div', { class: 'hero-orb', 'aria-hidden': 'true' }, [el('i'), el('i'), el('i'), tooth])
+      el('div', { class: 'hero-copy' }, [
+        el('p', { class: 'kicker', text: 'Atlas clinique · Odontologie' }),
+        el('h1', null, [document.createTextNode('Protocoles '), el('span', { class: 'hl', text: 'cliniques' }), document.createTextNode(' d\'odontologie')]),
+        el('p', { class: 'lead', text: 'Les fiches de protocoles du service, discipline par discipline : séances, matériel, points de vigilance et consignes au patient.' }),
+        heroBtns,
+        el('div', { class: 'hero-meta' }, [
+          el('div', null, [el('b', { text: pad2(DISCIPLINES.length) }), el('span', { text: 'disciplines' })]),
+          el('div', null, [el('b', { text: String(TOTAL) }), el('span', { text: 'protocoles' })]),
+          el('a', { href: '#/materiaux' }, [el('b', { text: String(MAT_TOTAL) }), el('span', { text: 'matériaux' })])
+        ])
+      ]),
+      A ? el('figure', { class: 'plate' }, [
+        (function () { var f = el('div', { class: 'plate-frame' }); f.appendChild(rawSvg(A.plate())); return f; })(),
+        el('figcaption', null, [el('span', { text: 'Planche 01' }), document.createTextNode(' · Molaire en coupe')])
+      ]) : null
     ]));
     var bn = banner(); if (bn) frag.appendChild(bn);
-    frag.appendChild(el('div', { class: 'stats' }, [
-      el('div', { class: 'stat' }, [el('b', { text: String(DISCIPLINES.length) }), el('span', { text: 'disciplines' })]),
-      el('div', { class: 'stat' }, [el('b', { text: String(TOTAL) }), el('span', { text: 'protocoles' })]),
-      el('a', { class: 'stat', href: '#/materiaux' }, [el('b', { text: String(MAT_TOTAL) }), el('span', { text: 'matériaux' })])
-    ]));
+    if (A) {
+      var od = el('div', { class: 'odonto', role: 'presentation' }, [el('p', { class: 'kicker', text: 'Odontogramme · notation FDI' })]);
+      od.appendChild(rawSvg(A.odonto())); frag.appendChild(od);
+    }
 
     var rec = recents.map(byKey).filter(Boolean).slice(0, 6);
     if (rec.length) {
@@ -271,24 +285,24 @@
       var rail2 = el('div', { class: 'rail' }); fv.slice(0, 6).forEach(function (p) { rail2.appendChild(protoCard(p, true)); }); frag.appendChild(rail2);
     }
 
-    frag.appendChild(el('div', { class: 'section-title' }, [el('h2', { text: 'Disciplines' })]));
+    frag.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: '01' }), el('h2', { text: 'Disciplines' })]));
     var grid = el('div', { class: 'grid' });
-    DISCIPLINES.forEach(function (d) {
+    DISCIPLINES.forEach(function (d, i) {
       grid.appendChild(el('a', { class: 'card', href: '#/' + d.id, style: colorStyle(d) }, [
-        el('span', { class: 'badge-ico', 'aria-hidden': 'true', text: d.sigle || d.nom.slice(0, 2).toUpperCase() }),
+        el('div', { class: 'card-top' }, [el('span', { class: 'badge-ico', 'aria-hidden': 'true' }, [discIco(d.id)]), el('span', { class: 'idx', text: pad2(i + 1) })]),
         el('h3', { text: d.nom }),
         el('p', { text: d.description }),
-        el('div', { class: 'meta' }, [el('b', { text: plural(d.protocoles.length, 'fiche') })])
+        el('div', { class: 'meta' }, [el('b', { text: plural(d.protocoles.length, 'fiche') }), el('span', { class: 'arr' }, [icon('arrow', 18, '2.2')])])
       ]));
     });
     frag.appendChild(grid);
     if (window.MATERIAUX) {
-      frag.appendChild(el('div', { class: 'section-title' }, [el('h2', { text: 'Matériaux' })]));
-      frag.appendChild(el('a', { class: 'card', href: '#/materiaux', style: colorStyle({ couleur: '#1d5fa8' }) }, [
-        el('span', { class: 'badge-ico', 'aria-hidden': 'true', text: 'MA' }),
+      frag.appendChild(el('div', { class: 'section-title' }, [el('span', { class: 'sec-k', text: '02' }), el('h2', { text: 'Matériaux' })]));
+      frag.appendChild(el('a', { class: 'card card-wide', href: '#/materiaux', style: colorStyle({ couleur: '#1d5fa8' }) }, [
+        el('div', { class: 'card-top' }, [el('span', { class: 'badge-ico', 'aria-hidden': 'true' }, [discIco('materiaux')]), el('span', { class: 'idx', text: String(MAT_TOTAL) })]),
         el('h3', { text: 'Matériaux du service' }),
         el('p', { text: 'Indications, contre-indications, méthode d\'utilisation et choix selon la situation, d\'après les notices.' }),
-        el('div', { class: 'meta' }, [el('b', { text: plural(MAT_TOTAL, 'produit') })])
+        el('div', { class: 'meta' }, [el('b', { text: plural(MAT_TOTAL, 'produit') }), el('span', { class: 'arr' }, [icon('arrow', 18, '2.2')])])
       ]));
     }
     mount(frag);
@@ -298,7 +312,8 @@
     setTitle(d.nom); setDisc(d); refreshChrome(d.id, null);
     var frag = document.createDocumentFragment();
     frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: d.nom }]));
-    frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [el('h1', { text: d.nom })]));
+    var di = DISCIPLINES.indexOf(d) + 1;
+    frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [el('span', { class: 'dh-ico', 'aria-hidden': 'true' }, [discIco(d.id)]), el('p', { class: 'kicker', text: 'Discipline ' + pad2(di) + ' · ' + plural(d.protocoles.length, 'fiche') }), el('h1', { text: d.nom })]));
     var list = el('div', { class: 'plist' });
     d.protocoles.forEach(function (p) { list.appendChild(protoCard(p, false)); });
     frag.appendChild(list); mount(frag);
@@ -348,7 +363,10 @@
       else prompt('Copiez le lien :', location.href);
     } }, [icon(navigator.share ? 'share' : 'link', 18), el('span', { text: navigator.share ? 'Partager' : 'Copier le lien' })]));
 
+    var pi = d.protocoles.indexOf(p) + 1;
     frag.appendChild(el('header', { class: 'page-head', style: colorStyle(d) }, [
+      el('span', { class: 'ph-art', 'aria-hidden': 'true' }, [discIco(d.id)]),
+      el('p', { class: 'kicker', text: d.nom + ' · Fiche ' + pad2(pi) + '/' + pad2(d.protocoles.length) }),
       el('h1', { text: p.titre }),
       el('div', { class: 'chips' }, chips), el('div', { class: 'actions' }, actions)
     ]));
@@ -772,7 +790,8 @@
   $('textBtn').addEventListener('click', function () { scaleIdx = (scaleIdx + 1) % scales.length; save('scale', scaleIdx); applyScale(); toast('Texte : ' + ['normal', 'grand', 'très grand'][scaleIdx]); });
 
   put($('menuBtn'), 'menu'); put($('searchIco'), 'search', 18); put($('textBtn'), 'textsize');
-  var bm = $('brandMark'); bm.appendChild(icon('tooth', 22, '1.8'));
+  var bm = $('brandMark'); bm.appendChild(window.MOLARIUM_ART ? rawSvg(window.MOLARIUM_ART.logo()) : icon('tooth', 22, '1.8'));
+  (function () { var A = window.MOLARIUM_ART, fi = document.querySelector('.foot-in'); if (A && fi) { var w = el('div', { class: 'foot-odonto', 'aria-hidden': 'true' }); w.appendChild(rawSvg(A.odonto())); fi.insertBefore(w, fi.firstChild); } })();
   $('footStats').textContent = plural(TOTAL, 'protocole') + ' · ' + plural(DISCIPLINES.length, 'discipline') + '.';
 
   window.addEventListener('beforeprint', function () { Array.prototype.forEach.call(document.querySelectorAll('details.acc'), function (x) { x.setAttribute('open', ''); }); });

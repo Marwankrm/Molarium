@@ -59,3 +59,7 @@ Le dossier `archive/` contient des fiches retirées du site mais conservées (no
 ## Design « Aurora » (v4)
 
 Identité : fond blanc, encre foncée et **une seule couleur de marque, le bleu-vert Molarium** (`--brand` dans `css/v4.css`). Le rouge n'est gardé que pour les alertes. Pas de couleur par discipline, pas de dégradé multicolore. Typographie : Space Grotesk (titres) et Figtree (texte). Barre de navigation flottante sur téléphone. Tout est dans `css/v4.css`, chargé après `style.css` et `v3.css` ; la police `css/fonts/space-grotesk-latin-wght-normal.woff2` est sous licence SIL OFL (`SpaceGrotesk-OFL.txt`).
+
+## Identité « Atlas » (v5)
+
+Le site est conçu comme un **atlas clinique** : planche anatomique au trait (molaire en coupe, dessinée en SVG dans `js/art.js`), odontogramme en notation FDI, icônes dessinées pour chaque discipline, étiquettes techniques et numérotation en chasse fixe (JetBrains Mono, licence SIL OFL), règle graduée sous les titres. Toujours une seule couleur de marque (`--brand`). Les styles sont dans `css/v5.css` (chargé après `v4.css`) ; les illustrations sont dans `js/art.js`.
