@@ -72,6 +72,7 @@ var RIM_PA = {
 window.DISCIPLINES.push({
   id: "prothese-amovible",
   ordre: 1,
+  ordreSections: ["s-indic", "s-etapes", "s-suivi", "s-consignes", "s-compl", "s-annexe", "s-alertes", "s-erreurs", "s-refs", "s-todo"],
   nom: "Prothèse amovible",
   sigle: "PA",
   couleur: "#7a3e9d",
