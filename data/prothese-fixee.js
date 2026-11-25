@@ -322,7 +322,7 @@ window.DISCIPLINES.push({
       contreIndications: ["Cuspides fragilisées : onlay", "Isolation impossible (collage)", "Parafonction non contrôlée"],
       materiel: [
         "Fraises de préparation",
-        "Empreinte de la préparation : **Express 2** ou **Impregum Penta Super Quick** ; **alginate** pour l'antagoniste",
+        "Empreinte de la préparation : **Express 2** ou **Impregum Penta Super Quick** ; **alginate** pour l'antagoniste ; occlusion au **Futar D**",
         "Composite provisoire **Telio Onlay** (Ivoclar, seringue de 2,5 g, teinte universelle) et ciment provisoire **Kerr** (Temporary Cement + accélérateur)",
         "Isolation (digue) ; **Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus**",
         "Traitement de l'intrados : céramique silicatée (ex. disilicate de lithium) : **acide fluorhydrique** **Porcelain Etch** (Ultradent, gel tamponné : **90 s**, aspiration à haut débit pendant le mordançage, aspirer, rincer, sécher jusqu'à un aspect givré) ; **si le laboratoire a déjà mordancé à l'HF : acide phosphorique seulement**, pas de second mordançage ; composite : **sablage, gel de mordançage K-Etchant, rinçage, séchage**",
@@ -341,9 +341,9 @@ window.DISCIPLINES.push({
           "Teinte au teintier",
           { t: "**Empreinte de la préparation**", sub: ["**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)", "Rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet (Acteon)"] },
           "**Empreinte de l'antagoniste** à l'**alginate**",
-          "**Empreinte de l'occlusion**",
+          "**Empreinte de l'occlusion** avec le **Futar D**",
           "**Provisoire**"
-        ], materiel: ["fraises de préparation", "Express 2 ou Impregum Penta Super Quick", "alginate", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'inlay en céramique ou en composite." },
+        ], materiel: ["fraises de préparation", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (occlusion)", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'inlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
           "Dépose du provisoire, **essayage à sec** : adaptation, contacts proximaux, teinte ; validation du patient",
           { t: "**Collage au Panavia V5 sous isolation** (notice, inlays/onlays)", sub: [{ t: "**Traitement de l'intrados**", sub: ["Céramique silicatée : **Porcelain Etch** 90 s, rinçage, séchage", "Composite : sablage, **K-Etchant**, rinçage, séchage", "Puis **Clearfil Ceramic Primer Plus**"] }, "**Tooth Primer 20 s** sur la dent, séchage", "Pâte Panavia V5, mise en place, **excès retiré après 3 à 5 s de photopolymérisation** (ou au pinceau)", "**Isolation maintenue 3 minutes** ou photopolymérisation"] },
@@ -395,7 +395,7 @@ window.DISCIPLINES.push({
       contreIndications: ["Perte de substance trop importante : couronne", "Isolation impossible (collage)", "Parafonction non contrôlée"],
       materiel: [
         "Fraises de préparation",
-        "Empreinte de la préparation : **Express 2** ou **Impregum Penta Super Quick** ; **alginate** pour l'antagoniste",
+        "Empreinte de la préparation : **Express 2** ou **Impregum Penta Super Quick** ; **alginate** pour l'antagoniste ; occlusion au **Futar D**",
         "Composite provisoire **Telio Onlay** (Ivoclar, seringue de 2,5 g, teinte universelle) et ciment provisoire **Kerr** (Temporary Cement + accélérateur)",
         "Isolation (digue) ; **Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus**",
         "Traitement de l'intrados : céramique silicatée (ex. disilicate de lithium) : **acide fluorhydrique** **Porcelain Etch** (Ultradent, gel tamponné : **90 s**, aspiration à haut débit pendant le mordançage, aspirer, rincer, sécher jusqu'à un aspect givré) ; **si le laboratoire a déjà mordancé à l'HF : acide phosphorique seulement**, pas de second mordançage ; composite : **sablage, gel de mordançage K-Etchant, rinçage, séchage**",
@@ -415,9 +415,9 @@ window.DISCIPLINES.push({
           "Teinte au teintier",
           { t: "**Empreinte de la préparation**", sub: ["**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)", "Rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet (Acteon)"] },
           "**Empreinte de l'antagoniste** à l'**alginate**",
-          "**Empreinte de l'occlusion**",
+          "**Empreinte de l'occlusion** avec le **Futar D**",
           "**Provisoire**"
-        ], materiel: ["fraises de préparation", "Express 2 ou Impregum Penta Super Quick", "alginate", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'onlay en céramique ou en composite." },
+        ], materiel: ["fraises de préparation", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (occlusion)", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'onlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
           "Dépose du provisoire, **essayage à sec** : adaptation, contacts proximaux, occlusion, teinte ; validation du patient",
           { t: "**Collage au Panavia V5 sous isolation** (notice, inlays/onlays)", sub: [{ t: "**Traitement de l'intrados**", sub: ["Céramique silicatée : **Porcelain Etch** 90 s, rinçage, séchage", "Composite : sablage, **K-Etchant**, rinçage, séchage", "Puis **Clearfil Ceramic Primer Plus**"] }, "**Tooth Primer 20 s** sur la dent, séchage", "Pâte Panavia V5, mise en place, **excès retiré après 3 à 5 s de photopolymérisation** (ou au pinceau)", "**Isolation maintenue 3 minutes** ou photopolymérisation"] },
@@ -477,7 +477,7 @@ window.DISCIPLINES.push({
       ],
       materiel: [
         "Fraises diamantées : cylindro-conique (conicité de l'ordre de 7° pour la chambre) et fraise boule/roue pour la table occlusale",
-        "Empreinte de la préparation : **Express 2** (silicone, 3M ESPE) ou **Impregum Penta Super Quick** (polyéther) ; **alginate** pour l'antagoniste ; fabrication de la zircone",
+        "Empreinte de la préparation : **Express 2** (silicone, 3M ESPE) ou **Impregum Penta Super Quick** (polyéther) ; **alginate** pour l'antagoniste ; occlusion au **Futar D** ; fabrication de la zircone",
         "Provisoire : résine **Unifast Trad**, ciment provisoire **Temp-Bond** ou **Temp-Bond NE**",
         "**Panavia V5 Paste**, **Tooth Primer**, **Clearfil Ceramic Primer Plus**, sablage à l'alumine, lampe à photopolymériser",
         "Isolation : digue"
@@ -498,9 +498,9 @@ window.DISCIPLINES.push({
           { t: "**Chambre pulpaire**", sub: ["Parois sans contre-dépouille avec la fraise cylindro-conique (conicité ≈ 7°)", "Parois lisses et continues avec la cavité d'accès", "Ciment de scellement endodontique retiré dans la chambre"] },
           "**Empreinte** (silicone **Express 2** ou polyéther **Impregum Penta Super Quick**)",
           "**Empreinte de l'antagoniste** à l'**alginate**",
-          "**Empreinte de l'occlusion**",
+          "**Empreinte de l'occlusion** avec le **Futar D**",
           "**Provisoire** (**Unifast Trad**, **Temp-Bond**)"
-        ], materiel: ["fraises diamantées", "empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "provisoire (Unifast Trad, Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire (ou en CFAO au service) : fabrication de l'endo-couronne en zircone." },
+        ], materiel: ["fraises diamantées", "empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "**Futar D** (occlusion)", "provisoire (Unifast Trad, Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire (ou en CFAO au service) : fabrication de l'endo-couronne en zircone." },
         { titre: "Séance 2 – Essayage et collage", details: [
           "Dépose du provisoire et nettoyage",
           { t: "**Essayage à sec**", sub: ["Adaptation interne et marginale", "Contacts proximaux", "Occlusion", "Teinte"] },
@@ -543,7 +543,7 @@ window.DISCIPLINES.push({
         "Examen : sonde, miroir, radiographie rétro-alvéolaire, alginate pour modèles d'étude",
         "Fraises de préparation",
         "Rétraction gingivale : fil(s) rétracteur(s)",
-        "Empreinte de la préparation : **Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther) ; **alginate** pour l'arcade antagoniste",
+        "Empreinte de la préparation : **Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther) ; **alginate** pour l'arcade antagoniste ; occlusion au **Futar D**",
         "Provisoire : résine **Unifast Trad**, clé en silicone, ciment provisoire **Temp-Bond** ou **Temp-Bond NE**",
         "Teintier",
         "Ciment d'assemblage : **scellement** au **Fuji PLUS** ou **collage** au **Panavia V5**, selon le matériau (prétraitement : feuille Panavia V5 du service)",
@@ -567,9 +567,9 @@ window.DISCIPLINES.push({
           "**Rétraction gingivale**",
           "**Empreinte de précision** (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther))",
           "**Empreinte de l'antagoniste** à l'**alginate**",
-          "**Enregistrement de l'occlusion**",
+          "**Enregistrement de l'occlusion** avec le **Futar D**",
           "**Provisoire** réalisé avec la clé en silicone, ajusté puis posé au ciment provisoire"
-        ], materiel: ["fraises de préparation", "fil rétracteur", "matériau d'empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "résine (Unifast Trad) et clé en silicone pour provisoire", "ciment provisoire (Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée du modèle de travail et confection de la couronne." },
+        ], materiel: ["fraises de préparation", "fil rétracteur", "matériau d'empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "**Futar D** (occlusion)", "résine (Unifast Trad) et clé en silicone pour provisoire", "ciment provisoire (Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée du modèle de travail et confection de la couronne." },
         { titre: "Séance 3 – Essayage et scellement", details: [
           "Voir les fiches **Scellement d'une couronne en zircone** ou **Scellement d'une couronne céramo-métallique** selon le matériau",
           "Contrôle de l'occlusion, consignes au patient et suivi"
