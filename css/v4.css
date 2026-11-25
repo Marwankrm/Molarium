@@ -1,6 +1,6 @@
 /* =====================================================================
    Molarium v4 — « Aurora »
-   Fond blanc, lignes fines, dégradé cyan → violet → magenta,
+   Fond blanc, lignes fines, une seule couleur de marque (bleu-vert),
    typographie géométrique (Space Grotesk) et cartes lumineuses.
    Couche chargée après style.css et v3.css : change uniquement la forme.
    ===================================================================== */
@@ -267,3 +267,104 @@ a.stat:hover{transform:translateY(-3px);border-color:var(--vi);box-shadow:var(--
 .disc-head::before{display:none}
 .disc-head h1{margin:0;font-size:clamp(2rem,4.6vw,3rem);font-weight:800;letter-spacing:-.04em;color:var(--d,var(--ink));text-decoration:none}
 @media (max-width:760px){.disc-head{padding:0;border-radius:0;margin:8px 0 24px}.disc-head h1{font-size:1.9rem}}
+
+/* =====================================================================
+   Identité visuelle : UNE couleur de marque
+   Blanc + encre + bleu-vert « Molarium ». Le rouge n'est gardé que pour les
+   alertes. Plus de couleur par discipline, plus de dégradés multicolores.
+   ===================================================================== */
+:root{
+  --brand:#0e7c8a; --brand-strong:#0a5a66; --brand-soft:#eaf6f8; --brand-line:#c3e2e7;
+  --d:var(--brand); --vi:var(--brand); --cy:var(--brand); --mg:var(--brand);
+  --grad:linear-gradient(135deg,#12909f,#0a5a66); --grad-btn:linear-gradient(135deg,#0f8696,#0a5a66);
+  --info:var(--brand); --info-bg:#f1f9fa; --info-line:var(--brand-line);
+  --ok:var(--brand-strong); --ok-bg:#f1f9fa;
+  --warn:var(--brand-strong); --warn-bg:#f1f9fa; --warn-line:var(--brand-line);
+  --shadow-1:0 1px 2px rgba(12,26,43,.04),0 8px 24px rgba(12,26,43,.06);
+  --shadow-2:0 2px 6px rgba(12,26,43,.05),0 18px 44px rgba(12,26,43,.12);
+}
+::selection{background:#cfeaee}
+:focus-visible{outline-color:color-mix(in srgb,var(--brand) 75%,#fff)}
+.beta-bar{background:#f4f9fa;border-bottom:1px solid var(--brand-line);color:var(--ink)}
+.brand-mark{background:var(--brand);box-shadow:0 6px 16px rgba(14,124,138,.28)}
+.search:focus-within,.mat-search:focus{border-color:var(--brand);box-shadow:0 0 0 4px rgba(14,124,138,.14)}
+.side-link.on,.side-disc.on{background:var(--brand-soft);color:var(--brand-strong);box-shadow:inset 3px 0 0 var(--brand)}
+.side-disc .dot{display:none}
+.side-sub a.on{background:var(--brand-soft);color:var(--brand-strong)}
+
+/* accueil */
+.hero{background:radial-gradient(520px 340px at 92% 8%,rgba(14,124,138,.10),transparent 70%),#fff}
+.hero::after{background-image:radial-gradient(rgba(14,124,138,.30) 1px,transparent 1.3px);opacity:.45}
+.hero h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--ink);-webkit-text-fill-color:currentColor}
+.hero-btn.main,.btn.primary{background:var(--brand);box-shadow:0 10px 22px rgba(14,124,138,.28)}
+.hero-btn.main:hover,.btn.primary:hover{background:var(--brand-strong);filter:none}
+.hero-btn:hover,.btn:hover{border-color:var(--brand);color:var(--brand-strong);background:var(--brand-soft)}
+.hero-btn.main:hover,.btn.primary:hover{color:#fff}
+.hero-orb i{border-color:rgba(14,124,138,.30)}
+.hero-orb i:nth-child(2),.hero-orb i:nth-child(3){border-color:rgba(14,124,138,.22)}
+.hero-orb i::after,.hero-orb i:nth-child(2)::after,.hero-orb i:nth-child(3)::after{background:var(--brand);box-shadow:0 0 12px 2px rgba(14,124,138,.40)}
+.hero-tooth{color:var(--brand);filter:none}
+.stat b{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:currentColor;color:var(--brand-strong)}
+a.stat:hover{border-color:var(--brand)}
+
+/* cartes de disciplines et de fiches : sobres */
+.card::before,.pcard::before,.pcard::after{display:none}
+.card,.pcard{border:1px solid var(--line);box-shadow:none}
+.card:hover,.pcard:hover{transform:translateY(-3px);border-color:var(--brand);box-shadow:0 14px 34px rgba(12,26,43,.09)}
+.badge-ico{background:var(--brand-soft);color:var(--brand-strong);border:1px solid var(--brand-line);box-shadow:none}
+.card .meta b,.pcard .disc,.pcard .go{color:var(--brand-strong)}
+.pcard{padding-left:22px}
+
+/* en-têtes de fiche */
+.page-head{background:#fff}
+.page-head::before{display:none}
+.page-head,.disc-head{box-shadow:none}
+.disc-head h1{color:var(--ink)}
+
+/* sommaire, sections, étapes */
+.toc-bar a.on{background:var(--brand);box-shadow:none}
+.toc-side a:hover{border-left-color:var(--brand)}
+.toc-side a.on{border-left-color:var(--brand);background:var(--brand-soft)!important}
+.acc{--c:var(--brand)}
+.acc[open]>summary,.acc>summary:hover{background:var(--brand-soft)}
+.acc.main-acc{--c:var(--brand);box-shadow:none;border:1.5px solid var(--brand-line)}
+.acc.main-acc>summary{background:var(--brand-soft)}
+.acc.main-acc>summary:hover{background:#e2f2f5}
+.acc.main-acc>summary h2{color:var(--brand-strong)}
+.acc.main-acc .acc-ico{background:var(--brand);box-shadow:none}
+.acc.main-acc>summary .cnt{background:var(--brand)}
+.acc.sec-danger,.acc.alert{--c:var(--danger)}
+.acc.sec-danger .acc-ico,.acc.alert .acc-ico{background:var(--danger-bg);color:var(--danger)}
+.acc.sec-danger[open]>summary,.acc.alert>summary,.acc.alert[open]>summary{background:var(--danger-bg)}
+.progress .bar i{background:var(--brand)}
+.step-n{border-color:var(--brand);color:var(--brand);box-shadow:0 0 0 6px rgba(14,124,138,.10)}
+.step-n:hover{box-shadow:0 0 0 9px rgba(14,124,138,.14)}
+.step.done .step-n{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 0 0 6px rgba(14,124,138,.12)}
+.step.done .step-body{background:var(--brand-soft);border-color:var(--brand-line)}
+.step:hover .step-body{border-color:var(--brand-line)}
+.eyebrow{background:var(--brand-soft);color:var(--brand-strong)}
+.step-body li::marker{color:var(--brand)}
+.mat{background:var(--info-bg)}
+.valid,.tip{background:var(--info-bg);border:1px solid var(--brand-line);border-left:1px solid var(--brand-line)}
+.chip.draft,.chip.valid,.chip.src{background:var(--brand-soft);border-color:var(--brand-line);color:var(--brand-strong)}
+
+/* matériaux */
+.m-ind{background:var(--info-bg);border:1px solid var(--brand-line)}
+.m-ret{background:#f7f9fa;border:1px solid var(--line)}
+.m-ret h3{color:var(--muted)}
+.mc::before{background:var(--brand)}
+.mat-acc .acc-ico{border:1px solid var(--line)}
+
+/* téléphone : barre du bas */
+@media (max-width:1000px){
+  .tabbar .on{background:var(--brand);box-shadow:0 6px 14px rgba(14,124,138,.30)}
+}
+
+/* menu mobile : tiroir à hauteur d'écran, qui défile seul */
+@media (max-width:1000px){
+  .sidebar{align-self:stretch;height:100vh;height:100dvh;max-height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  body.menu-open{overflow:hidden}
+}
+.banner{background:#f7fbfc;border:1px solid var(--brand-line)}
+.banner strong{color:var(--brand-strong)}
+@media (max-width:1000px){.sidebar:not(.open){box-shadow:none}}

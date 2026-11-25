@@ -58,4 +58,4 @@ Le dossier `archive/` contient des fiches retirées du site mais conservées (no
 
 ## Design « Aurora » (v4)
 
-Fond blanc, lignes fines, dégradé cyan → violet → magenta, typographie Space Grotesk (titres) et Figtree (texte), cartes lumineuses aux couleurs des disciplines, barre de navigation flottante sur téléphone. Tout est dans `css/v4.css`, chargé après `style.css` et `v3.css` ; la police `css/fonts/space-grotesk-latin-wght-normal.woff2` est sous licence SIL OFL (`SpaceGrotesk-OFL.txt`).
+Identité : fond blanc, encre foncée et **une seule couleur de marque, le bleu-vert Molarium** (`--brand` dans `css/v4.css`). Le rouge n'est gardé que pour les alertes. Pas de couleur par discipline, pas de dégradé multicolore. Typographie : Space Grotesk (titres) et Figtree (texte). Barre de navigation flottante sur téléphone. Tout est dans `css/v4.css`, chargé après `style.css` et `v3.css` ; la police `css/fonts/space-grotesk-latin-wght-normal.woff2` est sous licence SIL OFL (`SpaceGrotesk-OFL.txt`).

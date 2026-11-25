@@ -133,7 +133,7 @@
   function findProto(d, pid) { return d && d.protocoles.filter(function (p) { return p.id === pid; })[0]; }
   function setTitle(t) { document.title = (t ? t + ' – ' : '') + 'Molarium · Protocoles d\'odontologie'; }
   function setDisc(d) { document.documentElement.style.setProperty('--d', d ? (d.couleur || '#0b6e7f') : '#0b6e7f'); }
-  function colorStyle(d) { return '--d:' + (d.couleur || '#0b6e7f'); }
+  function colorStyle(d) { return '--d:var(--brand)'; }
   function isNarrow() { return window.matchMedia('(max-width:1000px)').matches; }
 
   // ---------- pastilles ----------
@@ -210,7 +210,7 @@
     if (window.MATERIAUX) $tabbar.appendChild(tab('#/materiaux', 'box', 'Matériaux', /materiaux/.test(route), null));
   }
   function openMenu(on) {
-    $sidebar.classList.toggle('open', on); $scrim.classList.toggle('on', on);
+    $sidebar.classList.toggle('open', on); $scrim.classList.toggle('on', on); document.body.classList.toggle('menu-open', !!on);
     $('menuBtn').setAttribute('aria-expanded', on ? 'true' : 'false');
   }
   function refreshChrome(active, proto) {
@@ -712,10 +712,16 @@
   }
 
   // ---------- routeur ----------
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  function toTop() {
+    var h = document.documentElement; h.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0); document.body.scrollTop = 0; h.scrollTop = 0;
+    requestAnimationFrame(function () { window.scrollTo(0, 0); setTimeout(function () { window.scrollTo(0, 0); h.style.scrollBehavior = ''; }, 60); });
+  }
   function route() {
     var parts = location.hash.replace(/^#\/?/, '').split('/').map(decodeURIComponent).filter(Boolean);
     closeSuggest(); openMenu(false);
-    window.scrollTo(0, 0);
+    toTop();
     if (parts[0] === 'recherche') { var q = parts.slice(1).join('/'); $q.value = q; return renderSearch(q); }
     $q.value = '';
     if (!parts.length) return renderHome();
