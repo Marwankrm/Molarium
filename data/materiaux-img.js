@@ -188,6 +188,11 @@ window.MATERIAUX_IMG = {
   "credit": "Dentsply Maillefer (catalogue)",
   "page": "https://www.maillefer.com/wp-content/uploads/2016/10/2016-Maillefer-Catalog.pdf"
  },
+ "tenons-dentoclic-itena-clinical": {
+  "f": "img/materiaux/tenons-dentoclic-itena-clinical.jpg",
+  "credit": "",
+  "page": "https://itena-clinical.com/fr/ancrage-radiculaire/"
+ },
  "forets-cylindro-coniques-dentoclic-itena": {
   "f": "img/materiaux/forets-cylindro-coniques-dentoclic-itena.jpg",
   "credit": "",
