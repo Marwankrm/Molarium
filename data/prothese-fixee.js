@@ -28,7 +28,7 @@ window.DISCIPLINES.push({
       indications: ["Dent dépulpée avec **peu de parois restantes** (reconstitution par tenon fibré non envisageable)", "Rétention insuffisante pour la couronne prévue"],
       contreIndications: ["Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
-        "Digue ; instruments de désobturation (fraises, forets canalaires)",
+        "Digue ; désobturation : **Gates-Glidden 1, 2, 3** et **Largo (Peeso) 1, 2, 3**",
         "Empreinte du logement : **directe** (résine à maquette **GC Pattern Resin LS**, dont la notice prévoit l'usage en bouche pour une maquette de reconstitution) ou **indirecte** (silicone, avec tenon d'empreinte)",
         "**Tenon métallique Dentoclic** (Itena Clinical) de même diamètre comme tenon provisoire ; résine de provisoire **Unifast Trad** ; ciment provisoire **Temp-Bond** ou **Temp-Bond NE**, **seulement sur les bords de la couronne** et pas sur le tenon (notice Dentoclic)",
         "Inlay-core coulé en métal",
@@ -42,9 +42,9 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Préparation canalaire et empreinte", details: [
-          "Évaluation (radiographie, ferrule, parois résiduelles) ; **désobturation partielle sous digue** en gardant 4 à 5 mm de gutta-percha, calibrage du logement sans amincir les parois ; préparation coronaire",
+          "Évaluation (radiographie, ferrule, parois résiduelles) ; **désobturation partielle sous digue** en gardant 4 à 5 mm de gutta-percha : **Gates-Glidden 1, 2, 3** (0,50 / 0,70 / 0,90 mm) puis **Largo (Peeso) 1, 2, 3** (0,70 / 0,90 / 1,10 mm), **dans l'ordre croissant**, à environ **800-1 200 tr/min** en contre-angle, sans amincir les parois ; préparation coronaire",
           "**Empreinte du logement** et de la préparation coronaire, antagoniste, occlusion ; **tenon provisoire** et provisoire"
-        ], materiel: ["digue", "forets et fraises de désobturation", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée de l'inlay-core en métal." },
+        ], materiel: ["digue", "Gates-Glidden 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée de l'inlay-core en métal." },
         { titre: "Séance 2 – Essayage et scellement", details: [
           "**Essayage** de l'inlay-core (adaptation, insertion, parois) ; contrôle radiographique si besoin",
           "**Scellement au Panavia V5 sous digue** (notice, tenons métalliques) : sablage de l'inlay-core à l'alumine, nettoyage aux ultrasons, séchage, **Clearfil Ceramic Primer Plus** ; **Tooth Primer 20 s** dans le logement, excès de liquide retiré, séchage ; pâte sur l'inlay-core ou la dent, mise en place **rapide avec une légère vibration** ; excès étalé sur la base coronaire et la tête du tenon puis photopolymérisation (teinte opaque : prise de 3 min) ; **préparation de la dent 6 minutes après la pose** pour enchaîner la couronne"
@@ -62,6 +62,8 @@ window.DISCIPLINES.push({
         "Pas de digue lors du scellement"
       ],
       references: [
+        "[Gates-Glidden (n° 1 à 4 : 0,50 à 1,10 mm) et Largo-Peeso (n° 1 à 3 : 0,70 à 1,10 mm), Dentsply Maillefer, préparation du logement du tenon : étude PMC7691261](https://pmc.ncbi.nlm.nih.gov/articles/PMC7691261/)",
+        "Vitesse des Gates-Glidden et des Largo : environ 800 à 1 200 tr/min d'après les revendeurs des instruments Dentsply Maillefer (environ 1 000 tr/min pour les Gates-Glidden selon les ouvrages) ; notice du fabricant non trouvée. Les Largo, longs, risquent la perforation latérale dans un canal courbe : les garder dans la partie rectiligne.",
         "[Kuraray Noritake – PANAVIA V5, fiche protocole (12/2014), indication « scellement de tenons » : tenon métallique et tenon fibré](https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf) — à comparer à la notice en vigueur",
         "Séquence rédigée d'après la pratique courante ; **le Panavia V5 pour l'inlay-core est confirmé** par les feuilles affichées au service (prétraitement : métal = sablage, rinçage, séchage puis Clearfil Ceramic Primer Plus).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
@@ -86,7 +88,7 @@ window.DISCIPLINES.push({
       contreIndications: ["Parois restantes insuffisantes : inlay-core", "Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
         "Digue, matrice et cales",
-        "Foret canalaire du système de tenon",
+        "Désobturation : **Gates-Glidden 1, 2, 3** et **Largo (Peeso) 1, 2, 3** ; foret du système de tenon",
         "Tenon fibré",
         "**Silane Silan-IT** (Itena) pour le tenon fibré ; ciment résine auto-adhésif **RelyX Unicem 2** (3M) avec embout mélangeur et **Endo Tip** ; pointes de papier, alcool",
         "Adhésif **G-Premio Bond** et composite **Bulk Fill** de reconstitution ; lampe à photopolymériser"
@@ -102,9 +104,9 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Temps 1 – Évaluation et préparation du logement", details: [
           "Évaluation (radiographie, parois restantes, ferrule) ; **digue** ; élimination des anciennes restaurations et des tissus fragiles",
-          "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha ; forage du logement avec le foret du système ; **rincer puis sécher avec des pointes de papier**, sans dessécher excessivement la dentine ; isolation sous **digue** recommandée",
+          "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha : **Gates-Glidden 1, 2, 3** (0,50 / 0,70 / 0,90 mm) puis **Largo (Peeso) 1, 2, 3** (0,70 / 0,90 / 1,10 mm), **dans l'ordre croissant**, à environ **800-1 200 tr/min** en contre-angle ; forage du logement avec le foret du système ; **rincer puis sécher avec des pointes de papier**, sans dessécher excessivement la dentine ; isolation sous **digue** recommandée",
           "**Essayage du tenon fibré** : vérifier la **longueur et l'adaptation** (radiographie) ; **nettoyer le tenon à l'alcool**, puis sécher"
-        ], materiel: ["digue", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
+        ], materiel: ["digue", "Gates-Glidden 1, 2, 3 et Largo 1, 2, 3", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
           "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
           "**Préparation du ciment** : installer l'embout mélangeur puis l'**Endo Tip** sur le **RelyX Unicem 2** ; **purger une petite quantité** avant utilisation",
@@ -129,6 +131,8 @@ window.DISCIPLINES.push({
         "Logement trop large : paroi radiculaire amincie"
       ],
       references: [
+        "[Gates-Glidden (n° 1 à 4 : 0,50 à 1,10 mm) et Largo-Peeso (n° 1 à 3 : 0,70 à 1,10 mm), Dentsply Maillefer, préparation du logement du tenon : étude PMC7691261](https://pmc.ncbi.nlm.nih.gov/articles/PMC7691261/)",
+        "Vitesse des Gates-Glidden et des Largo : environ 800 à 1 200 tr/min d'après les revendeurs des instruments Dentsply Maillefer (environ 1 000 tr/min pour les Gates-Glidden selon les ouvrages) ; notice du fabricant non trouvée. Les Largo, longs, risquent la perforation latérale dans un canal courbe : les garder dans la partie rectiligne.",
         "Séquence d'après la **feuille « Scellement du tenon fibré avec silanisation et reconstitution du faux-moignon au composite Bulk Fill »** affichée au service (annotations manuscrites : RelyX Unicem 2 pour la RMIPP uniquement ; silane = Silan-IT ; adhésif = G-Premio Bond).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
