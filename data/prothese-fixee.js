@@ -47,9 +47,9 @@ window.DISCIPLINES.push({
           "**Préparation coronaire**",
           "**Empreinte du logement** et de la préparation coronaire (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther))",
           "**Empreinte de l'antagoniste** à l'**alginate**",
-          "**Empreinte de l'occlusion**",
+          "**Empreinte de l'occlusion** avec le **Futar D**",
           { t: "**Réalisation de la provisoire** avec un **tenon provisoire**", sub: ["Tenon : **tenon métallique Dentoclic** provisoire (de même diamètre que le tenon d'empreinte)", "Provisoire : résine **Unifast Trad**", "Si besoin de la sceller : **Temp-Bond** ou **Temp-Bond NE**, seulement sur les bords de la couronne, pas sur le tenon"] }
-        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "**Envoyer au laboratoire le tenon calcinable correspondant** au tenon d'empreinte. Au laboratoire : coulée de l'inlay-core en métal." },
+        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "**Futar D** (enregistrement de l'occlusion)", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "**Envoyer au laboratoire le tenon calcinable correspondant** au tenon d'empreinte. Au laboratoire : coulée de l'inlay-core en métal." },
         { titre: "Séance 2 – Essayage et scellement", details: [
           "**Essayage** de l'inlay-core (adaptation, insertion, parois) ; contrôle radiographique si besoin",
           "**Scellement au Panavia V5 sous digue** (notice, tenons métalliques) : sablage de l'inlay-core à l'alumine, nettoyage aux ultrasons, séchage, **Clearfil Ceramic Primer Plus** ; **Tooth Primer 20 s** dans le logement, excès de liquide retiré, séchage ; pâte sur l'inlay-core ou la dent, mise en place **rapide avec une légère vibration** ; excès étalé sur la base coronaire et la tête du tenon puis photopolymérisation (teinte opaque : prise de 3 min) ; **préparation de la dent 6 minutes après la pose** pour enchaîner la couronne"
