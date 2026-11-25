@@ -210,10 +210,11 @@ window.MATERIAUX = {
     {
      "id": "tenons-dentoclic-itena-clinical",
      "nom": "Tenons Dentoclic (Itena Clinical)",
-     "type": "Tenons en inox 316L et titane TA6V, tenons calcinables, forets",
+     "type": "Tenons métalliques en inox 316L et titane TA6V, tenons calcinables, forets",
      "statut": "lue",
      "ind": [
-      "Soutenir une reconstitution temporaire ou définitive après traitement radiculaire, par voie directe ou indirecte"
+      "**Tenon métallique** (inox ou titane) : **tenon provisoire** et **tenon d'empreinte** pour l'inlay-core, par voie indirecte",
+      "**Tenon calcinable** correspondant : **à envoyer au laboratoire** avec l'empreinte, pour la coulée de l'inlay-core"
      ],
      "ci": [
       "Tenons **calcinables** : ni empreinte, ni reconstitution corono-radiculaire directe"
@@ -221,10 +222,11 @@ window.MATERIAUX = {
      "met": [
       "Forets : **Gates ou Largo** (gutta), **pilotes**, puis cylindro-coniques ou coniques ; contre-angle lent, **10 000 tr/min au plus**",
       "Vérifier l'intégrité de la racine, garder des parois dentinaires suffisantes",
-      "**Indirect** : tenon métallique pour l'empreinte, tenon calcinable correspondant au labo ; provisoire avec un tenon de même diamètre, ciment provisoire **seulement sur les bords de la couronne**",
-      "**Direct** : tenon en titane scellé définitivement"
+      "**Empreinte** : tenon métallique en place ; envoyer au laboratoire le **tenon calcinable de même référence**",
+      "**Provisoire** : tenon métallique de même diamètre, ciment provisoire **seulement sur les bords de la couronne**"
      ],
      "ret": [
+      "**Ne pas oublier d'envoyer le tenon calcinable correspondant au laboratoire**",
       "Le calcinable est plus fin de 2/100 mm : toujours l'associer au métallique de même référence",
       "Tenons métalliques à stériliser avant usage (autoclave 134 °C, 18 min) ; calcinables non stérilisables"
      ],

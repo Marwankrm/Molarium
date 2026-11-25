@@ -30,7 +30,7 @@ window.DISCIPLINES.push({
       materiel: [
         "Digue ; désobturation : **Gates 1, 2, 3** et **Largo 1, 2, 3**",
         "Empreinte du logement : **directe** (résine à maquette **GC Pattern Resin LS**, dont la notice prévoit l'usage en bouche pour une maquette de reconstitution) ou **indirecte** (**Express 2** ou **Impregum Penta Super Quick**, avec tenon d'empreinte) ; antagoniste à l'**alginate**",
-        "**Tenon métallique Dentoclic** (Itena Clinical) de même diamètre comme tenon provisoire ; résine de provisoire **Unifast Trad** ; ciment provisoire **Temp-Bond** ou **Temp-Bond NE**, **seulement sur les bords de la couronne** et pas sur le tenon (notice Dentoclic)",
+        "**Tenon métallique Dentoclic** (Itena Clinical, inox ou titane) : **tenon d'empreinte** et **tenon provisoire** (de même diamètre) ; **envoyer au laboratoire le tenon calcinable correspondant** ; résine de provisoire **Unifast Trad** ; ciment provisoire **Temp-Bond** ou **Temp-Bond NE**, **seulement sur les bords de la couronne** et pas sur le tenon (notice Dentoclic)",
         "Inlay-core coulé en métal",
         "**Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus** ; sablage à l'alumine, bain ultrasonique, lampe à photopolymériser"
       ],
@@ -44,7 +44,7 @@ window.DISCIPLINES.push({
         { titre: "Séance 1 – Préparation canalaire et empreinte", details: [
           "Évaluation (radiographie, ferrule, parois résiduelles) ; **désobturation partielle sous digue** en gardant 4 à 5 mm de gutta-percha : utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**, sans amincir les parois ; préparation coronaire",
           "**Empreinte du logement** et de la préparation coronaire (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)), antagoniste à l'**alginate**, occlusion ; **tenon provisoire** et provisoire"
-        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée de l'inlay-core en métal." },
+        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "**Envoyer au laboratoire le tenon calcinable correspondant** au tenon d'empreinte. Au laboratoire : coulée de l'inlay-core en métal." },
         { titre: "Séance 2 – Essayage et scellement", details: [
           "**Essayage** de l'inlay-core (adaptation, insertion, parois) ; contrôle radiographique si besoin",
           "**Scellement au Panavia V5 sous digue** (notice, tenons métalliques) : sablage de l'inlay-core à l'alumine, nettoyage aux ultrasons, séchage, **Clearfil Ceramic Primer Plus** ; **Tooth Primer 20 s** dans le logement, excès de liquide retiré, séchage ; pâte sur l'inlay-core ou la dent, mise en place **rapide avec une légère vibration** ; excès étalé sur la base coronaire et la tête du tenon puis photopolymérisation (teinte opaque : prise de 3 min) ; **préparation de la dent 6 minutes après la pose** pour enchaîner la couronne"
