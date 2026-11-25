@@ -115,14 +115,15 @@ window.DISCIPLINES.push({
           { t: "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**"] },
           { t: "**Forage du logement** avec les **forets cylindro-coniques Itena**", sub: ["Ils mettent le canal **aux dimensions du tenon cylindro-conique** utilisé pour la RMIPP", "Foret de la **même couleur que le tenon choisi** (code couleur Itena)"] },
           "**Rincer**, puis **sécher avec des pointes de papier**, sans dessécher excessivement la dentine",
-          { t: "**Essayage du tenon fibré** à sec, avant tout adhésif", sub: ["Le tenon doit être **flottant** : il descend **passivement, sans forcer**, jusqu'à la profondeur voulue", "Vérifier la **longueur** et l'**émergence** à la hauteur prévue pour le moignon", "**Radiographie** pour contrôler la position", "Ajuster la longueur au **disque diamanté** sous irrigation d'eau", "**Nettoyer le tenon à l'alcool**, puis sécher"] }
+          { t: "**Essayage du tenon fibré** à sec, avant tout adhésif", sub: ["Le tenon doit être **flottant** : il descend **passivement, sans forcer**, jusqu'à la profondeur voulue", "Vérifier la **longueur** et l'**émergence** à la hauteur prévue pour le moignon", "**Radiographie** pour contrôler la position", "**Nettoyer le tenon à l'alcool**, puis sécher"] }
         ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "forets cylindro-coniques Itena", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
           "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
           "**Préparation du ciment** : installer l'embout mélangeur puis l'**Endo Tip** sur le **RelyX Unicem 2** ; **purger une petite quantité** avant utilisation",
           "**Injection** du ciment **du fond du canal vers la partie coronaire**, en **retirant progressivement l'embout** pendant l'injection (évite les bulles)",
           "**Mise en place du tenon** : enduire légèrement le tenon de ciment, l'insérer **immédiatement avec une pression constante** ; **retirer soigneusement les excès** avant la polymérisation finale",
-          "**Photopolymérisation : 40 s** (la mention « pour un tenon translucide » est barrée sur la feuille du service) ; **tenon opaque** : la polymérisation chimique assure la prise, photopolymériser la partie coronaire si possible"
+          "**Photopolymérisation : 40 s** (la mention « pour un tenon translucide » est barrée sur la feuille du service) ; **tenon opaque** : la polymérisation chimique assure la prise, photopolymériser la partie coronaire si possible",
+          "**Section de l'excédent coronaire du tenon après le scellement**, avec un instrument diamanté sous irrigation d'eau"
         ], materiel: ["Silan-IT", "RelyX Unicem 2 + embout mélangeur + Endo Tip", "lampe à photopolymériser"] },
         { titre: "Temps 3 – Reconstitution coronaire en phase plastique", details: [
           "**Après stabilisation du tenon**, appliquer l'**adhésif G-Premio Bond**, puis réaliser le **faux-moignon** au **composite Bulk Fill** de reconstitution, selon les recommandations du fabricant ; **photopolymériser chaque incrément** si nécessaire ; **finaliser la forme** avant la préparation prothétique (matrice si nécessaire)",
