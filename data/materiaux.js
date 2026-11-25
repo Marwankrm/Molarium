@@ -335,6 +335,36 @@ window.MATERIAUX = {
      ]
     },
     {
+     "id": "g-cem-linkforce-gc",
+     "nom": "G-CEM LinkForce (GC), avec G-Multi Primer et G-Premio Bond",
+     "type": "Ciment résine de collage (photopolymérisable), primaire pour restauration et adhésif GC",
+     "statut": "part",
+     "ind": [
+      "**Collage des tenons et des inlay-core** (feuille du service « Technique de collage pour tenons et inlay core »)",
+      "**Collage des inlays, onlays, couronnes et bridges** (feuille « … pour inlays, onlays, couronnes & bridges »)"
+     ],
+     "ci": [],
+     "met": [
+      "**Tenon ou inlay-core, préparation de la restauration** : nettoyer à l'**alcool**, appliquer le **G-Multi Primer**, sécher à la seringue à air",
+      "**Espace canalaire** : nettoyer au **NaOCl ou à l'EDTA**, rincer et sécher soigneusement ; mélanger **G-Premio Bond et DCA, ratio 1:1** ; appliquer dans le canal, laisser agir **20 s** ; sécher **sous pression d'air maximum 5 s** ; retirer les excès d'adhésif à la pointe de papier",
+      "**Collage du tenon** : extraire le **G-CEM LinkForce** dans le canal, insérer **aussitôt** le tenon, retirer les excès ; **photopolymériser 20 s** par surface ou joint (halogène/LED 700 mW/cm²) ; laisser en place **4 min** après l'insertion, puis poursuivre la reconstitution",
+      "**Inlay, onlay, couronne, bridge, essayage** : retirer le provisoire, nettoyer soigneusement ; vérifier l'ajustage et l'occlusion (au besoin avec la **G-CEM LinkForce Try-In Paste**) ; retirer la restauration et **rincer à l'eau**",
+      "**Préparation de la restauration** (selon le fabricant) : **céramique vitreuse** : mordançage à l'**acide fluorhydrique**, rinçage, séchage ; **céramique hybride ou composite** : **sablage** (pour Cerasmart ; sinon acide fluorhydrique), soufflage, rinçage, séchage ; puis, pour toutes, **G-Multi Primer** et séchage à la seringue à air",
+      "**Préparation de la dent** : rincer et sécher la dent préparée ; mordançage au choix : **auto-mordançage, mordançage sélectif ou mordançage total**, puis rincer et sécher",
+      "**Mode photopolymérisable** : appliquer le **G-Premio Bond**, patienter **10 s**, sécher **sous pression d'air maximum 5 s**, **photopolymériser 10 s** (halogène/LED 700 mW/cm²)"
+     ],
+     "ret": [
+      "Source : les **deux feuilles affichées au service** (photo) ; la partie « alternative : prise duale » de la 2e feuille n'est pas lisible sur la photo",
+      "Le site indique par ailleurs le **Panavia V5** et le **RelyX Unicem 2** pour le collage : à faire coïncider avec l'usage réel du service"
+     ],
+     "src": [
+      {
+       "t": "Feuilles de protocole du service (GC) : collage des tenons et inlay-core, collage des inlays, onlays, couronnes et bridges",
+       "u": "#/materiaux"
+      }
+     ]
+    },
+    {
      "id": "porcelain-etch-et-silane-ultradent",
      "nom": "Porcelain Etch & Silane (Ultradent)",
      "type": "Acide fluorhydrique tamponné en gel et silane monocomposant",
