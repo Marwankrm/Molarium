@@ -475,7 +475,7 @@
     if (p.erreurs && p.erreurs.length) add('s-erreurs', 'Erreurs fréquentes', acc('s-erreurs', 'Erreurs fréquentes à éviter', ul(p.erreurs), { open: false, icon: 'close', cls: 'sec-danger' }));
     if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false, icon: 'book', cls: 'sec-grey' }));
 
-    var ORD = d.ordreSections;
+    var ORD = d.ordreSections || ['s-indic', 's-etapes', 's-suivi', 's-consignes', 's-compl', 's-annexe', 's-alertes', 's-erreurs', 's-refs', 's-todo'];
     function rk(it) {
       if (ORD) { var k = ORD.indexOf(it.id.indexOf('s-annexe') === 0 ? 's-annexe' : it.id); return (k < 0 ? 100 : k) * 100 + it.i; }
       return it.id in RANK ? RANK[it.id] : 10 + it.i;
