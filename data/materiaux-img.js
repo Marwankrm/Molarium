@@ -188,6 +188,11 @@ window.MATERIAUX_IMG = {
   "credit": "Dentsply Maillefer (catalogue)",
   "page": "https://www.maillefer.com/wp-content/uploads/2016/10/2016-Maillefer-Catalog.pdf"
  },
+ "forets-cylindro-coniques-dentoclic-itena": {
+  "f": "img/materiaux/forets-cylindro-coniques-dentoclic-itena.jpg",
+  "credit": "",
+  "page": "https://itena-clinical.com/produit/dentoclic-forets/"
+ },
  "largo-peeso-dentsply-maillefer": {
   "f": "img/materiaux/largo-peeso-dentsply-maillefer.jpg",
   "credit": "Dentsply Maillefer (catalogue)",

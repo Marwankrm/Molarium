@@ -267,6 +267,41 @@ window.MATERIAUX = {
      ]
     },
     {
+     "id": "forets-cylindro-coniques-dentoclic-itena",
+     "nom": "Forets cylindro-coniques Dentoclic (Itena Clinical)",
+     "type": "Forets pour contre-angle, pour préparer le logement du tenon radiculaire (boîtes de 4 forets par diamètre)",
+     "statut": "lue",
+     "instrument": true,
+     "alias": [
+      "forets cylindro-coniques",
+      "foret cylindro-conique",
+      "forets cylindro-coniques Itena"
+     ],
+     "ind": [
+      "**Préparer le logement du tenon radiculaire** selon le choix du praticien",
+      "Au service : **RMIPP**, pour mettre le canal **aux dimensions du tenon cylindro-conique**, après la désobturation aux Gates et Largo"
+     ],
+     "ci": [],
+     "met": [
+      "**Un diamètre par couleur** : violet **1 mm**, blanc **1,2 mm**, jaune **1,3 mm**, rouge **1,4 mm**, bleu **1,5 mm**, vert **1,6 mm**, noir **1,7 mm**",
+      "Choisir le foret de la **même couleur que le tenon** (correspondance colorimétrique forets / tenons)",
+      "Le diamètre du tenon se choisit avec le **gabarit de la notice** posé sur la **radiographie périapicale**"
+     ],
+     "ret": [
+      "**Remplacer les forets toutes les 40 à 60 utilisations** ; **stérilisables à l'autoclave** (134 °C, 18 min)"
+     ],
+     "src": [
+      {
+       "t": "Itena Clinical, Dentoclic Forets",
+       "u": "https://itena-clinical.com/produit/dentoclic-forets/"
+      },
+      {
+       "t": "Notice Dentoclic Fibre de verre (Itena Clinical)",
+       "u": "https://itena-clinical.com/wp-content/uploads/2026/06/DENTOCLIC_Notice_FDV_IND-8.pdf"
+      }
+     ]
+    },
+    {
      "id": "silan-it-itena-clinical",
      "nom": "Silan-IT (Itena Clinical)",
      "type": "Agent de couplage pour céramique : silane monocomposant (flacon de 5 mL)",
