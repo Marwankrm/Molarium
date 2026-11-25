@@ -116,19 +116,10 @@
   }
 
   // ---------- préparation des données ----------
-  function collectTodos(obj, out) {
-    if (typeof obj === 'string') { if (/\[\[[^\]]+\]\]/.test(obj)) out.push(obj); }
-    else if (Array.isArray(obj)) obj.forEach(function (x) { collectTodos(x, out); });
-    else if (obj && typeof obj === 'object') Object.keys(obj).forEach(function (k) { if (k.charAt(0) !== '_' && k !== 'hopital') collectTodos(obj[k], out); });
-    return out;
-  }
-  function uniq(a) { var seen = {}; return a.filter(function (x) { if (seen[x]) return false; seen[x] = 1; return true; }); }
   var ALL = [];
   DISCIPLINES.forEach(function (d) {
     d.protocoles.forEach(function (p) {
       p._d = d; p._key = d.id + '/' + p.id;
-      p._todos = uniq(collectTodos(p, []));
-      p._todoN = p._todos.reduce(function (n, t) { return n + (t.match(/\[\[[^\]]+\]\]/g) || []).length; }, 0);
       var parts = [d.nom, p.titre, p.resume, (p.indications || []).join(' '), (p.materiel || []).join(' '), (p.alertes || []).join(' '), (p.consignes || []).join(' ')];
       (p.annexes || []).forEach(function (x) { parts.push(x.titre, x.intro || ''); (x.table ? x.table.rows : []).forEach(function (r) { parts.push(r.join(' ')); }); (x.sections || []).forEach(function (z) { parts.push(z.titre, z.texte || '', (z.items || []).join(' ')); }); });
       (p.etapes || []).forEach(function (s) { parts.push(s.titre, (s.details || []).join(' '), (s.materiel || []).join(' '), s.astuce || ''); });
@@ -137,7 +128,6 @@
     });
   });
   var TOTAL = ALL.length;
-  var TODO_TOTAL = ALL.reduce(function (n, p) { return n + p._todoN; }, 0);
   function byKey(k) { return ALL.filter(function (p) { return p._key === k; })[0]; }
   function findDisc(id) { return DISCIPLINES.filter(function (d) { return d.id === id; })[0]; }
   function findProto(d, pid) { return d && d.protocoles.filter(function (p) { return p.id === pid; })[0]; }
@@ -153,7 +143,6 @@
   function cardChips(p) {
     var c = [statusChip(p)];
     if (p.duree) c.push(el('span', { class: 'chip plain', text: p.duree }));
-    if (p._todoN) c.push(el('span', { class: 'chip todo-c', text: p._todoN + ' à préciser' }));
     return el('div', { class: 'chips' }, c);
   }
 
@@ -195,7 +184,6 @@
     }
     $sidebar.appendChild(link('#/', 'home', 'Accueil', null, route === '#/' || route === '#' || route === ''));
     $sidebar.appendChild(link('#/favoris', 'star', 'Favoris', favs.length || null, /favoris/.test(route)));
-    $sidebar.appendChild(link('#/a-completer', 'tasks', 'À préciser', TODO_TOTAL || null, /a-completer/.test(route)));
     if (window.MATERIAUX) $sidebar.appendChild(link('#/materiaux', 'box', 'Matériaux', MAT_TOTAL || null, /materiaux/.test(route)));
     $sidebar.appendChild(el('div', { class: 'side-title', text: 'Disciplines' }));
     DISCIPLINES.forEach(function (d) {
@@ -220,7 +208,6 @@
     $tabbar.appendChild(b);
     $tabbar.appendChild(tab('#/favoris', 'star', 'Favoris', /favoris/.test(route), favs.length || null));
     if (window.MATERIAUX) $tabbar.appendChild(tab('#/materiaux', 'box', 'Matériaux', /materiaux/.test(route), null));
-    $tabbar.appendChild(tab('#/a-completer', 'tasks', 'À préciser', /a-completer/.test(route), null));
   }
   function openMenu(on) {
     $sidebar.classList.toggle('open', on); $scrim.classList.toggle('on', on);
@@ -270,7 +257,7 @@
     frag.appendChild(el('div', { class: 'stats' }, [
       el('div', { class: 'stat' }, [el('b', { text: String(DISCIPLINES.length) }), el('span', { text: 'disciplines' })]),
       el('div', { class: 'stat' }, [el('b', { text: String(TOTAL) }), el('span', { text: 'protocoles' })]),
-      el('a', { class: 'stat link', href: '#/a-completer' }, [el('b', { text: String(TODO_TOTAL) }), el('span', { text: 'points à préciser →' })])
+      el('a', { class: 'stat', href: '#/materiaux' }, [el('b', { text: String(MAT_TOTAL) }), el('span', { text: 'matériaux' })])
     ]));
 
     var rec = recents.map(byKey).filter(Boolean).slice(0, 6);
@@ -287,12 +274,11 @@
     frag.appendChild(el('div', { class: 'section-title' }, [el('h2', { text: 'Disciplines' })]));
     var grid = el('div', { class: 'grid' });
     DISCIPLINES.forEach(function (d) {
-      var todo = d.protocoles.reduce(function (n, p) { return n + p._todoN; }, 0);
       grid.appendChild(el('a', { class: 'card', href: '#/' + d.id, style: colorStyle(d) }, [
         el('span', { class: 'badge-ico', 'aria-hidden': 'true', text: d.sigle || d.nom.slice(0, 2).toUpperCase() }),
         el('h3', { text: d.nom }),
         el('p', { text: d.description }),
-        el('div', { class: 'meta' }, [el('b', { text: plural(d.protocoles.length, 'fiche') }), todo ? el('span', { text: '· ' + todo + ' à préciser' }) : null])
+        el('div', { class: 'meta' }, [el('b', { text: plural(d.protocoles.length, 'fiche') })])
       ]));
     });
     frag.appendChild(grid);
@@ -311,7 +297,6 @@
   function renderDiscipline(d) {
     setTitle(d.nom); setDisc(d); refreshChrome(d.id, null);
     var frag = document.createDocumentFragment();
-    var todo = d.protocoles.reduce(function (n, p) { return n + p._todoN; }, 0);
     frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: d.nom }]));
     frag.appendChild(el('header', { class: 'disc-head', style: colorStyle(d) }, [
       el('h1', { text: d.nom }), el('p', { class: 'psum', text: d.description }),
@@ -384,7 +369,6 @@
       if (p.duree) fact('clock', p.duree, 'durée');
       fact('steps', String(p.etapes.length), p.etapes.length > 1 ? 'étapes' : 'étape');
       if (nVal) fact('check', String(nVal), nVal > 1 ? 'validations encadrant' : 'validation encadrant');
-      if (p._todoN) fact('warn', String(p._todoN), 'à préciser');
       var ovl = el('ol', { class: 'ov-steps' });
       p.etapes.forEach(function (x, i) {
         var lab = stepLabel(x.titre, i);
@@ -446,7 +430,6 @@
     if (p.complications && p.complications.length) add('s-compl', 'Complications', acc('s-compl', 'Complications et conduite à tenir', ul(p.complications), { open: false, icon: 'warn', cls: 'sec-warn' }));
     if (p.erreurs && p.erreurs.length) add('s-erreurs', 'Erreurs fréquentes', acc('s-erreurs', 'Erreurs fréquentes à éviter', ul(p.erreurs), { open: false, icon: 'close', cls: 'sec-danger' }));
     if (p.references && p.references.length) add('s-refs', 'Références', acc('s-refs', 'Références', el('div', { class: 'refs' }, [ul(p.references)]), { open: false, icon: 'book', cls: 'sec-grey' }));
-    if (p._todoN) add('s-todo', 'À préciser', acc('s-todo', 'Points à préciser par le service', ul(p._todos), { cls: 'todo-acc', open: false, count: p._todoN }));
 
     var ORD = d.ordreSections;
     function rk(it) {
@@ -726,44 +709,6 @@
     mount(frag);
   }
 
-  // --- points à préciser ---
-  var todoFilter = 'all';
-  function renderTodo() {
-    setTitle('Points à préciser'); setDisc(null); refreshChrome(null, null);
-    var frag = document.createDocumentFragment();
-    frag.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { label: 'À préciser' }]));
-    frag.appendChild(el('h1', { text: 'Points à préciser' }));
-    frag.appendChild(el('p', { class: 'muted', text: TODO_TOTAL + ' informations restent à renseigner (produits, références, délais…). Cette liste se met à jour automatiquement quand une fiche est complétée.' }));
-    var tb = el('div', { class: 'toolbar' }, [el('button', { class: 'btn primary', type: 'button', onclick: function () {
-      var out = ['POINTS À PRÉCISER – Protocoles cliniques d\'odontologie', ''];
-      DISCIPLINES.forEach(function (d) {
-        var ps = d.protocoles.filter(function (p) { return p._todoN; }); if (!ps.length) return;
-        out.push('== ' + d.nom + ' =='); ps.forEach(function (p) { out.push('• ' + p.titre); p._todos.forEach(function (t) { out.push('    - ' + plain(t.replace(/\[\[([^\]]+)\]\]/g, '⟨à préciser : $1⟩'))); }); }); out.push('');
-      });
-      var text = out.join('\n');
-      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { toast('Liste copiée'); }, function () { prompt('Copiez la liste :', text); }); else prompt('Copiez la liste :', text);
-    } }, [icon('link', 18), el('span', { text: 'Copier la liste' })])]);
-    frag.appendChild(tb);
-    var filters = el('div', { class: 'filters' });
-    function mk(id, label) { var b = el('button', { type: 'button', class: todoFilter === id ? 'on' : '', text: label, onclick: function () { todoFilter = id; renderTodo(); } }); filters.appendChild(b); }
-    mk('all', 'Toutes');
-    DISCIPLINES.forEach(function (d) { var n = d.protocoles.reduce(function (a, p) { return a + p._todoN; }, 0); if (n) mk(d.id, d.nom + ' (' + n + ')'); });
-    frag.appendChild(filters);
-    DISCIPLINES.forEach(function (d) {
-      if (todoFilter !== 'all' && todoFilter !== d.id) return;
-      var ps = d.protocoles.filter(function (p) { return p._todoN; }).sort(function (a, b) { return b._todoN - a._todoN; });
-      if (!ps.length) return;
-      frag.appendChild(el('div', { class: 'todo-disc', style: colorStyle(d) }, [el('i'), el('h2', { text: d.nom })]));
-      ps.forEach(function (p) {
-        frag.appendChild(el('div', { class: 'todo-card' }, [
-          el('h3', null, [el('a', { href: '#/' + d.id + '/' + p.id, text: p.titre }), el('span', { class: 'chip todo-c', text: p._todoN + ' à préciser' })]),
-          ul(p._todos)
-        ]));
-      });
-    });
-    mount(frag);
-  }
-
   function renderNotFound() {
     setTitle('Introuvable'); setDisc(null); refreshChrome(null, null);
     mount(el('div', { class: 'empty' }, [el('h1', { text: 'Page introuvable' }), el('a', { href: '#/', text: 'Retour à l\'accueil' })]));
@@ -778,7 +723,6 @@
     $q.value = '';
     if (!parts.length) return renderHome();
     if (parts[0] === 'favoris') return renderFavs();
-    if (parts[0] === 'a-completer') return renderTodo();
     if (parts[0] === 'materiaux') return renderMateriaux();
     var d = findDisc(parts[0]);
     if (!d) return renderNotFound();

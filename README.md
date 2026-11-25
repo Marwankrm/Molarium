@@ -36,7 +36,7 @@ passer à `statut: "valide"` et renseigner `validePar: "Dr X"` : le badge devien
 - **Téléphone** : barre de navigation en bas, sections repliables, sommaire défilant, suivi des étapes avec barre de progression fixe, option « Écran allumé » pendant un soin.
 - **Préparer la séance** : liste de matériel à cocher, par séance ou générale, mémorisée sur l'appareil et copiable.
 - **Favoris** et **récemment consultés** (mémorisés sur l'appareil).
-- **Points à préciser** : page qui rassemble automatiquement toutes les zones `[[à préciser]]` des fiches, avec un bouton pour copier la liste.
+- **Points à préciser** : la page et les pastilles ont été retirées du site. Le balisage `[[texte]]` d'une fiche s'affiche encore en orange si on en réutilise un.
 - Thème clair uniquement, taille du texte réglable, impression / PDF (toutes les sections sont dépliées à l'impression).
 
 ## Composants tiers

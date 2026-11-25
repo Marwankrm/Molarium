@@ -243,7 +243,7 @@ a{color:var(--brand-strong)}
 .mchoix{display:grid;gap:10px}.mc{background:var(--surface-2);border:1.5px solid var(--line);border-left:6px solid var(--info);border-radius:12px;padding:8px 14px}
 .mc h3{margin:0 0 3px;font-size:1rem}.mc p{margin:0}
 [hidden]{display:none!important}
-.tabbar{grid-template-columns:repeat(5,1fr)}
+.tabbar{grid-template-columns:repeat(4,1fr)}
 
 /* photos produits */
 .mfig{float:right;margin:0 0 10px 16px;width:180px;text-align:center}
@@ -252,3 +252,6 @@ a{color:var(--brand-strong)}
 .mfig figcaption a{color:inherit}
 .mat-acc .mblk{overflow:hidden}
 @media(max-width:560px){.mfig{float:none;margin:0 auto 10px}}
+
+a.stat{text-decoration:none;color:inherit}
+a.stat:hover{transform:translateY(-2px);border-color:var(--brand)}
