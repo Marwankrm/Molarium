@@ -94,7 +94,7 @@ window.DISCIPLINES.push({
       contreIndications: ["Parois restantes insuffisantes : inlay-core", "Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
         "Digue, matrice et cales",
-        "Désobturation : **Gates 1, 2, 3** et **Largo 1, 2, 3** ; foret du système de tenon",
+        "Désobturation : **Gates 1, 2, 3** et **Largo 1, 2, 3** ; **forets cylindro-coniques Itena** (de la couleur du tenon)",
         "Tenon fibré",
         "**Silane Silan-IT** (Itena) pour le tenon fibré ; ciment résine auto-adhésif **RelyX Unicem 2** (3M) avec embout mélangeur et **Endo Tip** ; pointes de papier, alcool",
         "Adhésif **G-Premio Bond** et composite **Bulk Fill** de reconstitution ; lampe à photopolymériser"
@@ -113,10 +113,10 @@ window.DISCIPLINES.push({
           "**Isolation sous digue**",
           "Élimination des anciennes restaurations et des tissus fragiles",
           { t: "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**"] },
-          "**Forage du logement** avec le foret du système",
+          { t: "**Forage du logement** avec les **forets cylindro-coniques Itena**", sub: ["Ils mettent le canal **aux dimensions du tenon cylindro-conique** utilisé pour la RMIPP", "Foret de la **même couleur que le tenon choisi** (code couleur Itena)"] },
           "**Rincer**, puis **sécher avec des pointes de papier**, sans dessécher excessivement la dentine",
           { t: "**Essayage du tenon fibré**", sub: ["Vérifier la **longueur et l'adaptation** (radiographie)", "**Nettoyer le tenon à l'alcool**, puis sécher"] }
-        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "foret canalaire", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
+        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "forets cylindro-coniques Itena", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
           "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
           "**Préparation du ciment** : installer l'embout mélangeur puis l'**Endo Tip** sur le **RelyX Unicem 2** ; **purger une petite quantité** avant utilisation",
