@@ -11,7 +11,7 @@ window.DISCIPLINES.push({
     {
       id: "inlay-core",
       titre: "Inlay-core (reconstitution corono-radiculaire coulée)",
-      resume: "Reconstitution coulée en métal sur dent dépulpée, choisie quand les parois restantes sont insuffisantes, scellée au Panavia V5. 2 séances : préparation et empreinte, puis essayage et scellement.",
+      resume: "Reconstitution coulée en métal sur dent dépulpée, choisie quand les parois restantes sont insuffisantes, scellée au Panavia V5. 2 séances : préparation canalaire et empreinte du canal, puis essayage et scellement, suivis des empreintes pour la couronne.",
       duree: "2 séances",
       niveau: "Étudiant encadré",
       statut: "brouillon",
@@ -20,7 +20,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Inlay-core coulé en métal** (alliage non précisé)",
         "**Scellement au Panavia V5** (feuilles de prétraitement et de collage Panavia V5 affichées au service)",
-        "**2 séances** : préparation et empreinte, puis essayage, scellement et préparation de la couronne (déduit du protocole)",
+        "**2 séances** : préparation canalaire et empreinte du canal, puis essayage et scellement ; ensuite **nouvelle empreinte de l'inlay-core et des tissus environnants**, antagoniste à l'alginate, occlusion, et **demande de la couronne**",
         "Choisi **plutôt qu'une RMIPP lorsque les parois restantes ne sont pas assez nombreuses**",
         "**Empreinte du logement** : **directe** (résine) et **indirecte** (silicone) sont toutes deux utilisées",
         "**Validation par l'encadrant** : empreintes, essayage et pose"
@@ -29,7 +29,7 @@ window.DISCIPLINES.push({
       contreIndications: ["Traitement endodontique de qualité insuffisante ou lésion périapicale non traitée", "Racine fragile ou absence de ferrule non améliorable"],
       materiel: [
         "Digue ; désobturation : **Gates 1, 2, 3** et **Largo 1, 2, 3**",
-        "Empreinte du logement : **directe** (résine à maquette **GC Pattern Resin LS**, dont la notice prévoit l'usage en bouche pour une maquette de reconstitution) ou **indirecte** (**Express 2** ou **Impregum Penta Super Quick**, avec tenon d'empreinte) ; antagoniste à l'**alginate**",
+        "Empreinte du logement : **directe** (résine à maquette **GC Pattern Resin LS**, dont la notice prévoit l'usage en bouche pour une maquette de reconstitution) ou **indirecte** (**Express 2** ou **Impregum Penta Super Quick**, avec tenon d'empreinte) ; antagoniste à l'**alginate** et occlusion (**Futar D**) à la séance 2",
         "**Tenon métallique Dentoclic** (Itena Clinical, inox ou titane) : **tenon d'empreinte** et **tenon provisoire** (de même diamètre) ; **envoyer au laboratoire le tenon calcinable correspondant** ; résine de provisoire **Unifast Trad** ; ciment provisoire **Temp-Bond** ou **Temp-Bond NE**, **seulement sur les bords de la couronne** et pas sur le tenon (notice Dentoclic)",
         "Inlay-core coulé en métal",
         "**Panavia V5 Paste** (Universal A2 ou Clear), **Panavia V5 Tooth Primer**, **Clearfil Ceramic Primer Plus** ; sablage à l'alumine, bain ultrasonique, lampe à photopolymériser"
@@ -46,17 +46,19 @@ window.DISCIPLINES.push({
           { t: "**Désobturation partielle sous digue**, en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**, sans amincir les parois"] },
           "**Préparation coronaire**",
           "**Empreinte du logement** et de la préparation coronaire (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther))",
-          "**Empreinte de l'antagoniste** à l'**alginate**",
-          "**Empreinte de l'occlusion** avec le **Futar D**",
           { t: "**Réalisation de la provisoire** avec un **tenon provisoire**", sub: ["Tenon : **tenon métallique Dentoclic** provisoire (de même diamètre que le tenon d'empreinte)", "Provisoire : résine **Unifast Trad**", "Si besoin de la sceller : **Temp-Bond** ou **Temp-Bond NE**, seulement sur les bords de la couronne, pas sur le tenon"] }
-        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "**Futar D** (enregistrement de l'occlusion)", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "**Envoyer au laboratoire le tenon calcinable correspondant** au tenon d'empreinte. Au laboratoire : coulée de l'inlay-core en métal." },
-        { titre: "Séance 2 – Essayage et scellement", details: [
+        ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "**Envoyer au laboratoire le tenon calcinable correspondant** au tenon d'empreinte. Au laboratoire : coulée de l'inlay-core en métal." },
+        { titre: "Séance 2 – Essayage, scellement et empreintes pour la couronne", details: [
           { t: "**Essayage** de l'inlay-core", sub: ["Adaptation", "Insertion", "Parois", "Contrôle radiographique si besoin"] },
           { t: "**Préparation de l'inlay-core**", sub: ["Sablage à l'alumine", "Nettoyage aux ultrasons", "Séchage", "Application du **Clearfil Ceramic Primer Plus**"] },
           { t: "**Préparation du logement** sous digue", sub: ["**Tooth Primer** pendant 20 s", "Retirer l'excès de liquide", "Séchage"] },
           { t: "**Scellement au Panavia V5** (notice, tenons métalliques)", sub: ["Pâte sur l'inlay-core ou sur la dent", "Mise en place **rapide avec une légère vibration**", "Excès étalé sur la base coronaire et la tête du tenon", "Photopolymérisation (teinte opaque : prise de 3 min)"] },
-          "**Préparation de la dent 6 minutes après la pose** pour enchaîner la couronne"
-        ], materiel: ["inlay-core", "digue", "sablage", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe à photopolymériser", "radiographie"], validation: "essayage et scellement", astuce: "Si la préparation de la couronne est faite dans la même séance, attendre 6 minutes après la pose de l'inlay-core." }
+          "**Préparation de la dent 6 minutes après la pose** pour enchaîner la couronne",
+          "**Empreinte de l'inlay-core et des tissus environnants**",
+          "**Empreinte de l'antagoniste** à l'**alginate**",
+          "**Empreinte de l'occlusion** avec le **Futar D**",
+          "**Demande de la couronne** au laboratoire"
+        ], materiel: ["inlay-core", "digue", "sablage", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe à photopolymériser", "radiographie", "alginate", "**Futar D** (enregistrement de l'occlusion)"], validation: "essayage, scellement et empreintes", astuce: "Si la préparation de la couronne est faite dans la même séance, attendre 6 minutes après la pose de l'inlay-core." }
       ],
       consignes: [
         "**Provisoire** : éviter de mordre dans des aliments durs ; s'il se décolle, prendre rendez-vous rapidement.",
