@@ -115,7 +115,7 @@ window.DISCIPLINES.push({
           { t: "**Désobturation partielle** en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**"] },
           { t: "**Forage du logement** avec les **forets cylindro-coniques Itena**", sub: ["Ils mettent le canal **aux dimensions du tenon cylindro-conique** utilisé pour la RMIPP", "Foret de la **même couleur que le tenon choisi** (code couleur Itena)"] },
           "**Rincer**, puis **sécher avec des pointes de papier**, sans dessécher excessivement la dentine",
-          { t: "**Essayage du tenon fibré**", sub: ["Vérifier la **longueur et l'adaptation** (radiographie)", "**Nettoyer le tenon à l'alcool**, puis sécher"] }
+          { t: "**Essayage du tenon fibré** à sec, avant tout adhésif", sub: ["Le tenon doit être **flottant** : il descend **passivement, sans forcer**, jusqu'à la profondeur voulue", "Vérifier la **longueur** et l'**émergence** à la hauteur prévue pour le moignon", "**Radiographie** pour contrôler la position", "Ajuster la longueur au **disque diamanté** sous irrigation d'eau", "**Nettoyer le tenon à l'alcool**, puis sécher"] }
         ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "forets cylindro-coniques Itena", "tenon fibré", "radiographie"], validation: "essayage du tenon" },
         { titre: "Temps 2 – Collage du tenon", details: [
           "**Traitement du tenon fibré** : silane (**Silan-IT**) sur **toute la surface** du tenon ; laisser agir **60 s** sans toucher la surface avec les doigts (notice Itena) ; sécher à l'**air**",
