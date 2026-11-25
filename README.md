@@ -64,3 +64,7 @@ Un seul fichier de style, `css/v6.css`, chargé après `style.css` (les ancienne
 - **Accueil :** bandeau pleine largeur avec une **molaire interactive** (`js/art.js`) dont chaque zone ouvre une discipline, puis des pavés asymétriques.
 - **Signature visuelle :** coin « molaire » (trois angles arrondis, un presque carré), numérotation en chasse fixe (JetBrains Mono), bandeaux bleu-vert profond, listes éditoriales à la place des cartes, vitrine de produits pour les matériaux.
 - **Polices :** Space Grotesk (titres), Figtree (texte), JetBrains Mono (repères) ; licences SIL OFL dans `css/fonts/`.
+
+## Instruments et produits cliquables
+
+Dans le « Déroulement » d'une fiche, les noms de produits et d'instruments sont soulignés en pointillés : un clic ouvre une fenêtre avec la photo et les caractéristiques tirées de la page Matériaux. Un produit est reconnu grâce au champ `alias` de son entrée dans `data/materiaux.js` (liste de mots à repérer). Pour ajouter un instrument : créer l'entrée dans `data/materiaux.js` avec ses `alias`, et sa photo dans `data/materiaux-img.js`.

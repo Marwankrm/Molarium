@@ -35,6 +35,9 @@ window.MATERIAUX = {
        "t": "Notice Dentsply Sirona IRM (multilingue)",
        "u": "https://proclinic.es/media/proclinic-es/annexes/Is_3018_es_fr_pt_en_it_pl.pdf"
       }
+     ],
+     "alias": [
+      "IRM"
      ]
     },
     {
@@ -66,6 +69,10 @@ window.MATERIAUX = {
        "t": "Notice GC Fuji II LC capsules (Europe)",
        "u": "https://gc.dental/europe/sites/europe.gc.dental/files/products/downloads/fuji2lc/ifu/4795_IFU_Fuji_II_LC_Capsules_E.pdf"
       }
+     ],
+     "alias": [
+      "Fuji II LC",
+      "CVI photopolymérisable"
      ]
     },
     {
@@ -95,6 +102,9 @@ window.MATERIAUX = {
        "t": "Notice GC Fuji Triage (Amérique)",
        "u": "https://www.gc.dental/america/sites/america.gc.dental/files/products/downloads/gcfujitriage/ifu/gc-fuji-triage-ifu.pdf"
       }
+     ],
+     "alias": [
+      "Fuji Triage"
      ]
     },
     {
@@ -123,6 +133,10 @@ window.MATERIAUX = {
        "t": "Notice GC Unifast Trad (01/2024)",
        "u": "https://www.gc.dental/europe/sites/europe.gc.dental/files/products/downloads/unifasttrad/ifu/23896_IFU_Unifast_TRAD_W_Rev.%2001_2024.pdf"
       }
+     ],
+     "alias": [
+      "Unifast Trad",
+      "Unifast"
      ]
     },
     {
@@ -152,6 +166,11 @@ window.MATERIAUX = {
        "t": "Notice Kerr Temp-Bond / Temp-Bond NE",
        "u": "https://admin3334.webygroup.sk/obchod_homedir/data/3129/prilohy/nav-ifu-temp-bond-temp-bond-ne-20170719-ml.pdf"
       }
+     ],
+     "alias": [
+      "Temp-Bond NE",
+      "Temp-Bond",
+      "TempBond"
      ]
     },
     {
@@ -178,6 +197,9 @@ window.MATERIAUX = {
        "t": "Fiche produit 3M Canada",
        "u": "https://3mcanada.ca/3M/en_CA/p/d/v000154694"
       }
+     ],
+     "alias": [
+      "Durelon"
      ]
     },
     {
@@ -205,6 +227,10 @@ window.MATERIAUX = {
        "t": "Notice GC Pattern Resin",
        "u": "https://www.gc.dental/europe/sites/europe.gc.dental/files/products/downloads/patternresin/ifu/IFU_Pattern_Resin_W.pdf"
       }
+     ],
+     "alias": [
+      "Pattern Resin LS",
+      "Pattern Resin"
      ]
     },
     {
@@ -235,6 +261,9 @@ window.MATERIAUX = {
        "t": "Notice Dentoclic",
        "u": "https://dvd-dental.com/content/documents/54-970/VafR1BVF4k9TEt6e3DayRhx4LRbRfbei.pdf"
       }
+     ],
+     "alias": [
+      "Dentoclic"
      ]
     },
     {
@@ -275,6 +304,9 @@ window.MATERIAUX = {
        "t": "Fiche de la RMIPP (site)",
        "u": "#/prothese-fixee/rmipp"
       }
+     ],
+     "alias": [
+      "Silan-IT"
      ]
     },
     {
@@ -302,6 +334,10 @@ window.MATERIAUX = {
        "t": "Fiche de la RMIPP (site)",
        "u": "#/prothese-fixee/rmipp"
       }
+     ],
+     "alias": [
+      "RelyX Unicem 2",
+      "RelyX"
      ]
     },
     {
@@ -332,6 +368,9 @@ window.MATERIAUX = {
        "t": "Feuille Kuraray affichée au service (12/2014)",
        "u": "https://plandent.fi/globalassets/catalog-resources/fi1/tarvikkeet/protetiikka/kiinnityssementit/panavia_v5-dfu-kuvilla.pdf"
       }
+     ],
+     "alias": [
+      "Panavia V5"
      ]
     },
     {
@@ -362,6 +401,11 @@ window.MATERIAUX = {
        "t": "Feuilles de protocole du service (GC) : collage des tenons et inlay-core, collage des inlays, onlays, couronnes et bridges",
        "u": "#/materiaux"
       }
+     ],
+     "alias": [
+      "G-CEM LinkForce",
+      "G-Multi Primer",
+      "G-Premio Bond"
      ]
     },
     {
@@ -391,6 +435,9 @@ window.MATERIAUX = {
        "t": "Notice Ultradent affichée au service",
        "u": "#/materiaux"
       }
+     ],
+     "alias": [
+      "Porcelain Etch"
      ]
     }
    ]
@@ -424,6 +471,10 @@ window.MATERIAUX = {
        "t": "Notice GC Cavity Conditioner (10/2024)",
        "u": "https://www.gc.dental/europe/sites/europe.gc.dental/files/products/downloads/cavityconditioner/ifu/IFU_Cavity_Conditioner_W_0508513TZ.pdf"
       }
+     ],
+     "alias": [
+      "GC Cavity Conditioner",
+      "Cavity Conditioner"
      ]
     },
     {
@@ -460,6 +511,9 @@ window.MATERIAUX = {
        "t": "Fiche produit Henry Schein",
        "u": "https://henryschein.co.uk/dental-gb/products/henry-schein-etch-gel-37.aspx?hssc=4"
       }
+     ],
+     "alias": [
+      "Etch Gel"
      ]
     },
     {
@@ -489,6 +543,9 @@ window.MATERIAUX = {
        "t": "Notice Dycal",
        "u": "https://www.proclinic.es/media/proclinic-es/annexes/3010_instrucciones.pdf"
       }
+     ],
+     "alias": [
+      "Dycal"
      ]
     },
     {
@@ -526,6 +583,9 @@ window.MATERIAUX = {
        "t": "Notice Biodentine capsules (Septodont), copie d'un distributeur",
        "u": "https://www.proclinic.es/media/proclinic-es/annexes/19062_biodentine.pdf"
       }
+     ],
+     "alias": [
+      "Biodentine"
      ]
     },
     {
@@ -555,6 +615,10 @@ window.MATERIAUX = {
        "t": "Notice Voco Calcimol LC",
        "u": "https://www.adamdental.com.au/Documents/Brand%20Management/Voco/Web%20Docs/Calcimol%20LC%20IFU.pdf"
       }
+     ],
+     "alias": [
+      "Calcimol LC",
+      "Calcimol"
      ]
     },
     {
@@ -585,6 +649,10 @@ window.MATERIAUX = {
        "t": "Notice Voco Ionofil Molar AC / Quick",
        "u": "https://www.adamdental.com.au/Documents/Brand%20Management/Voco/Web%20Docs/voco-ionofil-molar-ac-quick_ifu_e1.pdf"
       }
+     ],
+     "alias": [
+      "Ionofil Molar AC",
+      "Ionofil"
      ]
     },
     {
@@ -616,6 +684,10 @@ window.MATERIAUX = {
        "t": "Notice GC EQUIA Forte HT",
        "u": "https://gc.dental/europe/sites/europe.gc.dental/files/products/downloads/equiaforteht/ifu/22004_IFU_EQUIA_Forte_HT_W.pdf"
       }
+     ],
+     "alias": [
+      "EQUIA Forte HT Fil",
+      "EQUIA Forte"
      ]
     },
     {
@@ -640,6 +712,10 @@ window.MATERIAUX = {
        "t": "Notice SDR flow+",
        "u": "https://assets.dentsplysirona.com/flagship/en/explore/restorative/sdr_flow_plus_eu-version/RES-IFU-SDRflow-plus-multilingual-2018-03-30.pdf"
       }
+     ],
+     "alias": [
+      "SDR flow+",
+      "SDR flow"
      ]
     },
     {
@@ -666,6 +742,9 @@ window.MATERIAUX = {
        "t": "Notices Ivoclar Tetric EvoFlow",
        "u": "https://icde-fr.ivoclar.com/zoolu-website/media/document/838/Tetric+EvoFlow"
       }
+     ],
+     "alias": [
+      "Tetric EvoFlow"
      ]
     },
     {
@@ -695,6 +774,10 @@ window.MATERIAUX = {
        "t": "FAQ Filtek Easy Match (Solventum, 2024), reçue du service",
        "u": "#/materiaux"
       }
+     ],
+     "alias": [
+      "Filtek Easy Match",
+      "Filtek"
      ]
     },
     {
@@ -722,6 +805,9 @@ window.MATERIAUX = {
        "t": "Notice Voco Caries Marker",
        "u": "https://www.adamdental.com.au/Documents/Brand%20Management/Voco/Web%20Docs/caries-marker_ifu_e1.pdf"
       }
+     ],
+     "alias": [
+      "Caries Marker"
      ]
     },
     {
@@ -748,6 +834,10 @@ window.MATERIAUX = {
        "t": "Dentsply Sirona Palodent 360",
        "u": "https://www.dentsplysirona.com/en-nz/categories/restorative/palodent-dental-matrix-systems/palodent-360.html"
       }
+     ],
+     "alias": [
+      "Palodent 360",
+      "Palodent"
      ]
     },
     {
@@ -764,7 +854,11 @@ window.MATERIAUX = {
       "Stripmat : bande polyester de 0,05 mm"
      ],
      "ret": [],
-     "src": []
+     "src": [],
+     "alias": [
+      "Sof-Lex",
+      "Stripmat"
+     ]
     }
    ]
   },
@@ -805,6 +899,10 @@ window.MATERIAUX = {
        "t": "Notice Kerr (copie en ligne)",
        "u": "https://www.adamdental.com.au/Documents/Brand%20Management/Kerr/Pulp%20Canal%20Sealer/Instructions.pdf"
       }
+     ],
+     "alias": [
+      "Pulp Canal Sealer EWT",
+      "Pulp Canal Sealer"
      ]
     },
     {
@@ -839,6 +937,10 @@ window.MATERIAUX = {
        "t": "Fiche produit Acteon",
        "u": "https://www.medicalexpo.com/prod/acteon-group/product-71216-1161024.html"
       }
+     ],
+     "alias": [
+      "Desocclusol Orange",
+      "Desocclusol"
      ]
     },
     {
@@ -867,6 +969,9 @@ window.MATERIAUX = {
        "t": "Notice Glyde",
        "u": "https://admin3334.webygroup.sk/obchod_homedir/data/3129/prilohy/man-end-glyde-ifu-multilingual.pdf"
       }
+     ],
+     "alias": [
+      "Glyde File Prep"
      ]
     },
     {
@@ -891,6 +996,9 @@ window.MATERIAUX = {
        "t": "Brochure R&S hydroxydes de calcium",
        "u": "https://directdentalsupplies.nl/storage/uploads/products/rs-calcium-hydroxides-20171030-1258.pdf"
       }
+     ],
+     "alias": [
+      "Supracal"
      ]
     },
     {
@@ -917,6 +1025,11 @@ window.MATERIAUX = {
        "t": "Ultradent NaviTip",
        "u": "https://www.ultradent.com/products/categories/endodontics/sealing/navitip-tips"
       }
+     ],
+     "alias": [
+      "NaviTip",
+      "Capillary Tips",
+      "IrriFlex"
      ]
     },
     {
@@ -972,6 +1085,113 @@ window.MATERIAUX = {
        "t": "Fiche produit Dentsply Sirona France",
        "u": "https://www.dentsplysirona.com/fr-fr/acheter/product-page.html/BP-300165/protaper-universal-lime-en-rotation-continue-de-retraitement.html"
       }
+     ],
+     "alias": [
+      "ProTaper Universal Retreatment",
+      "D1",
+      "D2",
+      "D3"
+     ]
+    },
+    {
+     "id": "protaper-gold-dentsply-sirona",
+     "nom": "ProTaper Gold (Dentsply Sirona)",
+     "type": "Limes rotatives NiTi de mise en forme : S1, S2, SX, F1, F2, F3",
+     "statut": "lue",
+     "instrument": true,
+     "alias": [
+      "ProTaper Gold",
+      "S1",
+      "S2",
+      "SX",
+      "F1",
+      "F2",
+      "F3"
+     ],
+     "ind": [
+      "**Mise en forme et nettoyage** du système canalaire, dans une zone où le **chemin de glisse** est confirmé, lisse et reproductible"
+     ],
+     "ci": [
+      "**Stériles et à usage unique** : ne jamais les réutiliser"
+     ],
+     "met": [
+      "**S1** (18/100, conicité 2 %) et **S2** (20/100, 4 %) : mise en forme, **mouvement de brossage** à la remontée",
+      "**SX** (19/100, 4 %) : entrée du canal, racine courte, éloigner le canal d'une furcation, si besoin",
+      "**F1** (20/100, 7 %), **F2** (25/100, 8 %) et **F3** (30/100, 9 %) : finition, **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus**",
+      "**Vitesse 300 tr/min** ; couple : **S1 et SX 5,1 N·cm**, **S2 et F1 1,5 N·cm**, **F2 et F3 3,1 N·cm**",
+      "Préparation apicale **en général jusqu'au 25/100 (F2)** ; pression apicale minimale, ne jamais forcer"
+     ],
+     "ret": [
+      "Irriguer, **récapituler** et ré-irriguer après chaque lime ; **inspecter les spires** de la lime"
+     ],
+     "src": [
+      {
+       "t": "Fiche technique ProTaper Gold (Dentsply Sirona)",
+       "u": "https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf"
+      }
+     ]
+    },
+    {
+     "id": "gates-glidden-dentsply-maillefer",
+     "nom": "Gates-Glidden (Dentsply Maillefer)",
+     "type": "Forets d'élargissement coronaire, en acier inoxydable, pour contre-angle",
+     "statut": "lue",
+     "instrument": true,
+     "alias": [
+      "Gates-Glidden",
+      "Gates Glidden",
+      "Gates"
+     ],
+     "ind": [
+      "**Élargir la partie coronaire du canal** (enlèvement de matière dentaire en masse)",
+      "Au service : **désobturation partielle** avant le logement d'un tenon (**Gates 1, 2, 3**, puis Largo 1, 2, 3)"
+     ],
+     "ci": [],
+     "met": [
+      "S'utilisent dans **tout contre-angle**",
+      "**Encoches** pour repérer la taille ; **code couleur ISO** qui indique le diamètre de coupe",
+      "Longueurs : **standard 32 mm** et **court 28 mm** (court : canaux postérieurs)",
+      "Tailles **1 à 6**, boîtes de 6 ; diamètres de coupe : **n° 1 0,50 mm**, **n° 2 0,70 mm**, **n° 3 0,90 mm**, n° 4 1,10 mm"
+     ],
+     "ret": [
+      "Foret à tige rigide : à garder dans la **partie rectiligne** du canal"
+     ],
+     "src": [
+      {
+       "t": "Catalogue Dentsply Maillefer",
+       "u": "https://www.maillefer.com/wp-content/uploads/2016/10/2016-Maillefer-Catalog.pdf"
+      }
+     ]
+    },
+    {
+     "id": "largo-peeso-dentsply-maillefer",
+     "nom": "Largo (réamer de Peeso, Dentsply Maillefer)",
+     "type": "Réamers en acier inoxydable pour contre-angle",
+     "statut": "lue",
+     "instrument": true,
+     "alias": [
+      "Largo",
+      "Peeso"
+     ],
+     "ind": [
+      "**Élargir la partie cervicale du canal**, préparer l'entrée du canal et **retirer la gutta-percha pour le logement d'un tenon**",
+      "Au service : après les Gates, pour **calibrer le logement** du tenon (**Largo 1, 2, 3**)"
+     ],
+     "ci": [],
+     "met": [
+      "S'utilisent dans **tout contre-angle**",
+      "**Encoches** pour repérer la taille",
+      "Longueurs : **standard 32 mm** et **court 28 mm**",
+      "Tailles **1 à 6**, boîtes de 6 ; diamètres : **n° 1 0,70 mm**, **n° 2 0,90 mm**, **n° 3 1,10 mm**"
+     ],
+     "ret": [
+      "Partie coupante plus longue que celle des Gates : risque de **perforation latérale** dans un canal courbe, donc à garder dans la partie rectiligne"
+     ],
+     "src": [
+      {
+       "t": "Catalogue Dentsply Maillefer",
+       "u": "https://www.maillefer.com/wp-content/uploads/2016/10/2016-Maillefer-Catalog.pdf"
+      }
      ]
     }
    ]
@@ -1005,6 +1225,9 @@ window.MATERIAUX = {
        "t": "Notice Repin",
        "u": "https://admin3334.webygroup.sk/obchod_homedir/data/3129/prilohy/nav-ifu-repin-20160127-ml.pdf"
       }
+     ],
+     "alias": [
+      "Repin"
      ]
     },
     {
@@ -1030,6 +1253,9 @@ window.MATERIAUX = {
        "t": "Fromentin, thèse Nantes 2007",
        "u": "https://archive.bu.univ-nantes.fr/pollux/fichiers/download/9dfb26a1-0492-468d-9bf9-93915e7556b1"
       }
+     ],
+     "alias": [
+      "pâte de Kerr"
      ]
     },
     {
@@ -1060,6 +1286,10 @@ window.MATERIAUX = {
        "t": "FAQ 3M adhésif polyéther",
        "u": "https://www.adamdental.com.au/Documents/3M%20IFU/Polyether%20Adhesive%20FAQs.pdf"
       }
+     ],
+     "alias": [
+      "Impregum Penta Super Quick",
+      "Impregum Penta"
      ]
     },
     {
@@ -1077,7 +1307,10 @@ window.MATERIAUX = {
      "ret": [
       "Demander la notice de la boîte"
      ],
-     "src": []
+     "src": [],
+     "alias": [
+      "Impregum F"
+     ]
     },
     {
      "id": "express-2-3m-espe-putty-soft-light-body-",
@@ -1103,6 +1336,9 @@ window.MATERIAUX = {
        "t": "Notice Express VPS (3M)",
        "u": "https://www.adamdental.com.au/Documents/3M%20IFU/Express%20VPS%20IFU.pdf"
       }
+     ],
+     "alias": [
+      "Express 2"
      ]
     },
     {
@@ -1145,6 +1381,10 @@ window.MATERIAUX = {
        "t": "Aegis Dental, Futar D",
        "u": "https://www.aegisdentalnetwork.com/id/products/kettenbach/futar-d-slow"
       }
+     ],
+     "alias": [
+      "Futar D",
+      "Futar"
      ]
     },
     {
@@ -1169,6 +1409,9 @@ window.MATERIAUX = {
        "t": "Fiche distributeur",
        "u": "https://esadental.it/en/products/algiretard-calbenium-200ml-100-buste-airel"
       }
+     ],
+     "alias": [
+      "Algiretard"
      ]
     },
     {
@@ -1189,6 +1432,9 @@ window.MATERIAUX = {
        "t": "Étude 2024 (PMC)",
        "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11000910"
       }
+     ],
+     "alias": [
+      "Aluwax"
      ]
     },
     {
@@ -1224,6 +1470,10 @@ window.MATERIAUX = {
        "t": "Série de vidéos (Aix-Marseille)",
        "u": "https://amupod.univ-amu.fr/ecole-de-medecine-dentaire/pour-toutes-les-promos-utilisation-de-larticulateur-quick-master-b2/"
       }
+     ],
+     "alias": [
+      "arc facial Quick",
+      "arc facial"
      ]
     },
     {
@@ -1256,6 +1506,10 @@ window.MATERIAUX = {
        "t": "Mode d'emploi du Quick Master B2 (FAG Dentaire)",
        "u": "https://www.fag-dentaire.com/wp-content/uploads/2022/06/mode-demploi-articulateur-quick-master-b2.pdf"
       }
+     ],
+     "alias": [
+      "articulateur Quick Master",
+      "Quick Master"
      ]
     },
     {
@@ -1278,7 +1532,12 @@ window.MATERIAUX = {
       "Rebasage direct = solution temporaire ; référence = rebasage indirect au laboratoire (thèse de Lille, 2022)",
       "**F.I.T.T. (notice 2024)** : environ **1 dose de poudre pour 1 de liquide** (fin) à **1,5 pour 1** (plus de corps) ; gobelets gradués 7 mL (poudre) et 5 mL (liquide) ; mélange d'environ 1 min ; retrait 2 à 3 min après la pose ; peut être porté plusieurs jours"
      ],
-     "src": []
+     "src": [],
+     "alias": [
+      "GC Reline",
+      "Coe-Soft",
+      "F.I.T.T."
+     ]
     },
     {
      "id": "gc-tri-plaque-id-gel",
@@ -1304,6 +1563,9 @@ window.MATERIAUX = {
        "t": "Notice GC Tri Plaque ID Gel",
        "u": "https://www.proclinic.es/media/proclinic-es/annexes/tri_plaque_id_gel_ifu_es_en_de_fr_it.pdf"
       }
+     ],
+     "alias": [
+      "Tri Plaque ID Gel"
      ]
     }
    ]

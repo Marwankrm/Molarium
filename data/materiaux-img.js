@@ -177,5 +177,20 @@ window.MATERIAUX_IMG = {
  "biodentine-septodont": {
   "f": "img/materiaux/biodentine-septodont.jpg",
   "credit": ""
+ },
+ "protaper-gold-dentsply-sirona": {
+  "f": "img/materiaux/protaper-gold-dentsply-sirona.jpg",
+  "credit": "Dentsply Sirona (fiche technique)",
+  "page": "https://assets.dentsplysirona.com/master/product-procedure-brand-categories/endodontics/product-categories/full-solutions/protaper-gold-solution/product-info/END-TipCard-ProTaper-Gold-web.pdf"
+ },
+ "gates-glidden-dentsply-maillefer": {
+  "f": "img/materiaux/gates-glidden-dentsply-maillefer.jpg",
+  "credit": "Dentsply Maillefer (catalogue)",
+  "page": "https://www.maillefer.com/wp-content/uploads/2016/10/2016-Maillefer-Catalog.pdf"
+ },
+ "largo-peeso-dentsply-maillefer": {
+  "f": "img/materiaux/largo-peeso-dentsply-maillefer.jpg",
+  "credit": "Dentsply Maillefer (catalogue)",
+  "page": "https://www.maillefer.com/wp-content/uploads/2016/10/2016-Maillefer-Catalog.pdf"
  }
 };

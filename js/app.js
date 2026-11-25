@@ -514,6 +514,7 @@
     outP.appendChild(el('header', { class: 'band band-fiche' }, [el('span', { class: 'band-art', 'aria-hidden': 'true' }, [discIco(d.id)]), bw]));
     var cw = el('div', { class: 'wrap' }); cw.appendChild(frag); outP.appendChild(cw);
     mount(outP, true);
+    linkifyIn($main);
 
     // section active dans le sommaire
     if ('IntersectionObserver' in window) {
@@ -799,6 +800,72 @@
   }
   buildMega();
 
+
+  // ---------- instruments et produits cliquables dans le déroulement ----------
+  var matById = {}, instRe = null, instMap = {};
+  function buildInstIndex() {
+    if (instRe || !window.MATERIAUX) return;
+    var names = [];
+    window.MATERIAUX.sections.forEach(function (sec) {
+      sec.produits.forEach(function (p) {
+        matById[p.id] = p;
+        (p.alias || []).forEach(function (a) { var k = norm(a); if (!instMap[k]) { instMap[k] = p.id; names.push(a); } });
+      });
+    });
+    names.sort(function (a, b) { return b.length - a.length; });
+    var esc = names.map(function (a) { return a.replace(/[.*+?^${}()|[\]\\\/]/g, '\\$&'); });
+    instRe = esc.length ? new RegExp('(^|[^\\p{L}\\p{N}])(' + esc.join('|') + ')(?![\\p{L}\\p{N}])', 'giu') : null;
+  }
+  function linkifyIn(root) {
+    buildInstIndex(); if (!instRe || !root) return;
+    var nodes = root.querySelectorAll('.step-body li, .step-body .mat .m');
+    Array.prototype.forEach.call(nodes, function (box) {
+      var walker = document.createTreeWalker(box, NodeFilter.SHOW_TEXT, null), list = [], n;
+      while ((n = walker.nextNode())) { if (!n.parentNode.closest('button.inst, a')) list.push(n); }
+      list.forEach(function (tn) {
+        var txt = tn.nodeValue; instRe.lastIndex = 0; var m, last = 0, frag = null;
+        while ((m = instRe.exec(txt))) {
+          var start = m.index + m[1].length, word = m[2], pid = instMap[norm(word)]; if (!pid) continue;
+          frag = frag || document.createDocumentFragment();
+          frag.appendChild(document.createTextNode(txt.slice(last, start)));
+          frag.appendChild(el('button', { type: 'button', class: 'inst', 'data-pid': pid, title: 'Voir la fiche : ' + plain(matById[pid].nom), text: word }));
+          last = start + word.length;
+        }
+        if (frag) { frag.appendChild(document.createTextNode(txt.slice(last))); tn.parentNode.replaceChild(frag, tn); }
+      });
+    });
+  }
+  function openProduct(pid, opener) {
+    buildInstIndex(); var p = matById[pid]; if (!p) return;
+    var im = window.MATERIAUX_IMG && window.MATERIAUX_IMG[pid];
+    var wrap = el('div', { class: 'sheet-wrap' });
+    var sheet = el('div', { class: 'sheet prod-pop', role: 'dialog', 'aria-modal': 'true', 'aria-label': plain(p.nom) });
+    function close() { document.removeEventListener('keydown', onKey); wrap.remove(); document.body.classList.remove('no-scroll'); if (opener && opener.focus) try { opener.focus(); } catch (e) {} }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    var photo = el('div', { class: 'pp-photo' });
+    if (im && im.f) {
+      photo.appendChild(el('img', { src: im.f, alt: 'Photo : ' + plain(p.nom) }));
+      if (im.credit) photo.appendChild(el('small', null, [document.createTextNode('Image : ' + im.credit)]));
+    } else photo.appendChild(discIco(p.instrument ? 'endodontie' : 'materiaux', 'pp-ico'));
+    var xbtn = el('button', { class: 'icon-btn sheet-x', type: 'button', 'aria-label': 'Fermer', onclick: close }, [icon('close', 20)]);
+    var head = el('div', { class: 'pp-head' }, [photo, el('div', { class: 'pp-title' }, [el('p', { class: 'kicker', text: p.instrument ? 'Instrument' : 'Produit' }), el('h2', { text: plain(p.nom) }), p.type ? el('p', { class: 'muted', text: plain(p.type) }) : null]), xbtn]);
+    var body = el('div', { class: 'sheet-body pp-body' }, [
+      matBlock('m-ind', p.instrument ? 'Usage' : 'Indications', p.ind),
+      matBlock('m-met', 'Caractéristiques et méthode', p.met),
+      matBlock('m-ci', 'Précautions', p.ci),
+      matBlock('m-ret', 'À retenir', p.ret)
+    ]);
+    var foot = el('div', { class: 'sheet-foot' }, [
+      el('a', { class: 'btn', href: '#/materiaux/' + pid, onclick: close }, [icon('box', 18), el('span', { text: 'Voir dans Matériaux' })]),
+      el('button', { class: 'btn primary', type: 'button', text: 'Fermer', onclick: close })
+    ]);
+    sheet.appendChild(head); sheet.appendChild(body); sheet.appendChild(foot); wrap.appendChild(sheet);
+    wrap.addEventListener('click', function (e) { if (e.target === wrap) close(); });
+    document.addEventListener('keydown', onKey); document.body.appendChild(wrap); document.body.classList.add('no-scroll');
+    try { xbtn.focus(); } catch (e) {}
+  }
+  document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('button.inst'); if (b) { e.preventDefault(); openProduct(b.getAttribute('data-pid'), b); } });
+
   // ---------- routeur ----------
   try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
   function toTop() {
@@ -814,7 +881,7 @@
     $q.value = '';
     if (!parts.length) return renderHome();
     if (parts[0] === 'favoris') return renderFavs();
-    if (parts[0] === 'materiaux') return renderMateriaux();
+    if (parts[0] === 'materiaux') { renderMateriaux(); if (parts[1]) setTimeout(function () { var dd = document.getElementById('mat-' + parts[1]); if (dd) { dd.setAttribute('open', ''); dd.scrollIntoView({ block: 'start' }); } }, 80); return; }
     var d = findDisc(parts[0]);
     if (!d) return renderNotFound();
     if (parts.length === 1) return renderDiscipline(d);
