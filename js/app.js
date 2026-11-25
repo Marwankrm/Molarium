@@ -36,7 +36,12 @@
     return frag;
   }
   function plain(text) { return String(text).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/\[([^\[\]]+)\]\(https?:\/\/[^)\s]+\)/g, '$1'); }
-  function ul(items) { return el('ul', null, items.map(function (t) { return el('li', null, [rich(t)]); })); }
+  function ul(items) {
+    return el('ul', null, items.map(function (t) {
+      if (t && typeof t === 'object') return el('li', null, [rich(t.t), ul(t.sub || [])]);
+      return el('li', null, [rich(t)]);
+    }));
+  }
 
   function annexeBody(x) {
     var box = el('div', { class: 'annexe' });

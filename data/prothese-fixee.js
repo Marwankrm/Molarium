@@ -42,8 +42,13 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance 1 – Préparation canalaire et empreinte", details: [
-          "Évaluation (radiographie, ferrule, parois résiduelles) ; **désobturation partielle sous digue** en gardant 4 à 5 mm de gutta-percha : utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**, sans amincir les parois ; préparation coronaire",
-          "**Empreinte du logement** et de la préparation coronaire (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)), antagoniste à l'**alginate**, occlusion ; **tenon provisoire** et provisoire"
+          { t: "**Évaluation**", sub: ["Radiographie", "Ferrule", "Parois résiduelles"] },
+          { t: "**Désobturation partielle sous digue**, en gardant 4 à 5 mm de gutta-percha", sub: ["Utiliser les **Gates 1, 2, 3**, puis les **Largo 1, 2, 3**, sans amincir les parois"] },
+          "**Préparation coronaire**",
+          "**Empreinte du logement** et de la préparation coronaire (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther))",
+          "**Empreinte de l'antagoniste** à l'**alginate**",
+          "**Empreinte de l'occlusion**",
+          { t: "**Réalisation de la provisoire** avec un **tenon provisoire**", sub: ["Tenon : **tenon métallique Dentoclic** provisoire (de même diamètre que le tenon d'empreinte)", "Provisoire : résine **Unifast Trad**", "Si besoin de la sceller : **Temp-Bond** ou **Temp-Bond NE**, seulement sur les bords de la couronne, pas sur le tenon"] }
         ], materiel: ["digue", "Gates 1, 2, 3 et Largo 1, 2, 3", "résine à maquette **Pattern Resin LS** ou silicone d'empreinte", "résine de provisoire **Unifast Trad**"], validation: "préparation et empreinte", astuce: "**Envoyer au laboratoire le tenon calcinable correspondant** au tenon d'empreinte. Au laboratoire : coulée de l'inlay-core en métal." },
         { titre: "Séance 2 – Essayage et scellement", details: [
           "**Essayage** de l'inlay-core (adaptation, insertion, parois) ; contrôle radiographique si besoin",
