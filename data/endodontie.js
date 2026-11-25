@@ -53,7 +53,7 @@ window.DISCIPLINES.push({
         "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)**",
         "**Localisateur d'apex** utilisé",
         "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
-        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
+        "**Obturation par thermocompaction** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
         "**Étanchéité provisoire** : matériau d'obturation temporaire : **IRM** (Dentsply Sirona), ou **CVI photopolymérisable** pour une étanchéité totale",
         "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Supracal** (R&S), pâte prête à l'emploi en seringue",
         "**Validation par l'encadrant** : longueur de travail, essayage de la gutta (maître-cône) et obturation",
@@ -66,8 +66,8 @@ window.DISCIPLINES.push({
         "Hypochlorite de sodium **R&S 2,5 %** (Magnum Dental, flacon de 500 mL)",
         "**CanalPro EDTA 17 %** (Coltène, flacon de 500 mL) ; eau pour rincer entre les irrigants",
         "Seringue 5 mL à embout **Luer-Lock** et aiguille **30 G** (Ø externe 0,298–0,320 mm), à ouverture latérale (réduit l'extrusion apicale) ; aiguilles du service : **Access** (30 G, 25 mm), **NaviTip** double sideport (Ultradent), **IrriFlex** (30 G) ; **Capillary Tips** (Ultradent) pour **aspirer** (jamais pour délivrer un irrigant)",
-        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** : S1, S2, F1, F2 (SX et F3 si besoin) ; limes manuelles de cathétérisme (jusqu'au 15/100) et gel d'EDTA (**Glyde File Prep**, Dentsply Sirona) ; localisateur d'apex **NSK iPex II**",
-        "**Cônes ProTaper Gold Conform Fit** (Dentsply Sirona), assortis aux limes, et matériel de **thermocompaction (Dentsply Sirona)** ; **ciment canalaire des étudiants : Pulp Canal Sealer EWT** (Kerr)",
+        "Limes rotatives **ProTaper Gold (Dentsply Sirona)** : S1, S2, F1, F2 (SX et F3 si besoin) ; limes manuelles de cathétérisme (jusqu'au 15/100) et, si besoin, gel d'EDTA (**Glyde File Prep**, Dentsply Sirona) ; localisateur d'apex **NSK iPex II**",
+        "**Cônes ProTaper Gold Conform Fit** (Dentsply Sirona), assortis aux limes, et matériel de **thermocompaction** ; **ciment canalaire : Pulp Canal Sealer EWT** (Kerr)",
         "Hydroxyde de calcium en pâte prête à l'emploi en seringue (**Supracal**, R&S), si 2e séance",
         "**IRM** (Dentsply Sirona, poudre 40 g et liquide 15 mL) ou **CVI photopolymérisable** (étanchéité totale) pour l'étanchéité coronaire",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
@@ -91,9 +91,9 @@ window.DISCIPLINES.push({
           "**Pose de la digue**, désinfection du champ",
           "**Dès l'ouverture de la chambre sous digue : injecter l'hypochlorite** pour remplir la chambre et les canaux",
           "Repérer les orifices",
-          "**Cathétérisme manuel** avec des limes **jusqu'au 15/100** (10 puis 15), **avant les limes rotatives**, avec du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
+          "**Cathétérisme manuel** avec des limes **jusqu'au 15/100** (10 puis 15), **avant les limes rotatives**, avec, **si besoin**, du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
           "Obtenir un **chemin de glisse** lisse et reproductible : la notice ne l'autorise que dans ces conditions"
-        ], materiel: ["digue et clamps", "hypochlorite", "seringue Luer-Lock + aiguille 30 G", "limes manuelles de cathétérisme (jusqu'au 15/100)", "gel d'EDTA (Glyde File Prep)"] },
+        ], materiel: ["digue et clamps", "hypochlorite", "seringue Luer-Lock + aiguille 30 G", "limes manuelles de cathétérisme (jusqu'au 15/100)", "gel d'EDTA si besoin (Glyde File Prep)"] },
         { titre: "Temps 3 – Longueur de travail", details: [
           "**Mesure au localisateur d'apex** (**NSK iPex II**)",
           "**Confirmation par radiographie**"
@@ -102,7 +102,10 @@ window.DISCIPLINES.push({
           "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
           "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
           "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus**",
-          "**Vitesse 300 tr/min**, couple selon la notice Dentsply Sirona : **S1 et SX 5,1 N·cm**, **S2 et F1 1,5 N·cm**, **F2 et F3 3,1 N·cm** (réglages du moteur)",
+          "**Vitesse : 300 tr/min**",
+          "**Couple S1 et SX : 5,1 N·cm**",
+          "**Couple S2 et F1 : 1,5 N·cm**",
+          "**Couple F2 et F3 : 3,1 N·cm**",
           "Préparation apicale **en général jusqu'au 25/100 (F2)**",
           "**Pression apicale minimale** : ne jamais forcer",
           "**Entre chaque lime** : **2 mL d'hypochlorite par canal**",
@@ -111,7 +114,7 @@ window.DISCIPLINES.push({
         ], materiel: ["ProTaper Gold", "moteur endodontique", "hypochlorite", "seringue Luer-Lock + aiguille 30 G"] },
         { titre: "Temps 5 – Irrigation finale et séchage", details: [
           "**Hypochlorite 1 min**, puis **EDTA 17 % 1 min**, puis **hypochlorite 30 s** (plus de 5 mL par canal)",
-          "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant (consensus 2024)",
+          "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant",
           "**Rinçage à l'eau entre chaque irrigant**",
           "Séchage (rinçage à l'éthanol 95 %, 3 mL par canal, possible)"
         ], materiel: ["hypochlorite, EDTA 17 %, eau", "pointes de papier (ProTaper Gold, Maxima ISO 45-80)"] },
@@ -121,8 +124,8 @@ window.DISCIPLINES.push({
           "**Canal très infecté (fistule, exsudat) ou temps insuffisant : ne pas obturer.** Poser l'hydroxyde de calcium (**Supracal**, R&S) sur toute la longueur de travail, étanchéifier avec l'**IRM** ou un **CVI photopolymérisable** (étanchéité totale), puis poursuivre en séance 2"
         ], materiel: ["cônes de gutta-percha", "radiographies"], validation: "essayage de la gutta" },
         { titre: "Temps 7 – Obturation", details: [
-          "**Obturation par thermocompaction** (Dentsply Sirona) avec le ciment endodontique",
-          "**Ciment canalaire des étudiants : Pulp Canal Sealer EWT (Kerr)**, à l'oxyde de zinc-eugénol : **une cuillère de poudre pour une goutte de liquide**, mélange en cercles jusqu'à une pâte **lisse, non collante, sans grains d'argent** ; application à la lime ou au Lentulo puis enrobage du cône ; **ne pas trop remplir le canal** ; plus de 6 h de temps de travail sur le bloc, prise en bouche en moins de 2 h (notice Kerr)",
+          "**Obturation par thermocompaction** avec le ciment endodontique",
+          "**Ciment canalaire : Pulp Canal Sealer EWT (Kerr)**, à l'oxyde de zinc-eugénol : **une cuillère de poudre pour une goutte de liquide**, mélange en cercles jusqu'à une pâte **lisse, non collante, sans grains d'argent** ; application à la lime ou au Lentulo puis enrobage du cône ; **ne pas trop remplir le canal** ; plus de 6 h de temps de travail sur le bloc, prise en bouche en moins de 2 h",
           "**Radiographie de contrôle**"
         ], materiel: ["matériel de thermocompaction", "ciment canalaire (Pulp Canal Sealer EWT, Kerr)", "cônes de gutta-percha", "radiographies"], validation: "obturation" },
         { titre: "Temps 8 – Restauration coronaire", details: [
@@ -185,7 +188,7 @@ window.DISCIPLINES.push({
         "**Mise en forme** : limes rotatives **ProTaper Gold (Dentsply Sirona)**, séquence **SX, S1, S2, F1, F2, F3**, préparation apicale **en général jusqu'au 25/100 (F2)** ; désobturation aux limes **ProTaper Universal Retreatment (D1, D2, D3)**",
         "**Localisateur d'apex** utilisé",
         "**Irrigation** : hypochlorite de sodium ; **pas de chlorhexidine** ; **activation manuelle de l'irrigant** (pas d'équipement d'activation)",
-        "**Obturation par thermocompaction**, matériel **Dentsply Sirona** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
+        "**Obturation par thermocompaction** ; **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes ; ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
         "**Étanchéité provisoire** : matériau d'obturation temporaire : **IRM** (Dentsply Sirona), ou **CVI photopolymérisable** pour une étanchéité totale",
         "**EDTA** : **CanalPro EDTA 17 %** (Coltène) ; **hydroxyde de calcium** : **Supracal** (R&S), pâte prête à l'emploi en seringue",
         "**Validation par l'encadrant** : longueur de travail, essayage de la gutta (maître-cône) et obturation",
@@ -206,7 +209,7 @@ window.DISCIPLINES.push({
         "**Desocclusol Orange (Acteon)** ; limes **ProTaper Universal Retreatment D1, D2, D3** (Dentsply Sirona)",
         "Limes rotatives **ProTaper Gold (Dentsply Sirona)** (SX, S1, S2, F1, F2, F3) ; localisateur d'apex **NSK iPex II**",
         "**Hypochlorite de sodium R&S 2,5 %** (Magnum Dental), **CanalPro EDTA 17 %** (Coltène), eau, aiguille 30 G Luer-Lock",
-        "Matériel de **thermocompaction (Dentsply Sirona)**, **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes, ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
+        "Matériel de **thermocompaction**, **cônes ProTaper Gold Conform Fit** (Dentsply Sirona) assortis aux limes, ciment canalaire (Pulp Canal Sealer EWT, Kerr)",
         "**Hydroxyde de calcium** en pâte prête à l'emploi en seringue (**Supracal**, R&S), si 2e séance",
         "**IRM** ou **CVI photopolymérisable** pour l'étanchéité ; réparation de perforation à la **Biodentine** (indication de la notice)",
         "Radiographies : 3 (pré-opératoire, essayage de la gutta, contrôle d'obturation)"
@@ -237,17 +240,20 @@ window.DISCIPLINES.push({
           "Retrait des fragments ou réparation d'une perforation selon la situation : **Biodentine** pour la perforation"
         ], materiel: ["Desocclusol Orange (Acteon)", "limes ProTaper Universal Retreatment D1, D2, D3", "localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
-          "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
+          "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec, **si besoin**, du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
           "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
           "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
           "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus** ; apex en général jusqu'au 25/100",
           "**Pression apicale minimale** : ne jamais forcer",
-          "**Vitesse 300 tr/min**, couple selon la notice Dentsply Sirona : **S1 et SX 5,1 N·cm**, **S2 et F1 1,5 N·cm**, **F2 et F3 3,1 N·cm** (réglages du moteur)",
+          "**Vitesse : 300 tr/min**",
+          "**Couple S1 et SX : 5,1 N·cm**",
+          "**Couple S2 et F1 : 1,5 N·cm**",
+          "**Couple F2 et F3 : 3,1 N·cm**",
           "**Irrigation abondante** : hypochlorite, **2 mL par canal entre chaque lime**"
-        ], materiel: ["ProTaper Gold", "moteur endodontique", "gel d'EDTA", "limes manuelles de cathétérisme (jusqu'au 15/100)", "hypochlorite"] },
+        ], materiel: ["ProTaper Gold", "moteur endodontique", "gel d'EDTA (si besoin)", "limes manuelles de cathétérisme (jusqu'au 15/100)", "hypochlorite"] },
         { titre: "Temps 5 – Irrigation finale et séchage", details: [
           "**Hypochlorite 1 min**, puis **EDTA 17 % 1 min**, puis **hypochlorite 30 s**",
-          "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant (consensus 2024)",
+          "**Activer la solution manuellement** : cône de gutta-percha (ou lime) adapté à la taille du canal, mouvements de va-et-vient dans le canal rempli d'irrigant",
           "**Rinçage à l'eau entre chaque irrigant**",
           "Séchage"
         ], materiel: ["hypochlorite, EDTA, eau", "pointes de papier"] },
