@@ -99,18 +99,12 @@ window.DISCIPLINES.push({
           "**Confirmation par radiographie**"
         ], materiel: ["localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
-          "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
-          "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
-          "**F1 puis F2** (**F3** si le canal est plus large) : **sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus**",
-          "**Vitesse : 300 tr/min**",
-          "**Couple S1 et SX : 5,1 N·cm**",
-          "**Couple S2 et F1 : 1,5 N·cm**",
-          "**Couple F2 et F3 : 3,1 N·cm**",
-          "Préparation apicale **en général jusqu'au 25/100 (F2)**",
+          { t: "**S1 puis S2** jusqu'à la longueur de travail", sub: ["**Mouvement de brossage à la remontée**", "En s'éloignant de la furcation"] },
+          { t: "**SX** si besoin", sub: ["Entrée du canal", "Racine courte", "Éloigner le canal d'une furcation"] },
+          { t: "**F1 puis F2** (**F3** si le canal est plus large)", sub: ["**Sans brossage**, une seule fois à la longueur de travail", "**1 seconde au plus**", "Préparation apicale en général jusqu'au 25/100 (F2)"] },
+          { t: "**Réglages du moteur**", sub: ["Vitesse : **300 tr/min**", "Couple S1 et SX : **5,1 N·cm**", "Couple S2 et F1 : **1,5 N·cm**", "Couple F2 et F3 : **3,1 N·cm**"] },
           "**Pression apicale minimale** : ne jamais forcer",
-          "**Entre chaque lime** : **2 mL d'hypochlorite par canal**",
-          "Au total : **10 à 20 mL d'hypochlorite par canal**",
-          "Aiguille placée **à 2 mm de la longueur de travail**"
+          { t: "**Irrigation**", sub: ["**Entre chaque lime** : **2 mL d'hypochlorite par canal**", "Au total : **10 à 20 mL d'hypochlorite par canal**", "Aiguille placée **à 2 mm de la longueur de travail**"] }
         ], materiel: ["ProTaper Gold", "moteur endodontique", "hypochlorite", "seringue Luer-Lock + aiguille 30 G"] },
         { titre: "Temps 5 – Irrigation finale et séchage", details: [
           "**Hypochlorite 1 min**, puis **EDTA 17 % 1 min**, puis **hypochlorite 30 s** (plus de 5 mL par canal)",
@@ -242,14 +236,11 @@ window.DISCIPLINES.push({
         ], materiel: ["Desocclusol Orange (Acteon)", "limes ProTaper Universal Retreatment D1, D2, D3", "localisateur d'apex NSK iPex II", "radiographies"], validation: "longueur de travail" },
         { titre: "Temps 4 – Mise en forme et irrigation", details: [
           "**Cathétérisme manuel** jusqu'au 15/100 avant les limes rotatives, avec, **si besoin**, du **gel d'EDTA** (**Glyde File Prep** : ne pas l'injecter sous pression, une dose par patient)",
-          "**S1 puis S2** jusqu'à la longueur de travail, avec un **mouvement de brossage à la remontée**, en s'éloignant de la furcation",
-          "**SX** si besoin : entrée du canal, racine courte, éloigner le canal d'une furcation",
-          { t: "**F1 puis F2** (**F3** si le canal est plus large)", sub: ["**Sans brossage**, une seule fois à la longueur de travail, **1 seconde au plus**", "Apex en général jusqu'au 25/100"] },
+          { t: "**S1 puis S2** jusqu'à la longueur de travail", sub: ["**Mouvement de brossage à la remontée**", "En s'éloignant de la furcation"] },
+          { t: "**SX** si besoin", sub: ["Entrée du canal", "Racine courte", "Éloigner le canal d'une furcation"] },
+          { t: "**F1 puis F2** (**F3** si le canal est plus large)", sub: ["**Sans brossage**, une seule fois à la longueur de travail", "**1 seconde au plus**", "Apex en général jusqu'au 25/100"] },
+          { t: "**Réglages du moteur**", sub: ["Vitesse : **300 tr/min**", "Couple S1 et SX : **5,1 N·cm**", "Couple S2 et F1 : **1,5 N·cm**", "Couple F2 et F3 : **3,1 N·cm**"] },
           "**Pression apicale minimale** : ne jamais forcer",
-          "**Vitesse : 300 tr/min**",
-          "**Couple S1 et SX : 5,1 N·cm**",
-          "**Couple S2 et F1 : 1,5 N·cm**",
-          "**Couple F2 et F3 : 3,1 N·cm**",
           "**Irrigation abondante** : hypochlorite, **2 mL par canal entre chaque lime**"
         ], materiel: ["ProTaper Gold", "moteur endodontique", "gel d'EDTA (si besoin)", "limes manuelles de cathétérisme (jusqu'au 15/100)", "hypochlorite"] },
         { titre: "Temps 5 – Irrigation finale et séchage", details: [
