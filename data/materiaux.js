@@ -604,7 +604,7 @@ window.MATERIAUX = {
       "**Coiffage** : digue, retirer la dentine cariée (garder la dentine affectée), **hémostase indispensable**, placer la Biodentine **directement sur la pulpe exposée sans compression**",
       "**Pulpotomie** : excision de la pulpe camérale, hémostase, Biodentine placée dans la chambre pulpaire, bien adaptée aux parois",
       "**Perforations** : champ opératoire, canal rincé à l'hypochlorite et séché, Biodentine mise en place puis comprimée au fouloir, radiographie de contrôle",
-      "**Biodentine XP (cartouche, mixeur et pistolet Biodentine)** : coiffage direct en 2 sessions (**protocole Bio-Bulk Fill**, Septodont) : hémostase par compression à l'**hypochlorite 1-6 %**, injection en remontant lentement jusqu'en haut de la cavité, **sous-occlusion**, radiographie ; **6 semaines plus tard** : retirer **2 mm** de Biodentine, mordançage de l'émail et de la Biodentine (MR3 ou MR2) ou SAM1, composite",
+      "**Coiffage direct en 2 sessions** (fiche Septodont Bio-Bulk Fill, écrite pour la Biodentine XP) : hémostase par compression à l'**hypochlorite 1-6 %**, Biodentine jusqu'en haut de la cavité **en sous-occlusion**, radiographie ; **6 semaines plus tard** : évaluer la vitalité, retirer **2 mm** de Biodentine, mordançage de l'émail et de la Biodentine (MR3 ou MR2) ou SAM1, composite",
       "**Éviter l'eau et les fluides** pendant la prise initiale (**12 minutes**) ; attendre la fin de la prise avant de déposer la matrice ; un vernis sur la surface améliore les propriétés et facilite la dépose",
       "**Vérifier l'occlusion** ; **d'une semaine à six mois** plus tard, préparer la cavité pour la restauration définitive : la Biodentine restante peut rester en profondeur, compatible avec tous les adhésifs",
       "Rincer et nettoyer rapidement les instruments"
@@ -620,7 +620,7 @@ window.MATERIAUX = {
        "u": "https://www.proclinic.es/media/proclinic-es/annexes/19062_biodentine.pdf"
       },
       {
-       "t": "Septodont, Protocole Bio-Bulk Fill – Coiffage direct en 2 sessions (Biodentine XP, octobre 2024), fiche reçue du service",
+       "t": "Septodont, Protocole Bio-Bulk Fill – Coiffage direct en 2 sessions (octobre 2024), fiche reçue du service",
        "u": "#/materiaux"
       }
      ],
