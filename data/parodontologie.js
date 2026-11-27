@@ -255,7 +255,7 @@ window.DISCIPLINES.push({
       materiel: ["Sonde parodontale", "Logiciel Logos", "Révélateur de plaque", "Radiographies si besoin"],
       alertes: ["**Objectifs de santé** : aucune poche **≥ 5 mm avec saignement** et aucune poche profonde **≥ 6 mm** ; si atteints, passage en maintenance ; sinon, étape 3 (EFP)."],
       etapes: [
-        { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", { t: "**Décision**", sub: ["Maintenance si objectifs atteints", "Sinon ré-instrumentation ciblée ou chirurgie (étape 3)", "Consignes d'hygiène"] }], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
+        { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", { t: "**Décision**", sub: ["Maintenance si objectifs atteints", "Sinon étape 3 : refaire le surfaçage des sites résiduels, chirurgie si poches profondes", "Consignes d'hygiène"] }], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
       ],
       consignes: ["**Résultat** du traitement expliqué au patient ; objectifs et prochaines étapes ; **maintenance** à rythme personnalisé."],
       erreurs: ["Réévaluation trop précoce, avant la cicatrisation", "Sondage incomplet", "Absence de décision écrite (maintenance ou étape 3)"],
@@ -264,35 +264,38 @@ window.DISCIPLINES.push({
     {
       id: "chirurgie-parodontale",
       groupe: "Étape 3 – Sites non répondeurs",
-      titre: "Chirurgie parodontale (étape 3)",
-      resume: "Prise en charge des sites non répondeurs : ré-instrumentation, lambeau d'accès, chirurgie résectrice ou régénératrice. Réalisée au service par des praticiens formés.",
+      titre: "Étape 3 – Sites non répondeurs : nouveau surfaçage, puis chirurgie",
+      resume: "Si les objectifs ne sont pas atteints à la réévaluation : on commence par refaire le surfaçage des poches résiduelles modérées (4-5 mm). La chirurgie (lambeau d'accès, chirurgie résectrice ou régénératrice) ne concerne que les poches profondes, les défauts intra-osseux et les furcations ; elle est réalisée au service par des praticiens formés.",
       duree: "Selon l'acte",
-      niveau: "Praticien formé / spécialiste (pas les étudiants de 4e et 5e année)",
+      niveau: "Nouveau surfaçage : étudiant encadré ; chirurgie : praticien formé / spécialiste (pas les étudiants de 4e et 5e année)",
       statut: "brouillon",
       sourceType: "Pratique du service (CHU) + guideline EFP S3 2020 + HAS 2026",
       maj: "2026-11",
       hopital: [
+        "**Dans un premier temps**, le surfaçage est refait sur les poches résiduelles modérées (4-5 mm)",
         "**Chirurgie parodontale réalisée au service**, **mais pas par les étudiants de 4e et 5e année**"
       ],
       indications: [
+        "**Poches résiduelles modérées (4-5 mm)** : nouveau surfaçage en premier",
         "Poches > 4 mm avec saignement et/ou poches profondes ≥ 6 mm persistant à la réévaluation après l'étape 2",
         "Lésions intra-osseuses et lésions de furcation"
       ],
       contreIndications: ["**Chirurgie non indiquée chez les patients n'atteignant pas un contrôle de plaque suffisant**", "Les actes de chirurgie parodontale sont contre-indiqués chez les patients traités pour une pathologie maligne ou irradiés ≥ 40 Gy (HAS 2026, certains actes)"],
       alertes: [
+        "**L'étape 3 ne commence pas par la chirurgie** : on **refait d'abord le surfaçage** des poches résiduelles modérées (4-5 mm). La chirurgie ne concerne que les poches profondes (≥ 6 mm), les défauts intra-osseux et les furcations.",
         "La chirurgie doit être réalisée par un praticien **avec formation spécifique supplémentaire** ou un spécialiste (EFP).",
         "Antibioprophylaxie : non recommandée en population générale pour la chirurgie d'assainissement, l'élongation coronaire ou la chirurgie plastique ; recommandée au cas par cas pour les patients à risque infectieux augmenté ou à haut risque d'ostéonécrose (HAS 2026)."
       ],
       etapes: [
-        { titre: "Poches résiduelles modérées (4-5 mm)", details: ["Répéter l'instrumentation sous-gingivale, avec ou sans lambeau d'accès, dans un contexte d'étapes 1 et 2 de qualité et de maintenance fréquente"] },
-        { titre: "Poches résiduelles profondes (≥ 6 mm)", details: ["**Lambeau d'accès** recommandé (différents dessins possibles)", "Chirurgie résectrice : possible, avec risque d'augmentation de la récession"] },
-        { titre: "Défauts intra-osseux ≥ 3 mm", details: ["**Chirurgie régénératrice** recommandée", "Régénération : **membranes** ou **dérivés de la matrice amélaire**, avec ou sans greffe d'origine osseuse ; lambeaux de préservation papillaire"] },
-        { titre: "Lésions de furcation", details: ["Traitement parodontal recommandé sur molaires de classes II et III avec poches résiduelles : **l'atteinte de furcation n'est pas une raison d'extraction**", "Classe II mandibulaire et classe II vestibulaire maxillaire : régénération recommandée",
+        { titre: "Temps 1 – Poches résiduelles modérées (4-5 mm) : refaire le surfaçage", details: ["**Refaire le surfaçage** (instrumentation sous-gingivale) des poches résiduelles modérées", "Avec ou sans lambeau d'accès", "Dans un contexte d'étapes 1 et 2 de qualité et de maintenance fréquente"] },
+        { titre: "Temps 2 – Poches résiduelles profondes (≥ 6 mm) : chirurgie", details: ["**Lambeau d'accès** recommandé (différents dessins possibles)", "Chirurgie résectrice : possible, avec risque d'augmentation de la récession"] },
+        { titre: "Temps 3 – Défauts intra-osseux ≥ 3 mm : chirurgie régénératrice", details: ["**Chirurgie régénératrice** recommandée", "Régénération : **membranes** ou **dérivés de la matrice amélaire**, avec ou sans greffe d'origine osseuse ; lambeaux de préservation papillaire"] },
+        { titre: "Temps 4 – Lésions de furcation", details: ["Traitement parodontal recommandé sur molaires de classes II et III avec poches résiduelles : **l'atteinte de furcation n'est pas une raison d'extraction**", "Classe II mandibulaire et classe II vestibulaire maxillaire : régénération recommandée",
           "Classe III et lésions complexes : tunnelisation, séparation ou résection radiculaire possibles"] },
-        { titre: "Réévaluation après l'étape 3", details: ["Mêmes objectifs : aucune poche ≥ 5 mm avec saignement, aucune poche ≥ 6 mm ; puis maintenance"] }
+        { titre: "Temps 5 – Réévaluation après l'étape 3", details: ["Mêmes objectifs : aucune poche ≥ 5 mm avec saignement, aucune poche ≥ 6 mm ; puis maintenance"] }
       ],
-      consignes: ["Consignes post-opératoires, bain de bouche et contrôle selon l'acte réalisé."],
-      erreurs: ["Opérer un patient sans contrôle de plaque satisfaisant", "Chirurgie réalisée par un opérateur non formé", "Maintenance non planifiée après la chirurgie"],
+      consignes: ["Après un nouveau surfaçage : mêmes consignes qu'à l'étape 2.", "Après une chirurgie : consignes post-opératoires, bain de bouche et contrôle selon l'acte réalisé."],
+      erreurs: ["Passer directement à la chirurgie sans avoir refait le surfaçage des poches résiduelles modérées", "Opérer un patient sans contrôle de plaque satisfaisant", "Chirurgie réalisée par un opérateur non formé", "Maintenance non planifiée après la chirurgie"],
       references: [
         "[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – étape 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 2](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
