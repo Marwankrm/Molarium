@@ -62,8 +62,8 @@ Un seul fichier de style, `css/v6.css`, chargé après `style.css` (les ancienne
 
 - **Navigation :** barre du haut (Accueil, Disciplines avec menu au survol, Matériaux, Favoris, recherche). Sur téléphone : barre flottante en bas et tiroir des disciplines.
 - **Accueil :** bandeau pleine largeur avec une **molaire interactive** (`js/art.js`) dont chaque zone ouvre une discipline, puis des pavés asymétriques.
-- **Signature visuelle :** coin « molaire » (trois angles arrondis, un presque carré), numérotation en chasse fixe (JetBrains Mono), bandeaux bleu-vert profond, listes éditoriales à la place des cartes, vitrine de produits pour les matériaux.
-- **Polices :** Space Grotesk (titres), Figtree (texte), JetBrains Mono (repères) ; licences SIL OFL dans `css/fonts/`.
+- **Signature visuelle :** coin « molaire » (trois angles arrondis, un presque carré), numérotation en chasse fixe (Azeret Mono), bandeaux bleu-vert profond, listes éditoriales à la place des cartes, vitrine de produits pour les matériaux.
+- **Polices :** Space Grotesk (titres), Figtree (texte), Azeret Mono (repères) ; licences SIL OFL dans `css/fonts/`.
 
 ## Instruments et produits cliquables
 
