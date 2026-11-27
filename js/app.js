@@ -156,7 +156,7 @@
   function byKey(k) { return ALL.filter(function (p) { return p._key === k; })[0]; }
   function findDisc(id) { return DISCIPLINES.filter(function (d) { return d.id === id; })[0]; }
   function findProto(d, pid) { return d && d.protocoles.filter(function (p) { return p.id === pid; })[0]; }
-  function setTitle(t) { document.title = (t ? t + ' – ' : '') + 'Molarium · Protocoles d\'odontologie'; }
+  function setTitle(t) { document.title = (t ? t + ' – ' : '') + 'Dentadi · Protocoles d\'odontologie'; }
   function setDisc(d) { document.documentElement.style.setProperty('--d', d ? (d.couleur || '#0b6e7f') : '#0b6e7f'); }
   function colorStyle(d) { return '--d:var(--brand)'; }
   function isNarrow() { return window.matchMedia('(max-width:1000px)').matches; }
@@ -387,7 +387,7 @@
     var narrow = isNarrow();
     var frag = document.createDocumentFragment();
 
-    frag.appendChild(el('div', { class: 'print-head' }, [document.createTextNode('Molarium · Protocoles d\'odontologie · ' + d.nom + (p.statut === 'valide' ? '' : ' · DOCUMENT À VALIDER'))]));
+    frag.appendChild(el('div', { class: 'print-head' }, [document.createTextNode('Dentadi · Protocoles d\'odontologie · ' + d.nom + (p.statut === 'valide' ? '' : ' · DOCUMENT À VALIDER'))]));
     var bandIn = document.createDocumentFragment();
     bandIn.appendChild(crumbs([{ href: '#/', label: 'Accueil' }, { href: '#/' + d.id, label: d.nom }, { label: p.titre }]));
 

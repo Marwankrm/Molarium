@@ -1,4 +1,4 @@
-/* Molarium : illustrations (SVG en ligne) — icônes de disciplines, planche anatomique, odontogramme, logo.
+/* Dentadi : illustrations (SVG en ligne) — icônes de disciplines, planche anatomique, odontogramme, logo.
    Style : trait fin, une seule couleur (currentColor), remplissages à 12 % d'opacité. */
 (function () {
   var A = window.MOLARIUM_ART = {};

@@ -1,4 +1,4 @@
-# Protocoles cliniques – Odontologie · CHU Dijon Bourgogne
+# Dentadi – protocoles cliniques d'odontologie · CHU Dijon Bourgogne
 
 Site statique (HTML/CSS/JS, aucune dépendance, aucun build).
 
@@ -58,7 +58,7 @@ Le dossier `archive/` contient des fiches retirées du site mais conservées (no
 
 ## Design « Atlas » (v6)
 
-Un seul fichier de style, `css/v6.css`, chargé après `style.css` (les anciennes couches v3, v4 et v5 sont supprimées). Une seule couleur de marque, le bleu-vert Molarium (`--brand`).
+Un seul fichier de style, `css/v6.css`, chargé après `style.css` (les anciennes couches v3, v4 et v5 sont supprimées). Une seule couleur de marque, le bleu-vert Dentadi (`--brand`).
 
 - **Navigation :** barre du haut (Accueil, Disciplines avec menu au survol, Matériaux, Favoris, recherche). Sur téléphone : barre flottante en bas et tiroir des disciplines.
 - **Accueil :** bandeau pleine largeur avec une **molaire interactive** (`js/art.js`) dont chaque zone ouvre une discipline, puis des pavés asymétriques.
