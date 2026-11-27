@@ -608,6 +608,88 @@ window.DISCIPLINES.push({
         "Séquence rédigée d'après la pratique courante (valeurs et produits à confirmer par le service).",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
+    },
+    {
+      id: "bridge",
+      titre: "Bridge dento-porté conventionnel – préparation, empreinte et provisoire",
+      resume: "Remplacement d'une ou de quelques dents absentes par un bridge scellé sur des piliers préparés en couronnes. Séances préalables au scellement : examen et projet, puis préparation des piliers avec empreinte et provisoire. Le scellement suit les fiches dédiées (zircone, céramo-métallique). Produits repris des fiches couronne, à confirmer par le service.",
+      duree: "2 séances avant le scellement (essayages éventuels selon le laboratoire)",
+      niveau: "Étudiant encadré",
+      statut: "brouillon",
+      sourceType: "Pratique courante + thèse de chirurgie dentaire (Toulouse 2018) – à compléter par le service",
+      maj: "2026-11",
+      indications: ["**Édentement encastré** de courte étendue, avec une dent pilier de chaque côté", "Solution implantaire ou orthodontique impossible ou différée", "Dents piliers déjà délabrées ou à couronner, ce qui limite le coût biologique de la préparation"],
+      contreIndications: ["**Piliers insuffisants** en nombre ou en valeur (rapport couronne/racine, forme et longueur des racines, état pulpaire)", "**Parodontopathie avancée** des piliers", "Dysfonction de l'appareil manducateur ou parafonction non contrôlée", "Édentement terminal : pas de pilier distal", "**Coût biologique trop élevé** (piliers sains à préparer) : discuter un bridge collé ou un implant", "Hygiène insuffisante ou patient non coopérant", "Pathologie évolutive ou pronostic des piliers à réévaluer : reporter"],
+      materiel: [
+        "Examen : sonde, miroir, radiographies, alginate pour modèles d'étude",
+        "Fraises de préparation",
+        "Rétraction gingivale : fil(s) rétracteur(s)",
+        "Empreinte de précision : **Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther) ; **alginate** pour l'arcade antagoniste ; occlusion au **Futar D**",
+        "Provisoire : résine **Unifast Trad**, clé en silicone, ciment provisoire **Temp-Bond** ou **Temp-Bond NE**",
+        "Teintier",
+        "Ciment d'assemblage : **scellement** au **Fuji PLUS** ou **collage** au **Panavia V5**, selon le matériau (voir les fiches de scellement)",
+        "Papier à articuler, sonde, fil dentaire"
+      ],
+      alertes: [
+        "**SDI** (scellement dentinaire immédiat) : pour un bridge **collé** (zircone) quand la préparation expose de la dentine, à réaliser **avant l'empreinte** et la provisoire.",
+        "**Piliers parallèles** : préparer tous les piliers selon un **axe d'insertion commun**, sinon le bridge ne s'insère pas.",
+        "Piliers **vivants et sains** de préférence ; vérifier la **vitalité** et l'état endodontique avant de préparer.",
+        "Repère classique (loi d'Ante) : la **surface parodontale des piliers** doit être au moins égale à celle des dents remplacées ; une revue récente nuance : un support parodontal réduit mais sain n'est pas une contre-indication.",
+        "**Bridge en zircone de 3 éléments postérieur** : connexions d'au moins **9 mm²** dans les protocoles d'études cliniques (à valider avec le laboratoire).",
+        "Prendre la **teinte avant** l'anesthésie et la préparation (dent hydratée, lumière naturelle).",
+        "**Pas d'antibioprophylaxie** pour les soins prothétiques ni les prises d'empreintes en population générale (HAS 2026)."
+      ],
+      etapes: [
+        { titre: "Séance 1 – Examen, plan de traitement et teinte", details: [
+          { t: "**Examen**", sub: ["Clinique, radiologique, occlusal et parodontal"] },
+          { t: "**Évaluation des piliers**", sub: ["Vitalité et état endodontique", "Support parodontal et mobilité", "Rapport couronne/racine, forme et longueur des racines", "Espaces mésio-distal et occlusal suffisants"] },
+          "Choix du **matériau** du bridge (céramo-métallique, zircone…) selon l'étendue, les contraintes et l'esthétique",
+          "Consentement et devis",
+          "**Empreinte d'étude** à l'alginate (modèles, éventuelle clé en silicone), **choix de la teinte** au teintier et photographies si besoin"
+        ], materiel: ["sonde, miroir, radiographies", "alginate", "teintier", "appareil photo (si besoin)"], validation: "plan de traitement", astuce: "Au laboratoire : modèles d'étude, éventuel projet esthétique (wax-up)." },
+        { titre: "Séance 2 – Préparation des piliers, empreinte et provisoire", details: [
+          "**Anesthésie locale**",
+          { t: "**Préparation de tous les piliers**", sub: ["Réduction occlusale et axiale respectant l'épaisseur du matériau", "Faible convergence des parois", "**Axe d'insertion commun** : contrôler le parallélisme entre les piliers", "**Limite cervicale** nette et arrondie respectant le parodonte"] },
+          { t: "**Scellement dentinaire immédiat (SDI)** si collage prévu (bridge en zircone) et dentine exposée, **avant l'empreinte**", sub: ["**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s, **photopolymériser** (10 s)", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte", "Empreinte au silicone **Express 2** de préférence ; ciment provisoire sans eugénol (**Temp-Bond NE**)"] },
+          "**Rétraction gingivale** de chaque pilier",
+          { t: "**Empreinte de précision**", sub: ["**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)", "Tous les piliers et la crête édentée dans la même empreinte"] },
+          "**Empreinte de l'antagoniste** à l'**alginate**",
+          "**Enregistrement de l'occlusion** avec le **Futar D**",
+          { t: "**Provisoire de bridge**", sub: ["Réalisé avec la clé en silicone (résine **Unifast Trad**), éléments reliés entre eux", "Ajusté puis posé au ciment provisoire (**Temp-Bond** ou **Temp-Bond NE**)"] }
+        ], materiel: ["fraises de préparation", "fil rétracteur", "Etch Gel 37 %", "G-Premio Bond", "matériau d'empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "**Futar D** (occlusion)", "résine (Unifast Trad) et clé en silicone pour provisoire", "ciment provisoire (Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire : coulée du modèle de travail et confection du bridge." },
+        { titre: "Séance 3 – Essayage et scellement", details: [
+          { t: "**Essayage du bridge** (armature ou bridge terminé, selon le laboratoire)", sub: ["Adaptation marginale de chaque pilier", "Contacts proximaux, intermédiaire sur la crête", "Occlusion", "Teinte"] },
+          "Validation par l'encadrant",
+          "**Scellement en une seule fois sur tous les piliers** : voir les fiches **Scellement d'une couronne en zircone** ou **Scellement d'une couronne céramo-métallique** selon le matériau",
+          "Retrait des excès de ciment, **fil dentaire sous l'intermédiaire**",
+          "Contrôle de l'occlusion, consignes au patient et suivi"
+        ], materiel: ["voir la fiche de scellement correspondante", "fil dentaire", "papier à articuler"], validation: "essayage et scellement" }
+      ],
+      consignes: [
+        "**Provisoire** : éviter les aliments durs ou collants et mastiquer de l'autre côté ; brosser doucement ; **s'il se décolle, le conserver et prendre rendez-vous rapidement** (les piliers peuvent migrer).",
+        "**Sensibilités** : un peu de sensibilité au froid ou au chaud est possible les premiers jours ; consulter si elle persiste ou si la douleur est spontanée.",
+        "**Après la pose** : éviter de mordre dans des aliments très durs les premières heures ; contrôler que la morsure est confortable, sinon revenir.",
+        "**Hygiène sous l'intermédiaire** : passer chaque jour un fil spécial pour bridge ou une brossette interdentaire sous le bridge ; brossage soigneux des limites cervicales des piliers.",
+        "**Contrôles réguliers** chez le chirurgien-dentiste."
+      ],
+      erreurs: [
+        "Piliers **non parallèles** : le bridge ne s'insère pas ou ne se positionne pas correctement",
+        "Piliers insuffisants ou mal évalués (parodonte, rapport couronne/racine, état endodontique)",
+        "Réduction insuffisante (épaisseur du matériau, esthétique ou occlusion compromises) ou excessive (fragilisation, sensibilités)",
+        "Limite cervicale imprécise ou agressant l'espace biologique ; **rétraction gingivale insuffisante** (empreinte inexploitable)",
+        "Provisoire non relié ou mal adapté (migration des piliers, gingivite)",
+        "Excès de ciment laissé dans le sulcus ou sous l'intermédiaire",
+        "Hygiène sous l'intermédiaire non enseignée"
+      ],
+      suivi: ["Contrôle à **1 à 2 semaines**, puis à **6 mois** et **chaque année** : occlusion, scellement des piliers, état parodontal, hygiène sous l'intermédiaire"],
+      complications: ["**Descellement d'un pilier** (parfois non perçu, avec risque de carie sous la couronne) : déposer, nettoyer, analyser la rétention", "**Carie ou atteinte pulpaire d'un pilier** : traitement, parfois dépose du bridge", "**Fracture de la céramique ou de l'armature** : réparation ou refonte", "**Gingivite ou récession** autour des piliers ou sous l'intermédiaire : hygiène, ajustement"],
+      references: [
+        "Séquence rédigée d'après la pratique courante (produits repris des fiches couronne, calendrier de suivi repris de la fiche zircone ; à confirmer par le service).",
+        "[Lopez S., Gestion d'un édentement unitaire antérieur par bridges collés cantilever, thèse Toulouse III (2018)](https://utheme.univ-tlse3.fr/access/files/original/3c76ed9c9c80349f895f00ae477bfa7a48af83ac.pdf) — indications et contre-indications générales des bridges",
+        "[La loi d'Ante (1926) réactualisée, Les Cahiers de Prothèse n° 139](https://www.editionscdp.fr/revues/les-cahiers-de-prothese/article/n-139/la-loi-d-ante-1926-reactualisee-excellents-taux-de-survie-a-5-et-10-ans-des-bridges-sur-piliers-dentaires-avec-support-parodontal-sain-mais-severement-reduit.html)",
+        "[Connector design and pontic span length in zirconia fixed dental prostheses: a systematic review (PMC13511259)](https://pmc.ncbi.nlm.nih.gov/articles/PMC13511259/) — valeur de 9 mm² reprise de protocoles d'études cliniques",
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
+      ]
     }
   ]
 });
