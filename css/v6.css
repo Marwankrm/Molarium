@@ -494,3 +494,6 @@ button.inst:hover,button.inst:focus-visible{background:var(--brand-soft);color:v
 .step-body li>ul{margin:.3em 0 .1em}.step-body li>ul>li{margin:.2em 0;color:var(--ink-2,inherit)}
 .step-body li.num{list-style:none;margin-left:-1.1em}
 .step-body li.num>ul{margin-left:1.1em}
+
+.plist-group{margin:0;padding:22px 10px 10px;font:700 .72rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--brand);border-bottom:1px solid var(--line)}
+.plist-group:not(:first-child){margin-top:26px;border-top:2px solid var(--ink)}

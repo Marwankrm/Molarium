@@ -9,6 +9,7 @@ window.DISCIPLINES.push({
   protocoles: [
     {
       id: "examen-parodontal",
+      groupe: "Examen et plan de traitement",
       titre: "Examen parodontal initial",
       resume: "Recueil des données cliniques et radiologiques dans le logiciel Logos, diagnostic (stade, grade) et plan de traitement par étapes.",
       duree: "1 séance, 45 à 60 min",
@@ -59,6 +60,7 @@ window.DISCIPLINES.push({
     },
     {
       id: "traitement-parodontite",
+      groupe: "Examen et plan de traitement",
       titre: "Traitement de la parodontite : les 4 étapes",
       resume: "Vue d'ensemble du traitement de la parodontite (stades I à III) en 4 étapes, d'après le guideline EFP S3 : contrôle de la plaque et des facteurs de risque, instrumentation sous-gingivale, traitement des sites non répondeurs, maintenance. Chaque étape renvoie à sa fiche détaillée.",
       duree: "Plusieurs mois (réévaluation 3 mois après l'étape 2), puis maintenance à vie",
@@ -119,6 +121,7 @@ window.DISCIPLINES.push({
     },
     {
       id: "motivation-hygiene",
+      groupe: "Étape 1 – Contrôle de la plaque et des facteurs de risque",
       titre: "Séance de motivation à l'hygiène",
       resume: "Étape 1 du traitement : enseignement du contrôle de plaque, brossettes interdentaires, facteurs de risque (tabac, diabète).",
       duree: "1 séance",
@@ -163,7 +166,40 @@ window.DISCIPLINES.push({
       references: ["[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – étape 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)"]
     },
     {
+      id: "detartrage-polissage",
+      groupe: "Étape 1 – Contrôle de la plaque et des facteurs de risque",
+      titre: "Détartrage et polissage",
+      resume: "Élimination professionnelle du tartre et du biofilm supra-gingival, polissage et suppression des facteurs rétentifs de plaque.",
+      duree: "1 séance",
+      niveau: "Étudiant encadré",
+      statut: "brouillon",
+      sourceType: "Guideline EFP S3 2020 + recommandation HAS 2026 + pratique courante – à compléter par le service",
+      maj: "2026-11",
+      indications: ["Gingivite, et étape 1 du traitement parodontal (contrôle professionnel de plaque)", "Séances de maintenance"],
+      materiel: ["Détartreur ultrasonique **Satelec** (pièce à main **Newtron Slim**) et inserts", "Curettes manuelles", "Cupule et pâte à polir", "Révélateur de plaque", "Irrigant : eau (ultrasons)"],
+      alertes: [
+        "**Pas d'antibioprophylaxie** pour le détartrage, le sondage et le polissage en population générale (HAS 2026).",
+        "Le **contrôle professionnel de la plaque et des facteurs rétentifs** est un élément fondamental de l'étape 1 (EFP)."
+      ],
+      etapes: [
+        { titre: "Séance – Détartrage supra-gingival et polissage", details: ["Indices de plaque et de saignement ; **détartrage supra-gingival aux ultrasons**, complété à la curette si besoin", "**Polissage** des surfaces",
+          "Suppression des facteurs rétentifs de plaque",
+          "Enseignement de l'hygiène"], materiel: ["ultrasons + inserts", "curettes", "cupule et pâte à polir", "révélateur de plaque"] }
+      ],
+      consignes: [
+        "**Sensibilité** : sensibilité au froid possible quelques jours ; dentifrice pour dents sensibles si besoin.",
+        "**Saignement** léger normal le jour même.",
+        "**Hygiène** : brossage et brossettes interdentaires comme appris ; prochain rendez-vous selon le plan de traitement."
+      ],
+      erreurs: ["Détartrage sans enseignement de l'hygiène", "Facteurs rétentifs (débords) non traités", "Insert ou puissance inadaptés (lésions de l'émail ou des restaurations)"],
+      references: [
+        "[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – étape 1 : PMPR](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
+        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 2](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
+      ]
+    },
+    {
       id: "gingivite",
+      groupe: "Étape 1 – Contrôle de la plaque et des facteurs de risque",
       titre: "Gingivite",
       resume: "Traitement de la gingivite induite par la plaque : contrôle de plaque par le patient, détartrage, antibiotiques non recommandés (HAS 2026).",
       duree: "1 à 2 séances",
@@ -195,38 +231,8 @@ window.DISCIPLINES.push({
       ]
     },
     {
-      id: "detartrage-polissage",
-      titre: "Détartrage et polissage",
-      resume: "Élimination professionnelle du tartre et du biofilm supra-gingival, polissage et suppression des facteurs rétentifs de plaque.",
-      duree: "1 séance",
-      niveau: "Étudiant encadré",
-      statut: "brouillon",
-      sourceType: "Guideline EFP S3 2020 + recommandation HAS 2026 + pratique courante – à compléter par le service",
-      maj: "2026-11",
-      indications: ["Gingivite, et étape 1 du traitement parodontal (contrôle professionnel de plaque)", "Séances de maintenance"],
-      materiel: ["Détartreur ultrasonique **Satelec** (pièce à main **Newtron Slim**) et inserts", "Curettes manuelles", "Cupule et pâte à polir", "Révélateur de plaque", "Irrigant : eau (ultrasons)"],
-      alertes: [
-        "**Pas d'antibioprophylaxie** pour le détartrage, le sondage et le polissage en population générale (HAS 2026).",
-        "Le **contrôle professionnel de la plaque et des facteurs rétentifs** est un élément fondamental de l'étape 1 (EFP)."
-      ],
-      etapes: [
-        { titre: "Séance – Détartrage supra-gingival et polissage", details: ["Indices de plaque et de saignement ; **détartrage supra-gingival aux ultrasons**, complété à la curette si besoin", "**Polissage** des surfaces",
-          "Suppression des facteurs rétentifs de plaque",
-          "Enseignement de l'hygiène"], materiel: ["ultrasons + inserts", "curettes", "cupule et pâte à polir", "révélateur de plaque"] }
-      ],
-      consignes: [
-        "**Sensibilité** : sensibilité au froid possible quelques jours ; dentifrice pour dents sensibles si besoin.",
-        "**Saignement** léger normal le jour même.",
-        "**Hygiène** : brossage et brossettes interdentaires comme appris ; prochain rendez-vous selon le plan de traitement."
-      ],
-      erreurs: ["Détartrage sans enseignement de l'hygiène", "Facteurs rétentifs (débords) non traités", "Insert ou puissance inadaptés (lésions de l'émail ou des restaurations)"],
-      references: [
-        "[Sanz M. et al. EFP S3 guideline, J Clin Periodontol 2020 – étape 1 : PMPR](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
-        "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 2](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
-      ]
-    },
-    {
       id: "surfacage-radiculaire",
+      groupe: "Étape 2 – Instrumentation sous-gingivale",
       titre: "Surfaçage radiculaire (instrumentation sous-gingivale)",
       resume: "Étape 2 du traitement : sondage, anesthésie et instrumentation sous-gingivale aux inserts parodontaux, en 2 séances pour une bouche entière.",
       duree: "2 séances pour une bouche entière (selon le patient)",
@@ -295,6 +301,7 @@ window.DISCIPLINES.push({
     },
     {
       id: "reevaluation-parodontale",
+      groupe: "Étape 2 – Instrumentation sous-gingivale",
       titre: "Réévaluation parodontale",
       resume: "Contrôle de la réponse à l'instrumentation : sondage complet, indices, décision entre maintenance et étape 3.",
       duree: "1 séance",
@@ -314,6 +321,7 @@ window.DISCIPLINES.push({
     },
     {
       id: "chirurgie-parodontale",
+      groupe: "Étape 3 – Sites non répondeurs",
       titre: "Chirurgie parodontale (étape 3)",
       resume: "Prise en charge des sites non répondeurs : ré-instrumentation, lambeau d'accès, chirurgie résectrice ou régénératrice. Réalisée au service par des praticiens formés.",
       duree: "Selon l'acte",
@@ -350,6 +358,7 @@ window.DISCIPLINES.push({
     },
     {
       id: "reevaluation-maintenance",
+      groupe: "Étape 4 – Maintenance",
       titre: "Maintenance parodontale (étape 4)",
       resume: "Soins de soutien parodontal : rythme à partir de 3 mois, contenu des séances, hygiène et adjuvants.",
       duree: "1 séance, 30 à 45 min",
@@ -377,6 +386,7 @@ window.DISCIPLINES.push({
     },
     {
       id: "abces-parodontal-urgence",
+      groupe: "Urgences",
       titre: "Abcès parodontal et urgences parodontales",
       resume: "Prise en charge d'un abcès parodontal ou d'une maladie parodontale nécrosante : geste local, antibiotiques selon la HAS 2026, orientation.",
       duree: "1 séance, 30 à 45 min",

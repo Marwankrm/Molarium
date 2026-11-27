@@ -366,7 +366,11 @@
     var di = DISCIPLINES.indexOf(d) + 1;
     out.appendChild(band({ cls: 'band-disc', art: discIco(d.id), crumbs: [{ href: '#/', label: 'Accueil' }, { label: d.nom }], kicker: 'Discipline ' + pad2(di) + ' · ' + plural(d.protocoles.length, 'fiche'), title: d.nom }));
     var list = el('div', { class: 'plist' });
-    d.protocoles.forEach(function (p) { list.appendChild(protoCard(p, false)); });
+    var lastG = null;
+    d.protocoles.forEach(function (p) {
+      if (p.groupe && p.groupe !== lastG) { list.appendChild(el('h2', { class: 'plist-group', text: p.groupe })); lastG = p.groupe; }
+      list.appendChild(protoCard(p, false));
+    });
     out.appendChild(el('div', { class: 'wrap' }, [list]));
     mount(out, true);
   }
