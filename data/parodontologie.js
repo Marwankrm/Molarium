@@ -41,7 +41,8 @@ window.DISCIPLINES.push({
         { titre: "Temps 2 – Examen clinique et sondage", details: ["**Indices de plaque et de saignement**, mobilité, atteinte de furcation (classes I à III), récessions, défauts intra-osseux", "**Sondage 6 sites par dent** : profondeur de poche, niveau d'attache clinique, saignement au sondage ; saisie dans **Logos**"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque (GC Tri Plaque ID Gel)"], validation: "sondage" },
         { titre: "Temps 3 – Examen radiologique", details: ["**Bilan long cône, panoramique et bite-wings** : niveau osseux, lésions intra-osseuses, furcations", "Facteurs rétentifs de plaque : tartre, débords de restauration"], materiel: ["radiographies"] },
         { titre: "Temps 4 – Diagnostic et plan de traitement", details: [{ t: "Classification 2018", sub: ["**Stade (I à IV)** selon la sévérité et la complexité", "**Grade (A à C)** selon la vitesse de progression et les facteurs de risque"] }, { t: "**Plan par étapes (EFP)**", sub: ["Étape 1 : hygiène et facteurs de risque", "Étape 2 : instrumentation", "Étape 3 : sites non répondeurs", "Étape 4 : maintenance"] },
-          "Consentement"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
+          "Consentement",
+          "**Étape 1 (motivation à l'hygiène)** : elle **commence après** ce diagnostic et ce plan de traitement, qui servent de point de départ et permettent d'expliquer la maladie au patient"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
       ],
       consignes: [
         "**Diagnostic expliqué** : maladie de la gencive et de l'os, qui se soigne mais demande une hygiène quotidienne rigoureuse et un suivi.",
@@ -71,7 +72,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Choix des brosses et brossettes** : variable selon l'étudiant [[pas de produit imposé]]"
       ],
-      indications: ["Tout patient atteint de gingivite ou de parodontite, **avant** l'instrumentation sous-gingivale", "Réinstructions à chaque séance de maintenance"],
+      indications: ["Tout patient atteint de gingivite ou de parodontite, **après l'examen initial** (charting, diagnostic, plan de traitement) et **avant** l'instrumentation sous-gingivale", "Réinstructions à chaque séance, puis à chaque séance de maintenance"],
       materiel: [
         "Révélateur de plaque **GC Tri Plaque ID Gel**",
         "Brosse à dents (manuelle ou électrique), **brossettes interdentaires** de tailles adaptées, éventuellement fil dentaire",
@@ -79,13 +80,14 @@ window.DISCIPLINES.push({
         "Fiche de conseils d'hygiène"
       ],
       alertes: [
+        "**Ordre** : examen initial et diagnostic d'abord, puis motivation. L'étape 1 concerne **tous** les patients atteints de parodontite, quel que soit le stade, et doit être **réévaluée fréquemment** pour entretenir la motivation et l'adhésion (EFP).",
         "**Les pratiques d'hygiène sont déterminantes à toutes les étapes** du traitement (EFP).",
         "L'**entretien motivationnel** ou la thérapie cognitivo-comportementale n'ont pas montré d'impact significatif : privilégier la démonstration pratique et le suivi.",
         "**Arrêt du tabac** et **contrôle du diabète** : recommandés dès l'étape 1."
       ],
       etapes: [
         { titre: "Séance – Indices de plaque et enseignement de l'hygiène", details: [
-          "**Révélation de plaque**, relevé de l'indice de plaque et de saignement ; montrer les zones à problème au miroir",
+          "**Révélation de plaque**, relevé de l'indice de plaque et de saignement, **comparé à l'examen initial** ; montrer les zones à problème au miroir",
           "**Démonstration du brossage**, choix et essai des **brossettes interdentaires** (taille mesurée avec la sonde) ; conseils sur le tabac et le diabète"
         ], materiel: ["révélateur de plaque", "brosse", "brossettes interdentaires", "miroir"], astuce: "Le patient doit refaire le geste devant l'étudiant : c'est la démonstration qui compte." }
       ],
@@ -98,6 +100,7 @@ window.DISCIPLINES.push({
       ],
       erreurs: [
         "Enseigner sans faire refaire le geste au patient",
+        "Ne faire qu'une seule séance de motivation, sans réévaluer l'hygiène aux séances suivantes",
         "Brossettes de taille inadaptée (trop petites ou trop grosses)",
         "Passer à l'instrumentation sous-gingivale sans contrôle de plaque satisfaisant",
         "Oublier le tabac et le diabète"
