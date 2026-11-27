@@ -197,7 +197,7 @@ window.DISCIPLINES.push({
           { t: "**Critère usuel : la géométrie de la préparation**", sub: ["Préparation **rétentive** (parois hautes, peu de conicité) : scellement au CVI possible", "Préparation **courte ou très conique**, ou si on veut la rétention maximale : **collage**"] },
         ], materiel: ["radiographie ou modèle pour juger la hauteur de préparation"] },
         { titre: "Temps 3A – Collage au Panavia V5 (protocole du fabricant)", details: [
-          { t: "**Si un SDI a été fait** en séance de préparation", sub: ["Retirer tout résidu de ciment provisoire", "Sablage bref à l'alumine de la dentine scellée (environ 5 s)"] },
+          "**Si un SDI a été fait** en séance de préparation : retirer tout résidu de ciment provisoire de la dentine scellée",
           "**1.** Sabler l'intrados à l'alumine, **nettoyer aux ultrasons** et sécher",
           "**2.** Appliquer le **Clearfil Ceramic Primer Plus** et sécher",
           "**3.** Appliquer le **Panavia V5 Tooth Primer** sur la dent, **laisser 20 secondes**, sécher",
@@ -341,15 +341,15 @@ window.DISCIPLINES.push({
           "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie",
           { t: "**Préparation de la cavité**", sub: ["Parois légèrement divergentes, angles arrondis", "**Sans recouvrement des cuspides**", "**Isthme d'au moins 1,5 mm de large**", "Parois divergentes de 6 à 12°", "**Épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet 1 mm de profondeur et de largeur au minimum)"] },
           "Teinte au teintier",
-          { t: "**Scellement dentinaire immédiat (SDI)** sur la dentine exposée, **avant l'empreinte**", sub: ["Dentine propre, sous isolation", "**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s à pression d'air maximale", "**Photopolymériser** (10 s), de préférence sous **gel de glycérine** pour éviter la couche inhibée par l'oxygène", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte"] },
+          { t: "**Scellement dentinaire immédiat (SDI)** sur la dentine exposée, **avant l'empreinte**", sub: ["Dentine propre, sous isolation", "**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s à pression d'air maximale", "**Photopolymériser** (10 s)", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte"] },
           { t: "**Empreinte de la préparation**", sub: ["**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)", "Après un SDI : **Express 2** de préférence, le polyéther est déconseillé sur une dentine scellée", "Rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet (Acteon)"] },
           "**Empreinte de l'antagoniste** à l'**alginate**",
           "**Empreinte de l'occlusion** avec le **Futar D**",
-          { t: "**Provisoire**", sub: ["Après un SDI : **gel de glycérine** (isolant hydrosoluble) sur la dentine scellée avant la résine de provisoire", "Ciment provisoire **sans eugénol** (**Temp-Bond NE**)"] }
-        ], materiel: ["fraises de préparation", "Etch Gel 37 %", "G-Premio Bond", "gel de glycérine", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (occlusion)", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'inlay en céramique ou en composite." },
+          { t: "**Provisoire**", sub: ["Après un SDI : ciment provisoire **sans eugénol** (**Temp-Bond NE**)"] }
+        ], materiel: ["fraises de préparation", "Etch Gel 37 %", "G-Premio Bond", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (occlusion)", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'inlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
           "Dépose du provisoire, **essayage à sec** : adaptation, contacts proximaux, teinte ; validation du patient",
-          { t: "**Nettoyage de la dentine scellée** (si SDI)", sub: ["Retirer tout résidu de ciment provisoire", "Sablage bref à l'alumine (environ 5 s)"] },
+          "**Nettoyage de la dentine scellée** (si SDI) : retirer tout résidu de ciment provisoire",
           { t: "**Collage au Panavia V5 sous isolation** (notice, inlays/onlays)", sub: [{ t: "**Traitement de l'intrados**", sub: ["Céramique silicatée : **Porcelain Etch** 90 s, rinçage, séchage", "Composite : sablage, **K-Etchant**, rinçage, séchage", "Puis **Clearfil Ceramic Primer Plus**"] }, "**Tooth Primer 20 s** sur la dent, séchage", "Pâte Panavia V5, mise en place, **excès retiré après 3 à 5 s de photopolymérisation** (ou au pinceau)", "**Isolation maintenue 3 minutes** ou photopolymérisation"] },
           "Finition et **contrôle de l'occlusion**"
         ], materiel: ["isolation (digue)", "Porcelain Etch (céramique) ou sablage et K-Etchant (composite)", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe", "papier à articuler"], validation: "essayage et collage", astuce: "Nettoyer l'intrados après l'essayage (sablage ou protocole du fabricant) avant le primer : la salive diminue l'adhésion." },
@@ -418,15 +418,15 @@ window.DISCIPLINES.push({
           "Anesthésie, dépose de l'ancienne restauration ou élimination de la carie",
           { t: "**Préparation avec recouvrement des cuspides fragilisées**", sub: ["Réduction cuspidienne d'**au moins 1,5 mm**", "**Épaisseur occlusale de 1,5 à 2 mm** pour la céramique comme pour le composite (le fabricant du disilicate de lithium GC admet environ 1 mm, épaulement d'au moins 1 mm)", "Angles arrondis", "Parois divergentes de 6 à 12°"] },
           "Teinte au teintier",
-          { t: "**Scellement dentinaire immédiat (SDI)** sur la dentine exposée, **avant l'empreinte**", sub: ["Dentine propre, sous isolation", "**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s à pression d'air maximale", "**Photopolymériser** (10 s), de préférence sous **gel de glycérine** pour éviter la couche inhibée par l'oxygène", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte"] },
+          { t: "**Scellement dentinaire immédiat (SDI)** sur la dentine exposée, **avant l'empreinte**", sub: ["Dentine propre, sous isolation", "**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s à pression d'air maximale", "**Photopolymériser** (10 s)", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte"] },
           { t: "**Empreinte de la préparation**", sub: ["**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther)", "Après un SDI : **Express 2** de préférence, le polyéther est déconseillé sur une dentine scellée", "Rétraction si limite sous-gingivale : pâte **Expasyl** et son pistolet (Acteon)"] },
           "**Empreinte de l'antagoniste** à l'**alginate**",
           "**Empreinte de l'occlusion** avec le **Futar D**",
-          { t: "**Provisoire**", sub: ["Après un SDI : **gel de glycérine** (isolant hydrosoluble) sur la dentine scellée avant la résine de provisoire", "Ciment provisoire **sans eugénol** (**Temp-Bond NE**)"] }
-        ], materiel: ["fraises de préparation", "Etch Gel 37 %", "G-Premio Bond", "gel de glycérine", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (occlusion)", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'onlay en céramique ou en composite." },
+          { t: "**Provisoire**", sub: ["Après un SDI : ciment provisoire **sans eugénol** (**Temp-Bond NE**)"] }
+        ], materiel: ["fraises de préparation", "Etch Gel 37 %", "G-Premio Bond", "Express 2 ou Impregum Penta Super Quick", "alginate", "**Futar D** (occlusion)", "teintier", "matériau de provisoire"], validation: "préparation et empreinte", astuce: "Au laboratoire : confection de l'onlay en céramique ou en composite." },
         { titre: "Séance 2 – Essayage et collage", details: [
           "Dépose du provisoire, **essayage à sec** : adaptation, contacts proximaux, occlusion, teinte ; validation du patient",
-          { t: "**Nettoyage de la dentine scellée** (si SDI)", sub: ["Retirer tout résidu de ciment provisoire", "Sablage bref à l'alumine (environ 5 s)"] },
+          "**Nettoyage de la dentine scellée** (si SDI) : retirer tout résidu de ciment provisoire",
           { t: "**Collage au Panavia V5 sous isolation** (notice, inlays/onlays)", sub: [{ t: "**Traitement de l'intrados**", sub: ["Céramique silicatée : **Porcelain Etch** 90 s, rinçage, séchage", "Composite : sablage, **K-Etchant**, rinçage, séchage", "Puis **Clearfil Ceramic Primer Plus**"] }, "**Tooth Primer 20 s** sur la dent, séchage", "Pâte Panavia V5, mise en place, **excès retiré après 3 à 5 s de photopolymérisation** (ou au pinceau)", "**Isolation maintenue 3 minutes** ou photopolymérisation"] },
           "Finition et **contrôle de l'occlusion**"
         ], materiel: ["isolation (digue)", "Porcelain Etch (céramique) ou sablage et K-Etchant (composite)", "Clearfil Ceramic Primer Plus", "Panavia V5 Tooth Primer", "Panavia V5 Paste", "lampe", "papier à articuler"], validation: "essayage et collage", astuce: "Nettoyer l'intrados après l'essayage (sablage ou protocole du fabricant) avant le primer : la salive diminue l'adhésion." },
@@ -504,15 +504,15 @@ window.DISCIPLINES.push({
           "**Marge à 90° en « butt-joint »** (bande de 1 à 2 mm), idéalement supra-gingivale",
           "Suppression de l'émail non soutenu",
           { t: "**Chambre pulpaire**", sub: ["Parois sans contre-dépouille avec la fraise cylindro-conique (conicité ≈ 7°)", "Parois lisses et continues avec la cavité d'accès", "Ciment de scellement endodontique retiré dans la chambre"] },
-          { t: "**Scellement dentinaire immédiat (SDI)** sur la dentine exposée, **avant l'empreinte**", sub: ["Dentine propre, sous isolation", "**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s à pression d'air maximale", "**Photopolymériser** (10 s), de préférence sous **gel de glycérine** pour éviter la couche inhibée par l'oxygène", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte"] },
+          { t: "**Scellement dentinaire immédiat (SDI)** sur la dentine exposée, **avant l'empreinte**", sub: ["Dentine propre, sous isolation", "**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s à pression d'air maximale", "**Photopolymériser** (10 s)", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte"] },
           { t: "**Empreinte**", sub: ["Silicone **Express 2** ou polyéther **Impregum Penta Super Quick**", "Après un SDI : **Express 2** de préférence, le polyéther est déconseillé sur une dentine scellée"] },
           "**Empreinte de l'antagoniste** à l'**alginate**",
           "**Empreinte de l'occlusion** avec le **Futar D**",
-          { t: "**Provisoire** (**Unifast Trad**, **Temp-Bond**)", sub: ["Après un SDI : **gel de glycérine** sur la dentine scellée avant la résine de provisoire", "Ciment provisoire **sans eugénol** (**Temp-Bond NE**)"] }
-        ], materiel: ["fraises diamantées", "Etch Gel 37 %", "G-Premio Bond", "gel de glycérine", "empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "**Futar D** (occlusion)", "provisoire (Unifast Trad, Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire (ou en CFAO au service) : fabrication de l'endo-couronne en zircone." },
+          { t: "**Provisoire** (**Unifast Trad**, **Temp-Bond**)", sub: ["Après un SDI : ciment provisoire **sans eugénol** (**Temp-Bond NE**)"] }
+        ], materiel: ["fraises diamantées", "Etch Gel 37 %", "G-Premio Bond", "empreinte (Express 2 ou Impregum Penta Super Quick)", "alginate (antagoniste)", "**Futar D** (occlusion)", "provisoire (Unifast Trad, Temp-Bond)"], validation: "préparation et empreinte", astuce: "Au laboratoire (ou en CFAO au service) : fabrication de l'endo-couronne en zircone." },
         { titre: "Séance 2 – Essayage et collage", details: [
           "Dépose du provisoire et nettoyage",
-          { t: "**Nettoyage de la dentine scellée** (si SDI)", sub: ["Retirer tout résidu de ciment provisoire", "Sablage bref à l'alumine (environ 5 s)"] },
+          "**Nettoyage de la dentine scellée** (si SDI) : retirer tout résidu de ciment provisoire",
           { t: "**Essayage à sec**", sub: ["Adaptation interne et marginale", "Contacts proximaux", "Occlusion", "Teinte"] },
           "Validation par l'encadrant",
           { t: "**Collage de la zircone**", sub: ["Sablage de l'intrados puis ultrasons", "**Clearfil Ceramic Primer Plus**", "**Tooth Primer 20 s** sur la dent", "Pâte **Panavia V5**", "Excès retiré après 3 à 5 s de photopolymérisation", "**Isolation maintenue 3 minutes**"] },
@@ -575,7 +575,7 @@ window.DISCIPLINES.push({
         ], materiel: ["sonde, miroir, radiographie", "alginate", "teintier", "appareil photo (si besoin)"], validation: "plan de traitement", astuce: "Au laboratoire : modèles d'étude, éventuel projet esthétique (wax-up)." },
         { titre: "Séance 2 – Préparation, empreinte et provisoire", details: [
           "**Anesthésie locale** puis **préparation** : réduction occlusale et axiale respectant l'épaisseur du matériau, faible convergence des parois, **limite cervicale** nette et arrondie respectant le parodonte",
-          { t: "**Scellement dentinaire immédiat (SDI)** si collage prévu (couronne en zircone) et dentine exposée, **avant l'empreinte**", sub: ["**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s, **photopolymériser** (10 s), de préférence sous gel de glycérine", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte", "Empreinte au silicone **Express 2** de préférence ; ciment provisoire sans eugénol (**Temp-Bond NE**)"] },
+          { t: "**Scellement dentinaire immédiat (SDI)** si collage prévu (couronne en zircone) et dentine exposée, **avant l'empreinte**", sub: ["**Etch Gel 37 %** 10 à 15 s, rinçage 5 s, séchage doux", "**Adhésif G-Premio Bond** : appliquer, laisser 10 s, sécher 5 s, **photopolymériser** (10 s)", "Nettoyer la surface scellée à la pierre ponce avant l'empreinte", "Empreinte au silicone **Express 2** de préférence ; ciment provisoire sans eugénol (**Temp-Bond NE**)"] },
           "**Rétraction gingivale**",
           "**Empreinte de précision** (**Express 2** (silicone) ou **Impregum Penta Super Quick** (polyéther))",
           "**Empreinte de l'antagoniste** à l'**alginate**",
