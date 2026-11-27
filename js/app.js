@@ -25,17 +25,17 @@
   // **gras**, [[à préciser]], [texte](https://lien) -> DOM (sans innerHTML)
   function rich(text) {
     var frag = document.createDocumentFragment();
-    String(text).split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\]|\[[^\[\]]+\]\(https?:\/\/[^)\s]+\))/g).forEach(function (part) {
+    String(text).split(/(\*\*[^*]+\*\*|\[\[[^\]]+\]\]|\[[^\[\]]+\]\((?:https?:\/\/|#\/)[^)\s]+\))/g).forEach(function (part) {
       if (!part) return;
-      var link = /^\[([^\[\]]+)\]\((https?:\/\/[^)\s]+)\)$/.exec(part);
+      var link = /^\[([^\[\]]+)\]\(((?:https?:\/\/|#\/)[^)\s]+)\)$/.exec(part);
       if (part.slice(0, 2) === '**') frag.appendChild(el('strong', { text: part.slice(2, -2) }));
       else if (part.slice(0, 2) === '[[') frag.appendChild(el('span', { class: 'todo', text: part.slice(2, -2) }));
-      else if (link) frag.appendChild(el('a', { href: link[2], target: '_blank', rel: 'noopener noreferrer', text: link[1] }));
+      else if (link) frag.appendChild(link[2].charAt(0) === '#' ? el('a', { href: link[2], text: link[1] }) : el('a', { href: link[2], target: '_blank', rel: 'noopener noreferrer', text: link[1] }));
       else frag.appendChild(document.createTextNode(part));
     });
     return frag;
   }
-  function plain(text) { return String(text).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/\[([^\[\]]+)\]\(https?:\/\/[^)\s]+\)/g, '$1'); }
+  function plain(text) { return String(text).replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[\[([^\]]+)\]\]/g, '$1').replace(/\[([^\[\]]+)\]\((?:https?:\/\/|#\/)[^)\s]+\)/g, '$1'); }
   function ul(items) {
     return el('ul', null, items.map(function (t) {
       var obj = t && typeof t === 'object', txt = obj ? t.t : t;
