@@ -34,7 +34,13 @@
 
   // logo : molaire pleine, pointe de pulpe
   A.logo = function () {
-    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#fff" d="M8.4 9.6C8.4 6.4 11.4 4.6 14.4 5.6c1 .3 2.2.3 3.2 0 3-1 6 .8 6 4 0 3.6-1.4 5.4-1.8 8.8-.5 3.4-1.1 8-3 8-1.8 0-1.8-4.4-2.8-4.4s-1 4.4-2.8 4.4c-1.9 0-2.5-4.6-3-8-.4-3.4-1.8-5.2-1.8-8.8z"/><path d="M13.2 11.2c1.8 1 3.8 1 5.6 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>';
+    var T = 'M104 118C104 62 148 40 190 56C232 40 276 62 276 118C276 158 260 178 256 216C252 264 244 308 228 336C222 346 210 340 206 324C200 298 196 264 190 248C184 264 180 298 174 324C170 340 158 346 152 336C136 308 128 264 124 216C120 178 104 158 104 118Z';
+    var PULP = 'M150 128C150 112 230 112 230 128C230 148 216 158 206 168L174 168C164 158 150 148 150 128Z';
+    var CANAL = 'M176 170C172 214 168 270 162 322M204 170C208 214 212 270 218 322';
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 22 252 340" aria-hidden="true" focusable="false">' +
+      '<path d="' + T + '" fill="rgba(255,255,255,.16)" stroke="#fff" stroke-width="15" stroke-linejoin="round"/>' +
+      '<path d="' + PULP + '" fill="rgba(255,255,255,.35)" stroke="#fff" stroke-width="10" stroke-linejoin="round"/>' +
+      '<path d="' + CANAL + '" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/></svg>';
   };
 
   // molaire interactive : chaque zone ouvre la discipline correspondante

@@ -46,7 +46,8 @@ main{padding:0}
 .topbar{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border:0;box-shadow:0 1px 0 var(--line)}
 .topbar-in{max-width:1240px;height:var(--topbar-h);padding:0 32px;gap:26px}
 .brand{gap:12px}
-.brand-mark{width:42px;height:42px;border-radius:14px 14px 14px 5px;background:var(--brand);box-shadow:none}
+.brand-mark{width:42px;height:42px;border-radius:14px 14px 14px 5px;background:var(--brand);box-shadow:none;display:grid;place-items:center}
+.brand-mark svg{width:29px;height:auto}
 .brand-txt strong{font-family:var(--display);font-weight:700;font-size:1.25rem;letter-spacing:-.04em;line-height:1}
 .brand-txt small{font:600 .58rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--brand);margin-top:4px}
 .mainnav{display:flex;align-items:center;gap:4px;margin-left:8px}
