@@ -5,7 +5,7 @@ window.DISCIPLINES.push({
   nom: "Parodontologie",
   sigle: "PD",
   couleur: "#0b6e7f",
-  description: "Examen parodontal, traitement de la parodontite en 4 étapes, motivation à l'hygiène, gingivite, détartrage, surfaçage, réévaluation, chirurgie, maintenance et urgences parodontales.",
+  description: "Examen parodontal, motivation à l'hygiène, gingivite, détartrage, surfaçage, réévaluation, chirurgie, maintenance et urgences parodontales.",
   protocoles: [
     {
       id: "examen-parodontal",
@@ -56,67 +56,6 @@ window.DISCIPLINES.push({
       ],
       references: [
         "[Sanz M. et al. Treatment of stage I-III periodontitis – The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47 Suppl 22:4-60](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
-      ]
-    },
-    {
-      id: "traitement-parodontite",
-      groupe: "Examen et plan de traitement",
-      titre: "Traitement de la parodontite : les 4 étapes",
-      resume: "Vue d'ensemble du traitement de la parodontite (stades I à III) en 4 étapes, d'après le guideline EFP S3 : contrôle de la plaque et des facteurs de risque, instrumentation sous-gingivale, traitement des sites non répondeurs, maintenance. Chaque étape renvoie à sa fiche détaillée.",
-      duree: "Plusieurs mois (réévaluation 3 mois après l'étape 2), puis maintenance à vie",
-      niveau: "Étudiant encadré",
-      statut: "brouillon",
-      sourceType: "Guideline EFP S3 2020 + pratique du service (CHU) + HAS 2026 – à compléter par le service",
-      maj: "2026-11",
-      hopital: [
-        "**Réévaluation à 3 mois** après l'instrumentation sous-gingivale",
-        "**Chirurgie parodontale (étape 3) réalisée au service**, mais **pas par les étudiants de 4e et 5e année**",
-        "**Validation par l'encadrant** : surfaçage"
-      ],
-      indications: ["Parodontite de **stade I à III**, après diagnostic de stade et de grade (voir [Examen parodontal initial](#/parodontologie/examen-parodontal))", "Plan de traitement convenu avec le patient, après information sur le diagnostic, les causes, les facteurs de risque et les alternatives"],
-      contreIndications: ["**Chirurgie (étape 3) non indiquée** chez les patients qui n'atteignent pas un contrôle de plaque suffisant"],
-      alertes: [
-        "Les **étapes 1 et 2 concernent tous les patients** ; l'**étape 3** seulement les sites qui ne répondent pas ; l'**étape 4** (maintenance) concerne tous les patients après le traitement actif (EFP).",
-        "**Objectifs de santé** à la réévaluation : aucune poche **≥ 5 mm avec saignement** et aucune poche profonde **≥ 6 mm**. Atteints : maintenance. Sinon : étape 3.",
-        "**Tabac** et **diabète** : leur contrôle fait partie de l'étape 1 et doit être maintenu ensuite.",
-        "**Antibiotiques systémiques en routine : non recommandés** en complément de l'instrumentation (EFP, grade A) ; indications limitées de la HAS 2026 (voir la fiche de surfaçage)."
-      ],
-      etapes: [
-        { titre: "Étape 1 – Contrôle de la plaque et des facteurs de risque", details: [
-          { t: "**Motivation et enseignement de l'hygiène**", sub: ["Brossage et **brossettes interdentaires**", "Démonstration pratique et suivi"] },
-          "**Détartrage supra-gingival et polissage** : contrôle professionnel de la plaque et des facteurs rétentifs",
-          "**Arrêt du tabac** et **contrôle du diabète**",
-          "Fiches : [Séance de motivation à l'hygiène](#/parodontologie/motivation-hygiene) et [Détartrage et polissage](#/parodontologie/detartrage-polissage)"
-        ], materiel: ["révélateur de plaque", "brossettes interdentaires", "ultrasons Satelec Newtron Slim", "curettes", "pâte à polir"] },
-        { titre: "Étape 2 – Instrumentation sous-gingivale", details: [
-          { t: "**Surfaçage radiculaire** (technique validée par l'encadrant)", sub: ["Première moitié de la bouche, puis seconde moitié", "**Inserts parodontaux** (curettes en complément), sous anesthésie", "Irrigation à la chlorhexidine ou au sérum"] },
-          "**Validation du surfaçage par l'encadrant**",
-          { t: "**Réévaluation à 3 mois**", sub: ["Sondage complet 6 sites par dent, indices de plaque et de saignement", "Objectifs atteints : maintenance (étape 4)", "Sinon : étape 3"] },
-          "Fiches : [Surfaçage radiculaire](#/parodontologie/surfacage-radiculaire) et [Réévaluation parodontale](#/parodontologie/reevaluation-parodontale)"
-        ], materiel: ["sonde parodontale", "inserts parodontaux", "curettes", "anesthésie locale", "irrigant (chlorhexidine ou sérum)"], validation: "surfaçage" },
-        { titre: "Étape 3 – Sites non répondeurs (si objectifs non atteints)", details: [
-          { t: "**Poches résiduelles modérées (4-5 mm)**", sub: ["Répéter l'instrumentation sous-gingivale, avec ou sans lambeau d'accès"] },
-          { t: "**Poches résiduelles profondes (≥ 6 mm)**", sub: ["**Lambeau d'accès** recommandé", "Chirurgie résectrice possible, avec risque d'augmentation de la récession"] },
-          { t: "**Défauts intra-osseux ≥ 3 mm**", sub: ["**Chirurgie régénératrice** recommandée"] },
-          { t: "**Lésions de furcation**", sub: ["Traitement parodontal recommandé sur molaires de classes II et III avec poches résiduelles", "L'atteinte de furcation n'est pas une raison d'extraction"] },
-          "Chirurgie réalisée par un praticien avec **formation spécifique supplémentaire** ou un spécialiste ; au service, **pas par les étudiants de 4e et 5e année**",
-          "**Réévaluation après l'étape 3** : mêmes objectifs, puis maintenance",
-          "Fiche : [Chirurgie parodontale (étape 3)](#/parodontologie/chirurgie-parodontale)"
-        ], materiel: ["selon l'acte : voir la fiche de chirurgie parodontale"] },
-        { titre: "Étape 4 – Maintenance parodontale", details: [
-          { t: "**Fréquence des visites**", sub: ["À partir de **3 mois**, jusqu'à 12 mois au maximum", "Intervalle personnalisé selon le profil de risque et l'état parodontal"] },
-          { t: "**Contenu de la séance**", sub: ["Instructions d'hygiène répétées et individualisées, incluant le nettoyage interdentaire", "Débridement mécanique professionnel de plaque, sondage des sites à risque, réévaluation"] },
-          "**Hygiène à domicile** : brossage complété par des **brossettes interdentaires** (le fil dentaire n'est pas le premier choix)",
-          "Maintenir les interventions d'**arrêt du tabac** et de **contrôle du diabète**",
-          "Fiche : [Maintenance parodontale (étape 4)](#/parodontologie/reevaluation-maintenance)"
-        ], materiel: ["sonde parodontale", "ultrasons Satelec Newtron Slim et inserts", "brossettes interdentaires"] }
-      ],
-      suivi: ["Réévaluation à **3 mois** après l'étape 2, puis après l'étape 3 si elle a été faite", "Maintenance à vie, avec un intervalle de 3 à 12 mois selon le risque"],
-      consignes: ["**Hygiène** quotidienne avec brossettes interdentaires ; signaler tout saignement, mobilité ou gonflement.", "**Rendez-vous réguliers** à vie : la maintenance évite la récidive.", "**Arrêt du tabac** et **contrôle du diabète** : ils conditionnent le résultat."],
-      erreurs: ["Passer à la chirurgie sans contrôle de plaque suffisant", "Réévaluation trop précoce, avant la cicatrisation", "Oublier la maintenance après le traitement actif ou ne pas relancer le patient", "Antibiotiques systémiques en routine"],
-      references: [
-        "[Sanz M. et al. Treatment of stage I-III periodontitis – The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47 Suppl 22:4-60](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
-        "Contenu repris des fiches détaillées de chaque étape (EFP, HAS 2026, pratique du service)."
       ]
     },
     {
