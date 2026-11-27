@@ -142,7 +142,8 @@ window.DISCIPLINES.push({
           { t: "**Choix entre les deux**", sub: ["Carie jusqu'au tiers interne de la dentine, sans atteindre le quart interne : plutôt le sélectif", "Carie jusqu'au quart interne : le deux temps peut aussi servir", "Selon la profondeur et les préférences : le guideline ne tranche pas"] },
           "**Éviter le curetage complet** jusqu'à la dentine dure au fond de la cavité : il augmente le risque d'exposer la pulpe",
           "**Matrice** si nécessaire pour la restauration du mur proximal",
-          "Si la pulpe est exposée : passer au coiffage direct (temps 5) ; sinon coiffage indirect (temps 4)"
+          { t: "**Si la pulpe est exposée**", sub: ["**Terminer le curetage complet** : éliminer la carie nécrosée et infectée jusqu'à la dentine dure", "Puis coiffage direct (temps 5)"] },
+          "Si la pulpe n'est pas exposée : coiffage indirect (temps 4)"
         ], materiel: ["curettes", "fraises à grosse boule", "matrice"] },
         { titre: "Temps 4 – Coiffage indirect (pulpe non exposée)", details: [
           { t: "**Liner non systématique**", sub: ["Si on en place un : **Biodentine**, **Dycal** ou **Calcimol LC** (pas à moins de 0,5 mm de la pulpe)", "**CVI** en base, jamais directement sur la pulpe"] },
