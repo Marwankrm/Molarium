@@ -87,6 +87,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Biodentine** : très utilisée au service pour le **coiffage pulpaire** et la **pulpotomie**, chez l'enfant et chez l'adulte",
         "**Dycal** (hydroxyde de calcium) possible ; **Calcimol LC** pour le coiffage indirect ou le liner",
+        "**Protocole Bio-Bulk Fill** (fiche Septodont, octobre 2024) : coiffage direct en **2 sessions**, séparées de **6 semaines**",
         "**Validation par l'encadrant** : avant de placer le matériau sur la pulpe"
       ],
       indications: [
@@ -105,7 +106,8 @@ window.DISCIPLINES.push({
         "Digue, loupes (grossissement)",
         "Curettes, fraises à grosse boule et instruments à main stériles",
         "Solution antimicrobienne de rinçage et boulettes de coton stériles",
-        "**Biodentine** (Septodont) en capsule et vibreur ; **Dycal** (hydroxyde de calcium) ; **Calcimol LC** (liner photopolymérisable)",
+        "**Biodentine** (Septodont) en capsule et vibreur, ou **Biodentine XP** (cartouche, mixeur et pistolet Biodentine) ; **Dycal** (hydroxyde de calcium) ; **Calcimol LC** (liner photopolymérisable)",
+        "Matrice si nécessaire pour la restauration du mur proximal",
         "Base : **CVI** (Fuji II LC, Ionofil Molar AC), jamais directement sur la pulpe",
         "Restauration : adhésif **G-Premio Bond**, **Etch Gel 37 %** et composite (voir la fiche composite postérieure)",
         "Test de vitalité, radiographies"
@@ -131,23 +133,38 @@ window.DISCIPLINES.push({
         ], materiel: ["anesthésie locale", "digue", "loupes"] },
         { titre: "Temps 3 – Élimination du tissu carié", details: [
           { t: "**Carie profonde**", sub: ["**Curetage sélectif** jusqu'à la dentine molle, en une étape, ou **en deux temps** (stepwise)", "Éviter le curetage complet jusqu'à la dentine dure au fond de la cavité : il augmente le risque d'exposition"] },
+          "**Matrice** si nécessaire pour la restauration du mur proximal",
           "Si la pulpe est exposée : passer au coiffage direct (temps 5) ; sinon coiffage indirect (temps 4)"
-        ], materiel: ["curettes", "fraises à grosse boule"] },
+        ], materiel: ["curettes", "fraises à grosse boule", "matrice"] },
         { titre: "Temps 4 – Coiffage indirect (pulpe non exposée)", details: [
           { t: "**Liner non systématique**", sub: ["Si on en place un : **Biodentine**, **Dycal** ou **Calcimol LC** (pas à moins de 0,5 mm de la pulpe)", "**CVI** en base, jamais directement sur la pulpe"] },
           "Poursuivre par la **restauration étanche** (temps 6)"
         ], materiel: ["Biodentine", "Dycal", "Calcimol LC", "CVI"] },
         { titre: "Temps 5 – Coiffage direct (pulpe exposée)", details: [
-          { t: "**Hémostase**", sub: ["Lavage antimicrobien et boulette stérile sur la pulpe", "Sans hémostase, ne pas placer le matériau : envisager la pulpotomie"] },
-          { t: "**Biodentine** : placer directement sur la pulpe exposée", sub: ["Mélange en capsule : 5 gouttes de la monodose, vibreur 4 000 à 4 200 oscillations/min pendant 30 s", "**Sans compression** sur la pulpe", "Éviter l'eau et les fluides pendant la prise initiale (**12 minutes**)"] },
+          { t: "**Hémostase par compression**", sub: ["Boulette stérile imbibée d'**hypochlorite à 1-6 %**, appliquée en compression sur la pulpe", "Sans hémostase, ne pas placer le matériau : envisager la pulpotomie"] },
+          { t: "**Biodentine** : placer directement sur la pulpe exposée, **sans compression**", sub: [
+            { t: "**Capsule**", sub: ["5 gouttes de la monodose, vibreur 4 000 à 4 200 oscillations/min pendant 30 s"] },
+            { t: "**Biodentine XP** (cartouche)", sub: ["Activer la cartouche, utiliser le **mixeur Biodentine**", "Pistolet : embout dans le fond de la cavité, injecter en **remontant lentement jusqu'en haut de la cavité**"] },
+            "Assurer l'**adaptation marginale** avec une **pression occlusale minimale** pendant le durcissement",
+            "Éviter l'eau et les fluides pendant la prise initiale (**12 minutes**)"
+          ] },
           "Variante : **Dycal** (hydroxyde de calcium)"
-        ], materiel: ["Biodentine, capsule et vibreur", "Dycal", "boulettes stériles", "solution de rinçage antimicrobienne"], validation: "avant de placer le matériau sur la pulpe" },
-        { titre: "Temps 6 – Restauration étanche", details: [
-          "**Restauration coronaire étanche** sur le matériau : composite sous digue (collage au **G-Premio Bond**, fiche composite postérieure)",
+        ], materiel: ["Biodentine (capsule et vibreur, ou XP avec mixeur et pistolet)", "Dycal", "boulettes stériles", "hypochlorite à 1-6 %"], validation: "avant de placer le matériau sur la pulpe" },
+        { titre: "Temps 6 – Fin de la 1re séance : Biodentine en sous-occlusion", details: [
+          "**Biodentine jusqu'en haut de la cavité**, montée **en sous-occlusion**",
           "Vérifier l'occlusion",
-          "La Biodentine restante peut rester en profondeur ; **d'une semaine à six mois** plus tard, on peut préparer la cavité pour la restauration définitive"
-        ], materiel: ["Etch Gel 37 %", "G-Premio Bond", "composite", "lampe à photopolymériser"] },
-        { titre: "Temps 7 – Contrôle", details: [
+          "**Radiographie post-opératoire**",
+          "Alternative : **restauration étanche dans la même séance** au composite sous digue (collage au **G-Premio Bond**, fiche composite postérieure)"
+        ], materiel: ["radiographies", "papier à articuler"] },
+        { titre: "Temps 7 – 2e séance, 6 semaines plus tard (protocole Bio-Bulk Fill)", details: [
+          "**Évaluer la vitalité pulpaire**",
+          "**Retirer 2 mm de Biodentine**",
+          { t: "**Système adhésif**", sub: ["**Mordançage de l'émail et de la Biodentine** (**MR3 ou MR2**)", "Ou **SAM1** (adhésif automordançant en un temps) sur la Biodentine et sur l'émail"] },
+          "**Mettre en place le composite**",
+          "**Radiographie post-opératoire** : composite en haut, Biodentine dans toute la cavité",
+          "**Planifier le suivi** du patient selon les recommandations actuelles"
+        ], materiel: ["test de vitalité", "Etch Gel 37 %", "G-Premio Bond", "composite", "lampe à photopolymériser", "radiographies"] },
+        { titre: "Temps 8 – Contrôle", details: [
           "**Contrôle clinique** : douleur, gonflement, test de vitalité",
           "**Radiographie de contrôle** : aucune lésion périapicale"
         ], materiel: ["test de vitalité", "radiographies"] }
@@ -172,12 +189,13 @@ window.DISCIPLINES.push({
         "Placer un **CVI ou un composite directement sur la pulpe**",
         "Faire un coiffage direct sur une **pulpite irréversible** sans envisager la pulpotomie",
         "Curetage **complet** jusqu'à la dentine dure dans une carie très profonde",
+        "Laisser la Biodentine **en surocclusion**",
         "Oublier le **contrôle** à 6-12 mois"
       ],
       references: [
         "[Schwendicke F., Kosan E. et al. Deep Caries Management: EFCD-ESE-ORCA S3-Level Clinical Practice Guideline (2026)](https://pmc.ncbi.nlm.nih.gov/articles/PMC13102370/)",
         "[Duncan H.F. et al. European Society of Endodontology position statement: Management of deep caries and the exposed pulp. Int Endod J 2019;52:923-934](https://pubmed.ncbi.nlm.nih.gov/30664240/)",
-        "Notice Biodentine (Septodont) et fiche Matériaux du site ; hémostase par lavage antimicrobien : protocole renforcé du guideline S3, concentration et durée à voir avec l'encadrant.",
+        "Septodont, **Protocole Bio-Bulk Fill – Coiffage direct en 2 sessions** (Biodentine XP, octobre 2024, cas clinique du Pr J. Sabbagh) : fiche reçue du service ; notice Biodentine et fiche Matériaux du site.",
         "[HAS – Prescription des antibiotiques en pratique bucco-dentaire (2026) – tableau 8](https://has-sante.fr/jcms/p_3525810/fr/prescription-des-antibiotiques-en-pratique-bucco-dentaire)"
       ]
     }
