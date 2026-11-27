@@ -132,7 +132,15 @@ window.DISCIPLINES.push({
           "Loupes si disponibles"
         ], materiel: ["anesthésie locale", "digue", "loupes"] },
         { titre: "Temps 3 – Élimination du tissu carié", details: [
-          { t: "**Carie profonde**", sub: ["**Curetage sélectif** jusqu'à la dentine molle, en une étape, ou **en deux temps** (stepwise)", "Éviter le curetage complet jusqu'à la dentine dure au fond de la cavité : il augmente le risque d'exposition"] },
+          { t: "**Curetage sélectif** (en une séance)", sub: ["Bords de la cavité : **dentine dure**, pour une restauration étanche", "Au fond, au-dessus de la pulpe : on **laisse la dentine molle**", "Restauration définitive dans la même séance"] },
+          { t: "**Ou curetage en deux temps (stepwise)**", sub: [
+            "**1er rendez-vous** : bords en dentine dure, dentine molle laissée sur la pulpe, **restauration provisoire étanche** prévue jusqu'à 12 mois ou plus",
+            "**Entre les deux** : la carie devient moins active et la pulpe fabrique de la dentine de réaction",
+            "**2e rendez-vous** : réévaluer la couleur et la dureté de la lésion, curetage **seulement jusqu'à une dentine ferme** au-dessus de la pulpe, puis restauration définitive",
+            "Inconvénients : un rendez-vous de plus ; rouvrir une cavité très profonde peut exposer la pulpe"
+          ] },
+          { t: "**Choix entre les deux**", sub: ["Carie jusqu'au tiers interne de la dentine, sans atteindre le quart interne : plutôt le sélectif", "Carie jusqu'au quart interne : le deux temps peut aussi servir", "Selon la profondeur et les préférences : le guideline ne tranche pas"] },
+          "**Éviter le curetage complet** jusqu'à la dentine dure au fond de la cavité : il augmente le risque d'exposer la pulpe",
           "**Matrice** si nécessaire pour la restauration du mur proximal",
           "Si la pulpe est exposée : passer au coiffage direct (temps 5) ; sinon coiffage indirect (temps 4)"
         ], materiel: ["curettes", "fraises à grosse boule", "matrice"] },
