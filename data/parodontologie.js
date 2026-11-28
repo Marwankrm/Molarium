@@ -20,7 +20,7 @@ window.DISCIPLINES.push({
       hopital: [
         "**Charting** réalisé sur le logiciel **Logos** [[version à préciser]]",
         "**Relevés** : plaque, saignement, profondeur de poche, niveau d'attache, mobilité, atteinte de furcation",
-        "**Radiographies** : bilan long cône, panoramique et bite-wings",
+        "**Radiographies** : bilan long cône et panoramique",
         "**Diagnostic de stade et de grade** posé",
         "**Validation par l'encadrant** : après le sondage"
       ],
@@ -28,19 +28,28 @@ window.DISCIPLINES.push({
       materiel: [
         "Sonde parodontale graduée",
         "Logiciel **Logos** pour le charting parodontal",
-        "Radiographies : **bilan long cône, panoramique, bite-wings**",
+        "Radiographies : **bilan long cône et panoramique**",
         "Révélateur de plaque **GC Tri Plaque ID Gel** (rose ou rouge : plaque récente ; bleu clair : plaque de plus de 48 h) ; miroir, sonde, précelle"
       ],
       alertes: [
         "Informer le patient du **diagnostic, des causes, des facteurs de risque, des alternatives et des risques/bénéfices**, y compris les conséquences d'un refus de traitement ; convenir d'un plan de soins personnalisé (EFP).",
-        "Facteurs de risque à rechercher : **tabac** et **diabète** (leur contrôle fait partie de l'étape 1), stress, génétique, médicaments.",
+        "**Facteurs favorisants** à rechercher dès l'examen : **tabac** et **diabète** (leur contrôle fait partie de l'étape 1), puis stress, obésité, génétique, médicaments, et les facteurs locaux (biofilm, tartre, débords de restauration).",
         "Chaque patient parodontal doit être inclus dans un programme de **maintenance** après le traitement actif."
       ],
       etapes: [
-        { titre: "Temps 1 – Anamnèse ciblée", details: ["Antécédents parodontaux, familiaux ; **diabète (HbA1c), tabagisme** (quantité, durée)", "Médicaments gingivo-hyperplasiants, traitements immunosuppresseurs"], materiel: ["questionnaire médical"] },
-        { titre: "Temps 2 – Examen clinique et sondage", details: ["**Indices de plaque et de saignement**, mobilité, atteinte de furcation (classes I à III), récessions, défauts intra-osseux", "**Sondage 6 sites par dent** : profondeur de poche, niveau d'attache clinique, saignement au sondage ; saisie dans **Logos**"], materiel: ["sonde parodontale", "Logos", "révélateur de plaque (GC Tri Plaque ID Gel)"], validation: "sondage" },
-        { titre: "Temps 3 – Examen radiologique", details: ["**Bilan long cône, panoramique et bite-wings** : niveau osseux, lésions intra-osseuses, furcations", "Facteurs rétentifs de plaque : tartre, débords de restauration"], materiel: ["radiographies"] },
-        { titre: "Temps 4 – Diagnostic et plan de traitement", details: [{ t: "Classification 2018", sub: ["**Stade (I à IV)** selon la sévérité et la complexité", "**Grade (A à C)** selon la vitesse de progression et les facteurs de risque"] }, { t: "**Plan par étapes (EFP)**", sub: ["Étape 1 : hygiène et facteurs de risque", "Étape 2 : instrumentation", "Étape 3 : sites non répondeurs", "Étape 4 : maintenance"] },
+        { titre: "Temps 1 – Anamnèse et facteurs favorisants", details: [
+          { t: "**Antécédents**", sub: ["**Parodontaux** : traitements antérieurs, perte de dents pour mobilité", "**Familiaux** : parodontite chez les parents ou la fratrie (terrain génétique)"] },
+          { t: "**Facteurs favorisants généraux**", sub: [
+            { t: "**Tabagisme**", sub: ["Quantité et durée", "Moins de 10 ou 10 cigarettes et plus par jour (modifie le grade)"] },
+            { t: "**Diabète**", sub: ["Type, ancienneté, **HbA1c**", "HbA1c inférieure à 7 % ou de 7 % et plus (modifie le grade)"] },
+            "**Obésité**, **stress**, mauvaise alimentation, manque de sommeil",
+            "**Maladies inflammatoires chroniques** ; changements hormonaux (grossesse)",
+            "**Médicaments** gingivo-hyperplasiants (ciclosporine, phénytoïne, inhibiteurs calciques) et **traitements immunosuppresseurs**"
+          ] }
+        ], materiel: ["questionnaire médical"] },
+        { titre: "Temps 2 – Examen clinique et sondage", details: ["**Indices de plaque et de saignement**, mobilité, atteinte de furcation (classes I à III), récessions, défauts intra-osseux", "**Sondage 6 sites par dent** : profondeur de poche, niveau d'attache clinique, saignement au sondage ; saisie dans **Logos**", { t: "**Facteurs locaux favorisants** à repérer", sub: ["**Biofilm** : hygiène insuffisante, plaque visible", "**Tartre** supra et sous-gingival", "**Débords** et restaurations ou prothèses inadaptées", "Dents en malposition, caries cervicales"] }], materiel: ["sonde parodontale", "Logos", "révélateur de plaque (GC Tri Plaque ID Gel)"], validation: "sondage" },
+        { titre: "Temps 3 – Examen radiologique", details: ["**Bilan long cône et panoramique** : niveau osseux, lésions intra-osseuses, furcations", "Facteurs rétentifs de plaque : tartre, débords de restauration"], materiel: ["radiographies"] },
+        { titre: "Temps 4 – Diagnostic et plan de traitement", details: [{ t: "Classification 2018", sub: ["**Stade (I à IV)** selon la sévérité et la complexité", "**Grade (A à C)** selon la vitesse de progression et les facteurs de risque (tabac, diabète)"] }, { t: "**Plan par étapes (EFP)**", sub: ["Étape 1 : hygiène et facteurs de risque", "Étape 2 : instrumentation", "Étape 3 : sites non répondeurs", "Étape 4 : maintenance"] },
           "Consentement",
           "**Étape 1 (motivation à l'hygiène)** : elle **commence après** ce diagnostic et ce plan de traitement, qui servent de point de départ et permettent d'expliquer la maladie au patient"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
       ],
@@ -51,11 +60,12 @@ window.DISCIPLINES.push({
       ],
       erreurs: [
         "Sondage incomplet (moins de 6 sites par dent) ou saisie incomplète dans Logos",
-        "Facteurs de risque (tabac, diabète) non recherchés",
+        "Facteurs favorisants (tabac, diabète, médicaments, facteurs locaux) non recherchés ou non consignés",
         "Stade et grade non consignés ; plan de traitement non expliqué au patient",
         "Pas de validation de l'encadrant après le sondage"
       ],
       references: [
+        "[Tonetti M.S., Greenwell H., Kornman K.S. Staging and grading of periodontitis: framework and proposal of a new classification and case definition. J Clin Periodontol 2018;45 Suppl 20:S149-S161](https://pubmed.ncbi.nlm.nih.gov/29926495/) — tabac et HbA1c comme modificateurs du grade",
         "[Sanz M. et al. Treatment of stage I-III periodontitis – The EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47 Suppl 22:4-60](https://pmc.ncbi.nlm.nih.gov/articles/PMC7891343/)",
       ]
     },
