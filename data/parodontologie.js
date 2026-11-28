@@ -51,7 +51,7 @@ window.DISCIPLINES.push({
         { titre: "Temps 3 – Examen radiologique", details: ["**Bilan long cône et panoramique** : niveau osseux, lésions intra-osseuses, furcations", "Facteurs rétentifs de plaque : tartre, débords de restauration"], materiel: ["radiographies"] },
         { titre: "Temps 4 – Diagnostic et plan de traitement", details: [{ t: "Classification 2018", sub: ["**Stade (I à IV)** selon la sévérité et la complexité", "**Grade (A à C)** selon la vitesse de progression et les facteurs de risque (tabac, diabète)"] }, { t: "**Plan par étapes (EFP)**", sub: ["Étape 1 : hygiène et facteurs de risque", "Étape 2 : instrumentation", "Étape 3 : sites non répondeurs", "Étape 4 : maintenance"] },
           "**Donner le devis** au patient",
-          "**Étape 1 (motivation à l'hygiène)** : elle **commence après** ce diagnostic et ce plan de traitement, qui servent de point de départ et permettent d'expliquer la maladie au patient"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
+          "**Étape 1 (motivation à l'hygiène)** : [voir la fiche](#/parodontologie/motivation-hygiene)"], materiel: ["Logos", "fiche d'information"], astuce: "Consigner stade et grade dans le dossier : ils orientent le plan de traitement." }
       ],
       consignes: [
         "**Diagnostic expliqué** : maladie de la gencive et de l'os, qui se soigne mais demande une hygiène quotidienne rigoureuse et un suivi.",
