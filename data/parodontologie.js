@@ -100,7 +100,7 @@ window.DISCIPLINES.push({
           "**Révélation de plaque**, relevé de l'indice de plaque et de saignement, **comparé à l'examen initial** ; montrer les zones à problème au miroir",
           "**Démonstration du brossage**, choix et essai des **brossettes interdentaires** (taille mesurée avec la sonde)",
           { t: "**Facteurs favorisants à aborder avec le patient**", sub: ["**Tabagisme** et **diabète** (HbA1c)", "Obésité, stress, alimentation, sommeil", "Maladies inflammatoires chroniques, grossesse", "Médicaments gingivo-hyperplasiants et immunosuppresseurs"] }
-        ], materiel: ["révélateur de plaque", "brosse", "brossettes interdentaires", "miroir"], astuce: "Le patient doit refaire le geste devant l'étudiant : c'est la démonstration qui compte." }
+        ], materiel: ["révélateur de plaque", "brosse à dents", "brossettes interdentaires", "miroir"], astuce: "Le patient doit refaire le geste devant l'étudiant : c'est la démonstration qui compte." }
       ],
       consignes: [
         "**Brossage** : deux à trois fois par jour, en insistant sur le collet des dents ; brosse souple ou électrique selon les conseils reçus.",
