@@ -144,21 +144,42 @@ main{padding:0}
 .m-zone:nth-of-type(1){animation-delay:1.6s}.m-zone:nth-of-type(2){animation-delay:1.75s}.m-zone:nth-of-type(3){animation-delay:1.9s}.m-zone:nth-of-type(4){animation-delay:2.05s}.m-zone:nth-of-type(5){animation-delay:2.2s}
 @keyframes m-in{to{opacity:1}}
 .m-fill path{fill:rgba(255,255,255,.001);stroke:none;transition:fill .2s}
-.m-zone:hover .m-fill path,.m-zone:focus .m-fill path{fill:rgba(127,224,236,.3)}
-.m-zone:hover .m-fill path[fill=none],.m-zone:focus .m-fill path[fill=none]{fill:none;stroke:#7fe0ec;stroke-width:6;stroke-linecap:round}
+.m-zone:focus .m-fill path,.m-zone.is-on .m-fill path{fill:rgba(127,224,236,.3)}
+.m-zone:focus .m-fill path[fill=none],.m-zone.is-on .m-fill path[fill=none]{fill:none;stroke:#7fe0ec;stroke-width:6;stroke-linecap:round}
 .m-lead{fill:none;stroke:rgba(255,255,255,.4);stroke-width:1;stroke-dasharray:2 3}
 .m-dot{fill:#7fe0ec}
 .m-ring{fill:none;stroke:#7fe0ec;stroke-width:1.2;opacity:.55;transform-box:fill-box;transform-origin:center;animation:m-pulse 2.6s ease-in-out infinite}
-@keyframes m-pulse{50%{transform:scale(1.5);opacity:.15}}
 .m-lab{font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;fill:#fff;transition:fill .2s}
 .m-sub{font:500 9px var(--mono);letter-spacing:.08em;fill:rgba(255,255,255,.55);text-transform:uppercase}
-.m-zone:hover .m-lab,.m-zone:focus .m-lab{fill:#7fe0ec}
-.m-zone:hover .m-lead,.m-zone:focus .m-lead{stroke:#7fe0ec;stroke-dasharray:none}
-.molar-svg:has(.m-zone:hover) .m-zone:not(:hover),.molar-svg:has(.m-zone:focus) .m-zone:not(:focus){opacity:.35}
+.m-zone:focus .m-lab,.m-zone.is-on .m-lab{fill:#7fe0ec}
+.m-zone:focus .m-lead,.m-zone.is-on .m-lead{stroke:#7fe0ec;stroke-dasharray:none}
+.molar-svg[data-active] .m-zone:not(.is-on){opacity:.35}
+@media (hover:hover){
+  .m-zone:hover .m-fill path{fill:rgba(127,224,236,.3)}
+  .m-zone:hover .m-fill path[fill=none]{fill:none;stroke:#7fe0ec;stroke-width:6;stroke-linecap:round}
+  .m-zone:hover .m-lab{fill:#7fe0ec}
+  .m-zone:hover .m-lead{stroke:#7fe0ec;stroke-dasharray:none}
+  .molar-svg:has(.m-zone:hover) .m-zone:not(:hover){opacity:.35}
+}
 .molar-cap{display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:2px;min-height:54px}
 .mc-k{font:600 .66rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#7fe0ec}
 .mc-t{font:650 1.2rem var(--display);letter-spacing:-.02em;color:#fff;text-decoration:none}
 .mc-t:hover{color:#7fe0ec}
+@media (hover:none){
+  .molar-svg,.molar-svg *{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+  .m-zone{touch-action:pan-y}
+  .m-zone .m-fill path{transition:fill .38s linear}
+  .m-zone.is-press .m-fill path{fill:rgba(127,224,236,.2)}
+  .m-zone.is-press .m-fill path[fill=none]{fill:none;stroke:#7fe0ec;stroke-width:4;stroke-linecap:round;opacity:.7}
+  .m-zone.is-press .m-ring{animation:none;transform:scale(1.9);opacity:.9;transition:transform .38s ease-out,opacity .38s}
+  .m-zone.is-on .m-ring{animation:none;transform:scale(1.5);opacity:1}
+  .molar-cap{align-items:stretch;text-align:left;margin:12px 6px 0;padding:14px 18px 16px;min-height:112px;border:1px solid rgba(255,255,255,.22);border-radius:22px;background:rgba(255,255,255,.08);gap:6px;justify-content:center}
+  .molar.is-active .molar-cap{background:rgba(127,224,236,.14);border-color:rgba(127,224,236,.55)}
+  .mc-t{font-size:1.02rem;font-weight:600}
+  .molar.is-active .mc-t{align-self:flex-start;margin-top:6px;padding:9px 18px;border-radius:999px;background:#fff;color:var(--brand-strong);font-weight:700;text-decoration:none}
+  .mc-d{display:none;font:500 .86rem/1.4 var(--font);color:rgba(255,255,255,.78);-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .molar.is-active .mc-d{display:-webkit-box}
+}
 .molar-more{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin-top:10px}
 .molar-more span{font:600 .62rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-right:4px}
 .molar-more a{padding:6px 14px;border:1px solid rgba(255,255,255,.3);border-radius:999px;color:#fff;font-size:.82rem;font-weight:600;text-decoration:none;transition:background .2s}

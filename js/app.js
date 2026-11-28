@@ -292,16 +292,52 @@
     var molar = el('figure', { class: 'molar' });
     if (A) {
       var svgNode = rawSvg(A.molar(counts));
-      var cap = el('figcaption', { class: 'molar-cap' }, [el('span', { class: 'mc-k', text: 'Molaire interactive' }), el('a', { class: 'mc-t', href: '#/', text: 'Touchez ou survolez une zone' })]);
-      var capK = cap.firstChild, capT = cap.lastChild, defaultT = capT.textContent;
+      var touchUI = window.matchMedia('(hover: none)').matches;
+      if (touchUI) svgNode.setAttribute('viewBox', '48 40 364 352');
+      var cap = el('figcaption', { class: 'molar-cap' }, [el('span', { class: 'mc-k', text: 'Molaire interactive' }), el('a', { class: 'mc-t', href: '#/', text: touchUI ? 'Maintiens le doigt sur une zone de la dent' : 'Touchez ou survolez une zone' }), el('span', { class: 'mc-d' })]);
+      var capK = cap.firstChild, capT = cap.childNodes[1], capD = cap.lastChild, defaultT = capT.textContent, activeId = null, held = false;
+      function setOn(z, id, d) {
+        Array.prototype.forEach.call(svgNode.querySelectorAll('.m-zone.is-on'), function (o) { o.classList.remove('is-on'); });
+        z.classList.add('is-on'); activeId = id; molar.classList.add('is-active');
+        svgNode.setAttribute('data-active', id);
+        if (touchUI) { capK.textContent = (d ? d.nom : '') + ' · ' + (d ? plural(d.protocoles.length, 'fiche') : ''); capT.textContent = 'Voir les fiches →'; capD.textContent = d && d.description ? d.description : ''; }
+        else { capK.textContent = d ? plural(d.protocoles.length, 'fiche') : ''; capT.textContent = (d ? d.nom : '') + ' →'; }
+        capT.setAttribute('href', '#/' + id);
+      }
+      function setOff() {
+        Array.prototype.forEach.call(svgNode.querySelectorAll('.m-zone.is-on'), function (o) { o.classList.remove('is-on'); });
+        activeId = null; molar.classList.remove('is-active'); svgNode.removeAttribute('data-active');
+        capK.textContent = 'Molaire interactive'; capT.textContent = defaultT; capT.setAttribute('href', '#/'); capD.textContent = '';
+      }
       Array.prototype.forEach.call(svgNode.querySelectorAll('.m-zone'), function (z) {
-        var id = z.getAttribute('data-disc'), d = findDisc(id);
-        function on() { svgNode.setAttribute('data-active', id); capK.textContent = d ? plural(d.protocoles.length, 'fiche') : ''; capT.textContent = (d ? d.nom : '') + ' →'; capT.setAttribute('href', '#/' + id); }
-        function off() { svgNode.removeAttribute('data-active'); capK.textContent = 'Molaire interactive'; capT.textContent = defaultT; capT.setAttribute('href', '#/'); }
-        z.addEventListener('mouseenter', on); z.addEventListener('focus', on); z.addEventListener('mouseleave', off); z.addEventListener('blur', off);
-        z.addEventListener('click', function () { if (window.matchMedia('(hover: none)').matches && svgNode.getAttribute('data-active') !== id) { on(); return; } location.hash = '#/' + id; });
+        var id = z.getAttribute('data-disc'), d = findDisc(id), timer = null, sx = 0, sy = 0, moved = false;
+        function on() { setOn(z, id, d); }
+        if (!touchUI) {
+          z.addEventListener('mouseenter', on); z.addEventListener('mouseleave', setOff);
+          z.addEventListener('click', function () { location.hash = '#/' + id; });
+        } else {
+          z.addEventListener('pointerdown', function (e) {
+            sx = e.clientX; sy = e.clientY; moved = false; held = false;
+            z.classList.add('is-press');
+            clearTimeout(timer);
+            timer = setTimeout(function () { held = true; z.classList.remove('is-press'); on(); if (navigator.vibrate) { try { navigator.vibrate(18); } catch (er) {} } }, 380);
+          });
+          z.addEventListener('pointermove', function (e) {
+            if (Math.abs(e.clientX - sx) > 10 || Math.abs(e.clientY - sy) > 10) { moved = true; clearTimeout(timer); z.classList.remove('is-press'); }
+          });
+          function end() { clearTimeout(timer); z.classList.remove('is-press'); }
+          z.addEventListener('pointerup', function () {
+            var wasHeld = held; end();
+            if (moved || wasHeld) return;
+            if (activeId === id) location.hash = '#/' + id; else on();
+          });
+          z.addEventListener('pointercancel', end);
+          z.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+        }
+        z.addEventListener('focus', function () { if (!touchUI || z.matches(':focus-visible')) on(); }); z.addEventListener('blur', function () { if (!touchUI && activeId === id) setOff(); });
         z.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/' + id; } });
       });
+      if (touchUI) document.addEventListener('pointerdown', function (e) { if (activeId && !molar.contains(e.target)) setOff(); });
       var more = el('div', { class: 'molar-more' }, [el('span', { text: 'Aussi' })]);
       ['prothese-amovible', 'pedodontie', 'tronc-commun'].forEach(function (id) { var d = findDisc(id); if (d) more.appendChild(el('a', { href: '#/' + id, text: d.nom })); });
       molar.appendChild(svgNode); molar.appendChild(cap); molar.appendChild(more);
