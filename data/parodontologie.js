@@ -98,7 +98,8 @@ window.DISCIPLINES.push({
       etapes: [
         { titre: "Séance – Indices de plaque et enseignement de l'hygiène", details: [
           "**Révélation de plaque**, relevé de l'indice de plaque et de saignement, **comparé à l'examen initial** ; montrer les zones à problème au miroir",
-          "**Démonstration du brossage**, choix et essai des **brossettes interdentaires** (taille mesurée avec la sonde) ; conseils sur le tabac et le diabète"
+          "**Démonstration du brossage**, choix et essai des **brossettes interdentaires** (taille mesurée avec la sonde)",
+          { t: "**Facteurs favorisants à aborder avec le patient**", sub: ["**Tabagisme** et **diabète** (HbA1c)", "Obésité, stress, alimentation, sommeil", "Maladies inflammatoires chroniques, grossesse", "Médicaments gingivo-hyperplasiants et immunosuppresseurs"] }
         ], materiel: ["révélateur de plaque", "brosse", "brossettes interdentaires", "miroir"], astuce: "Le patient doit refaire le geste devant l'étudiant : c'est la démonstration qui compte." }
       ],
       consignes: [
@@ -135,7 +136,7 @@ window.DISCIPLINES.push({
       ],
       etapes: [
         { titre: "Séance – Détartrage supra-gingival et polissage", details: ["Indices de plaque et de saignement ; **détartrage supra-gingival aux ultrasons**, complété à la curette si besoin", "**Polissage** des surfaces",
-          "Suppression des facteurs rétentifs de plaque",
+          { t: "**Suppression des facteurs rétentifs de plaque**", sub: ["**Tartre** supra et sous-gingival", "**Débords** et restaurations ou prothèses inadaptées : à corriger ou à planifier", "Caries cervicales : à traiter"] },
           "Enseignement de l'hygiène"], materiel: ["ultrasons + inserts", "curettes", "cupule et pâte à polir", "révélateur de plaque"] }
       ],
       consignes: [
@@ -164,12 +165,12 @@ window.DISCIPLINES.push({
       materiel: ["Révélateur de plaque", "Brosse, brossettes interdentaires", "Détartreur ultrasonique et curettes", "Cupule et pâte à polir"],
       alertes: [
         "**Gingivite : antibiothérapie non recommandée** (HAS 2026, grade B). **Pas d'antibioprophylaxie** pour le détartrage ni le polissage en population générale (HAS 2026).",
-        "Éliminer les **facteurs rétentifs de plaque** (tartre, débords de restauration)."
+        "Éliminer les **facteurs rétentifs de plaque** (tartre, débords de restauration) et rechercher les **facteurs favorisants** : biofilm, médicaments gingivo-hyperplasiants, grossesse ou changements hormonaux, tabac, diabète."
       ],
       etapes: [
         { titre: "Séance 1 – Diagnostic, motivation et détartrage", details: ["**Sondage** (absence de perte d'attache), indices de plaque et de saignement",
-          "**Enseignement de l'hygiène** (voir la fiche « Motivation à l'hygiène »)", "**Détartrage supra-gingival et polissage** ; suppression des facteurs rétentifs"], materiel: ["sonde parodontale", "révélateur de plaque", "ultrasons", "cupule et pâte à polir"], validation: "sondage" },
-        { titre: "Séance 2 (si nécessaire) – Contrôle", details: ["Nouveau relevé de plaque et de saignement ; renforcement de l'hygiène", "Si la gencive reste inflammatoire : rechercher une cause locale ou générale"], materiel: ["sonde parodontale", "révélateur de plaque"] }
+          "**Enseignement de l'hygiène** (voir la fiche « Motivation à l'hygiène »)", { t: "**Facteurs locaux favorisants**", sub: ["**Biofilm** : hygiène insuffisante", "**Tartre** supra et sous-gingival", "**Débords** et restaurations ou prothèses inadaptées", "Dents en malposition, caries cervicales"] }, "**Détartrage supra-gingival et polissage** ; suppression des facteurs rétentifs"], materiel: ["sonde parodontale", "révélateur de plaque", "ultrasons", "cupule et pâte à polir"], validation: "sondage" },
+        { titre: "Séance 2 (si nécessaire) – Contrôle", details: ["Nouveau relevé de plaque et de saignement ; renforcement de l'hygiène", { t: "Si la gencive reste inflammatoire : rechercher une cause", sub: ["**Locale** : tartre résiduel, débord, restauration inadaptée, caries cervicales", "**Générale** : diabète déséquilibré, médicaments, grossesse, tabac"] }], materiel: ["sonde parodontale", "révélateur de plaque"] }
       ],
       consignes: [
         "**Brossage** soigneux deux à trois fois par jour et **brossettes interdentaires** ; le saignement doit diminuer en quelques jours.",
@@ -208,6 +209,7 @@ window.DISCIPLINES.push({
         "Bain de bouche prescrit : **Eludril Perio** (chlorhexidine 0,20 %)"
       ],
       alertes: [
+        "**Facteurs favorisants à contrôler** : le tabac et le diabète mal équilibré favorisent la progression de la maladie ; rappeler au patient leur contrôle (étape 1, EFP).",
         "**Antibiotiques systémiques en routine : non recommandés** en complément de l'instrumentation (EFP, grade A). HAS 2026 : antibiothérapie recommandée **après la dernière séance d'instrumentation** pour une **parodontite stade III/IV avec inadéquation entre le biofilm et la destruction et ratio perte osseuse/âge > 1** ; maladie nécrosante avec atteinte systémique.",
         "**Non suggérés** en adjuvants : lasers, thérapie photodynamique, doxycycline sub-antimicrobienne, probiotiques ; **non recommandés** : gels de statines, AINS, oméga-3, gel de metformine.",
         "**Pas d'antibiotique local** (HAS 2026). **Pas d'antibioprophylaxie** pour le sondage, le détartrage et le surfaçage en population générale (HAS 2026).",
@@ -265,7 +267,7 @@ window.DISCIPLINES.push({
       materiel: ["Sonde parodontale", "Logiciel Logos", "Révélateur de plaque", "Radiographies si besoin"],
       alertes: ["**Objectifs de santé** : aucune poche **≥ 5 mm avec saignement** et aucune poche profonde **≥ 6 mm** ; si atteints, passage en maintenance ; sinon, étape 3 (EFP)."],
       etapes: [
-        { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", { t: "**Décision**", sub: ["Maintenance si objectifs atteints", "Sinon étape 3 : refaire le surfaçage des sites résiduels, chirurgie si poches profondes", "Consignes d'hygiène"] }], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
+        { titre: "Séance – Sondage complet et décision", details: ["**Sondage 6 sites par dent**, indices de plaque et de saignement, saisie dans **Logos** et comparaison avec l'examen initial", { t: "**Décision**", sub: ["Maintenance si objectifs atteints", "Sinon étape 3 : refaire le surfaçage des sites résiduels, chirurgie si poches profondes", { t: "Avant l'étape 3 : **revérifier les facteurs favorisants**", sub: ["Tabac et diabète (HbA1c)", "Hygiène et indice de plaque", "Facteurs locaux restants : tartre, débords, restaurations inadaptées"] }, "Consignes d'hygiène"] }], materiel: ["sonde parodontale", "Logos", "révélateur de plaque"], validation: "sondage" }
       ],
       consignes: ["**Résultat** du traitement expliqué au patient ; objectifs et prochaines étapes ; **maintenance** à rythme personnalisé."],
       erreurs: ["Réévaluation trop précoce, avant la cicatrisation", "Sondage incomplet", "Absence de décision écrite (maintenance ou étape 3)"],
@@ -292,6 +294,7 @@ window.DISCIPLINES.push({
       ],
       contreIndications: ["**Chirurgie non indiquée chez les patients n'atteignant pas un contrôle de plaque suffisant**", "Les actes de chirurgie parodontale sont contre-indiqués chez les patients traités pour une pathologie maligne ou irradiés ≥ 40 Gy (HAS 2026, certains actes)"],
       alertes: [
+        "**Avant d'opérer, vérifier** : contrôle de plaque (un score de plaque inférieur à 20-25 % est associé à de meilleurs résultats chirurgicaux, EFP), **arrêt du tabac** et **contrôle du diabète** maintenus.",
         "**L'étape 3 ne commence pas par la chirurgie** : on **refait d'abord le surfaçage** des poches résiduelles modérées (4-5 mm). La chirurgie ne concerne que les poches profondes (≥ 6 mm), les défauts intra-osseux et les furcations.",
         "La chirurgie doit être réalisée par un praticien **avec formation spécifique supplémentaire** ou un spécialiste (EFP).",
         "Antibioprophylaxie : non recommandée en population générale pour la chirurgie d'assainissement, l'élongation coronaire ou la chirurgie plastique ; recommandée au cas par cas pour les patients à risque infectieux augmenté ou à haut risque d'ostéonécrose (HAS 2026)."
@@ -333,7 +336,7 @@ window.DISCIPLINES.push({
         { titre: "Hygiène à domicile", details: ["Brossage complété par **brossettes interdentaires** (recommandé) ; **fil dentaire non suggéré** en 1er choix chez le patient en maintenance"] },
         { titre: "À ne pas faire", details: ["Doxycycline sub-antimicrobienne et thérapie photodynamique en complément : non suggérés",
           "Remplacer le débridement mécanique par un laser Er:YAG : non suggéré"] },
-        { titre: "Facteurs de risque", details: ["Maintenir les interventions d'arrêt du tabac et de contrôle du diabète"] }
+        { titre: "Facteurs favorisants", details: [{ t: "**À chaque visite**, vérifier et renforcer", sub: ["**Tabac** : maintenir l'arrêt", "**Diabète** : maintenir le contrôle (HbA1c)", "Obésité, stress, médicaments : signaler tout changement", "Facteurs locaux : tartre, débords, restaurations ou prothèses inadaptées"] }] }
       ],
       consignes: ["**Rendez-vous réguliers** à vie : la maintenance évite la récidive.", "**Hygiène** quotidienne avec brossettes interdentaires ; signaler tout saignement, mobilité ou gonflement."],
       erreurs: ["Intervalle trop espacé pour un patient à risque", "Pas de sondage lors de la séance", "Abandon du suivi par le patient non relancé"],
